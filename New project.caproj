@@ -1751,6 +1751,15 @@
         <object-type global="1" name="DoorData" sid="9533038479754913">
             <plugin id="Dictionary" />
         </object-type>
+        <object-type name="Sprite2" sid="4833608948354513">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4955644380878111" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
