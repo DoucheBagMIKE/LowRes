@@ -1745,6 +1745,14 @@
         <object-type global="1" name="DoorData" sid="9533038479754913">
             <plugin id="Dictionary" />
         </object-type>
+        <object-type name="Sprite2" sid="4188940114225642">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6444164555691292" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -1931,6 +1939,7 @@
         <event-sheet>Input.xml</event-sheet>
         <event-sheet>Pausing.xml</event-sheet>
         <event-sheet>FiniteStateMachine.xml</event-sheet>
+        <event-sheet>Save-Load.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

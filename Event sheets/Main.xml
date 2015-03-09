@@ -4,6 +4,7 @@
     <name>Main</name>
     <events>
         <include>Xml</include>
+        <include>Save-Load</include>
         <include>Z Ordering</include>
         <include>Input</include>
         <include>Player</include>
