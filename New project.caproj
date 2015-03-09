@@ -1423,8 +1423,6 @@
                         <instance-variable name="RoomUID" sid="1347078249406856" type="number" />
                         <instance-variable name="DoortoUID" sid="9161015832185214" type="number" />
                         <instance-variable name="facing" sid="6564563217641009" type="string" />
-                        <instance-variable name="LockType" sid="5871727066148748" type="string" />
-                        <instance-variable name="LocksData" sid="1831963432241911" type="string" />
                         <instance-variable name="speed" sid="8849962656236369" type="number" />
                         <instance-variable name="shake" sid="8030625785436811" type="boolean" />
                     </instance-variables>
@@ -1916,6 +1914,15 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Unlockable" plugin-id="Sprite" sid="9707277493723133">
+            <members>
+                <member>Door</member>
+            </members>
+            <instance-variables>
+                <instance-variable comment="Function to call when this object is unlocked." name="On_Unlocked" sid="9933643258076713" type="string" />
+                <instance-variable name="Params" sid="5838128292997966" type="string" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
@@ -1940,6 +1947,7 @@
         <event-sheet>Pausing.xml</event-sheet>
         <event-sheet>FiniteStateMachine.xml</event-sheet>
         <event-sheet>Save-Load.xml</event-sheet>
+        <event-sheet>Unlockable.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

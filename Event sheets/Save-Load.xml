@@ -35,6 +35,10 @@
                             <param id="0" name="Key">&quot;DoorData&quot;</param>
                             <param id="1" name="Value">DoorData.AsJSON</param>
                         </action>
+                        <action id="0" name="Set local value" sid="4774137457556723" type="WebStorage">
+                            <param id="0" name="Key">&quot;Inv&quot;</param>
+                            <param id="1" name="Value">INV.AsJSON</param>
+                        </action>
                         <action id="0" name="Call function" sid="5424758661180969" type="Function">
                             <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Bottom;Saved&quot;</param>
@@ -55,6 +59,9 @@
                 </action>
                 <action id="4" name="Load" sid="6879328531372563" type="DoorData">
                     <param id="0" name="JSON">WebStorage.LocalValue(&quot;DoorData&quot;)</param>
+                </action>
+                <action id="11" name="Load" sid="2791177220296697" type="INV">
+                    <param id="0" name="JSON">WebStorage.LocalValue(&quot;Inv&quot;)</param>
                 </action>
                 <action id="0" name="Call function" sid="43015504743504" type="Function">
                     <param id="0" name="Name">&quot;ShowTextBox&quot;</param>

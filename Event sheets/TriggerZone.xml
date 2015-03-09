@@ -172,6 +172,9 @@
                                 <condition id="1" name="Is overlapping another object" sid="6953938023968501" type="BASE">
                                     <param id="0" name="Object">TriggerZone</param>
                                 </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3495490034981495" type="TriggerZone">
+                                    <param id="0" name="Instance variable">Triggered</param>
+                                </condition>
                                 <condition id="-8" name="Compare two values" sid="9901674325320952" type="System">
                                     <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;SmallKey&quot;)</param>
                                     <param id="1" name="Comparison">5</param>
@@ -198,16 +201,28 @@
                                             <param id="2" name="Value">&quot;Pressed&quot;</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="1" name="Set key" sid="628299136976501" type="GameStats">
-                                            <param id="0" name="Key">&quot;keys&quot;</param>
-                                            <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) - 1</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="105255243467885" type="Function">
-                                            <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                                            <param id="1" name="Parameter {n}">TriggerZone.UID</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1061759562029504">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="8866146872654462" type="System">
+                                                    <param id="0" name="First value">Function.Call(&quot;OpenUnlockable&quot;, TriggerZone.Params)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set key" sid="628299136976501" type="GameStats">
+                                                    <param id="0" name="Key">&quot;keys&quot;</param>
+                                                    <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) - 1</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="6866596180977927" type="TriggerZone">
+                                                    <param id="0" name="Instance variable">Triggered</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

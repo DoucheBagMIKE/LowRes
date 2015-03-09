@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Unlockable</name>
+    <events>
+        <event-block sid="9985411963598799">
+            <conditions>
+                <condition id="0" name="On function" sid="7857790740272114" type="Function">
+                    <param id="0" name="Name">&quot;OpenUnlockable&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2570352343485529" type="Unlockable">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1569104713440724">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="3280299418662274" type="Door">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8183200460919922">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3995238471189321" type="System">
+                                    <param id="0" name="First value">Door.AnimationFrameCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set speed" sid="9912021176130099" type="Door">
+                                    <param id="0" name="Speed">Door.speed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8566308095960275">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5916416073006572" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="3196560123902779" type="Door">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1541181085035487">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="8802354278176099" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3029352781677113" type="Function">
+                                    <param id="0" name="Name">&quot;On_Unlocked&quot;&amp;Unlockable.On_Unlocked</param>
+                                    <param id="1" name="Parameter {n}">Unlockable.Params</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5509414548977445">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2048402647501449" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="1073909980013889" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

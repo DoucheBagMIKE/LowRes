@@ -3,7 +3,31 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>DoorsTeleporting</name>
     <events>
-        <event-block sid="9044728371126411">
+        <event-block sid="2542441063627666">
+            <conditions>
+                <condition id="0" name="On function" sid="262140999848217" type="Function">
+                    <param id="0" name="Name">&quot;On_Unlocked_Door&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9215047384228205">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8534099738574253" type="Door">
+                            <param id="0" name="Instance variable">shake</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="4692541572054632" type="Camera">
+                            <param id="0" name="Magnitude">2</param>
+                            <param id="1" name="Duration">1</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="9044728371126411">
             <conditions>
                 <condition id="0" name="On function" sid="5505382048175048" type="Function">
                     <param id="0" name="Name">&quot;OpenDoor&quot;</param>
@@ -14,41 +38,70 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="1910859262273798">
+                <event-block sid="2498182231012449">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="2787755451071773" type="System">
-                            <param id="0" name="First value">Door.AnimationFrameCount</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">2</param>
+                        <condition id="3" name="Compare frame" sid="201788997913767" type="Door">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="6" name="Set speed" sid="2061380895384559" type="Door">
-                            <param id="0" name="Speed">Door.speed</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1910859262273798">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2787755451071773" type="System">
+                                    <param id="0" name="First value">Door.AnimationFrameCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set speed" sid="2061380895384559" type="Door">
+                                    <param id="0" name="Speed">Door.speed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2619733000880445">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7324213668439193" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="32714958580863" type="Door">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6283738589460389">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5289851167568779" type="Door">
+                                    <param id="0" name="Instance variable">shake</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="3302329709369108" type="Camera">
+                                    <param id="0" name="Magnitude">2</param>
+                                    <param id="1" name="Duration">1</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7793845416550992">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="4758252996785169" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="2619733000880445">
+                <event-block sid="6019951819777351">
                     <conditions>
-                        <condition id="-22" name="Else" sid="7324213668439193" type="System" />
+                        <condition id="-22" name="Else" sid="1590030279410749" type="System" />
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="32714958580863" type="Door">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6283738589460389">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="5289851167568779" type="Door">
-                            <param id="0" name="Instance variable">shake</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="3302329709369108" type="Camera">
-                            <param id="0" name="Magnitude">2</param>
-                            <param id="1" name="Duration">1</param>
-                            <param id="2" name="Mode">0</param>
+                        <action id="1" name="Set return value" sid="5115596501943752" type="Function">
+                            <param id="0" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -148,111 +201,6 @@
                                     <param id="1" name="Y">Door.Y+12</param>
                                 </action>
                             </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="4720949473474223">
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" sid="6516125522746783" type="Door" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="713875857904196">
-                            <conditions>
-                                <condition id="-11" name="For Each" sid="3651496168863593" type="System">
-                                    <param id="0" name="Object">Door</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <variable constant="0" name="Unlocked" sid="4048231638739938" static="0" type="number">1</variable>
-                                <event-block sid="4709025673304606">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="4133809534691299" type="Door">
-                                            <param id="0" name="Instance variable">LockType</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;HasKeys&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="823063955512648">
-                                            <conditions>
-                                                <condition id="-12" name="Repeat" sid="8028553027946728" type="System">
-                                                    <param id="0" name="Count">tokencount(Door.LocksData,&quot;&amp;&quot;)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="9878822327517685">
-                                                    <conditions>
-                                                        <condition id="3" inverted="1" name="Has key" sid="8130529062890492" type="GameStats">
-                                                            <param id="0" name="Key">tokenat(Door.LocksData, loopindex,&quot;&amp;&quot;)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-9" name="Set value" sid="9551791644805883" type="System">
-                                                            <param id="0" name="Variable">Unlocked</param>
-                                                            <param id="1" name="Value">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block sid="3803284878688592">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="1891503688920208" type="Door">
-                                            <param id="0" name="Instance variable">LockType</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;RoomCleared&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="782360436192875">
-                                            <conditions>
-                                                <condition id="-14" name="Pick by unique ID" sid="6193237372913423" type="CameraZone">
-                                                    <param id="0" name="Unique ID">Door.RoomUID</param>
-                                                </condition>
-                                                <condition id="1" name="Is overlapping another object" sid="4687725834368572" type="Enemies">
-                                                    <param id="0" name="Object">CameraZone</param>
-                                                </condition>
-                                                <condition id="-8" name="Compare two values" sid="7643600155110121" type="System">
-                                                    <param id="0" name="First value">Enemies.Count</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Second value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="8633567901941148" type="System">
-                                                    <param id="0" name="Variable">Unlocked</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                                <event-block disabled="1" sid="6605992685755197">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="9408483946729515" type="System">
-                                            <param id="0" name="Variable">Unlocked</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                        <condition id="2" inverted="1" name="Is playing" sid="969683717793495" type="Door">
-                                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="5369667619973751" type="Function">
-                                            <param id="0" name="Name">&quot;OpenDoor&quot;</param>
-                                            <param id="1" name="Parameter {n}">Door.UID</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

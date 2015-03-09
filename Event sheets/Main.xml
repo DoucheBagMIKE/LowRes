@@ -16,6 +16,7 @@
         <include>Traps</include>
         <include>TriggerZone</include>
         <include>TextBox</include>
+        <include>Unlockable</include>
         <include>DoorsTeleporting</include>
         <include>Item Functions</include>
         <include>Spawnable Effects</include>

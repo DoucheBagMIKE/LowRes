@@ -4051,11 +4051,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <On_Unlocked>Door</On_Unlocked>
+                        <Params>28</Params>
                         <RoomUID>0</RoomUID>
                         <DoortoUID>30</DoortoUID>
                         <facing>north</facing>
-                        <LockType>HasKeys</LockType>
-                        <LocksData>Test</LocksData>
                         <speed>5</speed>
                         <shake>true</shake>
                     </instance-variables>
@@ -4089,11 +4089,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <On_Unlocked></On_Unlocked>
+                        <Params></Params>
                         <RoomUID>0</RoomUID>
                         <DoortoUID>28</DoortoUID>
                         <facing>south</facing>
-                        <LockType>RoomCleared</LockType>
-                        <LocksData></LocksData>
                         <speed>0</speed>
                         <shake>false</shake>
                     </instance-variables>
@@ -5226,7 +5226,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <FunctionName>OpenDoor</FunctionName>
+                        <FunctionName>OpenUnlockable</FunctionName>
                         <Params>28</Params>
                         <TriggeredBy>PushBlock</TriggeredBy>
                         <Triggered>false</Triggered>
@@ -5434,7 +5434,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <FunctionName>OpenDoor</FunctionName>
+                        <FunctionName>OpenUnlockable</FunctionName>
                         <Params>28</Params>
                         <TriggeredBy>SmallKey</TriggeredBy>
                         <Triggered>false</Triggered>
