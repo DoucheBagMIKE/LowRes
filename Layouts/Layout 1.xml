@@ -5158,7 +5158,7 @@
                         <Deceleration>400</Deceleration>
                         <MovementType>Jump2</MovementType>
                         <Shadow>Big</Shadow>
-                        <HP>6</HP>
+                        <HP>12</HP>
                         <Explode>true</Explode>
                         <Projectile>false</Projectile>
                         <hit>false</hit>
