@@ -19,6 +19,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="6">FiniteStateMachine</event-sheet>
         <event-sheet order="7">DoorsTeleporting</event-sheet>
         <event-sheet order="8">Camara</event-sheet>
+        <event-sheet order="9">Item Functions</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -40,8 +41,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="0" path="object-folder/PLAYER/" />
-        <folder expanded="1" path="object-folder/ENEMY/" />
+        <folder expanded="1" path="object-folder/PLAYER/" />
+        <folder expanded="0" path="object-folder/ENEMY/" />
         <folder expanded="0" path="object-folder/LEVEL/" />
         <folder expanded="0" path="object-folder/LEVEL/TileMaps/" />
         <folder expanded="0" path="object-folder/LEVEL/CreatedAtRuntime/" />
@@ -54,7 +55,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Inventory/" />
         <folder expanded="0" path="object-folder/XML/" />
         <folder expanded="0" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
+        <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
@@ -94,6 +95,5 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/INV_Slot/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Dog/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
     </folders-expanded>
 </c2uistate>

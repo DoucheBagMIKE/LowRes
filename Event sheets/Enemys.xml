@@ -875,7 +875,7 @@
                                                     <param id="0" name="Object">ObstacleTilemap</param>
                                                 </condition>
                                                 <condition id="1" name="Is overlapping another object" sid="1804953147202795" type="Enemies">
-                                                    <param id="0" name="Object">Rock</param>
+                                                    <param id="0" name="Object">Solid</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -937,8 +937,8 @@
                                                 <condition id="1" name="Is overlapping another object" sid="2947968781506525" type="Enemies">
                                                     <param id="0" name="Object">ObstacleTilemap</param>
                                                 </condition>
-                                                <condition id="1" name="Is overlapping another object" sid="2681917380359981" type="Enemies">
-                                                    <param id="0" name="Object">Rock</param>
+                                                <condition id="1" name="Is overlapping another object" sid="7495301952443774" type="Enemies">
+                                                    <param id="0" name="Object">Solid</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -999,43 +999,56 @@
                                     <param id="0" name="Which">0</param>
                                     <param id="1" name="Speed">self.Movement.Speed/4</param>
                                 </action>
-                                <action behavior="Flash" id="0" name="Flash" sid="5335454315092729" type="Enemies">
-                                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.5</param>
-                                </action>
                                 <action id="-13" name="Set boolean" sid="8305404018486363" type="Enemies">
                                     <param id="0" name="Instance variable">hit</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="25" name="Play at object" sid="6546586013790578" type="Audio">
-                                    <param id="0" name="Audio file">hit</param>
-                                    <param id="1" name="Loop">0</param>
-                                    <param id="2" name="Volume">random(-20,-15)</param>
-                                    <param id="3" name="Object">Enemies</param>
-                                    <param id="4" name="Inner angle">360</param>
-                                    <param id="5" name="Outer angle">360</param>
-                                    <param id="6" name="Outer gain">0</param>
-                                    <param id="7" name="Tag (optional)">&quot;Hit&quot;</param>
-                                </action>
-                                <action id="5" name="Set playback rate" sid="9035220745448242" type="Audio">
-                                    <param id="0" name="Tag">&quot;Hit&quot;</param>
-                                    <param id="1" name="Playback rate">1.5</param>
-                                </action>
-                                <action id="-12" name="Subtract from" sid="2495472652139036" type="Enemies">
-                                    <param id="0" name="Instance variable">HP</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                                <action behavior="ScrollTo" id="0" name="Shake" sid="1758938989032289" type="Camera">
-                                    <param id="0" name="Magnitude">2</param>
-                                    <param id="1" name="Duration">0.2</param>
-                                    <param id="2" name="Mode">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="6724959446517491" type="Function">
-                                    <param id="0" name="Name">&quot;HitCollide&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="9596868377419191">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="734543850159409" type="Melee_Hitbox">
+                                            <param id="0" name="Instance variable">Damage</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="1758938989032289" type="Camera">
+                                            <param id="0" name="Magnitude">2</param>
+                                            <param id="1" name="Duration">0.2</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="5335454315092729" type="Enemies">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">0.3</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="2495472652139036" type="Enemies">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Value">Melee_Hitbox.Damage</param>
+                                        </action>
+                                        <action id="25" name="Play at object" sid="6546586013790578" type="Audio">
+                                            <param id="0" name="Audio file">hit</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">random(-20,-15)</param>
+                                            <param id="3" name="Object">Enemies</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;Hit&quot;</param>
+                                        </action>
+                                        <action id="5" name="Set playback rate" sid="9035220745448242" type="Audio">
+                                            <param id="0" name="Tag">&quot;Hit&quot;</param>
+                                            <param id="1" name="Playback rate">1.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6724959446517491" type="Function">
+                                            <param id="0" name="Name">&quot;HitCollide&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="7152683401569774">
                             <conditions>
@@ -1059,7 +1072,7 @@
                                 <action behavior="Flash" id="0" name="Flash" sid="2690146593024752" type="Enemies">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.5</param>
+                                    <param id="2" name="Duration">0.3</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="109662805147418" type="Enemies">
                                     <param id="0" name="Instance variable">hit</param>
@@ -1151,7 +1164,7 @@
                                 <action behavior="Flash" id="0" name="Flash" sid="2214015411023155" type="Enemies">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.5</param>
+                                    <param id="2" name="Duration">0.3</param>
                                 </action>
                                 <action id="25" name="Play at object" sid="9218699479248681" type="Audio">
                                     <param id="0" name="Audio file">hit</param>
@@ -1226,7 +1239,7 @@
                                 <action behavior="Flash" id="0" name="Flash" sid="742371336099006" type="Enemies">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.5</param>
+                                    <param id="2" name="Duration">0.3</param>
                                 </action>
                                 <action id="25" name="Play at object" sid="8741994934982365" type="Audio">
                                     <param id="0" name="Audio file">hit</param>

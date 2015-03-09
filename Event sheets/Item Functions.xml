@@ -50,6 +50,10 @@
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">96</param>
                         </action>
+                        <action id="-10" name="Set value" sid="2353496085762227" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="8411847088560716">
@@ -76,6 +80,10 @@
                         <action id="-10" name="Set value" sid="6903663757132647" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3173472880023242" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -104,6 +112,10 @@
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">96</param>
                         </action>
+                        <action id="-10" name="Set value" sid="1690703585616645" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="8079363029428063">
@@ -130,6 +142,10 @@
                         <action id="-10" name="Set value" sid="5768315870761331" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9231323070243126" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -346,6 +362,26 @@
                             <param id="0" name="Animation">&quot;ShieldRight&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="5184998971640287" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="1417845518647622" type="Melee_Hitbox">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5890007743231892" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7427119200602883" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7276006167978289" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3719167169681608" type="Melee_Hitbox" />
                     </actions>
                 </event-block>
                 <event-block sid="4876086056526214">
@@ -361,6 +397,26 @@
                             <param id="0" name="Animation">&quot;ShieldDown&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="2167859238514257" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5390631819622771" type="Melee_Hitbox">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2238773188780609" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3949326571375279" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5053892997996797" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="5589562027138047" type="Melee_Hitbox" />
                     </actions>
                 </event-block>
                 <event-block sid="2829116324079189">
@@ -376,6 +432,26 @@
                             <param id="0" name="Animation">&quot;ShieldUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="9219877176735894" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="9573705349831955" type="Melee_Hitbox">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9030900974828115" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="216165861279214" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8882742330834533" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6111306450966923" type="Melee_Hitbox" />
                     </actions>
                 </event-block>
                 <event-block sid="5308744334201794">
@@ -391,6 +467,26 @@
                             <param id="0" name="Animation">&quot;ShieldLeft&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="7482526385503626" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5276850850765945" type="Melee_Hitbox">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7878505232555915" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4283850451024592" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2012101304801609" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7982584158007215" type="Melee_Hitbox" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -420,6 +516,22 @@
                             <param id="0" name="Animation">&quot;ShieldRight&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="6611554098297756" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="3242292448190879" type="Melee_Hitbox">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9812400571217281" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">112</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4367919240260509" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="801321771669306">
@@ -434,6 +546,22 @@
                         <action id="4" name="Set animation" sid="2372674081772921" type="ARMS">
                             <param id="0" name="Animation">&quot;ShieldDown&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="4450972678131106" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="9790721518689945" type="Melee_Hitbox">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5561453913282192" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">112</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="584008993293196" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -450,6 +578,22 @@
                             <param id="0" name="Animation">&quot;ShieldUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="9679717272589572" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="3307849110290792" type="Melee_Hitbox">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2853438561791618" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">112</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4120024712468008" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2059129917452029">
@@ -464,6 +608,22 @@
                         <action id="4" name="Set animation" sid="3407068399230505" type="ARMS">
                             <param id="0" name="Animation">&quot;ShieldLeft&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8645355173222261" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7683829056427878" type="Melee_Hitbox">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6932867322868524" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">112</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1738805548557577" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
