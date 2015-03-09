@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Spawnable Effects</name>
+    <events>
+        <event-block sid="2970226520150897">
+            <conditions>
+                <condition id="0" name="On function" sid="1636035963604972" type="Function">
+                    <param id="0" name="Name">&quot;Explosion&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6247418337348533">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7673044077475691" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Explode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4784248485196705" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="24" name="Play at position" sid="9513027586806835" type="Audio">
+                            <param id="0" name="Audio file">DM-CGS-49</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">random(-5,0)</param>
+                            <param id="3" name="X">Function.Param(0)</param>
+                            <param id="4" name="Y">Function.Param(1)</param>
+                            <param id="5" name="Angle">360</param>
+                            <param id="6" name="Inner angle">0</param>
+                            <param id="7" name="Outer angle">360</param>
+                            <param id="8" name="Outer gain">360</param>
+                            <param id="9" name="Tag (optional)">&quot;Explode&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9666100306887722">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="6102834706885988" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Grass&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6805798978395871">
+            <conditions>
+                <condition id="5" name="On any finished" sid="4199854302139962" type="Explosion" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8145556719275412" type="Explosion" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

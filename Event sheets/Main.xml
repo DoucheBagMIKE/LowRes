@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main</name>
+    <events>
+        <include>Xml</include>
+        <include>Z Ordering</include>
+        <include>Input</include>
+        <include>Player</include>
+        <include>Interactive</include>
+        <include>Enemys</include>
+        <include>Pausing</include>
+        <include>Camara</include>
+        <include>Spawner</include>
+        <include>Traps</include>
+        <include>TriggerZone</include>
+        <include>TextBox</include>
+        <include>DoorsTeleporting</include>
+        <include>Item Functions</include>
+        <include>Spawnable Effects</include>
+        <include>Musix</include>
+        <include>FiniteStateMachine</include>
+        <variable constant="0" name="MenuMoved" sid="2498301788833179" static="0" type="number">0</variable>
+        <variable constant="0" name="Pause" sid="926908428210607" static="0" type="number">2</variable>
+        <variable constant="0" name="LerpSDP" sid="6098572964459686" static="0" type="number">0.1</variable>
+        <variable constant="0" name="MusicPlaying" sid="3137294078195374" static="0" type="text"></variable>
+        <variable constant="0" name="ZoneLoaded" sid="6203516161513996" static="0" type="number">0</variable>
+        <variable constant="0" name="ScrolltoX" sid="4387079001928423" static="0" type="number">0</variable>
+        <variable constant="0" name="ScrolltoY" sid="5820235018737976" static="0" type="number">0</variable>
+        <variable constant="0" name="CurZone" sid="5523916427160463" static="0" type="number">-1</variable>
+        <event-block sid="2712545167009221">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7724518492129189" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="8062961792606357" type="Function">
+                    <param id="0" name="Name">&quot;ScrolltoPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-10" name="Set value" sid="7206683886493786" type="BASE">
+                    <param id="0" name="Instance variable">MaxSpd</param>
+                    <param id="1" name="Value">BASE.8Direction.MaxSpeed</param>
+                </action>
+                <action id="-10" name="Set value" sid="9819810724589436" type="BASE">
+                    <param id="0" name="Instance variable">Decel</param>
+                    <param id="1" name="Value">BASE.8Direction.Deceleration</param>
+                </action>
+                <action id="-10" name="Set value" sid="7837246215356541" type="Sprite">
+                    <param id="0" name="Instance variable">StartX</param>
+                    <param id="1" name="Value">self.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="6328533645766537" type="Sprite">
+                    <param id="0" name="Instance variable">StartY</param>
+                    <param id="1" name="Value">self.Y</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3265584362460109" type="TextBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5796303181191141" type="TextBoxText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Add key" sid="7571134731464853" type="GameStats">
+                    <param id="0" name="Key">&quot;keys&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="7922617050674798" title="DEBUG">
+            <sub-events>
+                <event-block any="1" sid="141615764024376">
+                    <conditions>
+                        <condition id="3" name="Is button down" sid="2954166013619666" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">5</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="1135250835130954" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="8803281959078037" type="BASE">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4665048051051859">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="769878235810528" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="1852080070675076" type="BASE">
+                            <param id="0" name="Collisions">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

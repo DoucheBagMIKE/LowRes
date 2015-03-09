@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FiniteStateMachine</name>
+    <events>
+        <event-block sid="6257045773734819">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8355692353418676" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="8010678647403967" type="System">
+                    <param id="0" name="Object to create">Dog</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">Dog.X</param>
+                    <param id="3" name="Y">Dog.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="762411512999836">
+                    <conditions>
+                        <condition id="-13" name="Pick nth instance" sid="255476359923556" type="System">
+                            <param id="0" name="Object">Dog</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="3994701175420098" type="FSM">
+                            <param id="0" name="Unique ID">Dog.FSM_UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8941441702858783" type="Dog" />
+                        <action id="-9" name="Destroy" sid="9559310977595917" type="FSM" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3669858929296397">
+            <conditions>
+                <condition id="-18" name="On created" sid="1863280774892736" type="NPC" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="856912872510916" type="System">
+                    <param id="0" name="Object to create">FSM</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="6655803981037537" type="System">
+                    <param id="0" name="Object to create">NPCData</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="8144211670171885" type="NPC">
+                    <param id="0" name="Instance variable">FSM_UID</param>
+                    <param id="1" name="Value">FSM.UID</param>
+                </action>
+                <action id="-10" name="Set value" sid="4020511460430193" type="NPC">
+                    <param id="0" name="Instance variable">DataUID</param>
+                    <param id="1" name="Value">NPCData.UID</param>
+                </action>
+                <action id="5" name="Push" sid="2902256919238703" type="FSM">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">NPC.StartState</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="319932826086733">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3780608807425373" type="System" />
+                <condition id="-11" name="For Each" sid="9335834033358119" type="System">
+                    <param id="0" name="Object">NPC</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="1296652870271648" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="2453726258624832" type="Function">
+                    <param id="0" name="Name">FSM.Back</param>
+                    <param id="1" name="Parameter {n}">NPC.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8504086508441036">
+            <conditions>
+                <condition id="0" name="On function" sid="4893191176660162" type="Function">
+                    <param id="0" name="Name">&quot;Wait&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="1498815709200897" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="8553089694882673" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7334703988115381" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4064209416903041">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6289986004661929" type="System">
+                            <param id="0" name="First value">distance(BASE.X, BASE.Y, NPC.X, NPC.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Pop" sid="9300612641907933" type="FSM">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="1317055659759676" type="FSM">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;Follow&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7605929446784294">
+            <conditions>
+                <condition id="0" name="On function" sid="3935578929958511" type="Function">
+                    <param id="0" name="Name">&quot;Follow&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="8266079732723852" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="89862399638928" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="5148015078176095" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2865036458835432">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6524343258156533" type="System">
+                            <param id="0" name="First value">distance(BASE.X, BASE.Y, NPC.X, NPC.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="8170221017688082" type="FSM">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;Wander&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6477520376815772">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7929263314161909" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="1883288562218647" type="NPC">
+                            <param id="0" name="Acceleration">32</param>
+                            <param id="1" name="Angle">angle(NPC.X,NPC.Y, BASE.X,BASE.Y)</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="9466157315116942" type="NPC">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">clamp(NPC.CustomMovement.Speed,0,32)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5644098599933868">
+            <conditions>
+                <condition id="0" name="On function" sid="6778014700024315" type="Function">
+                    <param id="0" name="Name">&quot;Wander&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7774203005435217" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="8827770398926685" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6350288072028748" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="5707922822185227">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Has key" sid="752102819144916" type="NPCData">
+                            <param id="0" name="Key">&quot;Wander X&quot;</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Has key" sid="3108174099570655" type="NPCData">
+                            <param id="0" name="Key">&quot;Wander Y&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="6828398253581147" type="NPCData">
+                            <param id="0" name="Key">&quot;Wander X&quot;</param>
+                            <param id="1" name="Value">random(BASE.X - 16, BASE.X + 16)</param>
+                        </action>
+                        <action id="0" name="Add key" sid="6810370334872173" type="NPCData">
+                            <param id="0" name="Key">&quot;Wander Y&quot;</param>
+                            <param id="1" name="Value">random(BASE.Y - 16, BASE.Y + 16)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7927777336602397">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5900145506748982" type="System">
+                            <param id="0" name="First value">distance(BASE.X, BASE.Y, NPC.X, NPC.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">32</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6025501669214805">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6376699074673042" type="System">
+                                    <param id="0" name="First value">distance(NPC.X,NPC.Y, NPCData.Get(&quot;Wander X&quot;),NPCData.Get(&quot;Wander Y&quot;))</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="CustomMovement" id="2" name="Set speed" sid="463612838740277" type="NPC">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">0</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="3323079181259909" type="NPCData">
+                                    <param id="0" name="Key">&quot;Wander X&quot;</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="4002267571064626" type="NPCData">
+                                    <param id="0" name="Key">&quot;Wander Y&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6730555059214146">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1032076904585386" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="755906154017284" type="NPC">
+                                    <param id="0" name="Acceleration">8</param>
+                                    <param id="1" name="Angle">angle(Npc.X,NPC.Y,NPCData.Get(&quot;Wander X&quot;), NPCData.Get(&quot;Wander Y&quot;))</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" sid="7976240663031662" type="NPC">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">clamp(NPC.CustomMovement.Speed,0,8)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8885425528585303">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1776638167421366" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Pop" sid="3485990968375042" type="FSM">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="4468510827634846" type="NPCData">
+                            <param id="0" name="Key">&quot;Wander X&quot;</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="4327313431249937" type="NPCData">
+                            <param id="0" name="Key">&quot;Wander Y&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
