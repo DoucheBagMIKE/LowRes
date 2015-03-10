@@ -11,10 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout active="1" order="0">Main</layout>
-        <layout order="1">Template</layout>
-        <event-sheet order="2">Enemys</event-sheet>
-        <event-sheet order="3">Interactive</event-sheet>
-        <event-sheet order="4">Spawner</event-sheet>
+        <event-sheet order="1">Spawnable Effects</event-sheet>
+        <event-sheet order="2">Input</event-sheet>
+        <event-sheet order="3">Player</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,7 +21,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="Traps" />
         <family expanded="0" name="Enemies" />
         <family expanded="0" name="Interactive" />
@@ -36,10 +35,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="Unlockable" />
     </families-expanded>
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="object-folder/PLAYER/" />
         <folder expanded="0" path="object-folder/ENEMY/" />
-        <folder expanded="1" path="object-folder/LEVEL/" />
+        <folder expanded="0" path="object-folder/LEVEL/" />
         <folder expanded="1" path="object-folder/LEVEL/TileMaps/" />
         <folder expanded="1" path="object-folder/LEVEL/CreatedAtRuntime/" />
         <folder expanded="0" path="object-folder/LEVEL/PlaceableInEditor/" />
@@ -50,14 +49,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Inputs/" />
         <folder expanded="0" path="object-folder/Inventory/" />
         <folder expanded="0" path="object-folder/XML/" />
-        <folder expanded="0" path="object-folder/NPC/" />
+        <folder expanded="1" path="object-folder/NPC/" />
         <folder expanded="1" path="layout-folder/" />
-        <folder expanded="0" path="event-folder/" />
-        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="file-folder/XML/" />
+        <folder expanded="0" path="file-folder/XML/" />
         <folder expanded="1" path="animation-folder/ARMS/" />
         <folder expanded="1" path="animation-folder/BASE/" />
         <folder expanded="1" path="animation-folder/BODY/" />

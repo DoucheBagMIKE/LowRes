@@ -61,23 +61,48 @@
                                             <param id="0" name="Speed">BASE.8Direction.Speed/10</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="5983352330287079" type="Melee_Hitbox" />
+                                        <action id="6" name="Set speed" sid="2921068755354739" type="ARMS">
+                                            <param id="0" name="Speed">BODY.AnimationSpeed</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="6562629154902748">
+                                        <event-block any="1" sid="4461509764727949">
                                             <conditions>
-                                                <condition id="-11" name="Is within angle" sid="6190900809044084" type="Indicator">
-                                                    <param id="0" name="Within">45</param>
-                                                    <param id="1" name="Angle">0</param>
+                                                <condition id="0" name="Compare value" sid="8966991451959525" type="Input">
+                                                    <param id="0" name="Key">&quot;Left X&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="8272070793731606" type="Input">
+                                                    <param id="0" name="Key">&quot;Left Y&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">0</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="4" name="Set animation" sid="346860251383354" type="BODY">
-                                                    <param id="0" name="Animation">&quot;Right&quot;</param>
-                                                    <param id="1" name="From">0</param>
+                                                <action id="-22" name="Set angle toward position" sid="1535415310320532" type="Indicator">
+                                                    <param id="0" name="X">self.X+Input.Get(&quot;Left X&quot;)</param>
+                                                    <param id="1" name="Y">self.y+Input.Get(&quot;Left Y&quot;)</param>
                                                 </action>
-                                                <action id="4" name="Set animation" sid="106023562651772" type="ARMS">
-                                                    <param id="0" name="Animation">&quot;Right&quot;</param>
-                                                    <param id="1" name="From">0</param>
+                                            </actions>
+                                        </event-block>
+                                        <event-block any="1" sid="934357347738014">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="4808437787560581" type="Input">
+                                                    <param id="0" name="Key">&quot;Right X&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="0" name="Compare value" sid="5759585479796646" type="Input">
+                                                    <param id="0" name="Key">&quot;Right Y&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-22" name="Set angle toward position" sid="6520521091111876" type="Indicator">
+                                                    <param id="0" name="X">self.X+Input.Get(&quot;Right X&quot;)</param>
+                                                    <param id="1" name="Y">self.y+Input.Get(&quot;Right Y&quot;)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -95,24 +120,6 @@
                                                 </action>
                                                 <action id="4" name="Set animation" sid="8519000513590805" type="ARMS">
                                                     <param id="0" name="Animation">&quot;Down&quot;</param>
-                                                    <param id="1" name="From">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="5417189583993475">
-                                            <conditions>
-                                                <condition id="-11" name="Is within angle" sid="9984323431623625" type="Indicator">
-                                                    <param id="0" name="Within">45</param>
-                                                    <param id="1" name="Angle">180</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="4" name="Set animation" sid="1642885527109074" type="BODY">
-                                                    <param id="0" name="Animation">&quot;Left&quot;</param>
-                                                    <param id="1" name="From">0</param>
-                                                </action>
-                                                <action id="4" name="Set animation" sid="8936776085323459" type="ARMS">
-                                                    <param id="0" name="Animation">&quot;Left&quot;</param>
                                                     <param id="1" name="From">0</param>
                                                 </action>
                                             </actions>
@@ -135,6 +142,42 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="6562629154902748">
+                                            <conditions>
+                                                <condition id="-11" name="Is within angle" sid="6190900809044084" type="Indicator">
+                                                    <param id="0" name="Within">45</param>
+                                                    <param id="1" name="Angle">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="346860251383354" type="BODY">
+                                                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="106023562651772" type="ARMS">
+                                                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5417189583993475">
+                                            <conditions>
+                                                <condition id="-11" name="Is within angle" sid="9984323431623625" type="Indicator">
+                                                    <param id="0" name="Within">45</param>
+                                                    <param id="1" name="Angle">180</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="1642885527109074" type="BODY">
+                                                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="8936776085323459" type="ARMS">
+                                                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="2859176460169673">
                                             <conditions>
                                                 <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="9499019471611611" type="BASE" />
@@ -151,49 +194,6 @@
                                                 </action>
                                                 <action id="5" name="Set frame" sid="4591235899063899" type="BODY">
                                                     <param id="0" name="Frame number">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="4461509764727949">
-                                            <conditions>
-                                                <condition id="0" name="Compare value" sid="8966991451959525" type="Input">
-                                                    <param id="0" name="Key">&quot;Left X&quot;</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                                <condition id="0" name="Compare value" sid="8272070793731606" type="Input">
-                                                    <param id="0" name="Key">&quot;Left Y&quot;</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-22" name="Set angle toward position" sid="1535415310320532" type="Indicator">
-                                                    <param id="0" name="X">self.X+Input.Get(&quot;Left X&quot;)</param>
-                                                    <param id="1" name="Y">self.y+Input.Get(&quot;Left Y&quot;)</param>
-                                                </action>
-                                                <action id="6" name="Set speed" sid="2921068755354739" type="ARMS">
-                                                    <param id="0" name="Speed">BODY.AnimationSpeed</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block any="1" sid="934357347738014">
-                                            <conditions>
-                                                <condition id="0" name="Compare value" sid="4808437787560581" type="Input">
-                                                    <param id="0" name="Key">&quot;Right X&quot;</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                                <condition id="0" name="Compare value" sid="5759585479796646" type="Input">
-                                                    <param id="0" name="Key">&quot;Right Y&quot;</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-22" name="Set angle toward position" sid="6520521091111876" type="Indicator">
-                                                    <param id="0" name="X">self.X+Input.Get(&quot;Right X&quot;)</param>
-                                                    <param id="1" name="Y">self.y+Input.Get(&quot;Right Y&quot;)</param>
                                                 </action>
                                             </actions>
                                         </event-block>

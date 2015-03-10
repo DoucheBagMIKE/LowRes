@@ -19,6 +19,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -1750,6 +1751,10 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Particles" sid="6131563811111799">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -1843,6 +1848,7 @@
                 <member>BASE</member>
                 <member>Bat</member>
                 <member>Bird</member>
+                <member>Dog</member>
                 <member>Item_Pickup</member>
                 <member>Sign</member>
                 <member>Slime</member>
@@ -1851,6 +1857,7 @@
         </family>
         <family name="DRAWSHADOW" plugin-id="Sprite" sid="9297328645158486">
             <members>
+                <member>Dog</member>
                 <member>Grass</member>
                 <member>Item_Pickup</member>
                 <member>PlayerProjectile</member>
@@ -2018,5 +2025,6 @@
         <file-folder name="XML">
             <file name="Texts.xml" />
         </file-folder>
+        <file name="KNOWN_BUGS.txt" />
     </files-folder>
 </c2project>

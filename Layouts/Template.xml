@@ -260,6 +260,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Shadow>SmallHor</Shadow>
                         <StartState>Wait</StartState>
                         <FSM_UID>-1</FSM_UID>
                         <DataUID>-1</DataUID>
