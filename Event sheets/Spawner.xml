@@ -305,9 +305,6 @@
                                                         <condition id="3" inverted="1" name="Has key" sid="7552154427922997" type="GameStats">
                                                             <param id="0" name="Key">ITEM_SPAWNER.DontSpawnIF</param>
                                                         </condition>
-                                                        <condition id="3" inverted="1" name="Has key" sid="7374922602232234" type="GameStats">
-                                                            <param id="0" name="Key">str(ITEM_SPAWNER.UID)</param>
-                                                        </condition>
                                                     </conditions>
                                                     <actions />
                                                     <sub-events>
@@ -342,10 +339,6 @@
                                                                         <action id="4" name="Set animation" sid="389912942497377" type="Item_Pickup">
                                                                             <param id="0" name="Animation">self.Effect</param>
                                                                             <param id="1" name="From">1</param>
-                                                                        </action>
-                                                                        <action id="-10" name="Set value" sid="6871491212138258" type="Item_Pickup">
-                                                                            <param id="0" name="Instance variable">SpawnerUID</param>
-                                                                            <param id="1" name="Value">ITEM_SPAWNER.UID</param>
                                                                         </action>
                                                                         <action id="-13" name="Set boolean" sid="7821172155475964" type="ITEM_SPAWNER">
                                                                             <param id="0" name="Instance variable">Loaded</param>
@@ -401,8 +394,8 @@
                                                                             <param id="0" name="Animation">self.Effect</param>
                                                                             <param id="1" name="From">1</param>
                                                                         </action>
-                                                                        <action id="-10" name="Set value" sid="5705651315622378" type="Item_Pickup">
-                                                                            <param id="0" name="Instance variable">SpawnerUID</param>
+                                                                        <action id="-10" name="Set value" sid="6871491212138258" type="Item_Pickup">
+                                                                            <param id="0" name="Instance variable">SpawnerID</param>
                                                                             <param id="1" name="Value">ITEM_SPAWNER.UID</param>
                                                                         </action>
                                                                         <action id="-13" name="Set boolean" sid="9716996076951962" type="ITEM_SPAWNER">

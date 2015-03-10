@@ -10,8 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Main</layout>
-        <layout active="1" order="1">Template</layout>
+        <layout active="1" order="0">Main</layout>
+        <layout order="1">Template</layout>
+        <event-sheet order="2">Enemys</event-sheet>
+        <event-sheet order="3">Interactive</event-sheet>
+        <event-sheet order="4">Spawner</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -19,7 +22,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="Traps" />
         <family expanded="0" name="Enemies" />
         <family expanded="0" name="Interactive" />
@@ -36,9 +39,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/PLAYER/" />
         <folder expanded="0" path="object-folder/ENEMY/" />
-        <folder expanded="0" path="object-folder/LEVEL/" />
+        <folder expanded="1" path="object-folder/LEVEL/" />
         <folder expanded="1" path="object-folder/LEVEL/TileMaps/" />
-        <folder expanded="0" path="object-folder/LEVEL/CreatedAtRuntime/" />
+        <folder expanded="1" path="object-folder/LEVEL/CreatedAtRuntime/" />
         <folder expanded="0" path="object-folder/LEVEL/PlaceableInEditor/" />
         <folder expanded="0" path="object-folder/LEVEL/PlaceableInEditor/Traps/" />
         <folder expanded="0" path="object-folder/SPAWNER/" />
@@ -47,7 +50,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Inputs/" />
         <folder expanded="0" path="object-folder/Inventory/" />
         <folder expanded="0" path="object-folder/XML/" />
-        <folder expanded="1" path="object-folder/NPC/" />
+        <folder expanded="0" path="object-folder/NPC/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="0" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />

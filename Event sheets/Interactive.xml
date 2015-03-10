@@ -254,9 +254,9 @@
                                         <action id="-9" name="Destroy" sid="4765503668179263" type="Interactive" />
                                     </actions>
                                 </event-block>
-                                <event-block sid="4416435325847683">
+                                <event-block sid="317789035970059">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="548066616619703" type="System" />
+                                        <condition id="-22" name="Else" sid="599584454085667" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="1" name="Set key" sid="6318757831393877" type="GameStats">
@@ -264,7 +264,7 @@
                                             <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) + 1</param>
                                         </action>
                                         <action id="0" name="Add key" sid="8921796203565228" type="GameStats">
-                                            <param id="0" name="Key">&quot;Has_Key_&quot;&amp;str(Item_Pickup.SpawnerUID)</param>
+                                            <param id="0" name="Key">&quot;Has_Key_&quot;&amp;str(Interactive.SpawnerID)</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="4721161247642757" type="Interactive" />

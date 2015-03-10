@@ -1048,6 +1048,52 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="2294917800348124">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="9529301858744432" type="Enemies">
+                                            <param id="0" name="Instance variable">Projectile</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="1130323670721106" type="Melee_Hitbox">
+                                            <param id="0" name="Instance variable">Damage</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="4381693573068636" type="Camera">
+                                            <param id="0" name="Magnitude">2</param>
+                                            <param id="1" name="Duration">0.2</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                        <action behavior="Flash" id="0" name="Flash" sid="7178981832358672" type="Enemies">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">0.3</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="7268739255700497" type="Enemies">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="25" name="Play at object" sid="6117924635128971" type="Audio">
+                                            <param id="0" name="Audio file">hit</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">random(-20,-15)</param>
+                                            <param id="3" name="Object">Enemies</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;Hit&quot;</param>
+                                        </action>
+                                        <action id="5" name="Set playback rate" sid="1696668363477471" type="Audio">
+                                            <param id="0" name="Tag">&quot;Hit&quot;</param>
+                                            <param id="1" name="Playback rate">1.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="5784110810342405" type="Function">
+                                            <param id="0" name="Name">&quot;HitCollide&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="7152683401569774">

@@ -203,10 +203,10 @@
                         <Pushable>false</Pushable>
                         <Pushed>false</Pushed>
                         <Effect>Sword</Effect>
+                        <SpawnerID>0</SpawnerID>
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
-                        <SpawnerUID>-1</SpawnerUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -3143,6 +3143,7 @@
                         <Pushable>false</Pushable>
                         <Pushed>false</Pushed>
                         <Effect>Push</Effect>
+                        <SpawnerID>0</SpawnerID>
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
@@ -4492,6 +4493,7 @@
                         <Pushable>false</Pushable>
                         <Pushed>false</Pushed>
                         <Effect>Slow</Effect>
+                        <SpawnerID>0</SpawnerID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -4534,6 +4536,7 @@
                         <Pushable>false</Pushable>
                         <Pushed>false</Pushed>
                         <Effect>Cut</Effect>
+                        <SpawnerID>0</SpawnerID>
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
