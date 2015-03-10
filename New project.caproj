@@ -1687,6 +1687,9 @@
                 </effects>
                 <texture />
             </object-type>
+            <object-type global="1" name="ItemDesc" sid="4828113227630351">
+                <plugin id="Dictionary" />
+            </object-type>
         </object-folder>
         <object-folder name="XML">
             <object-type global="1" name="TextData" sid="5789260471769958">
@@ -1694,6 +1697,27 @@
             </object-type>
             <object-type name="AJAX" sid="413392805654653">
                 <plugin id="AJAX" />
+            </object-type>
+        </object-folder>
+        <object-folder name="NPC">
+            <object-type name="Dog" sid="4122861944462838">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297824890208147" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="FSM" sid="3427646181992217">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="NPCData" sid="5478509479694992">
+                <plugin id="Dictionary" />
             </object-type>
         </object-folder>
         <object-type name="WebStorage" sid="1510269620771624">
@@ -1711,34 +1735,12 @@
         <object-type global="1" name="GameStats" sid="9822200618570486">
             <plugin id="Dictionary" />
         </object-type>
-        <object-type global="1" name="ItemDesc" sid="4828113227630351">
-            <plugin id="Dictionary" />
-        </object-type>
         <object-type global="1" name="Input" sid="2277810218523974">
             <plugin id="Dictionary" />
             <instance-variables>
                 <instance-variable name="Button1" sid="7375338461505978" type="string" />
                 <instance-variable name="Button2" sid="611695509605831" type="string" />
             </instance-variables>
-        </object-type>
-        <object-type global="1" name="FSM" sid="3427646181992217">
-            <plugin id="Arr" />
-        </object-type>
-        <object-type name="Dog" sid="4122861944462838">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297824890208147" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="1" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="1" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type global="1" name="NPCData" sid="5478509479694992">
-            <plugin id="Dictionary" />
         </object-type>
         <object-type global="1" name="DoorData" sid="9533038479754913">
             <plugin id="Dictionary" />
@@ -1887,6 +1889,7 @@
                 <member>ProjectileTrap</member>
                 <member>Rock</member>
                 <member>Sign</member>
+                <member>Sprite2</member>
             </members>
             <behaviors>
                 <behavior-type name="Solid2" sid="3427437807947409">
@@ -1925,7 +1928,8 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Main.xml</layout>
+        <layout>Template.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>

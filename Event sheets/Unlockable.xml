@@ -16,7 +16,7 @@
             <sub-events>
                 <event-block sid="1569104713440724">
                     <conditions>
-                        <condition id="3" name="Compare frame" sid="3280299418662274" type="Door">
+                        <condition id="3" name="Compare frame" sid="3280299418662274" type="Unlockable">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Number">0</param>
                         </condition>
@@ -50,12 +50,12 @@
                         <event-block sid="1541181085035487">
                             <conditions />
                             <actions>
-                                <action id="1" name="Set return value" sid="8802354278176099" type="Function">
-                                    <param id="0" name="Value">1</param>
-                                </action>
                                 <action id="0" name="Call function" sid="3029352781677113" type="Function">
                                     <param id="0" name="Name">&quot;On_Unlocked&quot;&amp;Unlockable.On_Unlocked</param>
-                                    <param id="1" name="Parameter {n}">Unlockable.Params</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Unlockable.Params</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="8802354278176099" type="Function">
+                                    <param id="0" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
