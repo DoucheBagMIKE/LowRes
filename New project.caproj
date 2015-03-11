@@ -49,7 +49,7 @@
         <height>176</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <preview-effects>0</preview-effects>
+    <preview-effects>1</preview-effects>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
@@ -70,6 +70,11 @@
         <object-folder name="PLAYER">
             <object-type name="ARMS" sid="2609941478050652">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="4647922769414468">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>BASE</type>
                     <type>BODY</type>
@@ -374,10 +379,14 @@
                     <instance-variable name="AttackTimer" sid="3016915589133092" type="number" />
                     <instance-variable name="MaxSpd" sid="8286792036496361" type="number" />
                     <instance-variable name="Decel" sid="4544444062373281" type="number" />
+                    <instance-variable name="Hurt" sid="3241880360051007" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="8Direction" sid="1349255795833973">
                         <behavior id="EightDir" />
+                    </behavior-type>
+                    <behavior-type name="Knockback" sid="6827987203639151">
+                        <behavior id="custom" />
                     </behavior-type>
                 </behaviors>
                 <container>
@@ -402,6 +411,11 @@
             </object-type>
             <object-type name="BODY" sid="9158598947869333">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="4511815939384238">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
                 <container>
                     <type>BASE</type>
                     <type>BODY</type>
@@ -1788,6 +1802,8 @@
                 <instance-variable name="Timer" sid="7507683695800306" type="number" />
                 <instance-variable name="playedsound" sid="3555448043731303" type="boolean" />
                 <instance-variable name="Flying" sid="3583241189358475" type="boolean" />
+                <instance-variable name="Damage" sid="8304317960648423" type="number" />
+                <instance-variable name="KnockbackAmount" sid="4758494175986432" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Knockback" sid="5869555695933761">
@@ -1957,6 +1973,7 @@
         <event-sheet>FiniteStateMachine.xml</event-sheet>
         <event-sheet>Save-Load.xml</event-sheet>
         <event-sheet>Unlockable.xml</event-sheet>
+        <event-sheet>GUI.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />

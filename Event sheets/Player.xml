@@ -5,6 +5,95 @@
     <events>
         <event-group description="" sid="8712854156304718" title="Player2">
             <sub-events>
+                <event-group description="" sid="3931052107261758" title="GettingHurt">
+                    <sub-events>
+                        <event-block sid="1351658325213872">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="4546133333791646" type="BASE">
+                                    <param id="0" name="Object">Enemies</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5987847614108686" type="Enemies">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6476108895040624" type="BASE">
+                                    <param id="0" name="Instance variable">Hurt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5810621070179113" type="Function">
+                                    <param id="0" name="Name">&quot;Hurt_Player&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.Damage{###}Enemies.KnockbackAmount{###}angle(enemies.X,enemies.Y,base.X,base.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7304622519992358">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="6850857885920087" type="BASE">
+                                    <param id="0" name="Object">SpikeTrap</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="6594917623227488" type="SpikeTrap">
+                                    <param id="0" name="Animation">&quot;Up&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8176004194094329" type="BASE">
+                                    <param id="0" name="Instance variable">Hurt</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2567020440168967" type="Function">
+                                    <param id="0" name="Name">&quot;Hurt_Player&quot;</param>
+                                    <param id="1" name="Parameter {n}">1{###}32{###}angle(SpikeTrap.X,SpikeTrap.Y,base.X,base.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="479356092734397">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9837337876942361" type="Function">
+                                    <param id="0" name="Name">&quot;Hurt_Player&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="23932921984607" type="BASE">
+                                    <param id="0" name="Instance variable">Hurt</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Set key" sid="5266039995810576" type="GameStats">
+                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                    <param id="1" name="Value">GameStats.Get(&quot;CurHP&quot;)-(Function.Param(0))</param>
+                                </action>
+                                <action behavior="Knockback" id="2" name="Set speed" sid="7325574232425356" type="BASE">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">function.Param(1)</param>
+                                </action>
+                                <action behavior="Knockback" id="6" name="Set angle of motion" sid="7938825964382066" type="BASE">
+                                    <param id="0" name="Angle">function.Param(2)</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="7823832243761833" type="ARMS">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">0.25</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="1300996146446449" type="BODY">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">0.25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8455412783887966">
+                            <conditions>
+                                <condition behavior="Flash" id="1" name="On flash ended" sid="9827570061442336" type="BODY" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="2697793953028707" type="BASE">
+                                    <param id="0" name="Instance variable">Hurt</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="442916737781929" title="Movement2">
                     <sub-events>
                         <event-block sid="8711682803796464">
@@ -203,9 +292,6 @@
                                                 <action id="5" name="Set frame" sid="3385912384282886" type="ARMS">
                                                     <param id="0" name="Frame number">BODY.AnimationFrame</param>
                                                 </action>
-                                                <action id="-15" name="Set visible" sid="6909800739429775" type="ARMS">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
                                                 <action behavior="8Direction" id="4" name="Set max speed" sid="4676557220410425" type="BASE">
                                                     <param id="0" name="Max Speed">self.MaxSpd</param>
                                                 </action>
@@ -213,6 +299,20 @@
                                                     <param id="0" name="Deceleration">self.Decel</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="4199177245239605">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8677676721898893" type="BASE">
+                                                            <param id="0" name="Instance variable">Hurt</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="6909800739429775" type="ARMS">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -298,6 +398,92 @@
                                         <action id="-13" name="Set boolean" sid="1314032288821491" type="BASE">
                                             <param id="0" name="Instance variable">attacking</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8235169240122939">
+                            <conditions>
+                                <condition behavior="Knockback" id="1" name="Compare speed" sid="3379649777057469" type="BASE">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Knockback" id="2" name="Set speed" sid="9344611750435806" type="BASE">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">self.Knockback.Speed-(dt*(self.Decel/2))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8660353024604717">
+                                    <conditions>
+                                        <condition behavior="Knockback" id="1" name="Compare speed" sid="2822940433472052" type="BASE">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Speed">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Knockback" id="2" name="Set speed" sid="1014001446475437" type="BASE">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5646547362717087">
+                            <conditions>
+                                <condition behavior="Knockback" id="3" name="On horizontal step" sid="2406929794834987" type="BASE" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5767214028404129">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="5400949773188993" type="BASE">
+                                            <param id="0" name="Object">ObstacleTilemap</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="2167157322038503" type="BASE">
+                                            <param id="0" name="Object">Solid</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Knockback" id="9" name="Stop stepping" sid="7919232183160123" type="BASE">
+                                            <param id="0" name="Position">0</param>
+                                        </action>
+                                        <action behavior="Knockback" id="2" name="Set speed" sid="9085562363317201" type="BASE">
+                                            <param id="0" name="Which">1</param>
+                                            <param id="1" name="Speed">(self.Knockback.dx*-1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8572694795215689">
+                            <conditions>
+                                <condition behavior="Knockback" id="4" name="On vertical step" sid="305091381364671" type="BASE" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5523404424852097">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="2753059118417158" type="BASE">
+                                            <param id="0" name="Object">ObstacleTilemap</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="2067002491138823" type="BASE">
+                                            <param id="0" name="Object">Solid</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Knockback" id="9" name="Stop stepping" sid="5587760247492083" type="BASE">
+                                            <param id="0" name="Position">0</param>
+                                        </action>
+                                        <action behavior="Knockback" id="2" name="Set speed" sid="8662024461902905" type="BASE">
+                                            <param id="0" name="Which">2</param>
+                                            <param id="1" name="Speed">(self.Knockback.dy*-1)</param>
                                         </action>
                                     </actions>
                                 </event-block>

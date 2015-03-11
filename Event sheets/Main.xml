@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <include>GUI</include>
         <include>Xml</include>
         <include>Save-Load</include>
         <include>Z Ordering</include>
@@ -64,6 +65,14 @@
                 <action id="0" name="Add key" sid="7571134731464853" type="GameStats">
                     <param id="0" name="Key">&quot;keys&quot;</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="1156998756379433" type="GameStats">
+                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+                <action id="0" name="Add key" sid="2146797736316446" type="GameStats">
+                    <param id="0" name="Key">&quot;MaxHP&quot;</param>
+                    <param id="1" name="Value">6</param>
                 </action>
             </actions>
         </event-block>

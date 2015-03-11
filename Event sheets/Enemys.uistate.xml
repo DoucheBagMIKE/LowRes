@@ -26,6 +26,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event collapsed="1" sid="7794962031025877" />
         <event collapsed="1" sid="1362290370859171" />
         <event collapsed="1" sid="7904725990849584" />
+        <event collapsed="1" sid="9368859888284801" />
+        <event collapsed="1" sid="3958406933829005" />
+        <event collapsed="1" sid="6411888629865854" />
         <event collapsed="1" sid="2337896447488479" />
     </events>
 </c2uistate>
