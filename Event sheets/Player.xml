@@ -72,12 +72,12 @@
                                 <action behavior="Flash" id="0" name="Flash" sid="7823832243761833" type="ARMS">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.25</param>
+                                    <param id="2" name="Duration">0.5</param>
                                 </action>
                                 <action behavior="Flash" id="0" name="Flash" sid="1300996146446449" type="BODY">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.25</param>
+                                    <param id="2" name="Duration">0.5</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -414,7 +414,7 @@
                             <actions>
                                 <action behavior="Knockback" id="2" name="Set speed" sid="9344611750435806" type="BASE">
                                     <param id="0" name="Which">0</param>
-                                    <param id="1" name="Speed">self.Knockback.Speed-(dt*(self.Decel/2))</param>
+                                    <param id="1" name="Speed">self.Knockback.Speed-(dt*(self.Decel/4))</param>
                                 </action>
                             </actions>
                             <sub-events>

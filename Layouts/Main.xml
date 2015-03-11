@@ -1379,7 +1379,7 @@
                         <playedsound>false</playedsound>
                         <Flying>true</Flying>
                         <Damage>1</Damage>
-                        <KnockbackAmount>128</KnockbackAmount>
+                        <KnockbackAmount>64</KnockbackAmount>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -3702,7 +3702,7 @@
                         <playedsound>false</playedsound>
                         <Flying>false</Flying>
                         <Damage>1</Damage>
-                        <KnockbackAmount>128</KnockbackAmount>
+                        <KnockbackAmount>80</KnockbackAmount>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -3804,7 +3804,7 @@
                         <playedsound>false</playedsound>
                         <Flying>false</Flying>
                         <Damage>1</Damage>
-                        <KnockbackAmount>128</KnockbackAmount>
+                        <KnockbackAmount>80</KnockbackAmount>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -4180,7 +4180,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-4</x>
+                        <x>188</x>
                         <y>-28</y>
                         <z>0</z>
                         <width>12</width>
@@ -4391,7 +4391,7 @@
                         <playedsound>false</playedsound>
                         <Flying>true</Flying>
                         <Damage>0</Damage>
-                        <KnockbackAmount>128</KnockbackAmount>
+                        <KnockbackAmount>0</KnockbackAmount>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -5192,7 +5192,7 @@
                         <playedsound>false</playedsound>
                         <Flying>false</Flying>
                         <Damage>1</Damage>
-                        <KnockbackAmount>128</KnockbackAmount>
+                        <KnockbackAmount>80</KnockbackAmount>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
