@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Spawner</name>
     <events>
-        <event-group description="" sid="3044321978302448" title="Spawner2">
+        <event-group description="" sid="3044321978302448" title="Spawner">
             <sub-events>
                 <event-block sid="1345210193030856">
                     <conditions>

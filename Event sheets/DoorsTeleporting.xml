@@ -103,7 +103,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="3927337307007349" title="Teleporting2">
+        <event-group description="" sid="3927337307007349" title="Teleporting">
             <sub-events>
                 <event-block sid="4035436329328783">
                     <conditions>

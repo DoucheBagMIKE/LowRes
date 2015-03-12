@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Pausing</name>
     <events>
-        <event-group description="" sid="7728332732277878" title="Pausing2">
+        <event-group description="" sid="7728332732277878" title="Pausing">
             <sub-events>
                 <event-block sid="9361919348700281">
                     <conditions>
@@ -103,7 +103,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="1855909957611705" title="INV2">
+                <event-group description="" sid="1855909957611705" title="INV">
                     <sub-events>
                         <event-block sid="6913680464022123">
                             <conditions>

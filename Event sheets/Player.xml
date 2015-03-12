@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Player</name>
     <events>
-        <event-group description="" sid="8712854156304718" title="Player2">
+        <event-group description="" sid="8712854156304718" title="Player">
             <sub-events>
                 <event-group description="" sid="3931052107261758" title="GettingHurt">
                     <sub-events>
@@ -94,7 +94,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="442916737781929" title="Movement2">
+                <event-group description="" sid="442916737781929" title="Movement">
                     <sub-events>
                         <event-block sid="8711682803796464">
                             <conditions>
@@ -491,7 +491,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="6447770477649497" title="Attacking2">
+                <event-group description="" sid="6447770477649497" title="Attacking">
                     <sub-events>
                         <event-block sid="4553539429127503">
                             <conditions />

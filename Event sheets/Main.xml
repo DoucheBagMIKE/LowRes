@@ -106,5 +106,23 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="9197733764623268">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7672137396621165" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="4007382030708613" type="Sprite3">
+                    <param id="0" name="Object">Dog</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="9694071930403355" type="Sprite4">
+                    <param id="0" name="Object">Dog</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="8154215236745049" type="Sprite6">
+                    <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

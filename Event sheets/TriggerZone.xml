@@ -15,7 +15,7 @@
             </conditions>
             <actions />
         </event-block>
-        <event-group description="" sid="1687015132733808" title="Triggers2">
+        <event-group description="" sid="1687015132733808" title="Triggers">
             <sub-events>
                 <event-block sid="208354988727665">
                     <conditions>

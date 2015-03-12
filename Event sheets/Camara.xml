@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Camara</name>
     <events>
-        <event-group description="" sid="2400617855604039" title="Camera2">
+        <event-group description="" sid="2400617855604039" title="Camera">
             <sub-events>
                 <event-block sid="9321662628044191">
                     <conditions>

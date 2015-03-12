@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Traps</name>
     <events>
-        <event-group description="" sid="8629667444287655" title="Traps2">
+        <event-group description="" sid="8629667444287655" title="Traps">
             <sub-events>
                 <event-block sid="9960838359772203">
                     <conditions>

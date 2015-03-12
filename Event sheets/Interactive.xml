@@ -3,9 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Interactive</name>
     <events>
-        <event-group description="" sid="2790915214581771" title="Interactive2">
+        <event-group description="" sid="2790915214581771" title="Interactive">
             <sub-events>
-                <event-group description="" sid="3642008264424403" title="Pushable2">
+                <event-group description="" sid="3642008264424403" title="Pushable">
                     <sub-events>
                         <event-block sid="4791793431247857">
                             <conditions>

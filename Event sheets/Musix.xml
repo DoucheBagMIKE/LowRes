@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Musix</name>
     <events>
-        <event-group description="" sid="452935535393927" title="Music/SFX2">
+        <event-group description="" sid="452935535393927" title="Music/SFX">
             <sub-events>
                 <event-block sid="4700972000286918">
                     <conditions>

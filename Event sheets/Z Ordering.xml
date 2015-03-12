@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Z Ordering</name>
     <events>
-        <event-group description="" sid="2539411090981193" title="ZOrdering2">
+        <event-group description="" sid="2539411090981193" title="ZOrdering">
             <sub-events>
                 <event-block sid="4778364325650748">
                     <conditions>

@@ -81,6 +81,10 @@
                     <param id="0" name="Instance variable">Triggered</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="3288845394416201" type="TriggerZone">
+                    <param id="0" name="Instance variable">Triggered</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="3332786982997561">
