@@ -54,9 +54,9 @@
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
-        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
@@ -64,7 +64,7 @@
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
-        <prop name="Use high-DPI display">No</prop>
+        <prop name="Use high-DPI display">Yes</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder>
@@ -1730,10 +1730,7 @@
             <object-type name="Dog" sid="4122861944462838">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297824890208147" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="1" />
-                        </frame>
+                    <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297824890208147" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.5" y="1" />
                         </frame>
@@ -1781,10 +1778,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="Particles" sid="6131563811111799">
-            <plugin id="Particles" />
-            <texture />
         </object-type>
         <object-type name="Sprite3" sid="8595833317171854">
             <plugin id="Sprite" />
@@ -1840,6 +1833,33 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="6815942398335086">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5869854859286819" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.666667">
+                        <collision-poly>
+                            <point x="0" y="0.333333" />
+                            <point x="1" y="0.333333" />
+                            <point x="1" y="0.666667" />
+                            <point x="0" y="0.666667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GHOST_PARTICLE" sid="3545224410965443">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="SMOKE_PARTICLE" sid="1638066892447142">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="FIRE_PARTICLE" sid="7655102457303822">
+            <plugin id="Particles" />
+            <texture />
         </object-type>
     </object-folder>
     <families>
