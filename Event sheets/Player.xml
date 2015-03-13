@@ -517,85 +517,116 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="7933978694982564">
+                        <event-block sid="124611545208474">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="8884223296123364" type="Input">
-                                    <param id="0" name="Key">&quot;Button 1&quot;</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="1" name="Is overlapping another object" sid="1010062187718931" type="BASE">
+                                    <param id="0" name="Object">TriggerZone</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="7519167180325177" type="Input">
-                                    <param id="0" name="Instance variable">Button1</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Released&quot;</param>
+                                <condition id="-8" name="Compare two values" sid="3910970254657484" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Buttons&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
-                            <sub-events>
-                                <event-block sid="7646738147498115">
-                                    <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1629694473826358" type="BASE">
-                                            <param id="0" name="Instance variable">attacking</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="670377580412718" type="BASE">
-                                            <param id="0" name="Instance variable">AttackTimer</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="4603775469817013" type="System">
-                                            <param id="0" name="Variable">Pause</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                        <condition id="-9" inverted="1" name="Is visible" sid="5321888104881586" type="TextBox" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="9505265714622845" type="Function">
-                                            <param id="0" name="Name">Input.Button1&amp;&quot;_&quot;&amp;GameStats.Get(&quot;Item1&quot;)</param>
-                                            <param id="1" name="Parameter {n}">BODY.AnimationName</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
-                        <event-block any="1" sid="3776432020980248">
+                        <event-block sid="8739076744730789">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="5820592841268093" type="Input">
-                                    <param id="0" name="Key">&quot;Button 2&quot;</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="1923833171578885" type="Input">
-                                    <param id="0" name="Instance variable">Button2</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Released&quot;</param>
-                                </condition>
+                                <condition id="-22" name="Else" sid="9695236002795407" type="System" />
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="724143675488892">
+                                <event-block any="1" sid="7933978694982564">
                                     <conditions>
-                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9658495792198131" type="BASE">
-                                            <param id="0" name="Instance variable">attacking</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="6608108548047529" type="BASE">
-                                            <param id="0" name="Instance variable">AttackTimer</param>
-                                            <param id="1" name="Comparison">3</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                        <condition id="-14" name="Compare variable" sid="1942910603457759" type="System">
-                                            <param id="0" name="Variable">Pause</param>
+                                        <condition id="-7" name="Compare instance variable" sid="5377268347752" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
                                         </condition>
-                                        <condition id="-9" inverted="1" name="Is visible" sid="4261530216832591" type="TextBox" />
+                                        <condition id="-7" name="Compare instance variable" sid="8884223296123364" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="7519167180325177" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Released&quot;</param>
+                                        </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Call function" sid="4640292714058279" type="Function">
-                                            <param id="0" name="Name">Input.Button2&amp;&quot;_&quot;&amp;GameStats.Get(&quot;Item2&quot;)</param>
-                                            <param id="1" name="Parameter {n}">BODY.AnimationName</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7646738147498115">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1629694473826358" type="BASE">
+                                                    <param id="0" name="Instance variable">attacking</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="670377580412718" type="BASE">
+                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="4603775469817013" type="System">
+                                                    <param id="0" name="Variable">Pause</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-9" inverted="1" name="Is visible" sid="5321888104881586" type="TextBox" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="9505265714622845" type="Function">
+                                                    <param id="0" name="Name">Input.Button1&amp;&quot;_&quot;&amp;GameStats.Get(&quot;Item1&quot;)</param>
+                                                    <param id="1" name="Parameter {n}">BODY.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block any="1" sid="3776432020980248">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1923833171578885" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="79813267350987" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="7279917987137498" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Released&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="724143675488892">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9658495792198131" type="BASE">
+                                                    <param id="0" name="Instance variable">attacking</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="6608108548047529" type="BASE">
+                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="1942910603457759" type="System">
+                                                    <param id="0" name="Variable">Pause</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-9" inverted="1" name="Is visible" sid="4261530216832591" type="TextBox" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="4640292714058279" type="Function">
+                                                    <param id="0" name="Name">Input.Button2&amp;&quot;_&quot;&amp;GameStats.Get(&quot;Item2&quot;)</param>
+                                                    <param id="1" name="Parameter {n}">BODY.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

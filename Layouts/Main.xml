@@ -5333,9 +5333,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>680</x>
-                        <y>472</y>
+                        <y>471</y>
                         <z>0</z>
-                        <width>4</width>
+                        <width>8</width>
                         <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

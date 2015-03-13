@@ -11,7 +11,11 @@
                 <condition id="-9" inverted="1" name="Is visible" sid="7427733712456946" type="TextBox" />
             </conditions>
             <actions>
-                <action disabled="1" id="-13" name="Set time scale" sid="9553241010558513" type="System">
+                <action id="-12" name="Set group active" sid="4777694874160128" type="System">
+                    <param id="0" name="Group name">&quot;TextBox Logic&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="9553241010558513" type="System">
                     <param id="0" name="Time scale">0</param>
                 </action>
             </actions>
@@ -76,7 +80,11 @@
                 <condition id="-9" name="Is visible" sid="453521689003204" type="TextBox" />
             </conditions>
             <actions>
-                <action disabled="1" id="-13" name="Set time scale" sid="3459539198684191" type="System">
+                <action id="-12" name="Set group active" sid="6344160916301226" type="System">
+                    <param id="0" name="Group name">&quot;TextBox Logic&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="3459539198684191" type="System">
                     <param id="0" name="Time scale">1.0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="8489594680091262" type="TextBox">
@@ -106,7 +114,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="1971498408542362" title="TextBox Logic">
+        <event-group description="" inactive="1" sid="1971498408542362" title="TextBox Logic">
             <sub-events>
                 <event-block sid="9486414476080938">
                     <conditions>

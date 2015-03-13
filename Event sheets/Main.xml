@@ -6,8 +6,10 @@
         <include>GUI</include>
         <include>Xml</include>
         <include>Save-Load</include>
-        <include>Z Ordering</include>
         <include>Input</include>
+        <include>Z Ordering</include>
+        <include>TriggerZone</include>
+        <include>TextBox</include>
         <include>Player</include>
         <include>Interactive</include>
         <include>Enemys</include>
@@ -15,8 +17,6 @@
         <include>Camara</include>
         <include>Spawner</include>
         <include>Traps</include>
-        <include>TriggerZone</include>
-        <include>TextBox</include>
         <include>Unlockable</include>
         <include>DoorsTeleporting</include>
         <include>Item Functions</include>
