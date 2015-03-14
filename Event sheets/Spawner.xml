@@ -274,6 +274,169 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="5160307150415759">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8796092302901645" type="PARTICLE_SPAWNER">
+                                    <param id="0" name="Instance variable">Zone</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">CurZone</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9585680359030699">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8345960853779382" type="PARTICLE_SPAWNER">
+                                            <param id="0" name="Instance variable">Loaded</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="6055849336034438">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="6536554601017281" type="System">
+                                                    <param id="0" name="Object">PARTICLE_SPAWNER</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="1475592704760142">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="2864360219775825" type="PARTICLE_SPAWNER">
+                                                            <param id="0" name="Instance variable">Spawn</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;SMOKE&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="6399252045106062" type="PARTICLE_SPAWNER">
+                                                            <param id="0" name="Object">SMOKE_PARTICLE</param>
+                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="9942834814138747" type="SMOKE_PARTICLE">
+                                                            <param id="0" name="Instance variable">Zone</param>
+                                                            <param id="1" name="Value">PARTICLE_SPAWNER.Zone</param>
+                                                        </action>
+                                                        <action id="-8" name="Set angle" sid="2698186724970664" type="SMOKE_PARTICLE">
+                                                            <param id="0" name="Angle">PARTICLE_SPAWNER.SetANG</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="4349678688786751" type="PARTICLE_SPAWNER">
+                                                            <param id="0" name="Instance variable">Loaded</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="107287621436298">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="3311498739596702" type="PARTICLE_SPAWNER">
+                                                            <param id="0" name="Instance variable">Spawn</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;FIRE&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="6865720606462982" type="PARTICLE_SPAWNER">
+                                                            <param id="0" name="Object">FIRE_PARTICLE</param>
+                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="2086048927341285" type="FIRE_PARTICLE">
+                                                            <param id="0" name="Instance variable">Zone</param>
+                                                            <param id="1" name="Value">PARTICLE_SPAWNER.Zone</param>
+                                                        </action>
+                                                        <action id="-8" name="Set angle" sid="7561138336407996" type="FIRE_PARTICLE">
+                                                            <param id="0" name="Angle">PARTICLE_SPAWNER.SetANG</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="6104805849034286" type="PARTICLE_SPAWNER">
+                                                            <param id="0" name="Instance variable">Loaded</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6671089819701346">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5325938882236912" type="LIGHT_SPAWNER">
+                                    <param id="0" name="Instance variable">Zone</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">CurZone</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2808436978599688">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5005007869084042" type="LIGHT_SPAWNER">
+                                            <param id="0" name="Instance variable">Loaded</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2658336448954987">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="3810097219000401" type="System">
+                                                    <param id="0" name="Object">LIGHT_SPAWNER</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="5439823463374023">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="776669887505689" type="LIGHT_SPAWNER">
+                                                            <param id="0" name="Object">Light</param>
+                                                            <param id="1" name="Layer">&quot;LIGHTING&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="2611586051167717" type="Light">
+                                                            <param id="0" name="Instance variable">Zone1</param>
+                                                            <param id="1" name="Value">LIGHT_SPAWNER.Zone</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="8193814919446655" type="Light">
+                                                            <param id="0" name="Instance variable">size</param>
+                                                            <param id="1" name="Value">LIGHT_SPAWNER.Size</param>
+                                                        </action>
+                                                        <action id="-7" name="Set size" sid="820596886226231" type="LightColor">
+                                                            <param id="0" name="Width">Light.Width</param>
+                                                            <param id="1" name="Height">Light.Height</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="4650442972167027" type="LightColor">
+                                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">LIGHT_SPAWNER.R</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="9617443261600755" type="LightColor">
+                                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">LIGHT_SPAWNER.G</param>
+                                                        </action>
+                                                        <action id="-28" name="Set effect parameter" sid="9282095061098426" type="LightColor">
+                                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">LIGHT_SPAWNER.B</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="3007571799186147" type="LightColor">
+                                                            <param id="0" name="Instance variable">Zone1</param>
+                                                            <param id="1" name="Value">LIGHT_SPAWNER.Zone</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="6633367619049462" type="LIGHT_SPAWNER">
+                                                            <param id="0" name="Instance variable">Loaded</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="966940351342344">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5303025207575787" type="ITEM_SPAWNER">
@@ -435,9 +598,31 @@
                         <condition id="-8" name="Is boolean instance variable set" sid="8338521937185977" type="Zone">
                             <param id="0" name="Instance variable">Destroy</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7527262551832019" type="Zone">
+                            <param id="0" name="Instance variable">Zone1</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="4391140407945259" type="Zone" />
+                    </actions>
+                </event-block>
+                <event-block sid="7516545160154856">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2583973062756546" type="Particles">
+                            <param id="0" name="Instance variable">Zone</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">CurZone</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8984375822440559" type="Particles">
+                            <param id="0" name="Instance variable">Zone</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1970241662637405" type="Particles" />
                     </actions>
                 </event-block>
                 <event-block sid="5812461427214213">

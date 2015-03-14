@@ -1779,26 +1779,38 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="8595833317171854">
+        <object-type name="Light" sid="8595833317171854">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="FollowUID" sid="981271062576231" type="number" />
+                <instance-variable name="size" sid="2877778926861893" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="5697962313783314">
                     <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>Light</type>
+                <type>LightColor</type>
+            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927331662877883" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite4" sid="8685091990216735">
+        <object-type name="LightColor" sid="8685091990216735">
             <plugin id="Sprite" />
             <effects>
                 <effect-type name="SetColor">
                     <effect id="setcolor" />
                 </effect-type>
             </effects>
+            <container>
+                <type>Light</type>
+                <type>LightColor</type>
+            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="168141801883493" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1860,6 +1872,31 @@
         <object-type name="FIRE_PARTICLE" sid="7655102457303822">
             <plugin id="Particles" />
             <texture />
+        </object-type>
+        <object-type name="PARTICLE_SPAWNER" sid="1456449770212386">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="SetANG" sid="7274958318708435" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6958011028335885" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LIGHT_SPAWNER" sid="2744114634826529">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Size" sid="7394747418695923" type="number" />
+                <instance-variable name="R" sid="6382099749166136" type="number" />
+                <instance-variable name="G" sid="3516027955928754" type="number" />
+                <instance-variable name="B" sid="7897781132585013" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="73918138686705" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -1940,7 +1977,9 @@
             <members>
                 <member>ENEMY_SPAWNER</member>
                 <member>ITEM_SPAWNER</member>
+                <member>LIGHT_SPAWNER</member>
                 <member>OBJECT_SPAWNER</member>
+                <member>PARTICLE_SPAWNER</member>
             </members>
             <instance-variables>
                 <instance-variable name="Zone" sid="3547270543358632" type="number" />
@@ -1984,6 +2023,8 @@
                 <member>EnemyProjectile</member>
                 <member>Grass</member>
                 <member>Item_Pickup</member>
+                <member>Light</member>
+                <member>LightColor</member>
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>
                 <member>Rock</member>
@@ -2038,6 +2079,16 @@
             <instance-variables>
                 <instance-variable comment="Function to call when this object is unlocked." name="On_Unlocked" sid="9933643258076713" type="string" />
                 <instance-variable name="Params" sid="5838128292997966" type="string" />
+            </instance-variables>
+        </family>
+        <family name="Particles" plugin-id="Particles" sid="4566313777666088">
+            <members>
+                <member>FIRE_PARTICLE</member>
+                <member>GHOST_PARTICLE</member>
+                <member>SMOKE_PARTICLE</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Zone" sid="6862358361488897" type="number" />
             </instance-variables>
         </family>
     </families>
