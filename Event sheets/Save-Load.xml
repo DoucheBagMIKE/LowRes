@@ -73,7 +73,6 @@
                 </action>
                 <action id="-9" name="Destroy" sid="3185648966123017" type="Enemies" />
                 <action id="-9" name="Destroy" sid="840761906914766" type="Interactive" />
-                <action id="-9" name="Destroy" sid="8965329597578656" type="Light" />
                 <action id="-13" name="Set boolean" sid="5304914615997167" type="Spawners">
                     <param id="0" name="Instance variable">Loaded</param>
                     <param id="1" name="Value">0</param>
@@ -84,15 +83,6 @@
                 </action>
                 <action id="-13" name="Set boolean" sid="3288845394416201" type="TriggerZone">
                     <param id="0" name="Instance variable">Triggered</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="8170618398776244" type="Particles" />
-                <action id="-13" name="Set boolean" sid="8707972452116644" type="HAS_LIGHT">
-                    <param id="0" name="Instance variable">HasLight</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="7549063220158943" type="HAS_PARTICLE">
-                    <param id="0" name="Instance variable">HasParticle</param>
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>

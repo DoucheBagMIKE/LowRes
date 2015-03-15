@@ -189,7 +189,7 @@
                                                         <action id="25" name="Play at object" sid="9057338631912766" type="Audio">
                                                             <param id="0" name="Audio file">DM-CGS-39</param>
                                                             <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-20,-15)</param>
+                                                            <param id="2" name="Volume">random(-35,-30)</param>
                                                             <param id="3" name="Object">Enemies</param>
                                                             <param id="4" name="Inner angle">360</param>
                                                             <param id="5" name="Outer angle">360</param>
@@ -275,7 +275,7 @@
                                                         <action id="25" name="Play at object" sid="222519236423966" type="Audio">
                                                             <param id="0" name="Audio file">DM-CGS-39</param>
                                                             <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-20,-15)</param>
+                                                            <param id="2" name="Volume">random(-35,-30)</param>
                                                             <param id="3" name="Object">Enemies</param>
                                                             <param id="4" name="Inner angle">360</param>
                                                             <param id="5" name="Outer angle">360</param>
@@ -496,7 +496,7 @@
                                                                 <action id="25" name="Play at object" sid="8331526834765375" type="Audio">
                                                                     <param id="0" name="Audio file">stepdirt_7</param>
                                                                     <param id="1" name="Loop">0</param>
-                                                                    <param id="2" name="Volume">random(-10,-5)</param>
+                                                                    <param id="2" name="Volume">random(-20,-15)</param>
                                                                     <param id="3" name="Object">Enemies</param>
                                                                     <param id="4" name="Inner angle">360</param>
                                                                     <param id="5" name="Outer angle">360</param>
@@ -633,7 +633,7 @@
                                                                 <action id="25" name="Play at object" sid="9369374923306332" type="Audio">
                                                                     <param id="0" name="Audio file">stepdirt_7</param>
                                                                     <param id="1" name="Loop">0</param>
-                                                                    <param id="2" name="Volume">random(-10,-5)</param>
+                                                                    <param id="2" name="Volume">random(-20,-15)</param>
                                                                     <param id="3" name="Object">Enemies</param>
                                                                     <param id="4" name="Inner angle">360</param>
                                                                     <param id="5" name="Outer angle">360</param>
