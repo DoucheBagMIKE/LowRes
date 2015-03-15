@@ -5729,7 +5729,7 @@
                         <Zone>-1</Zone>
                         <FollowUID>-1</FollowUID>
                     </instance-variables>
-                    <blend-mode>1</blend-mode>
+                    <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>704.50579834</x>
@@ -5815,7 +5815,7 @@
                         <Zone>-1</Zone>
                         <FollowUID>-1</FollowUID>
                     </instance-variables>
-                    <blend-mode>1</blend-mode>
+                    <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-76</x>
