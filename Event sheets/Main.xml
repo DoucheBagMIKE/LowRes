@@ -23,6 +23,8 @@
         <include>Spawnable Effects</include>
         <include>Musix</include>
         <include>FiniteStateMachine</include>
+        <include>Particle</include>
+        <include>Light</include>
         <variable constant="0" name="MenuMoved" sid="2498301788833179" static="0" type="number">0</variable>
         <variable constant="0" name="Pause" sid="926908428210607" static="0" type="number">2</variable>
         <variable constant="0" name="LerpSDP" sid="6098572964459686" static="0" type="number">0.1</variable>
@@ -74,10 +76,9 @@
                     <param id="0" name="Key">&quot;MaxHP&quot;</param>
                     <param id="1" name="Value">6</param>
                 </action>
-                <action id="-10" name="Set value" sid="9703746957106113" type="Light">
-                    <param id="0" name="Instance variable">FollowUID</param>
-                    <param id="1" name="Value">GHOST_PARTICLE.UID</param>
-                </action>
+                <action id="-9" name="Destroy" sid="9590643569551772" type="Light" />
+                <action id="-9" name="Destroy" sid="4340293376896861" type="Enemies" />
+                <action id="-9" name="Destroy" sid="4025836781457323" type="Particles" />
             </actions>
             <sub-events>
                 <event-block sid="2423298807149933">
@@ -128,56 +129,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="9197733764623268">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="7672137396621165" type="System" />
-            </conditions>
-            <actions>
-                <action id="-26" name="Move to layer" sid="6887205193775932" type="Light">
-                    <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
-                </action>
-                <action id="-26" name="Move to layer" sid="8154215236745049" type="LightColor">
-                    <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
-                </action>
-                <action id="-4" name="Set position to another object" sid="4609905705629402" type="GHOST_PARTICLE">
-                    <param id="0" name="Object">Dog</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-                <action id="-24" name="Move to top" sid="6958011901734712" type="Dog" />
-                <action id="-7" name="Set size" sid="2956797454174732" type="Light">
-                    <param id="0" name="Width">self.size</param>
-                    <param id="1" name="Height">self.size</param>
-                </action>
-                <action id="-7" name="Set size" sid="7653476178123281" type="LightColor">
-                    <param id="0" name="Width">Light.Width</param>
-                    <param id="1" name="Height">Light.Height</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="1403493710539489">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="417939119858534" type="Light">
-                            <param id="0" name="Instance variable">FollowUID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">GHOST_PARTICLE.UID</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="4007382030708613" type="Light">
-                            <param id="0" name="Object">Dog</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="9694071930403355" type="LightColor">
-                            <param id="0" name="Object">Light</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="3556115924344277" type="Light">
-                            <param id="0" name="Instance variable">size</param>
-                            <param id="1" name="Value">300</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
     </events>
 </c2eventsheet>
