@@ -27,7 +27,7 @@
         <include>Light</include>
         <variable constant="0" name="MenuMoved" sid="2498301788833179" static="0" type="number">0</variable>
         <variable constant="0" name="Pause" sid="926908428210607" static="0" type="number">2</variable>
-        <variable constant="0" name="LerpSDP" sid="6098572964459686" static="0" type="number">0.1</variable>
+        <variable constant="0" name="LerpSDP" sid="6098572964459686" static="0" type="number">0.5</variable>
         <variable constant="0" name="MusicPlaying" sid="3137294078195374" static="0" type="text"></variable>
         <variable constant="0" name="ZoneLoaded" sid="6203516161513996" static="0" type="number">0</variable>
         <variable constant="0" name="ScrolltoX" sid="4387079001928423" static="0" type="number">0</variable>

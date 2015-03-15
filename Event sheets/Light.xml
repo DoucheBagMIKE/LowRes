@@ -28,7 +28,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="8241408378651217" type="Light">
                             <param id="0" name="Instance variable">Zone1</param>
-                            <param id="1" name="Value">-1</param>
+                            <param id="1" name="Value">CurZone</param>
                         </action>
                         <action id="-10" name="Set value" sid="2738406208659915" type="Light">
                             <param id="0" name="Instance variable">size</param>
@@ -64,7 +64,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="2975006418731574" type="LightColor">
                             <param id="0" name="Instance variable">Zone1</param>
-                            <param id="1" name="Value">-1</param>
+                            <param id="1" name="Value">CurZone</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="601824291076417" type="HAS_LIGHT">
                             <param id="0" name="Instance variable">HasLight</param>
@@ -101,6 +101,17 @@
             </conditions>
             <actions>
                 <action id="-24" name="Move to top" sid="6875964828938407" type="Dog" />
+            </actions>
+        </event-block>
+        <event-block sid="7987441272604501">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="1709721070241634" type="HAS_LIGHT" />
+                <condition id="-14" name="Pick by unique ID" sid="1684486468549936" type="Light">
+                    <param id="0" name="Unique ID">HAS_LIGHT.LightUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="649244809720896" type="Light" />
             </actions>
         </event-block>
     </events>

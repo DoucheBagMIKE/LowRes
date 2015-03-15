@@ -65,7 +65,7 @@
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Point</prop>
-        <prop name="Use high-DPI display">Yes</prop>
+        <prop name="Use high-DPI display">No</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder>
@@ -2068,6 +2068,7 @@
         <family name="HAS_LIGHT" plugin-id="Sprite" sid="3092851011930477">
             <members>
                 <member>BASE</member>
+                <member>Bat</member>
                 <member>Dog</member>
             </members>
             <instance-variables>
@@ -2082,6 +2083,7 @@
         </family>
         <family name="HAS_PARTICLE" plugin-id="Sprite" sid="768815608759117">
             <members>
+                <member>Bat</member>
                 <member>Dog</member>
             </members>
             <instance-variables>

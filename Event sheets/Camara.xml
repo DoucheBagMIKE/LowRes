@@ -58,6 +58,10 @@
                                             <param id="0" name="Object">BASE</param>
                                             <param id="1" name="Image point (optional)">0</param>
                                         </action>
+                                        <action id="-13" name="Set boolean" sid="4597651927902163" type="HAS_LIGHT">
+                                            <param id="0" name="Instance variable">HasLight</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="3535387562853547">
