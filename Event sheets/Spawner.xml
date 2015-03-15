@@ -394,6 +394,9 @@
                                                             <param id="1" name="Layer">&quot;LIGHTING&quot;</param>
                                                             <param id="2" name="Image point">0</param>
                                                         </action>
+                                                        <action id="-26" name="Move to layer" sid="6685541661346095" type="Light">
+                                                            <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                                        </action>
                                                         <action id="-10" name="Set value" sid="2611586051167717" type="Light">
                                                             <param id="0" name="Instance variable">Zone1</param>
                                                             <param id="1" name="Value">LIGHT_SPAWNER.Zone</param>
@@ -401,6 +404,12 @@
                                                         <action id="-10" name="Set value" sid="8193814919446655" type="Light">
                                                             <param id="0" name="Instance variable">size</param>
                                                             <param id="1" name="Value">LIGHT_SPAWNER.Size</param>
+                                                        </action>
+                                                        <action id="-16" name="Set opacity" sid="8995225917330207" type="Light">
+                                                            <param id="0" name="Opacity">LIGHT_SPAWNER.LightOpacity</param>
+                                                        </action>
+                                                        <action id="-26" name="Move to layer" sid="5969077659236942" type="LightColor">
+                                                            <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
                                                         </action>
                                                         <action id="-7" name="Set size" sid="820596886226231" type="LightColor">
                                                             <param id="0" name="Width">Light.Width</param>
@@ -420,6 +429,9 @@
                                                             <param id="0" name="Effect">&quot;SetColor&quot;</param>
                                                             <param id="1" name="Parameter index">2</param>
                                                             <param id="2" name="Value">LIGHT_SPAWNER.B</param>
+                                                        </action>
+                                                        <action id="-16" name="Set opacity" sid="6011107075784484" type="LightColor">
+                                                            <param id="0" name="Opacity">LIGHT_SPAWNER.LightOpacity</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="3007571799186147" type="LightColor">
                                                             <param id="0" name="Instance variable">Zone1</param>

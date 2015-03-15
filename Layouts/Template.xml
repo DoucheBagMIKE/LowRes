@@ -219,6 +219,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <HasLight>false</HasLight>
+                        <LightUID>-1</LightUID>
+                        <LightSize>200</LightSize>
+                        <LightOpacity>5</LightOpacity>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>0</B>
                         <attacking>false</attacking>
                         <AttackTimer>-1</AttackTimer>
                         <MaxSpd>0</MaxSpd>
@@ -272,6 +279,16 @@
                         <StartState>Wait</StartState>
                         <FSM_UID>-1</FSM_UID>
                         <DataUID>-1</DataUID>
+                        <HasLight>false</HasLight>
+                        <LightUID>-1</LightUID>
+                        <LightSize>300</LightSize>
+                        <LightOpacity>100</LightOpacity>
+                        <R>0</R>
+                        <G>0</G>
+                        <B>12</B>
+                        <ParticleType>Ghost</ParticleType>
+                        <HasParticle>false</HasParticle>
+                        <ParticleUID>-1</ParticleUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">

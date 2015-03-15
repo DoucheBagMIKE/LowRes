@@ -1817,35 +1817,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite5" sid="2142206419205566">
-            <plugin id="Sprite" />
-            <container>
-                <type>Sprite5</type>
-                <type>Sprite6</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5302868866190211" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite6" sid="5746443542570409">
-            <plugin id="Sprite" />
-            <effects>
-                <effect-type name="SetColor">
-                    <effect id="setcolor" />
-                </effect-type>
-            </effects>
-            <container>
-                <type>Sprite5</type>
-                <type>Sprite6</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4186977489923145" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Sprite7" sid="6815942398335086">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1891,6 +1862,7 @@
                 <instance-variable name="R" sid="6382099749166136" type="number" />
                 <instance-variable name="G" sid="3516027955928754" type="number" />
                 <instance-variable name="B" sid="7897781132585013" type="number" />
+                <instance-variable name="LightOpacity" sid="4985313605105456" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="73918138686705" speed="5">
@@ -2089,6 +2061,32 @@
             </members>
             <instance-variables>
                 <instance-variable name="Zone" sid="6862358361488897" type="number" />
+                <instance-variable name="FollowUID" sid="9492907961595333" type="number" />
+            </instance-variables>
+        </family>
+        <family name="HAS_LIGHT" plugin-id="Sprite" sid="3092851011930477">
+            <members>
+                <member>BASE</member>
+                <member>Dog</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="HasLight" sid="6791342183039563" type="boolean" />
+                <instance-variable name="LightUID" sid="3902476863917325" type="number" />
+                <instance-variable name="LightSize" sid="5539500717092338" type="number" />
+                <instance-variable name="LightOpacity" sid="1878281132453234" type="number" />
+                <instance-variable name="R" sid="9560813832783374" type="number" />
+                <instance-variable name="G" sid="12338595316935" type="number" />
+                <instance-variable name="B" sid="8176258016818749" type="number" />
+            </instance-variables>
+        </family>
+        <family name="HAS_PARTICLE" plugin-id="Sprite" sid="768815608759117">
+            <members>
+                <member>Dog</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="ParticleType" sid="7953337383418355" type="string" />
+                <instance-variable name="HasParticle" sid="7268383014922397" type="boolean" />
+                <instance-variable name="ParticleUID" sid="4372701798442964" type="number" />
             </instance-variables>
         </family>
     </families>
@@ -2118,6 +2116,8 @@
         <event-sheet>Save-Load.xml</event-sheet>
         <event-sheet>Unlockable.xml</event-sheet>
         <event-sheet>GUI.xml</event-sheet>
+        <event-sheet>Light.xml</event-sheet>
+        <event-sheet>Particle.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
@@ -2142,9 +2142,9 @@
                 <panning-model>HRTF</panning-model>
                 <distance-model>Inverse</distance-model>
                 <listener-z-height>200</listener-z-height>
-                <reference-distance>200</reference-distance>
-                <maximum-distance>400</maximum-distance>
-                <roll-off-factor>20</roll-off-factor>
+                <reference-distance>150</reference-distance>
+                <maximum-distance>1000</maximum-distance>
+                <roll-off-factor>75</roll-off-factor>
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="7" />
