@@ -20,12 +20,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="4784248485196705" type="System">
-                            <param id="0" name="Object to create">Explosion</param>
-                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                            <param id="2" name="X">Function.Param(0)</param>
-                            <param id="3" name="Y">Function.Param(1)</param>
-                        </action>
                         <action id="24" name="Play at position" sid="9513027586806835" type="Audio">
                             <param id="0" name="Audio file">DM-CGS-49</param>
                             <param id="1" name="Loop">0</param>
@@ -37,6 +31,18 @@
                             <param id="7" name="Outer angle">360</param>
                             <param id="8" name="Outer gain">360</param>
                             <param id="9" name="Tag (optional)">&quot;Explode&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2467968037375451" type="System">
+                            <param id="0" name="Object to create">ExplodeSmoke_Particle</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4784248485196705" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
                         </action>
                     </actions>
                 </event-block>

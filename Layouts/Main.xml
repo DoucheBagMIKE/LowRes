@@ -1395,10 +1395,10 @@
                         <Destroy>true</Destroy>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
-                        <LightSize>25</LightSize>
-                        <LightOpacity>50</LightOpacity>
-                        <R>10</R>
-                        <G>0</G>
+                        <LightSize>250</LightSize>
+                        <LightOpacity>75</LightOpacity>
+                        <R>7</R>
+                        <G>2</G>
                         <B>0</B>
                         <ParticleType>Fire</ParticleType>
                         <HasParticle>false</HasParticle>
@@ -3411,7 +3411,7 @@
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
                         <LightSize>200</LightSize>
-                        <LightOpacity>5</LightOpacity>
+                        <LightOpacity>25</LightOpacity>
                         <R>0</R>
                         <G>0</G>
                         <B>0</B>
@@ -3444,7 +3444,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>560</x>
+                        <x>548</x>
                         <y>504</y>
                         <z>0</z>
                         <width>12</width>
@@ -5713,14 +5713,14 @@
                 </instance>
                 <instance type="GHOST_PARTICLE" uid="237">
                     <properties>
-                        <rate>64</rate>
+                        <rate>24</rate>
                         <spray-cone>360</spray-cone>
                         <type>Continuous spray</type>
                         <initial-particle-properties></initial-particle-properties>
-                        <speed>0</speed>
+                        <speed>4</speed>
                         <size>6</size>
                         <opacity>100</opacity>
-                        <grow-rate>-6</grow-rate>
+                        <grow-rate>-3</grow-rate>
                         <x-randomiser>0</x-randomiser>
                         <y-randomiser>0</y-randomiser>
                         <speed-randomiser->12</speed-randomiser->
@@ -5739,7 +5739,7 @@
                         <Zone>-1</Zone>
                         <FollowUID>-1</FollowUID>
                     </instance-variables>
-                    <blend-mode>0</blend-mode>
+                    <blend-mode>1</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>704.50579834</x>
@@ -5799,16 +5799,16 @@
                 </instance>
                 <instance type="FIRE_PARTICLE" uid="241">
                     <properties>
-                        <rate>4</rate>
+                        <rate>24</rate>
                         <spray-cone>160</spray-cone>
                         <type>Continuous spray</type>
                         <initial-particle-properties></initial-particle-properties>
                         <speed>0</speed>
                         <size>6</size>
                         <opacity>100</opacity>
-                        <grow-rate>0</grow-rate>
-                        <x-randomiser>1</x-randomiser>
-                        <y-randomiser>1</y-randomiser>
+                        <grow-rate>-6</grow-rate>
+                        <x-randomiser>2</x-randomiser>
+                        <y-randomiser>0</y-randomiser>
                         <speed-randomiser->4</speed-randomiser->
                         <size-randomiser>0</size-randomiser>
                         <grow-rate-randomiser>0</grow-rate-randomiser>
@@ -5818,7 +5818,7 @@
                         <angle-randomiser>0</angle-randomiser>
                         <speed-randomiser>0</speed-randomiser>
                         <opacity-randomiser>0</opacity-randomiser>
-                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <destroy-mode>Timeout expired</destroy-mode>
                         <timeout>1</timeout>
                     </properties>
                     <instance-variables>
@@ -6534,6 +6534,45 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="ExplodeSmoke_Particle" uid="263">
+                    <properties>
+                        <rate>32</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>16</speed>
+                        <size>8</size>
+                        <opacity>100</opacity>
+                        <grow-rate>-4</grow-rate>
+                        <x-randomiser>1</x-randomiser>
+                        <y-randomiser>1</y-randomiser>
+                        <speed-randomiser->48</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-24</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>0</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>0.5</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-188</x>
+                        <y>96</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -6650,7 +6689,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="240">
+                <instance type="LightRay" uid="240">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

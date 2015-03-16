@@ -362,10 +362,10 @@
                             <param id="0" name="Animation">&quot;ShieldRight&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="5184998971640287" type="BASE">
+                        <action id="0" name="Spawn another object" sid="5184998971640287" type="ARMS">
                             <param id="0" name="Object">Melee_Hitbox</param>
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="Image point">1</param>
                         </action>
                         <action id="-8" name="Set angle" sid="1417845518647622" type="Melee_Hitbox">
                             <param id="0" name="Angle">0</param>
@@ -397,10 +397,10 @@
                             <param id="0" name="Animation">&quot;ShieldDown&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="2167859238514257" type="BASE">
+                        <action id="0" name="Spawn another object" sid="2167859238514257" type="ARMS">
                             <param id="0" name="Object">Melee_Hitbox</param>
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="Image point">1</param>
                         </action>
                         <action id="-8" name="Set angle" sid="5390631819622771" type="Melee_Hitbox">
                             <param id="0" name="Angle">90</param>
@@ -432,10 +432,10 @@
                             <param id="0" name="Animation">&quot;ShieldUp&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="9219877176735894" type="BASE">
+                        <action id="0" name="Spawn another object" sid="9219877176735894" type="ARMS">
                             <param id="0" name="Object">Melee_Hitbox</param>
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="Image point">1</param>
                         </action>
                         <action id="-8" name="Set angle" sid="9573705349831955" type="Melee_Hitbox">
                             <param id="0" name="Angle">270</param>
@@ -467,10 +467,10 @@
                             <param id="0" name="Animation">&quot;ShieldLeft&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="7482526385503626" type="BASE">
+                        <action id="0" name="Spawn another object" sid="7482526385503626" type="ARMS">
                             <param id="0" name="Object">Melee_Hitbox</param>
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="Image point">1</param>
                         </action>
                         <action id="-8" name="Set angle" sid="5276850850765945" type="Melee_Hitbox">
                             <param id="0" name="Angle">180</param>

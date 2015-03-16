@@ -131,14 +131,42 @@
                                     <param id="0" name="Where">0</param>
                                     <param id="1" name="Object">BODY</param>
                                 </action>
-                                <action id="-8" name="Set angle" sid="5197161933183446" type="BODY">
-                                    <param id="0" name="Angle">0+(BASE.8Direction.VectorX/7)</param>
-                                </action>
-                                <action id="-8" name="Set angle" sid="1101613288477253" type="ARMS">
-                                    <param id="0" name="Angle">BODY.Angle</param>
-                                </action>
                             </actions>
                             <sub-events>
+                                <event-block sid="6467707918680385">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4640383486506402" type="System">
+                                            <param id="0" name="Variable">Quality</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;low&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="5197161933183446" type="BODY">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="1101613288477253" type="ARMS">
+                                            <param id="0" name="Angle">BODY.Angle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2925133226687316">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9538717398854479" type="System">
+                                            <param id="0" name="Variable">Quality</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;high&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="4973436167959392" type="BODY">
+                                            <param id="0" name="Angle">0+(BASE.8Direction.VectorX/7)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="7404299308554222" type="ARMS">
+                                            <param id="0" name="Angle">BODY.Angle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="2863577550234691">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6205203771813764" type="BASE">

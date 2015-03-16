@@ -312,7 +312,7 @@
                     </animation>
                     <animation framecount="3" loop="0" name="ShieldRight" pingpong="0" repeatcount="1" repeatto="0" sid="8975263522247229" speed="8">
                         <frame duration="1" hotspotX="0.208333" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.541667" y="0.5" />
+                            <image-point name="Imagepoint 1" x="0.25" y="0.5" />
                         </frame>
                         <frame duration="2" hotspotX="0.208333" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.541667" y="0.5" />
@@ -323,7 +323,7 @@
                     </animation>
                     <animation framecount="3" loop="0" name="ShieldLeft" pingpong="0" repeatcount="1" repeatto="0" sid="3802903633065788" speed="8">
                         <frame duration="1" hotspotX="0.791667" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.458333" y="0.5" />
+                            <image-point name="Imagepoint 1" x="0.75" y="0.5" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -352,18 +352,18 @@
                     </animation>
                     <animation framecount="3" loop="0" name="ShieldDown" pingpong="0" repeatcount="1" repeatto="0" sid="8529766429913805" speed="8">
                         <frame duration="1" hotspotX="0.416667" hotspotY="0.208333">
-                            <image-point name="Imagepoint 1" x="0.333333" y="0.541667" />
+                            <image-point name="Imagepoint 1" x="0.375" y="0.291667" />
                         </frame>
                         <frame duration="2" hotspotX="0.416667" hotspotY="0.208333">
-                            <image-point name="Imagepoint 1" x="0.333333" y="0.541667" />
+                            <image-point name="Imagepoint 1" x="0.375" y="0.625" />
                         </frame>
                         <frame duration="1" hotspotX="0.416667" hotspotY="0.208333">
-                            <image-point name="Imagepoint 1" x="0.333333" y="0.541667" />
+                            <image-point name="Imagepoint 1" x="0.375" y="0.625" />
                         </frame>
                     </animation>
                     <animation framecount="3" loop="0" name="ShieldUp" pingpong="0" repeatcount="1" repeatto="0" sid="1214445650176348" speed="8">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.541667" y="0.208333" />
+                            <image-point name="Imagepoint 1" x="0.541667" y="0.375" />
                         </frame>
                         <frame duration="2" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.541667" y="0.208333" />
@@ -1559,6 +1559,32 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="LIGHT_SPAWNER" sid="2744114634826529">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Size" sid="7394747418695923" type="number" />
+                    <instance-variable name="R" sid="6382099749166136" type="number" />
+                    <instance-variable name="G" sid="3516027955928754" type="number" />
+                    <instance-variable name="B" sid="7897781132585013" type="number" />
+                    <instance-variable name="LightOpacity" sid="4985313605105456" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="73918138686705" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PARTICLE_SPAWNER" sid="1456449770212386">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="SetANG" sid="7274958318708435" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6958011028335885" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="CAMERA">
             <object-type name="Camera" sid="5967414008303214">
@@ -1745,6 +1771,64 @@
                 <plugin id="Dictionary" />
             </object-type>
         </object-folder>
+        <object-folder name="Particles">
+            <object-type name="ExplodeSmoke_Particle" sid="2010711909029396">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="FIRE_PARTICLE" sid="7655102457303822">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="SMOKE_PARTICLE" sid="1638066892447142">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="GHOST_PARTICLE" sid="3545224410965443">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Lights">
+            <object-type name="Light" sid="8595833317171854">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="FollowUID" sid="981271062576231" type="number" />
+                    <instance-variable name="size" sid="2877778926861893" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Sine" sid="5697962313783314">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Light</type>
+                    <type>LightColor</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927331662877883" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LightColor" sid="8685091990216735">
+                <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <container>
+                    <type>Light</type>
+                    <type>LightColor</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="168141801883493" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="WebStorage" sid="1510269620771624">
             <plugin id="WebStorage" />
         </object-type>
@@ -1780,45 +1864,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Light" sid="8595833317171854">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="FollowUID" sid="981271062576231" type="number" />
-                <instance-variable name="size" sid="2877778926861893" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Sine" sid="5697962313783314">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>Light</type>
-                <type>LightColor</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927331662877883" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="LightColor" sid="8685091990216735">
-            <plugin id="Sprite" />
-            <effects>
-                <effect-type name="SetColor">
-                    <effect id="setcolor" />
-                </effect-type>
-            </effects>
-            <container>
-                <type>Light</type>
-                <type>LightColor</type>
-            </container>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="168141801883493" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite7" sid="6815942398335086">
+        <object-type name="LightRay" sid="6815942398335086">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5869854859286819" speed="5">
@@ -1830,44 +1876,6 @@
                             <point x="0" y="0.666667" />
                         </collision-poly>
                     </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="GHOST_PARTICLE" sid="3545224410965443">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
-        <object-type name="SMOKE_PARTICLE" sid="1638066892447142">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
-        <object-type name="FIRE_PARTICLE" sid="7655102457303822">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
-        <object-type name="PARTICLE_SPAWNER" sid="1456449770212386">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="SetANG" sid="7274958318708435" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6958011028335885" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="LIGHT_SPAWNER" sid="2744114634826529">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Size" sid="7394747418695923" type="number" />
-                <instance-variable name="R" sid="6382099749166136" type="number" />
-                <instance-variable name="G" sid="3516027955928754" type="number" />
-                <instance-variable name="B" sid="7897781132585013" type="number" />
-                <instance-variable name="LightOpacity" sid="4985313605105456" type="number" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="73918138686705" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

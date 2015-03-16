@@ -222,7 +222,7 @@
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
                         <LightSize>200</LightSize>
-                        <LightOpacity>5</LightOpacity>
+                        <LightOpacity>10</LightOpacity>
                         <R>0</R>
                         <G>0</G>
                         <B>0</B>
