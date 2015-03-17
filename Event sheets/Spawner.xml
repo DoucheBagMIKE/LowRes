@@ -160,6 +160,36 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
+                                                <event-block sid="9996093922768989">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="3079932783365587" type="ENEMY_SPAWNER">
+                                                            <param id="0" name="Instance variable">Spawn</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;mage&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Spawn another object" sid="9855183763977451" type="ENEMY_SPAWNER">
+                                                            <param id="0" name="Object">Mage</param>
+                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="9975296823068526" type="Mage">
+                                                            <param id="0" name="Instance variable">Zone1</param>
+                                                            <param id="1" name="Value">ENEMY_SPAWNER.Zone</param>
+                                                        </action>
+                                                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="1291976414862386" type="Mage">
+                                                            <param id="0" name="Obstacle">ObstacleTilemap</param>
+                                                        </action>
+                                                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="3519718757076606" type="Mage">
+                                                            <param id="0" name="Obstacle">Rock</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="3058157988235299" type="ENEMY_SPAWNER">
+                                                            <param id="0" name="Instance variable">Loaded</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
                                             </sub-events>
                                         </event-block>
                                     </sub-events>

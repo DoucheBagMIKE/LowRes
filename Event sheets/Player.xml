@@ -27,6 +27,18 @@
                                     <param id="1" name="Parameter {n}">Enemies.Damage{###}Enemies.KnockbackAmount{###}angle(enemies.X,enemies.Y,base.X,base.Y)</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="9417527191537294">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="7039010551621998" type="Enemies">
+                                            <param id="0" name="Instance variable">Projectile</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="3706511978301877" type="Enemies" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="7304622519992358">
                             <conditions>
