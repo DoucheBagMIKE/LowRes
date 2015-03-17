@@ -1389,6 +1389,7 @@
                         <R>7</R>
                         <G>2</G>
                         <B>0</B>
+                        <drawlight>true</drawlight>
                         <ParticleType>Fire</ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -3404,6 +3405,7 @@
                         <R>0</R>
                         <G>0</G>
                         <B>0</B>
+                        <drawlight>true</drawlight>
                         <ParticleType>mage</ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -3827,6 +3829,14 @@
                         <KnockbackAmount>80</KnockbackAmount>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <HasLight>false</HasLight>
+                        <LightUID>-1</LightUID>
+                        <LightSize>250</LightSize>
+                        <LightOpacity>75</LightOpacity>
+                        <R>7</R>
+                        <G>2</G>
+                        <B>0</B>
+                        <drawlight>false</drawlight>
                         <ParticleType></ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -5557,6 +5567,7 @@
                         <R>0</R>
                         <G>0</G>
                         <B>12</B>
+                        <drawlight>true</drawlight>
                         <ParticleType>Ghost</ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>

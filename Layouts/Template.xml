@@ -226,6 +226,7 @@
                         <R>0</R>
                         <G>0</G>
                         <B>0</B>
+                        <drawlight>true</drawlight>
                         <ParticleType>Fire</ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -289,6 +290,7 @@
                         <R>0</R>
                         <G>0</G>
                         <B>12</B>
+                        <drawlight>true</drawlight>
                         <ParticleType>Ghost</ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>

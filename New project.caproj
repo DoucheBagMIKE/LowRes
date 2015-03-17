@@ -2124,6 +2124,7 @@
                 <member>BASE</member>
                 <member>Bat</member>
                 <member>Dog</member>
+                <member>EnemyProjectile</member>
             </members>
             <instance-variables>
                 <instance-variable name="HasLight" sid="6791342183039563" type="boolean" />
@@ -2133,6 +2134,7 @@
                 <instance-variable name="R" sid="9560813832783374" type="number" />
                 <instance-variable name="G" sid="12338595316935" type="number" />
                 <instance-variable name="B" sid="8176258016818749" type="number" />
+                <instance-variable name="drawlight" sid="1680413116277703" type="boolean" />
             </instance-variables>
         </family>
         <family name="HAS_PARTICLE" plugin-id="Sprite" sid="768815608759117">

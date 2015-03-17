@@ -8,6 +8,9 @@
                 <condition id="-11" name="For Each" sid="9506685311827092" type="System">
                     <param id="0" name="Object">HAS_LIGHT</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="2231445411484548" type="HAS_LIGHT">
+                    <param id="0" name="Instance variable">drawlight</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>

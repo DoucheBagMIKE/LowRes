@@ -785,6 +785,10 @@
                                                             <param id="0" name="Instance variable">enemyuid</param>
                                                             <param id="1" name="Value">Enemies.UID</param>
                                                         </action>
+                                                        <action id="-13" name="Set boolean" sid="6224517446118476" type="EnemyProjectile">
+                                                            <param id="0" name="Instance variable">drawlight</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
                                                     </actions>
                                                 </event-block>
                                                 <event-block sid="9318268902278057">
