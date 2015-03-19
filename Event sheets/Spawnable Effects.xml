@@ -46,15 +46,103 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9666100306887722">
+                <event-block sid="2218828179835329">
                     <conditions>
-                        <condition id="1" name="Compare parameter" sid="6102834706885988" type="Function">
+                        <condition id="1" name="Compare parameter" sid="7915965667531338" type="Function">
                             <param id="0" name="Index">2</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Grass&quot;</param>
+                            <param id="2" name="Value">&quot;FireExplode&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="24" name="Play at position" sid="2951591459559348" type="Audio">
+                            <param id="0" name="Audio file">DM-CGS-49</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">random(-5,0)</param>
+                            <param id="3" name="X">Function.Param(0)</param>
+                            <param id="4" name="Y">Function.Param(1)</param>
+                            <param id="5" name="Angle">360</param>
+                            <param id="6" name="Inner angle">0</param>
+                            <param id="7" name="Outer angle">360</param>
+                            <param id="8" name="Outer gain">360</param>
+                            <param id="9" name="Tag (optional)">&quot;Explode&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="3940474139181714" type="System">
+                            <param id="0" name="Object to create">ExplodeSmoke_Particle</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="3769646343318615" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3223300488695469">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="2691774459905502" type="System">
+                                    <param id="0" name="Count">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8941826222191375" type="System">
+                                    <param id="0" name="Object to create">EnemyProjectile</param>
+                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                    <param id="2" name="X">Function.Param(0)</param>
+                                    <param id="3" name="Y">Function.Param(1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4662411404599312" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">Zone1</param>
+                                    <param id="1" name="Value">CurZone</param>
+                                </action>
+                                <action behavior="Movement" id="2" name="Set speed" sid="1836625613020926" type="EnemyProjectile">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">random(8,64)</param>
+                                </action>
+                                <action behavior="Movement" id="6" name="Set angle of motion" sid="8063996178524071" type="EnemyProjectile">
+                                    <param id="0" name="Angle">random(360)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="376106561470868" type="EnemyProjectile">
+                                    <param id="0" name="Animation">&quot;Firepar&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="1" name="Set blend mode" sid="8418054925490931" type="EnemyProjectile">
+                                    <param id="0" name="Blend mode">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5262085844969395" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">Shadow</param>
+                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2695376327741902" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">ParticleType</param>
+                                    <param id="1" name="Value">&quot;Fire&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4875142557598829" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">enemyuid</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="8530384697621639" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">drawlight</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="9314414576149681" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">Explode</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="2442330983521428" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">Flying</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7069742293289215" type="System">
+                                    <param id="0" name="Seconds">0.4</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1487260111821258" type="EnemyProjectile" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

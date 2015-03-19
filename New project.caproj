@@ -1180,6 +1180,25 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="1" name="ice" pingpong="0" repeatcount="1" repeatto="0" sid="8304455737252773" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.875" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="Firepar" pingpong="0" repeatcount="1" repeatto="0" sid="9242731929709861" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.875" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.875" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Spider" sid="6414842812907998">
@@ -1211,8 +1230,11 @@
             <object-type name="Mage" sid="5316797558092783">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5563634578439021" speed="3">
-                        <frame duration="3" hotspotX="0.5" hotspotY="0.5">
+                    <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="5563634578439021" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -1220,7 +1242,31 @@
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="9421750546836346" speed="5">
-                        <frame duration="3" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Mage2" sid="3556195488468357">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="2323484305795516" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="3018452325465621" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -1942,6 +1988,7 @@
                 <member>Bird</member>
                 <member>EnemyProjectile</member>
                 <member>Mage</member>
+                <member>Mage2</member>
                 <member>Slime</member>
                 <member>Spider</member>
             </members>
@@ -1958,6 +2005,7 @@
                 <instance-variable name="Flying" sid="3583241189358475" type="boolean" />
                 <instance-variable name="Damage" sid="8304317960648423" type="number" />
                 <instance-variable name="KnockbackAmount" sid="4758494175986432" type="number" />
+                <instance-variable name="ProjectileType" sid="5051754548617732" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Knockback" sid="5869555695933761">
@@ -2023,6 +2071,7 @@
                 <member>Dog</member>
                 <member>Item_Pickup</member>
                 <member>Mage</member>
+                <member>Mage2</member>
                 <member>Slime</member>
                 <member>Spider</member>
             </members>
@@ -2052,6 +2101,7 @@
                 <member>Light</member>
                 <member>LightColor</member>
                 <member>Mage</member>
+                <member>Mage2</member>
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>
                 <member>Rock</member>
@@ -2067,6 +2117,7 @@
         </family>
         <family name="Solid" plugin-id="Sprite" sid="1112206093548328">
             <members>
+                <member>Door</member>
                 <member>Grass</member>
                 <member>ProjectileTrap</member>
                 <member>Rock</member>

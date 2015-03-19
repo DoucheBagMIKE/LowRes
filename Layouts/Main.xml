@@ -1380,6 +1380,7 @@
                         <Flying>true</Flying>
                         <Damage>1</Damage>
                         <KnockbackAmount>64</KnockbackAmount>
+                        <ProjectileType></ProjectileType>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <HasLight>false</HasLight>
@@ -3725,6 +3726,7 @@
                         <Flying>false</Flying>
                         <Damage>1</Damage>
                         <KnockbackAmount>80</KnockbackAmount>
+                        <ProjectileType></ProjectileType>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -3827,6 +3829,7 @@
                         <Flying>false</Flying>
                         <Damage>1</Damage>
                         <KnockbackAmount>80</KnockbackAmount>
+                        <ProjectileType></ProjectileType>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <HasLight>false</HasLight>
@@ -4112,6 +4115,11 @@
                         <shake>true</shake>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Solid2">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -4150,6 +4158,11 @@
                         <shake>false</shake>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Solid2">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -4326,7 +4339,7 @@
                     <instance-variables>
                         <Zone>22</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn>Spider</Spawn>
+                        <Spawn>mage</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
@@ -4426,6 +4439,7 @@
                         <Flying>true</Flying>
                         <Damage>0</Damage>
                         <KnockbackAmount>0</KnockbackAmount>
+                        <ProjectileType></ProjectileType>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -5227,6 +5241,7 @@
                         <Flying>false</Flying>
                         <Damage>1</Damage>
                         <KnockbackAmount>80</KnockbackAmount>
+                        <ProjectileType></ProjectileType>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -5825,7 +5840,7 @@
                         <angle-randomiser>0</angle-randomiser>
                         <speed-randomiser>0</speed-randomiser>
                         <opacity-randomiser>0</opacity-randomiser>
-                        <destroy-mode>Timeout expired</destroy-mode>
+                        <destroy-mode>Fade to invisible</destroy-mode>
                         <timeout>1</timeout>
                     </properties>
                     <instance-variables>
@@ -6067,8 +6082,9 @@
                         <Timer>1</Timer>
                         <playedsound>false</playedsound>
                         <Flying>false</Flying>
-                        <Damage>1</Damage>
+                        <Damage>0</Damage>
                         <KnockbackAmount>64</KnockbackAmount>
+                        <ProjectileType>Fireball</ProjectileType>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -6121,7 +6137,80 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ENEMY_SPAWNER" uid="247">
+                <instance type="Mage2" uid="247">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Deceleration>160</Deceleration>
+                        <MovementType>StayDistance</MovementType>
+                        <Shadow>SmallHor</Shadow>
+                        <HP>4</HP>
+                        <Explode>true</Explode>
+                        <Projectile>false</Projectile>
+                        <hit>false</hit>
+                        <Timer>0</Timer>
+                        <playedsound>false</playedsound>
+                        <Flying>false</Flying>
+                        <Damage>0</Damage>
+                        <KnockbackAmount>0</KnockbackAmount>
+                        <ProjectileType>Ice</ProjectileType>
+                        <Zone1>-1</Zone1>
+                        <Destroy>true</Destroy>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Knockback">
+                            <properties>
+                                <stepping-mode>Horizontal then vertical</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Movement">
+                            <properties>
+                                <stepping-mode>Horizontal then vertical</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>300</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-44</x>
+                        <y>44</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ENEMY_SPAWNER" uid="248">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6131,7 +6220,7 @@
                     <instance-variables>
                         <Zone>24</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn>mage</Spawn>
+                        <Spawn>mage2</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
@@ -6139,8 +6228,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>764</x>
-                        <y>524</y>
+                        <x>760</x>
+                        <y>512</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>

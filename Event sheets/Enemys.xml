@@ -85,6 +85,54 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="3252894070329234">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="7051744764275856" type="EnemyProjectile" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3534508100990187">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="1283734783152542" type="EnemyProjectile" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="256147309445517" type="Camera">
+                                            <param id="0" name="Magnitude">4</param>
+                                            <param id="1" name="Duration">0.4</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="4097500000124205">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="9962771134120189" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;fireball&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="8524583571001351" type="Function">
+                                                    <param id="0" name="Name">&quot;Explosion&quot;</param>
+                                                    <param id="1" name="Parameter {n}">EnemyProjectile.X{###}EnemyProjectile.Y{###}&quot;FireExplode&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="8743783076913703">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="304670609523356" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;ice&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="289855164753641" type="Function">
+                                                    <param id="0" name="Name">&quot;Explosion&quot;</param>
+                                                    <param id="1" name="Parameter {n}">EnemyProjectile.X{###}EnemyProjectile.Y{###}&quot;Explode&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="2642646587606484" title="EnemyMovement2">
@@ -738,58 +786,178 @@
                                                             <param id="2" name="Value">0</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="7894320495720666" type="Enemies">
-                                                            <param id="0" name="Animation">&quot;Attack&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="5053376710835387" type="Enemies">
-                                                            <param id="0" name="Instance variable">Timer</param>
-                                                            <param id="1" name="Value">random(2,5)</param>
-                                                        </action>
-                                                        <action id="-16" name="Wait" sid="2132477104137912" type="System">
-                                                            <param id="0" name="Seconds">0.2</param>
-                                                        </action>
-                                                        <action id="0" name="Spawn another object" sid="9646367742040046" type="Enemies">
-                                                            <param id="0" name="Object">EnemyProjectile</param>
-                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                                            <param id="2" name="Image point">0</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="9883053635804546" type="EnemyProjectile">
-                                                            <param id="0" name="Instance variable">Zone1</param>
-                                                            <param id="1" name="Value">CurZone</param>
-                                                        </action>
-                                                        <action behavior="Movement" id="2" name="Set speed" sid="8388934943688127" type="EnemyProjectile">
-                                                            <param id="0" name="Which">0</param>
-                                                            <param id="1" name="Speed">125</param>
-                                                        </action>
-                                                        <action behavior="Movement" id="6" name="Set angle of motion" sid="4332769794630572" type="EnemyProjectile">
-                                                            <param id="0" name="Angle">angle(self.X,self.Y,base.X,base.Y)</param>
-                                                        </action>
-                                                        <action id="4" name="Set animation" sid="5235286726336161" type="EnemyProjectile">
-                                                            <param id="0" name="Animation">&quot;fireball&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                        <action id="1" name="Set blend mode" sid="4995531415649427" type="EnemyProjectile">
-                                                            <param id="0" name="Blend mode">1</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="8516670804496058" type="EnemyProjectile">
-                                                            <param id="0" name="Instance variable">Shadow</param>
-                                                            <param id="1" name="Value">&quot;SmallVer&quot;</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="4331307037410049" type="EnemyProjectile">
-                                                            <param id="0" name="Instance variable">ParticleType</param>
-                                                            <param id="1" name="Value">&quot;Fire&quot;</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="5683407159277055" type="EnemyProjectile">
-                                                            <param id="0" name="Instance variable">enemyuid</param>
-                                                            <param id="1" name="Value">Enemies.UID</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="6224517446118476" type="EnemyProjectile">
-                                                            <param id="0" name="Instance variable">drawlight</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="4674857135350634">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="8461140209452407" type="Enemies">
+                                                                    <param id="0" name="Instance variable">ProjectileType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Fireball&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="5053376710835387" type="Enemies">
+                                                                    <param id="0" name="Instance variable">Timer</param>
+                                                                    <param id="1" name="Value">random(2,4)</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="7894320495720666" type="Enemies">
+                                                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="2132477104137912" type="System">
+                                                                    <param id="0" name="Seconds">0.3</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="9646367742040046" type="Enemies">
+                                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="9883053635804546" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">CurZone</param>
+                                                                </action>
+                                                                <action behavior="Movement" id="2" name="Set speed" sid="8388934943688127" type="EnemyProjectile">
+                                                                    <param id="0" name="Which">0</param>
+                                                                    <param id="1" name="Speed">125</param>
+                                                                </action>
+                                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="4332769794630572" type="EnemyProjectile">
+                                                                    <param id="0" name="Angle">angle(self.X,self.Y,base.X,base.Y)</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="5235286726336161" type="EnemyProjectile">
+                                                                    <param id="0" name="Animation">&quot;fireball&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="1" name="Set blend mode" sid="4995531415649427" type="EnemyProjectile">
+                                                                    <param id="0" name="Blend mode">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="8516670804496058" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="4331307037410049" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">ParticleType</param>
+                                                                    <param id="1" name="Value">&quot;Fire&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="5683407159277055" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                                    <param id="1" name="Value">Enemies.UID</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="6224517446118476" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">drawlight</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="8228637050202594" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">Explode</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="4528099211858885">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="5030874823428197" type="Enemies">
+                                                                    <param id="0" name="Instance variable">ProjectileType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Ice&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="7009069107174007" type="Enemies">
+                                                                    <param id="0" name="Instance variable">Timer</param>
+                                                                    <param id="1" name="Value">random(4,6)</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="289858535269226" type="Enemies">
+                                                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="4701098767836159" type="System">
+                                                                    <param id="0" name="Seconds">0.3</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="4737509018852807" type="Enemies">
+                                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="8481200992306049" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">CurZone</param>
+                                                                </action>
+                                                                <action behavior="Movement" id="2" name="Set speed" sid="6757924210493311" type="EnemyProjectile">
+                                                                    <param id="0" name="Which">0</param>
+                                                                    <param id="1" name="Speed">100</param>
+                                                                </action>
+                                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="5121457472964395" type="EnemyProjectile">
+                                                                    <param id="0" name="Angle">angle(self.X,self.Y,base.X,base.Y)</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="2247403568527462" type="EnemyProjectile">
+                                                                    <param id="0" name="Animation">&quot;ice&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="4951953889837381" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="8338024178994011" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">ParticleType</param>
+                                                                    <param id="1" name="Value">&quot;Ghost&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="7105700595828412" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                                    <param id="1" name="Value">Enemies.UID</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="9092474934125349" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">Explode</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="7938605563105973" type="System">
+                                                                    <param id="0" name="Seconds">0.2</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="7098359715360349" type="Enemies">
+                                                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="8344094004138347" type="System">
+                                                                    <param id="0" name="Seconds">0.3</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="3899222239019268" type="Enemies">
+                                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="5818239635086057" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">CurZone</param>
+                                                                </action>
+                                                                <action behavior="Movement" id="2" name="Set speed" sid="5694620520360289" type="EnemyProjectile">
+                                                                    <param id="0" name="Which">0</param>
+                                                                    <param id="1" name="Speed">100</param>
+                                                                </action>
+                                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="558498033581882" type="EnemyProjectile">
+                                                                    <param id="0" name="Angle">angle(self.X,self.Y,base.X,base.Y)</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="4429363067985605" type="EnemyProjectile">
+                                                                    <param id="0" name="Animation">&quot;ice&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="7499966057852864" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="9457745938411528" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">ParticleType</param>
+                                                                    <param id="1" name="Value">&quot;Ghost&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="484151914884861" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                                    <param id="1" name="Value">Enemies.UID</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="1404604564086969" type="EnemyProjectile">
+                                                                    <param id="0" name="Instance variable">Explode</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                                 <event-block sid="9318268902278057">
                                                     <conditions>
@@ -1441,6 +1609,7 @@
                                     <param id="0" name="Instance variable">HP</param>
                                     <param id="1" name="Value">EnemyProjectile.Damage</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="3341759793684118" type="EnemyProjectile" />
                             </actions>
                             <sub-events>
                                 <event-block sid="2858467982386624">
