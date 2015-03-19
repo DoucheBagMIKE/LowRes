@@ -210,6 +210,9 @@
                         <condition id="1" name="Is overlapping another object" sid="2852738272218722" type="BASE">
                             <param id="0" name="Object">Interactive</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9570183699314917" type="Interactive">
+                            <param id="0" name="Instance variable">Pushable</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
