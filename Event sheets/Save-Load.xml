@@ -14,13 +14,13 @@
                 <event-block sid="9576427548422095">
                     <conditions>
                         <condition id="-11" name="For Each" sid="1644283466043862" type="System">
-                            <param id="0" name="Object">Door</param>
+                            <param id="0" name="Object">Unlockable</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Add key" sid="9355233074142444" type="DoorData">
-                            <param id="0" name="Key">str(Door.UID)</param>
-                            <param id="1" name="Value">Door.AnimationFrame</param>
+                            <param id="0" name="Key">str(Unlockable.UID)</param>
+                            <param id="1" name="Value">Unlockable.AnimationFrame</param>
                         </action>
                     </actions>
                 </event-block>
@@ -63,10 +63,6 @@
                 <action id="11" name="Load" sid="2791177220296697" type="INV">
                     <param id="0" name="JSON">WebStorage.LocalValue(&quot;Inv&quot;)</param>
                 </action>
-                <action id="-9" name="Set value" sid="5899092299905249" type="System">
-                    <param id="0" name="Variable">ZoneLoaded</param>
-                    <param id="1" name="Value">0</param>
-                </action>
                 <action id="-9" name="Destroy" sid="3185648966123017" type="Enemies" />
                 <action id="-9" name="Destroy" sid="840761906914766" type="Interactive" />
                 <action id="-9" name="Destroy" sid="8965329597578656" type="Light" />
@@ -77,6 +73,9 @@
                 <action id="-13" name="Set boolean" sid="669962997016956" type="Spawners">
                     <param id="0" name="Instance variable">Triggered</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="6" name="Set speed" sid="7960854672868303" type="Unlockable">
+                    <param id="0" name="Speed">0</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="3288845394416201" type="TriggerZone">
                     <param id="0" name="Instance variable">Triggered</param>
@@ -91,6 +90,10 @@
                     <param id="0" name="Instance variable">HasParticle</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-9" name="Set value" sid="5899092299905249" type="System">
+                    <param id="0" name="Variable">ZoneLoaded</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="0" name="Call function" sid="43015504743504" type="Function">
                     <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Bottom;Loaded&quot;</param>
@@ -100,12 +103,12 @@
                 <event-block sid="3332786982997561">
                     <conditions>
                         <condition id="-11" name="For Each" sid="9700624029509709" type="System">
-                            <param id="0" name="Object">Door</param>
+                            <param id="0" name="Object">Unlockable</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Set frame" sid="4770791063606929" type="Door">
-                            <param id="0" name="Frame number">DoorData.Get(str(Door.UID))</param>
+                        <action id="5" name="Set frame" sid="4770791063606929" type="Unlockable">
+                            <param id="0" name="Frame number">DoorData.Get(str(Unlockable.UID))</param>
                         </action>
                     </actions>
                 </event-block>

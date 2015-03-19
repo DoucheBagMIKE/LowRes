@@ -1540,7 +1540,7 @@
                         <instance-variable name="RoomUID" sid="1347078249406856" type="number" />
                         <instance-variable name="DoortoUID" sid="9161015832185214" type="number" />
                         <instance-variable name="facing" sid="6564563217641009" type="string" />
-                        <instance-variable name="speed" sid="8849962656236369" type="number" />
+                        <instance-variable name="speed2" sid="8849962656236369" type="number" />
                         <instance-variable name="shake" sid="8030625785436811" type="boolean" />
                     </instance-variables>
                     <behaviors>
@@ -1968,6 +1968,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type global="1" name="Array" sid="7308609091175341">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -2157,6 +2160,7 @@
             <instance-variables>
                 <instance-variable comment="Function to call when this object is unlocked." name="On_Unlocked" sid="9933643258076713" type="string" />
                 <instance-variable name="Params" sid="5838128292997966" type="string" />
+                <instance-variable name="speed" sid="702369108341283" type="number" />
             </instance-variables>
         </family>
         <family name="Particles" plugin-id="Particles" sid="4566313777666088">

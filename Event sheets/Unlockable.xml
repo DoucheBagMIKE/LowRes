@@ -32,8 +32,16 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="6" name="Set speed" sid="9912021176130099" type="Door">
-                                    <param id="0" name="Speed">Door.speed</param>
+                                <action id="6" name="Set speed" sid="9912021176130099" type="Unlockable">
+                                    <param id="0" name="Speed">Unlockable.speed</param>
+                                </action>
+                                <action id="3" name="Start" sid="3800779539829854" type="Unlockable">
+                                    <param id="0" name="From">0</param>
+                                </action>
+                                <action id="5" name="Push" sid="4106056606752118" type="Array">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;set anim spd to :&quot;&amp;Unlockable.speed</param>
+                                    <param id="2" name="Axis">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -42,7 +50,7 @@
                                 <condition id="-22" name="Else" sid="5916416073006572" type="System" />
                             </conditions>
                             <actions>
-                                <action id="5" name="Set frame" sid="3196560123902779" type="Door">
+                                <action id="5" name="Set frame" sid="3196560123902779" type="Unlockable">
                                     <param id="0" name="Frame number">1</param>
                                 </action>
                             </actions>
@@ -50,8 +58,13 @@
                         <event-block sid="1541181085035487">
                             <conditions />
                             <actions>
+                                <action id="5" name="Push" sid="2669652541612949" type="Array">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;On_Unlocked_&quot;&amp;Unlockable.On_Unlocked&amp;&quot; &quot;&amp;Function.Param(0)</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
                                 <action id="0" name="Call function" sid="3029352781677113" type="Function">
-                                    <param id="0" name="Name">&quot;On_Unlocked&quot;&amp;Unlockable.On_Unlocked</param>
+                                    <param id="0" name="Name">&quot;On_Unlocked_&quot;&amp;Unlockable.On_Unlocked</param>
                                     <param id="1" name="Parameter {n}">Function.Param(0){###}Unlockable.Params</param>
                                 </action>
                                 <action id="1" name="Set return value" sid="8802354278176099" type="Function">

@@ -4108,10 +4108,11 @@
                     <instance-variables>
                         <On_Unlocked>Door</On_Unlocked>
                         <Params>28</Params>
+                        <speed>5</speed>
                         <RoomUID>0</RoomUID>
                         <DoortoUID>30</DoortoUID>
                         <facing>north</facing>
-                        <speed>5</speed>
+                        <speed2>5</speed2>
                         <shake>true</shake>
                     </instance-variables>
                     <behavior-instances>
@@ -4151,10 +4152,11 @@
                     <instance-variables>
                         <On_Unlocked></On_Unlocked>
                         <Params></Params>
+                        <speed>5</speed>
                         <RoomUID>0</RoomUID>
                         <DoortoUID>28</DoortoUID>
                         <facing>south</facing>
-                        <speed>0</speed>
+                        <speed2>0</speed2>
                         <shake>false</shake>
                     </instance-variables>
                     <behavior-instances>
@@ -5209,8 +5211,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>872</x>
-                        <y>520</y>
+                        <x>912</x>
+                        <y>416</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -6228,8 +6230,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>760</x>
-                        <y>512</y>
+                        <x>864</x>
+                        <y>392</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -7335,6 +7337,13 @@
         </instance>
         <instance type="NPCData" uid="221" />
         <instance type="DoorData" uid="222" />
+        <instance type="Array" uid="249">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>

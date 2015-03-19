@@ -53,7 +53,7 @@
                             </conditions>
                             <actions>
                                 <action id="6" name="Set speed" sid="2061380895384559" type="Door">
-                                    <param id="0" name="Speed">Door.speed</param>
+                                    <param id="0" name="Speed">Door.speed2</param>
                                 </action>
                             </actions>
                         </event-block>
