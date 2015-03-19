@@ -55,50 +55,54 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5989064088109259">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="8379248235501361" type="BASE">
-                            <param id="0" name="Object">TriggerZone</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="7127683506466545" type="System">
-                            <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Player&quot;)</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="5152017699033389" type="Function">
-                            <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                            <param id="1" name="Parameter {n}">TriggerZone.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="381778490504974">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="9477623419557125" type="Enemies">
-                            <param id="0" name="Object">TriggerZone</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="3851173239312586" type="System">
-                            <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Enemy&quot;)</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="2605955452391623" type="Function">
-                            <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                            <param id="1" name="Parameter {n}">TriggerZone.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="6715871188132635">
                     <conditions>
+                        <condition id="-15" inverted="1" name="Is group active" sid="3430633191533267" type="System">
+                            <param id="0" name="Group name">&quot;TextBox Logic&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="150177234779614" type="TriggerZone" />
                         <condition id="-11" name="For Each" sid="6319396754560436" type="System">
                             <param id="0" name="Object">TriggerZone</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="381778490504974">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="9477623419557125" type="Enemies">
+                                    <param id="0" name="Object">TriggerZone</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="3851173239312586" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Enemy&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2605955452391623" type="Function">
+                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
+                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5989064088109259">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8379248235501361" type="BASE">
+                                    <param id="0" name="Object">TriggerZone</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="7127683506466545" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Player&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5152017699033389" type="Function">
+                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
+                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="1514727680294664">
                             <conditions>
                                 <condition id="9" name="Is overlapping at offset" sid="4548116869039034" type="Rock">
