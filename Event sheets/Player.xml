@@ -238,7 +238,7 @@
                                         <event-block sid="5061191907804659">
                                             <conditions>
                                                 <condition id="-11" name="Is within angle" sid="1069060298820068" type="Indicator">
-                                                    <param id="0" name="Within">45</param>
+                                                    <param id="0" name="Within">44.5</param>
                                                     <param id="1" name="Angle">90</param>
                                                 </condition>
                                             </conditions>
@@ -256,7 +256,7 @@
                                         <event-block sid="8653906503471489">
                                             <conditions>
                                                 <condition id="-11" name="Is within angle" sid="9383171681101626" type="Indicator">
-                                                    <param id="0" name="Within">45</param>
+                                                    <param id="0" name="Within">44.5</param>
                                                     <param id="1" name="Angle">270</param>
                                                 </condition>
                                             </conditions>
@@ -274,7 +274,7 @@
                                         <event-block sid="6562629154902748">
                                             <conditions>
                                                 <condition id="-11" name="Is within angle" sid="6190900809044084" type="Indicator">
-                                                    <param id="0" name="Within">45</param>
+                                                    <param id="0" name="Within">44.5</param>
                                                     <param id="1" name="Angle">0</param>
                                                 </condition>
                                             </conditions>
@@ -292,7 +292,7 @@
                                         <event-block sid="5417189583993475">
                                             <conditions>
                                                 <condition id="-11" name="Is within angle" sid="9984323431623625" type="Indicator">
-                                                    <param id="0" name="Within">45</param>
+                                                    <param id="0" name="Within">44.5</param>
                                                     <param id="1" name="Angle">180</param>
                                                 </condition>
                                             </conditions>
