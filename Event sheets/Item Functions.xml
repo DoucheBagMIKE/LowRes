@@ -3,6 +3,320 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Item Functions</name>
     <events>
+        <event-block sid="391974330271162">
+            <conditions>
+                <condition id="0" name="On function" sid="4849810722453008" type="Function">
+                    <param id="0" name="Name">&quot;Holding_Sword&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="8316354106973041" type="BASE">
+                    <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="6556052666413502" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4105385971933983">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3229870057998252" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6558424533971433" type="ARMS">
+                            <param id="0" name="Animation">&quot;SwordRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2477565410191336">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="1196469015194536" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5440689465390364" type="ARMS">
+                            <param id="0" name="Animation">&quot;SwordDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2716328861672665">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="4621634780486304" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9015993317985843" type="ARMS">
+                            <param id="0" name="Animation">&quot;SwordUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7135829952799186">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7417312127173295" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3637291555436483" type="ARMS">
+                            <param id="0" name="Animation">&quot;SwordLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9405530835271014">
+            <conditions>
+                <condition id="0" name="On function" sid="4884398394899193" type="Function">
+                    <param id="0" name="Name">&quot;Holding_Bow&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="2339388892017515" type="BASE">
+                    <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="5512157225241126" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8477965659553128">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7298657589354033" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9363597581362977" type="ARMS">
+                            <param id="0" name="Animation">&quot;BowRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4697427425995708">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="1291128156464634" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2995056385037487" type="ARMS">
+                            <param id="0" name="Animation">&quot;BowDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6240440341873721">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2262610713121415" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7087716015851801" type="ARMS">
+                            <param id="0" name="Animation">&quot;BowUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8226838162864586">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2258763692537313" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9105146284745338" type="ARMS">
+                            <param id="0" name="Animation">&quot;BowLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3235431833147398">
+            <conditions>
+                <condition id="0" name="On function" sid="9613564615447195" type="Function">
+                    <param id="0" name="Name">&quot;Holding_Shield&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="5144067020432665" type="BASE">
+                    <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="2132157965187598" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7822335908355243">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7278224614003335" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2532251952705845" type="ARMS">
+                            <param id="0" name="Animation">&quot;ShieldRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5184998971640287" type="ARMS">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="1417845518647622" type="Melee_Hitbox">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5890007743231892" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7427119200602883" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7276006167978289" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3719167169681608" type="Melee_Hitbox" />
+                    </actions>
+                </event-block>
+                <event-block sid="4876086056526214">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9265174212760495" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7525617046317405" type="ARMS">
+                            <param id="0" name="Animation">&quot;ShieldDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2167859238514257" type="ARMS">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5390631819622771" type="Melee_Hitbox">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2238773188780609" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3949326571375279" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5053892997996797" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="5589562027138047" type="Melee_Hitbox" />
+                    </actions>
+                </event-block>
+                <event-block sid="2829116324079189">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2360474853485655" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1728721011452112" type="ARMS">
+                            <param id="0" name="Animation">&quot;ShieldUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="9219877176735894" type="ARMS">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="9573705349831955" type="Melee_Hitbox">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9030900974828115" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="216165861279214" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8882742330834533" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6111306450966923" type="Melee_Hitbox" />
+                    </actions>
+                </event-block>
+                <event-block sid="5308744334201794">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9610268661091437" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6656107172434436" type="ARMS">
+                            <param id="0" name="Animation">&quot;ShieldLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7482526385503626" type="ARMS">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5276850850765945" type="Melee_Hitbox">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7878505232555915" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4283850451024592" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2012101304801609" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7982584158007215" type="Melee_Hitbox" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="666985267057665">
             <conditions>
                 <condition id="0" name="On function" sid="6913963333920467" type="Function">
@@ -22,6 +336,10 @@
                 </action>
                 <action behavior="8Direction" id="3" name="Set speed" sid="3582200366536116" type="BASE">
                     <param id="0" name="Speed">BASE.8Direction.Speed/4</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8026232916102085" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
             <sub-events>
@@ -189,308 +507,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="391974330271162">
-            <conditions>
-                <condition id="0" name="On function" sid="4849810722453008" type="Function">
-                    <param id="0" name="Name">&quot;Holding_Sword&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="8316354106973041" type="BASE">
-                    <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="4105385971933983">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="3229870057998252" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Right&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6558424533971433" type="ARMS">
-                            <param id="0" name="Animation">&quot;SwordRight&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2477565410191336">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="1196469015194536" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Down&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="5440689465390364" type="ARMS">
-                            <param id="0" name="Animation">&quot;SwordDown&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2716328861672665">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="4621634780486304" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Up&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9015993317985843" type="ARMS">
-                            <param id="0" name="Animation">&quot;SwordUp&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7135829952799186">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="7417312127173295" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Left&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3637291555436483" type="ARMS">
-                            <param id="0" name="Animation">&quot;SwordLeft&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="9405530835271014">
-            <conditions>
-                <condition id="0" name="On function" sid="4884398394899193" type="Function">
-                    <param id="0" name="Name">&quot;Holding_Bow&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="2339388892017515" type="BASE">
-                    <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="8477965659553128">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="7298657589354033" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Right&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9363597581362977" type="ARMS">
-                            <param id="0" name="Animation">&quot;BowRight&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4697427425995708">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="1291128156464634" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Down&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="2995056385037487" type="ARMS">
-                            <param id="0" name="Animation">&quot;BowDown&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6240440341873721">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="2262610713121415" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Up&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7087716015851801" type="ARMS">
-                            <param id="0" name="Animation">&quot;BowUp&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8226838162864586">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="2258763692537313" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Left&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9105146284745338" type="ARMS">
-                            <param id="0" name="Animation">&quot;BowLeft&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="3235431833147398">
-            <conditions>
-                <condition id="0" name="On function" sid="9613564615447195" type="Function">
-                    <param id="0" name="Name">&quot;Holding_Shield&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="5144067020432665" type="BASE">
-                    <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="7822335908355243">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="7278224614003335" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Right&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="2532251952705845" type="ARMS">
-                            <param id="0" name="Animation">&quot;ShieldRight&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="5184998971640287" type="ARMS">
-                            <param id="0" name="Object">Melee_Hitbox</param>
-                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="1417845518647622" type="Melee_Hitbox">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="5890007743231892" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">96</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="7427119200602883" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Damage</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="7276006167978289" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="3719167169681608" type="Melee_Hitbox" />
-                    </actions>
-                </event-block>
-                <event-block sid="4876086056526214">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="9265174212760495" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Down&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7525617046317405" type="ARMS">
-                            <param id="0" name="Animation">&quot;ShieldDown&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="2167859238514257" type="ARMS">
-                            <param id="0" name="Object">Melee_Hitbox</param>
-                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="5390631819622771" type="Melee_Hitbox">
-                            <param id="0" name="Angle">90</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="2238773188780609" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">96</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="3949326571375279" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Damage</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="5053892997996797" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="5589562027138047" type="Melee_Hitbox" />
-                    </actions>
-                </event-block>
-                <event-block sid="2829116324079189">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="2360474853485655" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Up&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="1728721011452112" type="ARMS">
-                            <param id="0" name="Animation">&quot;ShieldUp&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="9219877176735894" type="ARMS">
-                            <param id="0" name="Object">Melee_Hitbox</param>
-                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="9573705349831955" type="Melee_Hitbox">
-                            <param id="0" name="Angle">270</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="9030900974828115" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">96</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="216165861279214" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Damage</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="8882742330834533" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="6111306450966923" type="Melee_Hitbox" />
-                    </actions>
-                </event-block>
-                <event-block sid="5308744334201794">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="9610268661091437" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Left&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6656107172434436" type="ARMS">
-                            <param id="0" name="Animation">&quot;ShieldLeft&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="7482526385503626" type="ARMS">
-                            <param id="0" name="Object">Melee_Hitbox</param>
-                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="5276850850765945" type="Melee_Hitbox">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="7878505232555915" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">96</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4283850451024592" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Damage</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="2012101304801609" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="7982584158007215" type="Melee_Hitbox" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="1606928247705432">
             <conditions>
                 <condition id="0" name="On function" sid="4003731402378553" type="Function">
@@ -500,6 +516,10 @@
             <actions>
                 <action behavior="8Direction" id="4" name="Set max speed" sid="1962524137164593" type="BASE">
                     <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="6895627682223967" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
             <sub-events>
@@ -686,6 +706,10 @@
                 </action>
                 <action behavior="8Direction" id="3" name="Set speed" sid="7975859534927749" type="BASE">
                     <param id="0" name="Speed">BASE.8Direction.Speed/4</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="3165750282201055" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
             <sub-events>

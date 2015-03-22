@@ -3415,6 +3415,7 @@
                         <MaxSpd>0</MaxSpd>
                         <Decel>0</Decel>
                         <Hurt>false</Hurt>
+                        <holding>false</holding>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
