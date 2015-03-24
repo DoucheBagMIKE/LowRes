@@ -6243,6 +6243,109 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Mutant" uid="250">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Deceleration>1000</Deceleration>
+                        <MovementType>oo</MovementType>
+                        <Shadow>Giant</Shadow>
+                        <HP>10</HP>
+                        <Explode>true</Explode>
+                        <Projectile>false</Projectile>
+                        <hit>false</hit>
+                        <Timer>0</Timer>
+                        <playedsound>false</playedsound>
+                        <Flying>false</Flying>
+                        <Damage>1</Damage>
+                        <KnockbackAmount>64</KnockbackAmount>
+                        <ProjectileType></ProjectileType>
+                        <Zone1>15</Zone1>
+                        <Destroy>true</Destroy>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Knockback">
+                            <properties>
+                                <stepping-mode>Horizontal then vertical</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Movement">
+                            <properties>
+                                <stepping-mode>Horizontal then vertical</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Custom</obstacles>
+                                <range>300</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-20</x>
+                        <y>48</y>
+                        <z>0</z>
+                        <width>24</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ENEMY_SPAWNER" uid="251">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zone>0</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn>mutant</Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>832</x>
+                        <y>516</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
