@@ -6251,7 +6251,7 @@
                         <playedsound>false</playedsound>
                         <Flying>false</Flying>
                         <Damage>1</Damage>
-                        <KnockbackAmount>250</KnockbackAmount>
+                        <KnockbackAmount>112</KnockbackAmount>
                         <ProjectileType></ProjectileType>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
