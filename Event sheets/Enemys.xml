@@ -670,7 +670,7 @@
                                                             <actions>
                                                                 <action behavior="Movement" id="2" name="Set speed" sid="6284232675202279" type="Enemies">
                                                                     <param id="0" name="Which">0</param>
-                                                                    <param id="1" name="Speed">random(48,80)</param>
+                                                                    <param id="1" name="Speed">random(48,112)</param>
                                                                 </action>
                                                                 <action behavior="Movement" id="6" name="Set angle of motion" sid="7232024749091332" type="Enemies">
                                                                     <param id="0" name="Angle">angle(self.X,self.Y,base.X,base.Y)+random(-16,16)</param>
@@ -700,13 +700,10 @@
                                             <actions>
                                                 <action behavior="Movement" id="2" name="Set speed" sid="9911766412879564" type="Enemies">
                                                     <param id="0" name="Which">0</param>
-                                                    <param id="1" name="Speed">clamp(self.Movement.Speed-(dt*25),0,112)</param>
-                                                </action>
-                                                <action id="6" name="Set speed" sid="6701038410153693" type="Enemies">
-                                                    <param id="0" name="Speed">clamp(Enemies.Movement.Speed/10,2,100)</param>
+                                                    <param id="1" name="Speed">clamp(self.Movement.Speed-(dt*16),0,112)</param>
                                                 </action>
                                                 <action behavior="Movement" id="6" name="Set angle of motion" sid="6547357306181488" type="Enemies">
-                                                    <param id="0" name="Angle">anglelerp(Enemies.movement.MovingAngle, angle(self.X,self.Y,base.X,base.Y), 0.05)</param>
+                                                    <param id="0" name="Angle">anglelerp(Enemies.movement.MovingAngle, angle(self.X,self.Y,base.X,base.Y), 0.025)</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
@@ -714,8 +711,8 @@
                                                     <conditions>
                                                         <condition behavior="Movement" id="1" name="Compare speed" sid="7436651978293357" type="Enemies">
                                                             <param id="0" name="Which">0</param>
-                                                            <param id="1" name="Comparison">2</param>
-                                                            <param id="2" name="Speed">1</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Speed">0</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -726,9 +723,6 @@
                                                         <action behavior="Movement" id="2" name="Set speed" sid="7345946083735953" type="Enemies">
                                                             <param id="0" name="Which">0</param>
                                                             <param id="1" name="Speed">0</param>
-                                                        </action>
-                                                        <action id="6" name="Set speed" sid="3301019433207498" type="Enemies">
-                                                            <param id="0" name="Speed">5</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -1519,7 +1513,7 @@
                                 </action>
                                 <action behavior="Movement" id="2" name="Set speed" sid="5297069620893317" type="Enemies">
                                     <param id="0" name="Which">0</param>
-                                    <param id="1" name="Speed">self.Movement.Speed/4</param>
+                                    <param id="1" name="Speed">self.Movement.Speed/1.5</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="8305404018486363" type="Enemies">
                                     <param id="0" name="Instance variable">hit</param>
@@ -1544,7 +1538,7 @@
                                         <action behavior="Flash" id="0" name="Flash" sid="5335454315092729" type="Enemies">
                                             <param id="0" name="&apos;On&apos; time">0.1</param>
                                             <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">0.3</param>
+                                            <param id="2" name="Duration">0.5</param>
                                         </action>
                                         <action id="-12" name="Subtract from" sid="2495472652139036" type="Enemies">
                                             <param id="0" name="Instance variable">HP</param>
@@ -1590,7 +1584,7 @@
                                         <action behavior="Flash" id="0" name="Flash" sid="7178981832358672" type="Enemies">
                                             <param id="0" name="&apos;On&apos; time">0.1</param>
                                             <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">0.3</param>
+                                            <param id="2" name="Duration">0.5</param>
                                         </action>
                                         <action id="-12" name="Subtract from" sid="7268739255700497" type="Enemies">
                                             <param id="0" name="Instance variable">HP</param>
@@ -1635,12 +1629,12 @@
                                 </action>
                                 <action behavior="Movement" id="2" name="Set speed" sid="2728840398508759" type="Enemies">
                                     <param id="0" name="Which">0</param>
-                                    <param id="1" name="Speed">self.Movement.Speed/4</param>
+                                    <param id="1" name="Speed">self.Movement.Speed/1.5</param>
                                 </action>
                                 <action behavior="Flash" id="0" name="Flash" sid="2690146593024752" type="Enemies">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.3</param>
+                                    <param id="2" name="Duration">0.5</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="109662805147418" type="Enemies">
                                     <param id="0" name="Instance variable">hit</param>
@@ -1732,12 +1726,12 @@
                                 </action>
                                 <action behavior="Movement" id="2" name="Set speed" sid="8808612575842136" type="Enemies">
                                     <param id="0" name="Which">0</param>
-                                    <param id="1" name="Speed">self.Movement.Speed/4</param>
+                                    <param id="1" name="Speed">self.Movement.Speed/1.5</param>
                                 </action>
                                 <action behavior="Flash" id="0" name="Flash" sid="2214015411023155" type="Enemies">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.3</param>
+                                    <param id="2" name="Duration">0.5</param>
                                 </action>
                                 <action id="25" name="Play at object" sid="9218699479248681" type="Audio">
                                     <param id="0" name="Audio file">hit</param>
@@ -1808,12 +1802,12 @@
                                 </action>
                                 <action behavior="Movement" id="2" name="Set speed" sid="9869300940456915" type="Enemies">
                                     <param id="0" name="Which">0</param>
-                                    <param id="1" name="Speed">self.Movement.Speed/4</param>
+                                    <param id="1" name="Speed">self.Movement.Speed/1.5</param>
                                 </action>
                                 <action behavior="Flash" id="0" name="Flash" sid="742371336099006" type="Enemies">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.3</param>
+                                    <param id="2" name="Duration">0.5</param>
                                 </action>
                                 <action id="25" name="Play at object" sid="8741994934982365" type="Audio">
                                     <param id="0" name="Audio file">hit</param>
