@@ -208,6 +208,10 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
+                                                <action id="-11" name="Add to" sid="4498541164672888" type="BASE">
+                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                    <param id="1" name="Value">0.5</param>
+                                                </action>
                                                 <action id="1" name="Set key" sid="628299136976501" type="GameStats">
                                                     <param id="0" name="Key">&quot;keys&quot;</param>
                                                     <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) - 1</param>
@@ -253,6 +257,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="-11" name="Add to" sid="2102730031848767" type="BASE">
+                                            <param id="0" name="Instance variable">AttackTimer</param>
+                                            <param id="1" name="Value">0.5</param>
+                                        </action>
                                         <action id="0" name="Call function" sid="3464970776441615" type="Function">
                                             <param id="0" name="Name">&quot;TriggerZone&quot;</param>
                                             <param id="1" name="Parameter {n}">TriggerZone.UID</param>

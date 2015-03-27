@@ -213,164 +213,224 @@
                 </event-group>
                 <event-group description="" sid="3395083332411848" title="Keyboard">
                     <sub-events>
-                        <event-block sid="6995375314357001">
-                            <conditions>
-                                <condition id="2" inverted="1" name="Key is down" sid="9261319350822966" type="Keyboard">
-                                    <param id="0" name="Key">90 (Z)</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="147131950839607" type="Input">
-                                    <param id="0" name="Instance variable">Button1</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Released&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="2166695608910252" type="System">
-                                    <param id="0" name="Seconds">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="3426477173685433" type="Input">
-                                    <param id="0" name="Instance variable">Button1</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9824786330043191">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="1848957482265419" type="System" />
-                                <condition id="2" name="Key is down" sid="4499128580709973" type="Keyboard">
-                                    <param id="0" name="Key">90 (Z)</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="5652620479616093" type="Input">
-                                    <param id="0" name="Instance variable">Button1</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Pressed&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="5412930570102802" type="System">
-                                    <param id="0" name="Seconds">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="8535049715446004" type="Input">
-                                    <param id="0" name="Instance variable">Button1</param>
-                                    <param id="1" name="Value">&quot;Holding&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6936905237325281">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="919114378299536" type="Keyboard">
-                                    <param id="0" name="Key">90 (Z)</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="9409225511321539" type="Input">
-                                    <param id="0" name="Instance variable">Button2</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;Holding&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="4696179783765594" type="Input">
-                                    <param id="0" name="Instance variable">Button1</param>
-                                    <param id="1" name="Value">&quot;Pressed&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9378870833466567">
-                            <conditions>
-                                <condition id="3" name="On key released" sid="6485057112262359" type="Keyboard">
-                                    <param id="0" name="Key">90 (Z)</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="1751138015983873" type="Input">
-                                    <param id="0" name="Instance variable">Button2</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;Holding&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="3049669705490942" type="Input">
-                                    <param id="0" name="Instance variable">Button1</param>
-                                    <param id="1" name="Value">&quot;Released&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8345280385015424">
-                            <conditions>
-                                <condition id="2" inverted="1" name="Key is down" sid="8798585387646526" type="Keyboard">
-                                    <param id="0" name="Key">88 (X)</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="4755134245233121" type="Input">
-                                    <param id="0" name="Instance variable">Button2</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Released&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="5776351235883205" type="System">
-                                    <param id="0" name="Seconds">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="983798737428981" type="Input">
-                                    <param id="0" name="Instance variable">Button2</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3894052878414255">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="7712311754424327" type="System" />
-                                <condition id="2" name="Key is down" sid="1077349176604122" type="Keyboard">
-                                    <param id="0" name="Key">88 (X)</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="5166250414372712" type="Input">
-                                    <param id="0" name="Instance variable">Button2</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Pressed&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="1340616809599256" type="System">
-                                    <param id="0" name="Seconds">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="6976648730873275" type="Input">
-                                    <param id="0" name="Instance variable">Button2</param>
-                                    <param id="1" name="Value">&quot;Holding&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8402802968773351">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="1671270085297687" type="Keyboard">
-                                    <param id="0" name="Key">88 (X)</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="3247906010411916" type="Input">
-                                    <param id="0" name="Instance variable">Button1</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;Holding&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="2135439531545201" type="Input">
-                                    <param id="0" name="Instance variable">Button2</param>
-                                    <param id="1" name="Value">&quot;Pressed&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="292426002435306">
-                            <conditions>
-                                <condition id="3" name="On key released" sid="7342175480668237" type="Keyboard">
-                                    <param id="0" name="Key">88 (X)</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="1148108081334475" type="Input">
-                                    <param id="0" name="Instance variable">Button1</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;Holding&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="4488476821405371" type="Input">
-                                    <param id="0" name="Instance variable">Button2</param>
-                                    <param id="1" name="Value">&quot;Released&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
+                        <event-group description="" sid="6249987350658166" title="Button1">
+                            <sub-events>
+                                <event-block sid="6936905237325281">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="919114378299536" type="Keyboard">
+                                            <param id="0" name="Key">90 (Z)</param>
+                                        </condition>
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="9409225511321539" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4696179783765594" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Value">&quot;Pressed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9378870833466567">
+                                    <conditions>
+                                        <condition id="3" name="On key released" sid="6485057112262359" type="Keyboard">
+                                            <param id="0" name="Key">90 (Z)</param>
+                                        </condition>
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="1751138015983873" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="3049669705490942" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Value">&quot;Released&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6995375314357001">
+                                    <conditions>
+                                        <condition id="2" inverted="1" name="Key is down" sid="9261319350822966" type="Keyboard">
+                                            <param id="0" name="Key">90 (Z)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="5450400682740275">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="147131950839607" type="Input">
+                                                    <param id="0" name="Instance variable">Button1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Released&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="2166695608910252" type="System">
+                                                    <param id="0" name="Seconds">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3426477173685433" type="Input">
+                                                    <param id="0" name="Instance variable">Button1</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1571842916678764">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="6015126431114308" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="9167977827924139" type="Input">
+                                                    <param id="0" name="Instance variable">Button1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Holding&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="455697036616897" type="System">
+                                                    <param id="0" name="Seconds">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3690494757850943" type="Input">
+                                                    <param id="0" name="Instance variable">Button1</param>
+                                                    <param id="1" name="Value">&quot;Released&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="9824786330043191">
+                                    <conditions>
+                                        <condition disabled="1" id="-22" name="Else" sid="1848957482265419" type="System" />
+                                        <condition id="2" name="Key is down" sid="4499128580709973" type="Keyboard">
+                                            <param id="0" name="Key">90 (Z)</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="5652620479616093" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="5412930570102802" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8535049715446004" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Value">&quot;Holding&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="4687910536534185" title="Button2">
+                            <sub-events>
+                                <event-block sid="8402802968773351">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="1671270085297687" type="Keyboard">
+                                            <param id="0" name="Key">88 (X)</param>
+                                        </condition>
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="3247906010411916" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="2135439531545201" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Value">&quot;Pressed&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="292426002435306">
+                                    <conditions>
+                                        <condition id="3" name="On key released" sid="7342175480668237" type="Keyboard">
+                                            <param id="0" name="Key">88 (X)</param>
+                                        </condition>
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="1148108081334475" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4488476821405371" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Value">&quot;Released&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8345280385015424">
+                                    <conditions>
+                                        <condition id="2" inverted="1" name="Key is down" sid="8798585387646526" type="Keyboard">
+                                            <param id="0" name="Key">88 (X)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="8075829687621418">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="4755134245233121" type="Input">
+                                                    <param id="0" name="Instance variable">Button2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Released&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="5776351235883205" type="System">
+                                                    <param id="0" name="Seconds">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="983798737428981" type="Input">
+                                                    <param id="0" name="Instance variable">Button2</param>
+                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2733881992356681">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="750514171278006" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="6560010169199014" type="Input">
+                                                    <param id="0" name="Instance variable">Button2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Holding&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="5342971098750241" type="System">
+                                                    <param id="0" name="Seconds">0</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3006495165092175" type="Input">
+                                                    <param id="0" name="Instance variable">Button2</param>
+                                                    <param id="1" name="Value">&quot;Released&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="3894052878414255">
+                                    <conditions>
+                                        <condition disabled="1" id="-22" name="Else" sid="7712311754424327" type="System" />
+                                        <condition id="2" name="Key is down" sid="1077349176604122" type="Keyboard">
+                                            <param id="0" name="Key">88 (X)</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="5166250414372712" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="1340616809599256" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6976648730873275" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Value">&quot;Holding&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-group>
                 <event-group description="" sid="4320311458273334" title="Both">

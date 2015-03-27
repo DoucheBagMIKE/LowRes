@@ -742,7 +742,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="124611545208474">
+                        <event-block disabled="1" sid="124611545208474">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="1010062187718931" type="BASE">
                                     <param id="0" name="Object">TriggerZone</param>
@@ -765,22 +765,12 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block any="1" sid="7933978694982564">
+                                <event-block sid="7933978694982564">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="5377268347752" type="Input">
-                                            <param id="0" name="Instance variable">Button1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
-                                        </condition>
                                         <condition id="-7" name="Compare instance variable" sid="8884223296123364" type="Input">
                                             <param id="0" name="Instance variable">Button1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Holding&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="7519167180325177" type="Input">
-                                            <param id="0" name="Instance variable">Button1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Released&quot;</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions />
@@ -811,22 +801,12 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                                <event-block any="1" sid="3776432020980248">
+                                <event-block sid="3776432020980248">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="1923833171578885" type="Input">
                                             <param id="0" name="Instance variable">Button2</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="79813267350987" type="Input">
-                                            <param id="0" name="Instance variable">Button2</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Holding&quot;</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="7279917987137498" type="Input">
-                                            <param id="0" name="Instance variable">Button2</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Released&quot;</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions />
