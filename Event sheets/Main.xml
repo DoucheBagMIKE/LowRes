@@ -108,6 +108,7 @@
                             <param id="0" name="Gamepad">0</param>
                             <param id="1" name="Button">5</param>
                         </condition>
+                        <condition id="2" name="Is in touch" sid="4664528864264697" type="Touch" />
                         <condition id="2" name="Key is down" sid="1135250835130954" type="Keyboard">
                             <param id="0" name="Key">32 (Space)</param>
                         </condition>
@@ -190,5 +191,16 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="721896659797865">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="9960711138224674" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="2329286739381299" type="BASE">
+                    <param id="0" name="X">lerp(self.x,touch.X,0.1)</param>
+                    <param id="1" name="Y">lerp(self.Y,touch.Y,0.1)</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -109,9 +109,6 @@
                                     <param id="0" name="Animation">&quot;Firepar&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="1" name="Set blend mode" sid="8418054925490931" type="EnemyProjectile">
-                                    <param id="0" name="Blend mode">1</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="5262085844969395" type="EnemyProjectile">
                                     <param id="0" name="Instance variable">Shadow</param>
                                     <param id="1" name="Value">&quot;SmallVer&quot;</param>

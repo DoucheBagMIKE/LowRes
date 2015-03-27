@@ -94,6 +94,9 @@
                                 <event-block sid="3534508100990187">
                                     <conditions>
                                         <condition id="-3" name="Is on-screen" sid="1283734783152542" type="EnemyProjectile" />
+                                        <condition id="-8" name="Is boolean instance variable set" sid="3646991842431239" type="EnemyProjectile">
+                                            <param id="0" name="Instance variable">Explode</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="ScrollTo" id="0" name="Shake" sid="256147309445517" type="Camera">
@@ -969,9 +972,6 @@
                                                                 <action id="4" name="Set animation" sid="5235286726336161" type="EnemyProjectile">
                                                                     <param id="0" name="Animation">&quot;fireball&quot;</param>
                                                                     <param id="1" name="From">1</param>
-                                                                </action>
-                                                                <action id="1" name="Set blend mode" sid="4995531415649427" type="EnemyProjectile">
-                                                                    <param id="0" name="Blend mode">1</param>
                                                                 </action>
                                                                 <action id="-10" name="Set value" sid="8516670804496058" type="EnemyProjectile">
                                                                     <param id="0" name="Instance variable">Shadow</param>
