@@ -2064,6 +2064,16 @@
         <object-type global="1" name="Array" sid="7308609091175341">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="Sprite3" sid="5328189712717188">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1458116674467818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -2184,6 +2194,7 @@
                 <member>Rock</member>
                 <member>Sign</member>
                 <member>Sprite2</member>
+                <member>Sprite3</member>
             </members>
             <instance-variables>
                 <instance-variable name="Shadow" sid="8926569785025806" type="string" />
@@ -2289,7 +2300,6 @@
         </family>
         <family name="HAS_PARTICLE" plugin-id="Sprite" sid="768815608759117">
             <members>
-                <member>BASE</member>
                 <member>Dog</member>
                 <member>EnemyProjectile</member>
             </members>
