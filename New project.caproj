@@ -2064,13 +2064,94 @@
         <object-type global="1" name="Array" sid="7308609091175341">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Sprite3" sid="5328189712717188">
+        <object-type name="Mirror" sid="5328189712717188">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="BeamUID" sid="4584186413880502" type="number" />
+                <instance-variable name="LosUID" sid="4686090244932898" type="number" />
+            </instance-variables>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1458116674467818" speed="5">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1458116674467818" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.5" y="0.75" />
                     </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MirrorBeam" sid="5786244984611683">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1056306254459068" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BeamSource" sid="3018297424098331">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Dir" sid="8011950650680657" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LineOfSight" sid="8271723217370292">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>BeamSource</type>
+                <type>SourceBeam</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5976084100573953" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SourceBeam" sid="5033634285863253">
+            <plugin id="Sprite" />
+            <container>
+                <type>BeamSource</type>
+                <type>SourceBeam</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8155391367274071" speed="5">
+                    <frame duration="1" hotspotX="1" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MirrorLOS" sid="6367493533478546">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MirrorUID" sid="9071572809747063" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LineOfSight" sid="5466263640905903">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4156874057420535" speed="5">
+                    <frame duration="1" hotspotX="0.666667" hotspotY="0.666667" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -2189,12 +2270,12 @@
                 <member>Dog</member>
                 <member>Grass</member>
                 <member>Item_Pickup</member>
+                <member>Mirror</member>
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>
                 <member>Rock</member>
                 <member>Sign</member>
                 <member>Sprite2</member>
-                <member>Sprite3</member>
             </members>
             <instance-variables>
                 <instance-variable name="Shadow" sid="8926569785025806" type="string" />
