@@ -525,13 +525,7 @@
                                                     <conditions>
                                                         <condition id="-4" name="Trigger once while true" sid="7724768139432517" type="System" />
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Spawn another object" sid="4161091346369239" type="Enemies">
-                                                            <param id="0" name="Object">DustParticle</param>
-                                                            <param id="1" name="Layer">&quot;BG&quot;</param>
-                                                            <param id="2" name="Image point">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
                                                     <sub-events>
                                                         <event-block sid="1321803415462111">
                                                             <conditions>
@@ -636,39 +630,6 @@
                                                     <param id="0" name="State">0</param>
                                                 </action>
                                             </actions>
-                                        </event-block>
-                                        <event-block sid="7588856943917059">
-                                            <conditions>
-                                                <condition id="2" name="Is playing" sid="8782008364482427" type="Enemies">
-                                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="3145017382817286">
-                                                    <conditions>
-                                                        <condition id="3" name="Compare frame" sid="9717306566491479" type="Enemies">
-                                                            <param id="0" name="Comparison">0</param>
-                                                            <param id="1" name="Number">1</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="9712366166520167">
-                                                            <conditions>
-                                                                <condition id="-4" name="Trigger once while true" sid="4780161262346982" type="System" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="0" name="Spawn another object" sid="9386270679712808" type="Enemies">
-                                                                    <param id="0" name="Object">DustParticle</param>
-                                                                    <param id="1" name="Layer">&quot;BG&quot;</param>
-                                                                    <param id="2" name="Image point">1</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                            </sub-events>
                                         </event-block>
                                         <event-block sid="5460872920784">
                                             <conditions>
@@ -861,13 +822,7 @@
                                                     <conditions>
                                                         <condition id="-4" name="Trigger once while true" sid="5883505493296214" type="System" />
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Spawn another object" sid="4080019859885535" type="Enemies">
-                                                            <param id="0" name="Object">DustParticle</param>
-                                                            <param id="1" name="Layer">&quot;BG&quot;</param>
-                                                            <param id="2" name="Image point">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
                                                     <sub-events>
                                                         <event-block sid="4409755578412445">
                                                             <conditions>

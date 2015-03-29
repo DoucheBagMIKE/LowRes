@@ -555,11 +555,6 @@
                                         <condition id="2" inverted="1" name="Is playing" sid="2880503161364712" type="BASE">
                                             <param id="0" name="Animation">&quot;RollRight&quot;</param>
                                         </condition>
-                                        <condition behavior="Knockback" id="1" name="Compare speed" sid="5896554798814781" type="BASE">
-                                            <param id="0" name="Which">0</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Speed">8</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="8Direction" id="9" name="Set vector X" sid="1410100464547159" type="BASE">
