@@ -2162,6 +2162,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type global="1" name="TempData" sid="4941800187016818">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="DustPar" sid="5629100099264935">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="HPGUI" sid="3924425921982152">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="MAXHPGUI" sid="2327588202716233">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="HeartParticle" sid="2789661651493658">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -2201,6 +2220,7 @@
                 <instance-variable name="Damage" sid="8304317960648423" type="number" />
                 <instance-variable name="KnockbackAmount" sid="4758494175986432" type="number" />
                 <instance-variable name="ProjectileType" sid="5051754548617732" type="string" />
+                <instance-variable name="spawnerUID" sid="1359232653356904" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Knockback" sid="5869555695933761">

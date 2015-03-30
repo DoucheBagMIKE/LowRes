@@ -51,6 +51,10 @@
                                     <param id="0" name="Name">&quot;Explosion&quot;</param>
                                     <param id="1" name="Parameter {n}">Enemies.X{###}Enemies.Y{###}&quot;Explode&quot;</param>
                                 </action>
+                                <action id="0" name="Add key" sid="8060325939461937" type="TempData">
+                                    <param id="0" name="Key">str(Enemies.spawnerUID)</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="9928100213307216">

@@ -7,7 +7,14 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="6901612664698437" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-5" name="Set width" sid="6402306473070111" type="MAXHPGUI">
+                    <param id="0" name="Width">GameStats.Get(&quot;MaxHP&quot;)*8</param>
+                </action>
+                <action id="-5" name="Set width" sid="5625108736774983" type="HPGUI">
+                    <param id="0" name="Width">GameStats.Get(&quot;CurHP&quot;)*8</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="8166092901220623">
                     <conditions>

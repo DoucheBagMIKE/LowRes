@@ -32,7 +32,13 @@
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="4095207141609349" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="4227317064064147" type="BODY">
+                                    <param id="0" name="Object">DustPar</param>
+                                    <param id="1" name="Layer">&quot;BG&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block any="1" sid="4391561244481993">
                                     <conditions>

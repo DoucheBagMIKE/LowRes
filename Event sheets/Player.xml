@@ -66,6 +66,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-3" name="Create object" sid="1441327646899596" type="System">
+                                    <param id="0" name="Object to create">HeartParticle</param>
+                                    <param id="1" name="Layer">&quot;GUI&quot;</param>
+                                    <param id="2" name="X">(HPGUI.X+HPGUI.Width)-4</param>
+                                    <param id="3" name="Y">HPGUI.Y+4</param>
+                                </action>
                                 <action id="-13" name="Set boolean" sid="23932921984607" type="BASE">
                                     <param id="0" name="Instance variable">Hurt</param>
                                     <param id="1" name="Value">1</param>
@@ -554,6 +560,11 @@
                                         </condition>
                                         <condition id="2" inverted="1" name="Is playing" sid="2880503161364712" type="BASE">
                                             <param id="0" name="Animation">&quot;RollRight&quot;</param>
+                                        </condition>
+                                        <condition behavior="Knockback" id="1" name="Compare speed" sid="2498934510624634" type="BASE">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Speed">8</param>
                                         </condition>
                                     </conditions>
                                     <actions>

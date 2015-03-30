@@ -1337,6 +1337,7 @@
                         <Damage>1</Damage>
                         <KnockbackAmount>64</KnockbackAmount>
                         <ProjectileType></ProjectileType>
+                        <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -3670,6 +3671,7 @@
                         <Damage>1</Damage>
                         <KnockbackAmount>80</KnockbackAmount>
                         <ProjectileType></ProjectileType>
+                        <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -3773,6 +3775,7 @@
                         <Damage>1</Damage>
                         <KnockbackAmount>80</KnockbackAmount>
                         <ProjectileType></ProjectileType>
+                        <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <HasLight>false</HasLight>
@@ -4385,6 +4388,7 @@
                         <Damage>0</Damage>
                         <KnockbackAmount>0</KnockbackAmount>
                         <ProjectileType></ProjectileType>
+                        <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -5187,6 +5191,7 @@
                         <Damage>1</Damage>
                         <KnockbackAmount>80</KnockbackAmount>
                         <ProjectileType></ProjectileType>
+                        <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -6000,6 +6005,7 @@
                         <Damage>0</Damage>
                         <KnockbackAmount>64</KnockbackAmount>
                         <ProjectileType>Fireball</ProjectileType>
+                        <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -6073,6 +6079,7 @@
                         <Damage>0</Damage>
                         <KnockbackAmount>0</KnockbackAmount>
                         <ProjectileType>Ice</ProjectileType>
+                        <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -6174,8 +6181,9 @@
                         <playedsound>false</playedsound>
                         <Flying>false</Flying>
                         <Damage>1</Damage>
-                        <KnockbackAmount>112</KnockbackAmount>
+                        <KnockbackAmount>80</KnockbackAmount>
                         <ProjectileType></ProjectileType>
+                        <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -6655,6 +6663,45 @@
                         <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DustPar" uid="264">
+                    <properties>
+                        <rate>4</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>12</speed>
+                        <size>1</size>
+                        <opacity>50</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>6</x-randomiser>
+                        <y-randomiser>3</y-randomiser>
+                        <speed-randomiser->16</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-16</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>0</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>0.3</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>552</x>
+                        <y>668</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -7584,6 +7631,26 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="MAXHPGUI" uid="267">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>48</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="SpriteFont" uid="21">
                     <properties>
                         <character-width>16</character-width>
@@ -7614,8 +7681,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4</x>
-                        <y>4</y>
+                        <x>0</x>
+                        <y>-36</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -7702,6 +7769,65 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="HPGUI" uid="266">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4</x>
+                        <y>4</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HeartParticle" uid="268">
+                    <properties>
+                        <rate>32</rate>
+                        <spray-cone>360</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>8</speed>
+                        <size>1</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>8</x-randomiser>
+                        <y-randomiser>8</y-randomiser>
+                        <speed-randomiser->32</speed-randomiser->
+                        <size-randomiser>3</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-8</acceleration>
+                        <gravity>0</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>0</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>0.5</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-136</x>
+                        <y>124</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -7740,6 +7866,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
+        <instance type="TempData" uid="260" />
     </nonworld-instances>
     <effects />
 </c2layout>
