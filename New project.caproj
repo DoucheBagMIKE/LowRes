@@ -2068,7 +2068,6 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="BeamUID" sid="4584186413880502" type="number" />
-                <instance-variable name="LosUID" sid="4686090244932898" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1458116674467818" speed="0">
@@ -2151,6 +2150,14 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4156874057420535" speed="5">
+                    <frame duration="1" hotspotX="0.666667" hotspotY="0.666667" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BeamRunner" sid="7567470635324789">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3936693102360334" speed="5">
                     <frame duration="1" hotspotX="0.666667" hotspotY="0.666667" />
                 </animation>
             </animation-folder>
@@ -2419,6 +2426,7 @@
         <event-sheet>GUI.xml</event-sheet>
         <event-sheet>Light.xml</event-sheet>
         <event-sheet>Particle.xml</event-sheet>
+        <event-sheet>Mirrors.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="1" />
