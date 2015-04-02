@@ -30,6 +30,34 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="5484307084280826">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8021542870865803" type="SpriteFont">
+                            <param id="0" name="Instance variable">Function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ARROWS&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8953443802611838" type="SpriteFont">
+                            <param id="0" name="Text">GameStats.Get(&quot;ARROWS&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1883568078945592">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2200086456547902" type="SpriteFont">
+                            <param id="0" name="Instance variable">Function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BOMBS&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7700984268172615" type="SpriteFont">
+                            <param id="0" name="Text">GameStats.Get(&quot;BOMBS&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
     </events>

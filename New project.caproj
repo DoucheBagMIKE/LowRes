@@ -8,7 +8,7 @@
     <author-website></author-website>
     <app-id></app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>20000</saved-with-version>
+    <saved-with-version>20100</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -56,7 +56,7 @@
         <prop name="Clear background">No</prop>
         <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
@@ -247,17 +247,6 @@
                             <image-point name="Imagepoint 1" x="0.208333" y="0.25" />
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="BowRight" pingpong="0" repeatcount="1" repeatto="0" sid="9570113337810527" speed="10">
-                        <frame duration="1" hotspotX="0.208333" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.541667" y="0.5" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.208333" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.541667" y="0.5" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.208333" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.541667" y="0.5" />
-                        </frame>
-                    </animation>
                     <animation framecount="3" loop="0" name="BowLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4005680340496672" speed="10">
                         <frame duration="1" hotspotX="0.791667" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.458333" y="0.5" />
@@ -285,6 +274,17 @@
                                 <point x="0" y="0" />
                                 <point x="1" y="0" />
                             </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="BowRight" pingpong="0" repeatcount="1" repeatto="0" sid="7658316246149594" speed="10">
+                        <frame duration="1" hotspotX="0.208333" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.541667" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.208333" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.541667" y="0.5" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.208333" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.541667" y="0.5" />
                         </frame>
                     </animation>
                     <animation framecount="3" loop="0" name="BowDown" pingpong="0" repeatcount="1" repeatto="0" sid="836488207414564" speed="10">
@@ -2180,6 +2180,36 @@
         <object-type name="HeartParticle" sid="2789661651493658">
             <plugin id="Particles" />
             <texture />
+        </object-type>
+        <object-type name="GUI_ICON" sid="3946468970191348">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Bow" pingpong="0" repeatcount="1" repeatto="0" sid="7225707528559896" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Bomb" pingpong="0" repeatcount="1" repeatto="0" sid="1759511921045105" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tilemap" sid="8860606055427446">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="7160935921886368">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="Sprite3" sid="6452495407886295">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9230245832095183" speed="1">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>

@@ -1277,6 +1277,37 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="1830585487135797">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="1249505629053131" type="Enemies">
+                                            <param id="0" name="Object">Tilemap</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="8314609068015515" type="Enemies">
+                                            <param id="0" name="Instance variable">MovementType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Projectile&quot;</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="7976899949559639" type="Enemies">
+                                            <param id="0" name="Instance variable">MovementType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Flying&quot;</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="4871698579269824" type="Enemies">
+                                            <param id="0" name="Instance variable">MovementType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Flying2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Movement" id="2" name="Set speed" sid="8654261608104325" type="Enemies">
+                                            <param id="0" name="Which">2</param>
+                                            <param id="1" name="Speed">(self.Movement.dy/2)*-1</param>
+                                        </action>
+                                        <action behavior="Movement" id="9" name="Stop stepping" sid="6070938564064298" type="Enemies">
+                                            <param id="0" name="Position">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="250580848245453">
@@ -1368,6 +1399,37 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="1891152769681943">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="952606075281877" type="Enemies">
+                                            <param id="0" name="Object">Tilemap</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="1920707089108714" type="Enemies">
+                                            <param id="0" name="Instance variable">MovementType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Projectile&quot;</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="718900945585031" type="Enemies">
+                                            <param id="0" name="Instance variable">MovementType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Flying&quot;</param>
+                                        </condition>
+                                        <condition id="-7" inverted="1" name="Compare instance variable" sid="9853835603940483" type="Enemies">
+                                            <param id="0" name="Instance variable">MovementType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Flying2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Movement" id="2" name="Set speed" sid="607633388519611" type="Enemies">
+                                            <param id="0" name="Which">1</param>
+                                            <param id="1" name="Speed">(self.Movement.dx/2)*-1</param>
+                                        </action>
+                                        <action behavior="Movement" id="9" name="Stop stepping" sid="6296393390969335" type="Enemies">
+                                            <param id="0" name="Position">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="7794962031025877">
@@ -1396,6 +1458,9 @@
                                                 </condition>
                                                 <condition id="1" name="Is overlapping another object" sid="1804953147202795" type="Enemies">
                                                     <param id="0" name="Object">Solid</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="9610036634813953" type="Enemies">
+                                                    <param id="0" name="Object">Tilemap</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -1459,6 +1524,9 @@
                                                 </condition>
                                                 <condition id="1" name="Is overlapping another object" sid="7495301952443774" type="Enemies">
                                                     <param id="0" name="Object">Solid</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="1218990436416571" type="Enemies">
+                                                    <param id="0" name="Object">Tilemap</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -1570,13 +1638,13 @@
                                 </event-block>
                                 <event-block sid="2294917800348124">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="9529301858744432" type="Enemies">
-                                            <param id="0" name="Instance variable">Projectile</param>
-                                        </condition>
                                         <condition id="-7" name="Compare instance variable" sid="1130323670721106" type="Melee_Hitbox">
                                             <param id="0" name="Instance variable">Damage</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="9529301858744432" type="Enemies">
+                                            <param id="0" name="Instance variable">Projectile</param>
                                         </condition>
                                     </conditions>
                                     <actions>

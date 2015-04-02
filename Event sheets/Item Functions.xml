@@ -335,7 +335,7 @@
                     <param id="7" name="Tag (optional)">&quot;Sword&quot;</param>
                 </action>
                 <action behavior="8Direction" id="3" name="Set speed" sid="3582200366536116" type="BASE">
-                    <param id="0" name="Speed">BASE.8Direction.Speed/4</param>
+                    <param id="0" name="Speed">BASE.8Direction.Speed/2</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="8026232916102085" type="BASE">
                     <param id="0" name="Instance variable">holding</param>
@@ -501,7 +501,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="1989234173755645" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
-                            <param id="1" name="Value">0.25</param>
+                            <param id="1" name="Value">0.35</param>
                         </action>
                     </actions>
                 </event-block>
@@ -681,7 +681,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="300658347611883" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
-                            <param id="1" name="Value">0.25</param>
+                            <param id="1" name="Value">0.5</param>
                         </action>
                     </actions>
                 </event-block>
@@ -705,7 +705,7 @@
                     <param id="7" name="Tag (optional)">&quot;Sword&quot;</param>
                 </action>
                 <action behavior="8Direction" id="3" name="Set speed" sid="7975859534927749" type="BASE">
-                    <param id="0" name="Speed">BASE.8Direction.Speed/4</param>
+                    <param id="0" name="Speed">BASE.8Direction.Speed/2</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="3165750282201055" type="BASE">
                     <param id="0" name="Instance variable">holding</param>
@@ -923,7 +923,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="6899325591932948" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
-                            <param id="1" name="Value">0.25</param>
+                            <param id="1" name="Value">0.5</param>
                         </action>
                     </actions>
                 </event-block>
