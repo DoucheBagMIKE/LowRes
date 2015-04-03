@@ -2407,6 +2407,7 @@
                 <instance-variable comment="Function to call when this object is unlocked." name="On_Unlocked" sid="9933643258076713" type="string" />
                 <instance-variable name="Params" sid="5838128292997966" type="string" />
                 <instance-variable name="speed" sid="702369108341283" type="number" />
+                <instance-variable name="NeedsGameData" sid="5588109790588124" type="boolean" />
             </instance-variables>
         </family>
         <family name="Particles" plugin-id="Particles" sid="4566313777666088">
@@ -2450,7 +2451,10 @@
         </family>
         <family name="PointsOfIntrest" plugin-id="Sprite" sid="6465003405776335">
             <members>
+                <member>Door</member>
                 <member>ITEM_SPAWNER</member>
+                <member>OBJECT_SPAWNER</member>
+                <member>Sign</member>
                 <member>Sprite2</member>
             </members>
         </family>

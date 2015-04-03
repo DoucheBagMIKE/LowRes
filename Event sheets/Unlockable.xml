@@ -55,6 +55,19 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="2075864042698505">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5874596576825549" type="Unlockable">
+                                    <param id="0" name="Instance variable">NeedsGameData</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="5163389108449197" type="GameStats">
+                                    <param id="0" name="Key">&quot;Unlockable_&quot;&amp;Unlockable.UID</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="1541181085035487">
                             <conditions />
                             <actions>

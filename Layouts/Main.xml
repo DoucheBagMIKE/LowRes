@@ -4377,6 +4377,7 @@
                         <On_Unlocked>Door</On_Unlocked>
                         <Params>28</Params>
                         <speed>5</speed>
+                        <NeedsGameData>true</NeedsGameData>
                         <RoomUID>0</RoomUID>
                         <DoortoUID>30</DoortoUID>
                         <facing>north</facing>
@@ -4421,6 +4422,7 @@
                         <On_Unlocked></On_Unlocked>
                         <Params></Params>
                         <speed>5</speed>
+                        <NeedsGameData>false</NeedsGameData>
                         <RoomUID>0</RoomUID>
                         <DoortoUID>28</DoortoUID>
                         <facing>south</facing>
@@ -6996,10 +6998,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>840</x>
-                        <y>488</y>
+                        <y>464</y>
                         <z>0</z>
-                        <width>36</width>
-                        <height>16</height>
+                        <width>96</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -7037,6 +7039,36 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="286">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Player</TriggeredBy>
+                        <Conditions>Has_Key_214 !Unlockable_28</Conditions>
+                        <FunctionName>SetGhostState</FunctionName>
+                        <Params>NpcTest 28 286</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>840</x>
+                        <y>446</y>
+                        <z>0</z>
+                        <width>96</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
             </instances>
