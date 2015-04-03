@@ -1606,9 +1606,10 @@
                 <object-type name="TriggerZone" sid="1986219512632634">
                     <plugin id="Sprite" />
                     <instance-variables>
+                        <instance-variable name="TriggeredBy" sid="8625528021362783" type="string" />
+                        <instance-variable name="Conditions" sid="6702141080560566" type="string" />
                         <instance-variable name="FunctionName" sid="8330495798329282" type="string" />
                         <instance-variable name="Params" sid="8691334727586757" type="string" />
-                        <instance-variable name="TriggeredBy" sid="8625528021362783" type="string" />
                         <instance-variable name="Triggered" sid="8678362022841377" type="boolean" />
                         <instance-variable name="RoomUID" sid="3217334782030308" type="number" />
                     </instance-variables>
@@ -2446,6 +2447,12 @@
                 <instance-variable name="HasParticle" sid="7268383014922397" type="boolean" />
                 <instance-variable name="ParticleUID" sid="4372701798442964" type="number" />
             </instance-variables>
+        </family>
+        <family name="PointsOfIntrest" plugin-id="Sprite" sid="6465003405776335">
+            <members>
+                <member>ITEM_SPAWNER</member>
+                <member>Sprite2</member>
+            </members>
         </family>
     </families>
     <layout-folder>

@@ -5574,9 +5574,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <TriggeredBy>PushBlock</TriggeredBy>
+                        <Conditions></Conditions>
                         <FunctionName>OpenUnlockable</FunctionName>
                         <Params>28</Params>
-                        <TriggeredBy>PushBlock</TriggeredBy>
                         <Triggered>false</Triggered>
                         <RoomUID>0</RoomUID>
                     </instance-variables>
@@ -5592,7 +5593,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
                 <instance type="ITEM_SPAWNER" uid="208">
@@ -5633,9 +5634,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <TriggeredBy>Buttons</TriggeredBy>
+                        <Conditions></Conditions>
                         <FunctionName>ShowTextBox</FunctionName>
                         <Params>bottom;Test</Params>
-                        <TriggeredBy>Buttons</TriggeredBy>
                         <Triggered>false</Triggered>
                         <RoomUID>0</RoomUID>
                     </instance-variables>
@@ -5651,7 +5653,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
                 <instance type="ITEM_SPAWNER" uid="214">
@@ -5752,9 +5754,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <TriggeredBy>SmallKey</TriggeredBy>
+                        <Conditions></Conditions>
                         <FunctionName>OpenUnlockable</FunctionName>
                         <Params>28</Params>
-                        <TriggeredBy>SmallKey</TriggeredBy>
                         <Triggered>false</Triggered>
                         <RoomUID>0</RoomUID>
                     </instance-variables>
@@ -5770,7 +5773,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
                 <instance type="Sign" uid="206">
@@ -5861,9 +5864,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <TriggeredBy>Buttons</TriggeredBy>
+                        <Conditions></Conditions>
                         <FunctionName>Save</FunctionName>
                         <Params></Params>
-                        <TriggeredBy>Buttons</TriggeredBy>
                         <Triggered>false</Triggered>
                         <RoomUID>0</RoomUID>
                     </instance-variables>
@@ -5879,7 +5883,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
                 <instance type="Sprite2" uid="223">
@@ -5922,9 +5926,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <TriggeredBy>Buttons</TriggeredBy>
+                        <Conditions></Conditions>
                         <FunctionName>Load</FunctionName>
                         <Params></Params>
-                        <TriggeredBy>Buttons</TriggeredBy>
                         <Triggered>false</Triggered>
                         <RoomUID>0</RoomUID>
                     </instance-variables>
@@ -5940,7 +5945,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
                 <instance type="Sprite2" uid="225">
@@ -6712,8 +6717,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>852</x>
-                        <y>508</y>
+                        <x>-8</x>
+                        <y>516</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -6734,8 +6739,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>836</x>
-                        <y>528</y>
+                        <x>-24</x>
+                        <y>536</y>
                         <z>0</z>
                         <width>4.933227539</width>
                         <height>2</height>
@@ -6760,70 +6765,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>848</x>
-                        <y>520</y>
+                        <x>-12</x>
+                        <y>528</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="BeamSource" uid="240">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Dir>Down</Dir>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Custom</obstacles>
-                                <range>480</range>
-                                <cone-of-view>1</cone-of-view>
-                                <use-collision-cells>No</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>820</x>
-                        <y>476</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SourceBeam" uid="255">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>820</x>
-                        <y>476</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>2</height>
-                        <depth>0</depth>
-                        <hotspotX>1</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -6839,8 +6787,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>836</x>
-                        <y>532</y>
+                        <x>-24</x>
+                        <y>540</y>
                         <z>0</z>
                         <width>3</width>
                         <height>3</height>
@@ -6865,8 +6813,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>820</x>
-                        <y>508</y>
+                        <x>-40</x>
+                        <y>516</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -6891,8 +6839,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>824</x>
-                        <y>520</y>
+                        <x>-36</x>
+                        <y>528</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -6926,8 +6874,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>852</x>
-                        <y>476</y>
+                        <x>-8</x>
+                        <y>484</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -6948,8 +6896,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>852</x>
-                        <y>476</y>
+                        <x>-8</x>
+                        <y>484</y>
                         <z>0</z>
                         <width>8</width>
                         <height>2</height>
@@ -7024,6 +6972,68 @@
                         <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="255">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Player</TriggeredBy>
+                        <Conditions>!Has_Key_214</Conditions>
+                        <FunctionName>SetGhostState</FunctionName>
+                        <Params>NpcTest 214 255</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>840</x>
+                        <y>488</y>
+                        <z>0</z>
+                        <width>36</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite2" uid="240">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Shadow>SmallHor</Shadow>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid2">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>744</x>
+                        <y>436</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

@@ -43,17 +43,86 @@
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="5" name="Push" sid="402089250974803" type="Array">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">TriggerZone.FunctionName&amp;&quot;  &quot;&amp;TriggerZone.Params</param>
-                            <param id="2" name="Axis">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="6544466266498827" type="Function">
-                            <param id="0" name="Name">TriggerZone.FunctionName</param>
-                            <param id="1" name="Parameter {n}">TriggerZone.Params</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="Flag" sid="8252983876961299" static="0" type="number">1</variable>
+                        <event-block sid="4470596709502193">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="1728876053553472" type="System">
+                                    <param id="0" name="Count">tokencount(TriggerZone.Conditions, &quot; &quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4269013101975439">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="2463085773676889" type="System">
+                                            <param id="0" name="First value">left(tokenat(TriggerZone.Conditions, loopindex, &quot; &quot;), 1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;!&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1201869154540404">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="1041708803651487" type="GameStats">
+                                                    <param id="0" name="Key">mid(tokenat(TriggerZone.Conditions, loopindex, &quot; &quot;), 1, len(tokenat(TriggerZone.Conditions, loopindex, &quot; &quot;)))</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="9512154567841867" type="System">
+                                                    <param id="0" name="Variable">Flag</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="2821034583577005">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="894518456491114" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="4937883615823671">
+                                            <conditions>
+                                                <condition id="3" inverted="1" name="Has key" sid="7007851092073051" type="GameStats">
+                                                    <param id="0" name="Key">mid(tokenat(TriggerZone.Conditions, loopindex, &quot; &quot;), 1, len(tokenat(TriggerZone.Conditions, loopindex, &quot; &quot;)))</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="8062919398132663" type="System">
+                                                    <param id="0" name="Variable">Flag</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2986533378741221">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2586370105458266" type="System">
+                                    <param id="0" name="Variable">Flag</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="5" name="Push" sid="402089250974803" type="Array">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">TriggerZone.FunctionName&amp;&quot;  &quot;&amp;TriggerZone.Params</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6544466266498827" type="Function">
+                                    <param id="0" name="Name">TriggerZone.FunctionName</param>
+                                    <param id="1" name="Parameter {n}">TriggerZone.Params</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="6715871188132635">
                     <conditions>

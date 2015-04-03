@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Mirrors</name>
     <events>
-        <event-group description="" sid="7170822589747524" title="Mirror/BeamLogic">
+        <event-group description="" inactive="1" sid="7170822589747524" title="Mirror/BeamLogic">
             <sub-events>
                 <event-block sid="874949356269585">
                     <conditions>
