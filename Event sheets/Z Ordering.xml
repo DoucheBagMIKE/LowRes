@@ -30,7 +30,7 @@
                     </conditions>
                     <actions>
                         <action id="-24" name="Move to top" sid="3824120694201226" type="Enemies" />
-                        <action id="-24" name="Move to top" sid="896235720114588" type="Dog" />
+                        <action id="-24" name="Move to top" sid="896235720114588" type="Ghost" />
                     </actions>
                 </event-block>
             </sub-events>

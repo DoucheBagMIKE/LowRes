@@ -54,7 +54,7 @@
                                             <param id="0" name="Variable">LerpSDP</param>
                                             <param id="1" name="Value">0.1</param>
                                         </action>
-                                        <action id="-4" name="Set position to another object" sid="5120436487078382" type="Dog">
+                                        <action id="-4" name="Set position to another object" sid="5120436487078382" type="Ghost">
                                             <param id="0" name="Object">BASE</param>
                                             <param id="1" name="Image point (optional)">0</param>
                                         </action>

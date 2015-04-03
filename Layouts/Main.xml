@@ -4366,6 +4366,66 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TriggerZone" uid="255">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Player</TriggeredBy>
+                        <Conditions>!Has_Key_214</Conditions>
+                        <FunctionName>SetGhostState</FunctionName>
+                        <Params>NpcTest 214 255</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>812</x>
+                        <y>476</y>
+                        <z>0</z>
+                        <width>184</width>
+                        <height>136</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="286">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Player</TriggeredBy>
+                        <Conditions>Has_Key_214 !Unlockable_28</Conditions>
+                        <FunctionName>SetGhostState</FunctionName>
+                        <Params>NpcTest 28 286</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>812</x>
+                        <y>476</y>
+                        <z>0</z>
+                        <width>184</width>
+                        <height>136</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
                 <instance type="Door" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -5810,7 +5870,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Dog" uid="220">
+                <instance type="Ghost" uid="220">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6979,36 +7039,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TriggerZone" uid="255">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>Player</TriggeredBy>
-                        <Conditions>!Has_Key_214</Conditions>
-                        <FunctionName>SetGhostState</FunctionName>
-                        <Params>NpcTest 214 255</Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>840</x>
-                        <y>464</y>
-                        <z>0</z>
-                        <width>96</width>
-                        <height>60</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
-                    </world>
-                </instance>
                 <instance type="Sprite2" uid="240">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -7039,36 +7069,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TriggerZone" uid="286">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>Player</TriggeredBy>
-                        <Conditions>Has_Key_214 !Unlockable_28</Conditions>
-                        <FunctionName>SetGhostState</FunctionName>
-                        <Params>NpcTest 28 286</Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>840</x>
-                        <y>446</y>
-                        <z>0</z>
-                        <width>96</width>
-                        <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
             </instances>

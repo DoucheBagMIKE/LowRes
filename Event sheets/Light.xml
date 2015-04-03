@@ -103,7 +103,7 @@
                 <condition id="-1" name="Every tick" sid="1389239147096606" type="System" />
             </conditions>
             <actions>
-                <action id="-24" name="Move to top" sid="6875964828938407" type="Dog" />
+                <action id="-24" name="Move to top" sid="6875964828938407" type="Ghost" />
             </actions>
         </event-block>
         <event-block sid="7987441272604501">

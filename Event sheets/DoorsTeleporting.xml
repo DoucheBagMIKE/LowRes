@@ -154,18 +154,22 @@
                                 <event-block sid="9305163137179893">
                                     <conditions>
                                         <condition id="-14" name="Pick by unique ID" sid="2608075977178739" type="NPC">
-                                            <param id="0" name="Unique ID">Dog.UID</param>
+                                            <param id="0" name="Unique ID">Ghost.UID</param>
                                         </condition>
                                         <condition id="-14" name="Pick by unique ID" sid="6985734122644694" type="FSM">
                                             <param id="0" name="Unique ID">NPC.FSM_UID</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Clear" sid="3364602181043928" type="FSM" />
-                                        <action id="5" name="Push" sid="7522560701068538" type="FSM">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">&quot;Follow&quot;</param>
-                                            <param id="2" name="Axis">0</param>
+                                        <action id="1" name="Set size" sid="3364602181043928" type="FSM">
+                                            <param id="0" name="Width">0</param>
+                                            <param id="1" name="Height">1</param>
+                                            <param id="2" name="Depth">1</param>
+                                        </action>
+                                        <action id="3" name="Clear" sid="2365314009862573" type="NPCData" />
+                                        <action id="0" name="Call function" sid="7522560701068538" type="Function">
+                                            <param id="0" name="Name">&quot;SetGhostState&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Follow&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

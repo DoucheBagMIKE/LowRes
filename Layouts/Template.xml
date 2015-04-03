@@ -269,7 +269,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Dog" uid="234">
+                <instance type="Ghost" uid="234">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -278,7 +278,7 @@
                     </properties>
                     <instance-variables>
                         <Shadow>SmallHor</Shadow>
-                        <StartState>Wait</StartState>
+                        <StartState>Follow</StartState>
                         <FSM_UID>-1</FSM_UID>
                         <DataUID>-1</DataUID>
                         <HasLight>false</HasLight>

@@ -26,26 +26,32 @@
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="8010678647403967" type="System">
-                    <param id="0" name="Object to create">Dog</param>
+                    <param id="0" name="Object to create">Ghost</param>
                     <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">Dog.X</param>
-                    <param id="3" name="Y">Dog.Y</param>
+                    <param id="2" name="X">Ghost.X</param>
+                    <param id="3" name="Y">Ghost.Y</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block sid="762411512999836">
                     <conditions>
                         <condition id="-13" name="Pick nth instance" sid="255476359923556" type="System">
-                            <param id="0" name="Object">Dog</param>
+                            <param id="0" name="Object">Ghost</param>
                             <param id="1" name="Instance">0</param>
                         </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="3994701175420098" type="FSM">
-                            <param id="0" name="Unique ID">Dog.FSM_UID</param>
+                        <condition id="-13" name="Pick nth instance" sid="8029348559357996" type="System">
+                            <param id="0" name="Object">FSM</param>
+                            <param id="1" name="Instance">0</param>
+                        </condition>
+                        <condition id="-13" name="Pick nth instance" sid="3962219653874635" type="System">
+                            <param id="0" name="Object">NPCData</param>
+                            <param id="1" name="Instance">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="8941441702858783" type="Dog" />
+                        <action id="-9" name="Destroy" sid="8941441702858783" type="Ghost" />
                         <action id="-9" name="Destroy" sid="9559310977595917" type="FSM" />
+                        <action id="-9" name="Destroy" sid="1591638527267376" type="NPCData" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -80,6 +86,10 @@
                     <param id="1" name="Value">NPC.StartState</param>
                     <param id="2" name="Axis">0</param>
                 </action>
+                <action id="0" name="Add key" sid="3983102119328411" type="NPCData">
+                    <param id="0" name="Key">&quot;Target&quot;</param>
+                    <param id="1" name="Value">BASE.UID</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="8504086508441036">
@@ -96,13 +106,16 @@
                 <condition id="-14" name="Pick by unique ID" sid="7334703988115381" type="FSM">
                     <param id="0" name="Unique ID">NPC.FSM_UID</param>
                 </condition>
+                <condition id="-14" name="Pick by unique ID" sid="5074466421708293" type="PointsOfIntrest">
+                    <param id="0" name="Unique ID">NPCData.Get(&quot;Target&quot;)</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="4064209416903041">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="6289986004661929" type="System">
-                            <param id="0" name="First value">distance(BASE.X, BASE.Y, NPC.X, NPC.Y)</param>
+                            <param id="0" name="First value">distance(PointsOfIntrest.X, PointsOfIntrest.Y, NPC.X, NPC.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">8</param>
                         </condition>
@@ -135,13 +148,16 @@
                 <condition id="-14" name="Pick by unique ID" sid="5148015078176095" type="NPCData">
                     <param id="0" name="Unique ID">NPC.DataUID</param>
                 </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6250087962905773" type="PointsOfIntrest">
+                    <param id="0" name="Unique ID">NPCData.Get(&quot;Target&quot;)</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="2865036458835432">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="6524343258156533" type="System">
-                            <param id="0" name="First value">distance(BASE.X, BASE.Y, NPC.X, NPC.Y)</param>
+                            <param id="0" name="First value">distance(PointsOfIntrest.X, PointsOfIntrest.Y, NPC.X, NPC.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">16</param>
                         </condition>
@@ -161,11 +177,11 @@
                     <actions>
                         <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="1883288562218647" type="NPC">
                             <param id="0" name="Acceleration">128</param>
-                            <param id="1" name="Angle">angle(NPC.X,NPC.Y, BASE.X,BASE.Y)</param>
+                            <param id="1" name="Angle">angle(NPC.X,NPC.Y, PointsOfIntrest.X,PointsOfIntrest.Y)</param>
                         </action>
                         <action behavior="CustomMovement" id="2" name="Set speed" sid="9466157315116942" type="NPC">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">clamp(NPC.CustomMovement.Speed,0,distance(BASE.X,base.Y,NPC.X,npc.Y))</param>
+                            <param id="1" name="Speed">clamp(NPC.CustomMovement.Speed,0,distance(PointsOfIntrest.X,PointsOfIntrest.Y,NPC.X,npc.Y))</param>
                         </action>
                     </actions>
                 </event-block>
@@ -185,6 +201,9 @@
                 <condition id="-14" name="Pick by unique ID" sid="6350288072028748" type="FSM">
                     <param id="0" name="Unique ID">NPC.FSM_UID</param>
                 </condition>
+                <condition id="-14" name="Pick by unique ID" sid="8162113052432311" type="PointsOfIntrest">
+                    <param id="0" name="Unique ID">NPCData.Get(&quot;Target&quot;)</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
@@ -200,18 +219,18 @@
                     <actions>
                         <action id="0" name="Add key" sid="6828398253581147" type="NPCData">
                             <param id="0" name="Key">&quot;Wander X&quot;</param>
-                            <param id="1" name="Value">random(BASE.X - 16, BASE.X + 16)</param>
+                            <param id="1" name="Value">random(PointsOfIntrest.X - 16, PointsOfIntrest.X + 16)</param>
                         </action>
                         <action id="0" name="Add key" sid="6810370334872173" type="NPCData">
                             <param id="0" name="Key">&quot;Wander Y&quot;</param>
-                            <param id="1" name="Value">random(BASE.Y - 16, BASE.Y + 16)</param>
+                            <param id="1" name="Value">random(PointsOfIntrest.Y - 16, PointsOfIntrest.Y + 16)</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="7927777336602397">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="5900145506748982" type="System">
-                            <param id="0" name="First value">distance(BASE.X, BASE.Y, NPC.X, NPC.Y)</param>
+                            <param id="0" name="First value">distance(PointsOfIntrest.X, PointsOfIntrest.Y, NPC.X, NPC.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">32</param>
                         </condition>
@@ -275,13 +294,186 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="440148608218752">
+            <conditions>
+                <condition id="0" name="On function" sid="7915151550560147" type="Function">
+                    <param id="0" name="Name">&quot;NpcTest&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7794917781179379" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="9188558993787725" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="1964413769591552" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1030658407200559">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="9040643184532368" type="NPCData">
+                            <param id="0" name="Key">&quot;NpcTestParams&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="7689022576338328" type="NPCData">
+                            <param id="0" name="Key">&quot;LastPoint&quot;</param>
+                            <param id="1" name="Value">NPCData.Get(&quot;Target&quot;)</param>
+                        </action>
+                        <action id="1" name="Set key" sid="6883717680632086" type="NPCData">
+                            <param id="0" name="Key">&quot;Target&quot;</param>
+                            <param id="1" name="Value">int(tokenat(NPCData.Get(&quot;NpcTestParams&quot;),0, &quot; &quot;))</param>
+                        </action>
+                        <action id="0" name="Add key" sid="4871720390371659" type="NPCData">
+                            <param id="0" name="Key">&quot;TriggerUID&quot;</param>
+                            <param id="1" name="Value">int(tokenat(NPCData.Get(&quot;NpcTestParams&quot;),1, &quot; &quot;))</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="74892886706192" type="NPCData">
+                            <param id="0" name="Key">&quot;NpcTestParams&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7719177515817293">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="7500609866100717" type="TriggerZone">
+                            <param id="0" name="Unique ID">NPCData.Get(&quot;TriggerUID&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7188231290664193">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4466496274869384" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;TriggerConditions&quot;, TriggerZone.UID)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5628404556348953" type="Function">
+                                    <param id="0" name="Name">&quot;PopState&quot;</param>
+                                    <param id="1" name="Parameter {n}">NPC.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8158764887219628">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1339846971477776" type="System" />
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="6495160410535113" type="BASE">
+                                    <param id="0" name="Object">TriggerZone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1245978795126988" type="Function">
+                                    <param id="0" name="Name">&quot;PopState&quot;</param>
+                                    <param id="1" name="Parameter {n}">NPC.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5712960359605125">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8537105186199669" type="System" />
+                                <condition id="-14" name="Pick by unique ID" sid="9104901973358009" type="PointsOfIntrest">
+                                    <param id="0" name="Unique ID">NPCData.Get(&quot;Target&quot;)</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="638320403854529" type="System">
+                                    <param id="0" name="First value">distance(PointsOfIntrest.X, PointsOfIntrest.Y, NPC.X, NPC.Y)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1632934868143677" type="Function">
+                                    <param id="0" name="Name">&quot;SetGhostState&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;MoveToPOI&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6147294386818994">
+            <conditions>
+                <condition id="0" name="On function" sid="7885068633740328" type="Function">
+                    <param id="0" name="Name">&quot;MoveToPOI&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="9946665451103685" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7979640224852884" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7377442721640929" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="4181683608688763" type="PointsOfIntrest">
+                    <param id="0" name="Unique ID">int(NPCData.Get(&quot;Target&quot;))</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="551561548676695">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="1975760762464655" type="NPCData">
+                            <param id="0" name="Key">&quot;TriggerUID&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2810229712717782" type="TriggerZone">
+                            <param id="0" name="Unique ID">NPCData.Get(&quot;TriggerUID&quot;)</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="413868887425554" type="BASE">
+                            <param id="0" name="Object">TriggerZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="7837263233498206" type="Function">
+                            <param id="0" name="Name">&quot;PopState&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8979856877371183">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3946018974502706" type="System" />
+                        <condition id="-8" name="Compare two values" sid="8000303066625188" type="System">
+                            <param id="0" name="First value">distance(PointsOfIntrest.X, PointsOfIntrest.Y, NPC.X, NPC.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4920668184382967" type="Function">
+                            <param id="0" name="Name">&quot;PopState&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2848921077924819">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1095529425837475" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="7424109138028256" type="NPC">
+                            <param id="0" name="Acceleration">64</param>
+                            <param id="1" name="Angle">angle(NPC.X,NPC.Y, PointsOfIntrest.X,PointsOfIntrest.Y)</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="2238068571605161" type="NPC">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">clamp(NPC.CustomMovement.Speed,0,distance(PointsOfIntrest.X,PointsOfIntrest.Y,NPC.X,npc.Y))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="9080691422076241">
             <conditions>
                 <condition id="0" name="On function" sid="8191271837812787" type="Function">
                     <param id="0" name="Name">&quot;SetGhostState&quot;</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="3872710641411265" type="NPC">
-                    <param id="0" name="Unique ID">Dog.UID</param>
+                    <param id="0" name="Unique ID">Ghost.UID</param>
                 </condition>
                 <condition id="-14" name="Pick by unique ID" sid="2395664542426012" type="NPCData">
                     <param id="0" name="Unique ID">NPC.DataUID</param>
@@ -290,14 +482,19 @@
                     <param id="0" name="Unique ID">NPC.FSM_UID</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Add key" sid="4896809440803457" type="NPCData">
+                    <param id="0" name="Key">&quot;Data&quot;&amp;FSM.Width-1</param>
+                    <param id="1" name="Value">NPCData.AsJSON</param>
+                </action>
+            </actions>
             <sub-events>
                 <variable constant="0" name="Data" sid="3728084650696736" static="0" type="text"></variable>
                 <event-block sid="6421054435030656">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="431390804714948" type="System">
                             <param id="0" name="First value">tokencount(Function.Param(0), &quot; &quot;)</param>
-                            <param id="1" name="Comparison">4</param>
+                            <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">1</param>
                         </condition>
                     </conditions>
@@ -332,152 +529,44 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="440148608218752">
-            <conditions>
-                <condition id="0" name="On function" sid="7915151550560147" type="Function">
-                    <param id="0" name="Name">&quot;NpcTest&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="7794917781179379" type="NPC">
-                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="9188558993787725" type="NPCData">
-                    <param id="0" name="Unique ID">NPC.DataUID</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="1964413769591552" type="FSM">
-                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="1030658407200559">
+                <event-block sid="9101173214496582">
                     <conditions>
-                        <condition id="3" name="Has key" sid="9040643184532368" type="NPCData">
-                            <param id="0" name="Key">&quot;NpcTestParams&quot;</param>
-                        </condition>
+                        <condition id="-22" name="Else" sid="9786063048118682" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Add key" sid="7689022576338328" type="NPCData">
-                            <param id="0" name="Key">&quot;PointOfIntrest&quot;</param>
-                            <param id="1" name="Value">int(tokenat(NPCData.Get(&quot;NpcTestParams&quot;),0, &quot; &quot;))</param>
-                        </action>
-                        <action id="0" name="Add key" sid="4871720390371659" type="NPCData">
-                            <param id="0" name="Key">&quot;TriggerUID&quot;</param>
-                            <param id="1" name="Value">int(tokenat(NPCData.Get(&quot;NpcTestParams&quot;),1, &quot; &quot;))</param>
-                        </action>
-                        <action id="2" name="Delete key" sid="74892886706192" type="NPCData">
-                            <param id="0" name="Key">&quot;NpcTestParams&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7719177515817293">
-                    <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="7500609866100717" type="TriggerZone">
-                            <param id="0" name="Unique ID">NPCData.Get(&quot;TriggerUID&quot;)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7188231290664193">
-                            <conditions>
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="5362532864304753" type="BASE">
-                                    <param id="0" name="Object">TriggerZone</param>
-                                </condition>
-                                <condition disabled="1" id="-8" name="Compare two values" sid="4466496274869384" type="System">
-                                    <param id="0" name="First value">Function.Call(&quot;TriggerConditions&quot;, TriggerZone.UID)</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="2" name="Delete key" sid="5077037957848053" type="NPCData">
-                                    <param id="0" name="Key">&quot;PointOfIntrest&quot;</param>
-                                </action>
-                                <action id="2" name="Delete key" sid="1994311292899167" type="NPCData">
-                                    <param id="0" name="Key">&quot;TriggerUID&quot;</param>
-                                </action>
-                                <action id="6" name="Pop" sid="9870680165612504" type="FSM">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Axis">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5712960359605125">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="8537105186199669" type="System" />
-                                <condition id="-14" name="Pick by unique ID" sid="9104901973358009" type="PointsOfIntrest">
-                                    <param id="0" name="Unique ID">NPCData.Get(&quot;PointOfIntrest&quot;)</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="638320403854529" type="System">
-                                    <param id="0" name="First value">distance(PointsOfIntrest.X, PointsOfIntrest.Y, NPC.X, NPC.Y)</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">8</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Push" sid="9362572753362554" type="FSM">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">&quot;MoveToPOI&quot;</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="6147294386818994">
-            <conditions>
-                <condition id="0" name="On function" sid="7885068633740328" type="Function">
-                    <param id="0" name="Name">&quot;MoveToPOI&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="9946665451103685" type="NPC">
-                    <param id="0" name="Unique ID">Function.Param(0)</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="7979640224852884" type="FSM">
-                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="7377442721640929" type="NPCData">
-                    <param id="0" name="Unique ID">NPC.DataUID</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="4181683608688763" type="PointsOfIntrest">
-                    <param id="0" name="Unique ID">int(NPCData.Get(&quot;PointOfIntrest&quot;))</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="8979856877371183">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="8000303066625188" type="System">
-                            <param id="0" name="First value">distance(PointsOfIntrest.X, PointsOfIntrest.Y, NPC.X, NPC.Y)</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">8</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="6" name="Pop" sid="6696851104222979" type="FSM">
+                        <action id="5" name="Push" sid="5588303304823717" type="FSM">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Axis">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2848921077924819">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="1095529425837475" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="7424109138028256" type="NPC">
-                            <param id="0" name="Acceleration">64</param>
-                            <param id="1" name="Angle">angle(NPC.X,NPC.Y, PointsOfIntrest.X,PointsOfIntrest.Y)</param>
-                        </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="2238068571605161" type="NPC">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">clamp(NPC.CustomMovement.Speed,0,distance(PointsOfIntrest.X,PointsOfIntrest.Y,NPC.X,npc.Y))</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                            <param id="2" name="Axis">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="874961181958268">
+            <conditions>
+                <condition id="0" name="On function" sid="7385865184100021" type="Function">
+                    <param id="0" name="Name">&quot;PopState&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6337218611591609" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="5404373122075673" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6606757493059452" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Pop" sid="1370669372715039" type="FSM">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Axis">0</param>
+                </action>
+                <action id="4" name="Load" sid="6651594881239265" type="NPCData">
+                    <param id="0" name="JSON">NPCData.Get(&quot;Data&quot;&amp;FSM.Width-1)</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

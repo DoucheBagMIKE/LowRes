@@ -213,39 +213,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="8609931091486064">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="7925678461191965" type="System">
-                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;RoomCleared&quot;)</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1607461260791689" type="TriggerZone">
-                                    <param id="0" name="Instance variable">Triggered</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="8318196259604212" type="CameraZone">
-                                    <param id="0" name="Unique ID">TriggerZone.RoomUID</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="6715096764823873" type="Enemies">
-                                    <param id="0" name="Object">CameraZone</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="4180990095575683" type="System">
-                                    <param id="0" name="First value">Enemies.PickedCount</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="9020028188566312" type="TriggerZone">
-                                    <param id="0" name="Instance variable">Triggered</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="3607673106552956" type="Function">
-                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="1582532118853418">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="6953938023968501" type="BASE">
@@ -351,6 +318,39 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="8609931091486064">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7925678461191965" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;RoomCleared&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1607461260791689" type="TriggerZone">
+                                    <param id="0" name="Instance variable">Triggered</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="8318196259604212" type="CameraZone">
+                                    <param id="0" name="Unique ID">TriggerZone.RoomUID</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="6715096764823873" type="Enemies">
+                                    <param id="0" name="Object">CameraZone</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="4180990095575683" type="System">
+                                    <param id="0" name="First value">Enemies.PickedCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9020028188566312" type="TriggerZone">
+                                    <param id="0" name="Instance variable">Triggered</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3607673106552956" type="Function">
+                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
+                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
