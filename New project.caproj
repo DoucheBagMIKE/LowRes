@@ -2205,6 +2205,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="POI" sid="9062685669957048">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5220308819493749" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -2448,6 +2456,7 @@
                 <member>Door</member>
                 <member>ITEM_SPAWNER</member>
                 <member>OBJECT_SPAWNER</member>
+                <member>POI</member>
                 <member>Sign</member>
                 <member>Sprite2</member>
             </members>

@@ -153,6 +153,9 @@
                             <sub-events>
                                 <event-block sid="9305163137179893">
                                     <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="4489761443081854" type="GameStats">
+                                            <param id="0" name="Key">&quot;GhostWait&quot;</param>
+                                        </condition>
                                         <condition id="-14" name="Pick by unique ID" sid="2608075977178739" type="NPC">
                                             <param id="0" name="Unique ID">Ghost.UID</param>
                                         </condition>
