@@ -1947,6 +1947,14 @@
         <object-folder name="NPC">
             <object-type name="Ghost" sid="4122861944462838">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="SR" sid="6677916226711971" type="number" />
+                    <instance-variable name="SG" sid="9084415234892437" type="number" />
+                    <instance-variable name="SB" sid="670178789614658" type="number" />
+                    <instance-variable name="TR" sid="7611219408730756" type="number" />
+                    <instance-variable name="TG" sid="1772501459769871" type="number" />
+                    <instance-variable name="TB" sid="1165322201239239" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="297824890208147" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">

@@ -13,6 +13,295 @@
     </margins>
     <unbounded-scrolling>1</unbounded-scrolling>
     <layers>
+        <layer name="TRIGGERZONES" sid="9675893299814544">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="TriggerZone" uid="255">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Player</TriggeredBy>
+                        <Conditions>!Has_Key_214</Conditions>
+                        <FunctionName>SetGhostState</FunctionName>
+                        <Params>NpcTest 214 255</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>812</x>
+                        <y>476</y>
+                        <z>0</z>
+                        <width>184</width>
+                        <height>136</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="286">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Player</TriggeredBy>
+                        <Conditions>Has_Key_214 !Unlockable_28</Conditions>
+                        <FunctionName>SetGhostState</FunctionName>
+                        <Params>NpcTest 28 286</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>812</x>
+                        <y>476</y>
+                        <z>0</z>
+                        <width>184</width>
+                        <height>136</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="207">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>PushBlock</TriggeredBy>
+                        <Conditions></Conditions>
+                        <FunctionName>OpenUnlockable</FunctionName>
+                        <Params>28</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>796</x>
+                        <y>484</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="183">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Sign</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Buttons</TriggeredBy>
+                        <Conditions></Conditions>
+                        <FunctionName>ShowTextBox</FunctionName>
+                        <Params>bottom;Test</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>680</x>
+                        <y>472</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="218">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>SmallKey</TriggeredBy>
+                        <Conditions></Conditions>
+                        <FunctionName>OpenUnlockable</FunctionName>
+                        <Params>28</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>840</x>
+                        <y>484</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="224">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Buttons</TriggeredBy>
+                        <Conditions></Conditions>
+                        <FunctionName>Save</FunctionName>
+                        <Params></Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>774</x>
+                        <y>464</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="226">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Buttons</TriggeredBy>
+                        <Conditions></Conditions>
+                        <FunctionName>Load</FunctionName>
+                        <Params></Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>786</x>
+                        <y>464</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="289">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy></TriggeredBy>
+                        <Conditions></Conditions>
+                        <FunctionName></FunctionName>
+                        <Params></Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>728</x>
+                        <y>276</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+                <instance type="TriggerZone" uid="290">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <TriggeredBy>Player</TriggeredBy>
+                        <Conditions>!GhostWait</Conditions>
+                        <FunctionName>SetGhostState</FunctionName>
+                        <Params>WaitAtPOI 288 289</Params>
+                        <Triggered>false</Triggered>
+                        <RoomUID>0</RoomUID>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>728</x>
+                        <y>260</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.400000006</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
         <layer name="BG" sid="2553700978494388">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
@@ -4366,66 +4655,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TriggerZone" uid="255">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>Player</TriggeredBy>
-                        <Conditions>!Has_Key_214</Conditions>
-                        <FunctionName>SetGhostState</FunctionName>
-                        <Params>NpcTest 214 255</Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>812</x>
-                        <y>476</y>
-                        <z>0</z>
-                        <width>184</width>
-                        <height>136</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
-                    </world>
-                </instance>
-                <instance type="TriggerZone" uid="286">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>Player</TriggeredBy>
-                        <Conditions>Has_Key_214 !Unlockable_28</Conditions>
-                        <FunctionName>SetGhostState</FunctionName>
-                        <Params>NpcTest 28 286</Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>812</x>
-                        <y>476</y>
-                        <z>0</z>
-                        <width>184</width>
-                        <height>136</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
-                    </world>
-                </instance>
                 <instance type="Door" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -5628,36 +5857,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TriggerZone" uid="207">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>PushBlock</TriggeredBy>
-                        <Conditions></Conditions>
-                        <FunctionName>OpenUnlockable</FunctionName>
-                        <Params>28</Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>796</x>
-                        <y>484</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
-                    </world>
-                </instance>
                 <instance type="ITEM_SPAWNER" uid="208">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -5686,36 +5885,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TriggerZone" uid="183">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Sign</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>Buttons</TriggeredBy>
-                        <Conditions></Conditions>
-                        <FunctionName>ShowTextBox</FunctionName>
-                        <Params>bottom;Test</Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>680</x>
-                        <y>472</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
                 <instance type="ITEM_SPAWNER" uid="214">
@@ -5808,36 +5977,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TriggerZone" uid="218">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>SmallKey</TriggeredBy>
-                        <Conditions></Conditions>
-                        <FunctionName>OpenUnlockable</FunctionName>
-                        <Params>28</Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>840</x>
-                        <y>484</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
-                    </world>
-                </instance>
                 <instance type="Sign" uid="206">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -5893,6 +6032,12 @@
                         <ParticleType>Ghost</ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
+                        <SR>0</SR>
+                        <SG>0</SG>
+                        <SB>0</SB>
+                        <TR>0</TR>
+                        <TG>0</TG>
+                        <TB>0</TB>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -5916,36 +6061,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TriggerZone" uid="224">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>Buttons</TriggeredBy>
-                        <Conditions></Conditions>
-                        <FunctionName>Save</FunctionName>
-                        <Params></Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>774</x>
-                        <y>464</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
                 <instance type="Sprite2" uid="223">
@@ -5978,36 +6093,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TriggerZone" uid="226">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>Buttons</TriggeredBy>
-                        <Conditions></Conditions>
-                        <FunctionName>Load</FunctionName>
-                        <Params></Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>786</x>
-                        <y>464</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
                 <instance type="Sprite2" uid="225">
@@ -7071,36 +7156,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TriggerZone" uid="287">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy>Player</TriggeredBy>
-                        <Conditions>!GhostWait</Conditions>
-                        <FunctionName>SetGhostState</FunctionName>
-                        <Params>WaitAtPOI 288 289</Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>728</x>
-                        <y>258</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>12</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
-                    </world>
-                </instance>
                 <instance type="POI" uid="288">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -7111,8 +7166,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>712</x>
-                        <y>272</y>
+                        <x>740</x>
+                        <y>280</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -7121,36 +7176,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TriggerZone" uid="289">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <TriggeredBy></TriggeredBy>
-                        <Conditions></Conditions>
-                        <FunctionName></FunctionName>
-                        <Params></Params>
-                        <Triggered>false</Triggered>
-                        <RoomUID>0</RoomUID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>708</x>
-                        <y>288</y>
-                        <z>0</z>
-                        <width>56</width>
-                        <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.400000006</opacity>
                     </world>
                 </instance>
             </instances>

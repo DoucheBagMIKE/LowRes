@@ -3,58 +3,123 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FiniteStateMachine</name>
     <events>
+        <comment>Call The Currect State for All NPC&apos;s and the ghosts light color</comment>
         <event-block sid="319932826086733">
             <conditions>
                 <condition id="-1" name="Every tick" sid="3780608807425373" type="System" />
-                <condition id="-11" name="For Each" sid="9335834033358119" type="System">
-                    <param id="0" name="Object">NPC</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="1296652870271648" type="FSM">
-                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
-                </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="2453726258624832" type="Function">
-                    <param id="0" name="Name">FSM.Back</param>
-                    <param id="1" name="Parameter {n}">NPC.UID</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="304080842521562">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9335834033358119" type="System">
+                            <param id="0" name="Object">NPC</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1296652870271648" type="FSM">
+                            <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2453726258624832" type="Function">
+                            <param id="0" name="Name">FSM.Back</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3841663481596747">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4382217896435733" type="Ghost">
+                            <param id="0" name="Instance variable">R</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Ghost.TR</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6219242056021317" type="Ghost">
+                            <param id="0" name="Instance variable">R</param>
+                            <param id="1" name="Value">lerp(Ghost.R,Ghost.TR, 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2367688580918681">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9005663602089742" type="Ghost">
+                            <param id="0" name="Instance variable">G</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Ghost.TG</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6371306578113359" type="Ghost">
+                            <param id="0" name="Instance variable">G</param>
+                            <param id="1" name="Value">lerp(Ghost.G,Ghost.TG, 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7156965747245002">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6375274070465197" type="Ghost">
+                            <param id="0" name="Instance variable">B</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Ghost.TB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6559014081857665" type="Ghost">
+                            <param id="0" name="Instance variable">B</param>
+                            <param id="1" name="Value">lerp(Ghost.B,Ghost.TB, 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="6257045773734819">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="8355692353418676" type="System" />
             </conditions>
             <actions>
-                <action id="-3" name="Create object" sid="8010678647403967" type="System">
-                    <param id="0" name="Object to create">Ghost</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">Ghost.X</param>
-                    <param id="3" name="Y">Ghost.Y</param>
+                <action id="-10" name="Set value" sid="9559310977595917" type="Ghost">
+                    <param id="0" name="Instance variable">FSM_UID</param>
+                    <param id="1" name="Value">FSM.UID</param>
+                </action>
+                <action id="-10" name="Set value" sid="1591638527267376" type="Ghost">
+                    <param id="0" name="Instance variable">DataUID</param>
+                    <param id="1" name="Value">NPCData.UID</param>
+                </action>
+                <action id="5" name="Push" sid="6087266215355508" type="FSM">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">Ghost.StartState</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+                <action id="0" name="Add key" sid="350139736692737" type="NPCData">
+                    <param id="0" name="Key">&quot;Target&quot;</param>
+                    <param id="1" name="Value">BASE.UID</param>
+                </action>
+                <action id="-10" name="Set value" sid="5898051302680927" type="Ghost">
+                    <param id="0" name="Instance variable">SR</param>
+                    <param id="1" name="Value">Ghost.R</param>
+                </action>
+                <action id="-10" name="Set value" sid="6790590371020836" type="Ghost">
+                    <param id="0" name="Instance variable">TR</param>
+                    <param id="1" name="Value">Ghost.R</param>
+                </action>
+                <action id="-10" name="Set value" sid="949592901471763" type="Ghost">
+                    <param id="0" name="Instance variable">SG</param>
+                    <param id="1" name="Value">Ghost.G</param>
+                </action>
+                <action id="-10" name="Set value" sid="4499708969911122" type="Ghost">
+                    <param id="0" name="Instance variable">TG</param>
+                    <param id="1" name="Value">Ghost.G</param>
+                </action>
+                <action id="-10" name="Set value" sid="575021766195798" type="Ghost">
+                    <param id="0" name="Instance variable">SB</param>
+                    <param id="1" name="Value">Ghost.B</param>
+                </action>
+                <action id="-10" name="Set value" sid="218923658806515" type="Ghost">
+                    <param id="0" name="Instance variable">TB</param>
+                    <param id="1" name="Value">Ghost.B</param>
                 </action>
             </actions>
-            <sub-events>
-                <event-block sid="762411512999836">
-                    <conditions>
-                        <condition id="-13" name="Pick nth instance" sid="255476359923556" type="System">
-                            <param id="0" name="Object">Ghost</param>
-                            <param id="1" name="Instance">0</param>
-                        </condition>
-                        <condition id="-13" name="Pick nth instance" sid="8029348559357996" type="System">
-                            <param id="0" name="Object">FSM</param>
-                            <param id="1" name="Instance">0</param>
-                        </condition>
-                        <condition id="-13" name="Pick nth instance" sid="3962219653874635" type="System">
-                            <param id="0" name="Object">NPCData</param>
-                            <param id="1" name="Instance">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="8941441702858783" type="Ghost" />
-                        <action id="-9" name="Destroy" sid="9559310977595917" type="FSM" />
-                        <action id="-9" name="Destroy" sid="1591638527267376" type="NPCData" />
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="3669858929296397">
             <conditions>
@@ -86,12 +151,9 @@
                     <param id="1" name="Value">NPC.StartState</param>
                     <param id="2" name="Axis">0</param>
                 </action>
-                <action id="0" name="Add key" sid="3983102119328411" type="NPCData">
-                    <param id="0" name="Key">&quot;Target&quot;</param>
-                    <param id="1" name="Value">BASE.UID</param>
-                </action>
             </actions>
         </event-block>
+        <comment>Old Wait for Player code</comment>
         <event-block sid="8504086508441036">
             <conditions>
                 <condition id="0" name="On function" sid="4893191176660162" type="Function">
@@ -134,6 +196,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Old follow player code</comment>
         <event-block sid="7605929446784294">
             <conditions>
                 <condition id="0" name="On function" sid="3935578929958511" type="Function">
@@ -187,6 +250,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Make the Npc Wander around a point</comment>
         <event-block sid="5644098599933868">
             <conditions>
                 <condition id="0" name="On function" sid="6778014700024315" type="Function">
@@ -294,6 +358,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Npc Movement Code</comment>
         <event-block sid="6147294386818994">
             <conditions>
                 <condition id="0" name="On function" sid="7885068633740328" type="Function">
@@ -369,6 +434,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Make The Npc Move to and wait at a Point of intrest while some trigger is being collided with by the player.</comment>
         <event-block sid="440148608218752">
             <conditions>
                 <condition id="0" name="On function" sid="7915151550560147" type="Function">
@@ -474,6 +540,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Make the Npc Wait At The Point of Intrest until some triggerzone is activated</comment>
         <event-block sid="1555355793764537">
             <conditions>
                 <condition id="0" name="On function" sid="1259175215380361" type="Function">
@@ -513,6 +580,10 @@
                         <action id="2" name="Delete key" sid="7714723408133173" type="NPCData">
                             <param id="0" name="Key">&quot;WaitAtPOIParams&quot;</param>
                         </action>
+                        <action id="0" name="Call function" sid="295192171360351" type="Function">
+                            <param id="0" name="Name">&quot;GhostRGB&quot;</param>
+                            <param id="1" name="Parameter {n}">16{###}0{###}12</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2229231312708383">
@@ -547,6 +618,10 @@
                         <action id="2" name="Delete key" sid="5565467272498142" type="GameStats">
                             <param id="0" name="Key">&quot;GhostWait&quot;</param>
                         </action>
+                        <action id="0" name="Call function" sid="2968885890839667" type="Function">
+                            <param id="0" name="Name">&quot;GhostRGB&quot;</param>
+                            <param id="1" name="Parameter {n}">Ghost.SR{###}Ghost.SG{###}Ghost.SB</param>
+                        </action>
                         <action id="0" name="Call function" sid="2140645806174976" type="Function">
                             <param id="0" name="Name">&quot;PopState&quot;</param>
                             <param id="1" name="Parameter {n}">NPC.UID</param>
@@ -555,6 +630,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>a function that sets the set a new state and cleans up the last state</comment>
         <event-block sid="9080691422076241">
             <conditions>
                 <condition id="0" name="On function" sid="8191271837812787" type="Function">
@@ -631,6 +707,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>This Function Reverts the Npc To its last State.</comment>
         <event-block sid="874961181958268">
             <conditions>
                 <condition id="0" name="On function" sid="7385865184100021" type="Function">
@@ -655,6 +732,59 @@
                     <param id="0" name="JSON">NPCData.Get(&quot;Data&quot;&amp;FSM.Width-1)</param>
                 </action>
             </actions>
+        </event-block>
+        <comment>Set The Ghosts Target color</comment>
+        <event-block sid="5312594402894538">
+            <conditions>
+                <condition id="0" name="On function" sid="6183655614317842" type="Function">
+                    <param id="0" name="Name">&quot;GhostRGB&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2480514663466668">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3066862263194636" type="System">
+                            <param id="0" name="First value">Function.ParamCount</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1241625156584752" type="Ghost">
+                            <param id="0" name="Instance variable">TR</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5264268075315896" type="Ghost">
+                            <param id="0" name="Instance variable">TG</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6889016157462836" type="Ghost">
+                            <param id="0" name="Instance variable">TB</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8226920443301776">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="253867017843057" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9487332789457759" type="Ghost">
+                            <param id="0" name="Instance variable">TR</param>
+                            <param id="1" name="Value">int(tokenat(Function.Param(0), 0, &quot; &quot;))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7356166136167781" type="Ghost">
+                            <param id="0" name="Instance variable">TG</param>
+                            <param id="1" name="Value">int(tokenat(Function.Param(0), 1, &quot; &quot;))</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1412802099774687" type="Ghost">
+                            <param id="0" name="Instance variable">TB</param>
+                            <param id="1" name="Value">int(tokenat(Function.Param(0), 2, &quot; &quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

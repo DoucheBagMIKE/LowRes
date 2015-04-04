@@ -292,6 +292,12 @@
                         <ParticleType>Ghost</ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
+                        <SR>0</SR>
+                        <SG>0</SG>
+                        <SB>0</SB>
+                        <TR>0</TR>
+                        <TG>0</TG>
+                        <TB>0</TB>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
