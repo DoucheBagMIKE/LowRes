@@ -247,9 +247,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <TriggeredBy></TriggeredBy>
-                        <Conditions></Conditions>
-                        <FunctionName></FunctionName>
+                        <TriggeredBy>Player</TriggeredBy>
+                        <Conditions>GhostWait</Conditions>
+                        <FunctionName>GhostRGB</FunctionName>
                         <Params></Params>
                         <Triggered>false</Triggered>
                         <RoomUID>0</RoomUID>
@@ -279,8 +279,8 @@
                     <instance-variables>
                         <TriggeredBy>Player</TriggeredBy>
                         <Conditions>!GhostWait</Conditions>
-                        <FunctionName>SetGhostState</FunctionName>
-                        <Params>WaitAtPOI 288 289</Params>
+                        <FunctionName>ComplexTrigger</FunctionName>
+                        <Params>TestTrigger</Params>
                         <Triggered>false</Triggered>
                         <RoomUID>0</RoomUID>
                     </instance-variables>
@@ -8466,6 +8466,7 @@
             </properties>
         </instance>
         <instance type="TempData" uid="260" />
+        <instance type="TriggerZoneData" uid="287" />
     </nonworld-instances>
     <effects />
 </c2layout>

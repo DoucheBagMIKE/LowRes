@@ -3,18 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TriggerZone</name>
     <events>
-        <event-block sid="9722804889084538">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="8049535135868805" type="System" />
-                <condition id="-11" name="For Each" sid="6134103085419155" type="System">
-                    <param id="0" name="Object">Enemies</param>
-                </condition>
-                <condition id="1" name="Is overlapping another object" sid="9827249740963081" type="Enemies">
-                    <param id="0" name="Object">CameraZone</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
         <event-group description="" sid="1687015132733808" title="Triggers">
             <sub-events>
                 <event-block sid="208354988727665">
@@ -132,6 +120,15 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>ComplexTrigger Calls Muliple Functions with parameters all testing there for there own conditions (if they have conditions). this makes it so you olny have to put down one trigger to do lots of things.&#x0D;&#x0A;&#x0D;&#x0A;SEE XML FOR ACTUAL FUNCTION</comment>
+                <event-block sid="4002219734682113">
+                    <conditions>
+                        <condition disabled="1" id="0" name="On function" sid="3753432874023266" type="Function">
+                            <param id="0" name="Name">&quot;ComplexTrigger&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
                 <event-block sid="6715871188132635">
                     <conditions>

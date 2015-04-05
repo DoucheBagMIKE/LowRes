@@ -1,0 +1,19 @@
+<xml>
+	<Object Name="Template">
+		<Function 
+			Name="SomeFunction"
+			Params="Optional Params seperated ba a space"
+			Conditions="!Optional Flags Seperated By A Space"></Function>
+		<Function
+			Name="SomeFuctionWithNoParamsConditions"></Function>
+	</Object>
+
+	<Object Name="TestTrigger">
+		<Function 
+			Name="GhostRGB"
+			Params="12 0 12"></Function>
+		<Function
+			Name="SetGhostState"
+			Params="WaitAtPOI 288 289"></Function>
+	</Object>
+</xml>

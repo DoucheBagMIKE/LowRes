@@ -1943,6 +1943,9 @@
             <object-type name="AJAX" sid="413392805654653">
                 <plugin id="AJAX" />
             </object-type>
+            <object-type global="1" name="TriggerZoneData" sid="5137386079439713">
+                <plugin id="XML" />
+            </object-type>
         </object-folder>
         <object-folder name="NPC">
             <object-type name="Ghost" sid="4122861944462838">
@@ -2391,6 +2394,7 @@
         <family name="XmlData" plugin-id="XML" sid="5795262721723569">
             <members>
                 <member>TextData</member>
+                <member>TriggerZoneData</member>
             </members>
         </family>
         <family name="NPC" plugin-id="Sprite" sid="9044368687429383">
@@ -2475,6 +2479,10 @@
         <layout>Template.xml</layout>
     </layout-folder>
     <event-folder>
+        <event-folder name="NPC States">
+            <event-sheet>GhostStates.xml</event-sheet>
+            <event-sheet>GenericStates.xml</event-sheet>
+        </event-folder>
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>Spawnable Effects.xml</event-sheet>
         <event-sheet>Item Functions.xml</event-sheet>
@@ -2568,6 +2576,7 @@
         </file-folder>
         <file-folder name="XML">
             <file name="Texts.xml" />
+            <file name="TriggerZoneFunctions.xml" />
         </file-folder>
         <file name="KNOWN_BUGS.txt" />
     </files-folder>
