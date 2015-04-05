@@ -1611,6 +1611,7 @@
                         <instance-variable name="FunctionName" sid="8330495798329282" type="string" />
                         <instance-variable name="Params" sid="8691334727586757" type="string" />
                         <instance-variable name="Triggered" sid="8678362022841377" type="boolean" />
+                        <instance-variable name="ComplexTriggered" sid="2393238371813638" type="number" />
                         <instance-variable name="RoomUID" sid="3217334782030308" type="number" />
                     </instance-variables>
                     <animation-folder>

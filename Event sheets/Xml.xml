@@ -59,7 +59,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5843654678772477">
+        <event-block disabled="1" sid="5843654678772477">
             <conditions>
                 <condition id="0" name="On function" sid="8600696098826544" type="Function">
                     <param id="0" name="Name">&quot;ComplexTrigger&quot;</param>

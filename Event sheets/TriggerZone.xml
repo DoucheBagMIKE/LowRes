@@ -5,24 +5,7 @@
     <events>
         <event-group description="" sid="1687015132733808" title="Triggers">
             <sub-events>
-                <event-block sid="208354988727665">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="4338109564686096" type="System" />
-                        <condition id="-11" name="For Each" sid="4504459204036887" type="System">
-                            <param id="0" name="Object">TriggerZone</param>
-                        </condition>
-                        <condition id="1" name="Is overlapping another object" sid="5319402516874467" type="TriggerZone">
-                            <param id="0" name="Object">CameraZone</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="1676888395110155" type="TriggerZone">
-                            <param id="0" name="Instance variable">RoomUID</param>
-                            <param id="1" name="Value">CameraZone.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4496125810771912">
+                <event-block disabled="1" sid="4496125810771912">
                     <conditions>
                         <condition id="0" name="On function" sid="7290424634156651" type="Function">
                             <param id="0" name="Name">&quot;TriggerZone&quot;</param>
@@ -40,6 +23,246 @@
                         <action id="0" name="Call function" sid="6544466266498827" type="Function">
                             <param id="0" name="Name">TriggerZone.FunctionName</param>
                             <param id="1" name="Parameter {n}">TriggerZone.Params</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="2027424634545556">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5837802666653183" type="Function">
+                            <param id="0" name="Name">&quot;TriggeredBy&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="499860813200327" type="TriggerZone">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="381778490504974">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="9477623419557125" type="Enemies">
+                                    <param id="0" name="Object">TriggerZone</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="3851173239312586" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Enemy&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4450880609914794" type="TriggerZone">
+                                    <param id="0" name="Instance variable">ComplexTriggered</param>
+                                    <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, Function.Param(1), 1)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2605955452391623" type="Function">
+                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
+                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5989064088109259">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="8379248235501361" type="BASE">
+                                    <param id="0" name="Object">TriggerZone</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="7127683506466545" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Player&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="999777011232036" type="TriggerZone">
+                                    <param id="0" name="Instance variable">ComplexTriggered</param>
+                                    <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, Function.Param(1), 1)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5152017699033389" type="Function">
+                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
+                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1514727680294664">
+                            <conditions>
+                                <condition id="9" name="Is overlapping at offset" sid="4548116869039034" type="Rock">
+                                    <param id="0" name="Object">TriggerZone</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="6415855753851536" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;PushBlock&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="269656533709965" type="TriggerZone">
+                                    <param id="0" name="Instance variable">Triggered</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="7875529855266886" type="TriggerZone">
+                                    <param id="0" name="Instance variable">ComplexTriggered</param>
+                                    <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, Function.Param(1), 1)</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9745568638345166" type="Function">
+                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
+                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1582532118853418">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="6953938023968501" type="BASE">
+                                    <param id="0" name="Object">TriggerZone</param>
+                                </condition>
+                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="3495490034981495" type="TriggerZone">
+                                    <param id="0" name="Instance variable">Triggered</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="9901674325320952" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;SmallKey&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="4991255040129821" type="GameStats">
+                                    <param id="0" name="Key">&quot;keys&quot;</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="1620737371249874">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1667265524210502" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="6899188404050885" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1061759562029504">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="8866146872654462" type="System">
+                                                    <param id="0" name="First value">Function.Call(&quot;OpenUnlockable&quot;, TriggerZone.Params)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="4498541164672888" type="BASE">
+                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                    <param id="1" name="Value">0.5</param>
+                                                </action>
+                                                <action id="1" name="Set key" sid="628299136976501" type="GameStats">
+                                                    <param id="0" name="Key">&quot;keys&quot;</param>
+                                                    <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) - 1</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="1158488652934258" type="Function">
+                                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
+                                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="7828650982293765" type="TriggerZone">
+                                                    <param id="0" name="Instance variable">ComplexTriggered</param>
+                                                    <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, Function.Param(1), 1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2315808978342163">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="3022683548602393" type="BASE">
+                                    <param id="0" name="Object">TriggerZone</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="5238166540905122" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Buttons&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="2120972190430228">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5925594317964153" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="5313750046076799" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="2102730031848767" type="BASE">
+                                            <param id="0" name="Instance variable">AttackTimer</param>
+                                            <param id="1" name="Value">0.5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="3464970776441615" type="Function">
+                                            <param id="0" name="Name">&quot;TriggerZone&quot;</param>
+                                            <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="8609931091486064">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7925678461191965" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;RoomCleared&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1607461260791689" type="TriggerZone">
+                                    <param id="0" name="Instance variable">Triggered</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="8318196259604212" type="CameraZone">
+                                    <param id="0" name="Unique ID">TriggerZone.RoomUID</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="6715096764823873" type="Enemies">
+                                    <param id="0" name="Object">CameraZone</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="4180990095575683" type="System">
+                                    <param id="0" name="First value">Enemies.PickedCount</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9020028188566312" type="TriggerZone">
+                                    <param id="0" name="Instance variable">Triggered</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3607673106552956" type="Function">
+                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
+                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="208354988727665">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="4338109564686096" type="System" />
+                        <condition id="-11" name="For Each" sid="4504459204036887" type="System">
+                            <param id="0" name="Object">TriggerZone</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="5319402516874467" type="TriggerZone">
+                            <param id="0" name="Object">CameraZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1676888395110155" type="TriggerZone">
+                            <param id="0" name="Instance variable">RoomUID</param>
+                            <param id="1" name="Value">CameraZone.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -139,136 +362,52 @@
                         <condition id="-11" name="For Each" sid="6319396754560436" type="System">
                             <param id="0" name="Object">TriggerZone</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="1769194774470072" type="System">
-                            <param id="0" name="First value">Function.Call(&quot;TriggerConditions&quot;, TriggerZone.UID)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="381778490504974">
+                        <event-block sid="7236433098392426">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="9477623419557125" type="Enemies">
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="6403254559247646" type="BASE">
                                     <param id="0" name="Object">TriggerZone</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="3851173239312586" type="System">
-                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Enemy&quot;)</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="2605955452391623" type="Function">
-                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5989064088109259">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="8379248235501361" type="BASE">
-                                    <param id="0" name="Object">TriggerZone</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="7127683506466545" type="System">
-                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Player&quot;)</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="5152017699033389" type="Function">
-                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1514727680294664">
-                            <conditions>
-                                <condition id="9" name="Is overlapping at offset" sid="4548116869039034" type="Rock">
-                                    <param id="0" name="Object">TriggerZone</param>
-                                    <param id="1" name="Offset X">0</param>
-                                    <param id="2" name="Offset Y">0</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="6415855753851536" type="System">
-                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;PushBlock&quot;)</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="269656533709965" type="TriggerZone">
-                                    <param id="0" name="Instance variable">Triggered</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="7875529855266886" type="TriggerZone">
-                                    <param id="0" name="Instance variable">Triggered</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="9745568638345166" type="Function">
-                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1582532118853418">
-                            <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="6953938023968501" type="BASE">
-                                    <param id="0" name="Object">TriggerZone</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3495490034981495" type="TriggerZone">
-                                    <param id="0" name="Instance variable">Triggered</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="9901674325320952" type="System">
-                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;SmallKey&quot;)</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                                <condition id="0" name="Compare value" sid="4991255040129821" type="GameStats">
-                                    <param id="0" name="Key">&quot;keys&quot;</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block any="1" sid="1620737371249874">
+                                <event-block sid="9281809621461197">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="1667265524210502" type="Input">
-                                            <param id="0" name="Instance variable">Button1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        <condition id="-7" name="Compare instance variable" sid="2138915299171265" type="TriggerZone">
+                                            <param id="0" name="Instance variable">FunctionName</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;ComplexTrigger&quot;</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="6899188404050885" type="Input">
-                                            <param id="0" name="Instance variable">Button2</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
-                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6692544662151631" type="TriggerZone">
+                                            <param id="0" name="Instance variable">ComplexTriggered</param>
+                                            <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, 0,0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3422009019464878">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="219121829513243" type="System" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="1061759562029504">
+                                        <variable constant="0" name="Count" sid="880818346825346" static="0" type="number">0</variable>
+                                        <event-block sid="7362772213243918">
                                             <conditions>
-                                                <condition id="-8" name="Compare two values" sid="8866146872654462" type="System">
-                                                    <param id="0" name="First value">Function.Call(&quot;OpenUnlockable&quot;, TriggerZone.Params)</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">1</param>
+                                                <condition id="0" name="For each node" sid="7811622741012625" type="TriggerZoneData">
+                                                    <param id="0" name="XPath">&quot;//xml/Object[@Name=&apos;&quot;&amp;TriggerZone.Params&amp;&quot;&apos;]/Function&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-11" name="Add to" sid="4498541164672888" type="BASE">
-                                                    <param id="0" name="Instance variable">AttackTimer</param>
-                                                    <param id="1" name="Value">0.5</param>
+                                                <action id="-10" name="Set value" sid="7698503444945639" type="TriggerZone">
+                                                    <param id="0" name="Instance variable">ComplexTriggered</param>
+                                                    <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, Count, 0)</param>
                                                 </action>
-                                                <action id="1" name="Set key" sid="628299136976501" type="GameStats">
-                                                    <param id="0" name="Key">&quot;keys&quot;</param>
-                                                    <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) - 1</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="1158488652934258" type="Function">
-                                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="6866596180977927" type="TriggerZone">
-                                                    <param id="0" name="Instance variable">Triggered</param>
+                                                <action id="-10" name="Add to" sid="4854982110338507" type="System">
+                                                    <param id="0" name="Variable">Count</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
@@ -277,77 +416,584 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="2315808978342163">
+                        <event-block sid="8025355220026595">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="3022683548602393" type="BASE">
-                                    <param id="0" name="Object">TriggerZone</param>
+                                <condition id="-7" name="Compare instance variable" sid="7061692604148576" type="TriggerZone">
+                                    <param id="0" name="Instance variable">FunctionName</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;ComplexTrigger&quot;</param>
                                 </condition>
-                                <condition id="-8" name="Compare two values" sid="5238166540905122" type="System">
-                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Buttons&quot;)</param>
-                                    <param id="1" name="Comparison">5</param>
+                                <condition id="-8" name="Compare two values" sid="5069752031632868" type="System">
+                                    <param id="0" name="First value">getbit(TriggerZone.ComplexTriggered,0)</param>
+                                    <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">0</param>
                                 </condition>
+                                <condition id="-8" name="Compare two values" sid="1769194774470072" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;TriggerConditions&quot;, TriggerZone.UID)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action disabled="1" id="0" name="Call function" sid="5075900088122168" type="Function">
+                                    <param id="0" name="Name">&quot;TriggeredBy&quot;</param>
+                                    <param id="1" name="Parameter {n}">TriggerZone.UID{###}0</param>
+                                </action>
+                            </actions>
                             <sub-events>
-                                <event-block any="1" sid="2120972190430228">
+                                <event-block sid="9163744194897738">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="5925594317964153" type="Input">
-                                            <param id="0" name="Instance variable">Button1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        <condition id="1" name="Is overlapping another object" sid="1315581500778787" type="Enemies">
+                                            <param id="0" name="Object">TriggerZone</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="5313750046076799" type="Input">
-                                            <param id="0" name="Instance variable">Button2</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        <condition id="-8" name="Compare two values" sid="7123047997798012" type="System">
+                                            <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Enemy&quot;)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-11" name="Add to" sid="2102730031848767" type="BASE">
-                                            <param id="0" name="Instance variable">AttackTimer</param>
-                                            <param id="1" name="Value">0.5</param>
+                                        <action id="-10" name="Set value" sid="528922922283784" type="TriggerZone">
+                                            <param id="0" name="Instance variable">ComplexTriggered</param>
+                                            <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, 0, 1)</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="3464970776441615" type="Function">
-                                            <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                                            <param id="1" name="Parameter {n}">TriggerZone.UID</param>
+                                        <action id="0" name="Call function" sid="2357288833933359" type="Function">
+                                            <param id="0" name="Name">TriggerZone.FunctionName</param>
+                                            <param id="1" name="Parameter {n}">TriggerZone.Params</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9639834125965176">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="7651894203678375" type="BASE">
+                                            <param id="0" name="Object">TriggerZone</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="6345962129971393" type="System">
+                                            <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Player&quot;)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4892644965974456" type="TriggerZone">
+                                            <param id="0" name="Instance variable">ComplexTriggered</param>
+                                            <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, 0, 1)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7737763236189734" type="Function">
+                                            <param id="0" name="Name">TriggerZone.FunctionName</param>
+                                            <param id="1" name="Parameter {n}">TriggerZone.Params</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6438679936467271">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="7647816706627941" type="Rock">
+                                            <param id="0" name="Object">TriggerZone</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="6853795797225064" type="System">
+                                            <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;PushBlock&quot;)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="3367431836191746" type="TriggerZone">
+                                            <param id="0" name="Instance variable">Triggered</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="3290905876740566" type="TriggerZone">
+                                            <param id="0" name="Instance variable">ComplexTriggered</param>
+                                            <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, 0, 1)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6879472077730887" type="Function">
+                                            <param id="0" name="Name">TriggerZone.FunctionName</param>
+                                            <param id="1" name="Parameter {n}">TriggerZone.Params</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6103852009802381">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="951667648813994" type="BASE">
+                                            <param id="0" name="Object">TriggerZone</param>
+                                        </condition>
+                                        <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="6651672523414268" type="TriggerZone">
+                                            <param id="0" name="Instance variable">Triggered</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="9436954811826072" type="System">
+                                            <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;SmallKey&quot;)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="6454038738932369" type="GameStats">
+                                            <param id="0" name="Key">&quot;keys&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="8772197714736912">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="1502417392321006" type="Input">
+                                                    <param id="0" name="Instance variable">Button1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="4193944251946652" type="Input">
+                                                    <param id="0" name="Instance variable">Button2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="4002742351589089">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="97231923746295" type="System">
+                                                            <param id="0" name="First value">Function.Call(&quot;OpenUnlockable&quot;, TriggerZone.Params)</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Add to" sid="3473243128700919" type="BASE">
+                                                            <param id="0" name="Instance variable">AttackTimer</param>
+                                                            <param id="1" name="Value">0.5</param>
+                                                        </action>
+                                                        <action id="1" name="Set key" sid="6556881936951507" type="GameStats">
+                                                            <param id="0" name="Key">&quot;keys&quot;</param>
+                                                            <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) - 1</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="7757331708636311" type="TriggerZone">
+                                                            <param id="0" name="Instance variable">ComplexTriggered</param>
+                                                            <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, 0, 1)</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="4662264794969527" type="Function">
+                                                            <param id="0" name="Name">TriggerZone.FunctionName</param>
+                                                            <param id="1" name="Parameter {n}">TriggerZone.Params</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="8711581100060301">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="3627289810813604" type="BASE">
+                                            <param id="0" name="Object">TriggerZone</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="3371196131672645" type="System">
+                                            <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Buttons&quot;)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="3262282194631143">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="3769166108456044" type="Input">
+                                                    <param id="0" name="Instance variable">Button1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="8158959891856373" type="Input">
+                                                    <param id="0" name="Instance variable">Button2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="9375696734740123" type="BASE">
+                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                    <param id="1" name="Value">0.5</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="4539208374446599" type="Function">
+                                                    <param id="0" name="Name">TriggerZone.FunctionName</param>
+                                                    <param id="1" name="Parameter {n}">TriggerZone.Params</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block disabled="1" sid="9300231349987067">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4914363069286316" type="System">
+                                            <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;RoomCleared&quot;)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6025431186691599" type="TriggerZone">
+                                            <param id="0" name="Instance variable">Triggered</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="610754113222533" type="CameraZone">
+                                            <param id="0" name="Unique ID">TriggerZone.RoomUID</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="2051945834557164" type="Enemies">
+                                            <param id="0" name="Object">CameraZone</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="4956368413433838" type="System">
+                                            <param id="0" name="First value">Enemies.PickedCount</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="1735676385940779" type="TriggerZone">
+                                            <param id="0" name="Instance variable">Triggered</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8732785938102592" type="Function">
+                                            <param id="0" name="Name">TriggerZone.FunctionName</param>
+                                            <param id="1" name="Parameter {n}">TriggerZone.Params</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block disabled="1" sid="8609931091486064">
+                        <event-block sid="6206227251583532">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="7925678461191965" type="System">
-                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;RoomCleared&quot;)</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1607461260791689" type="TriggerZone">
-                                    <param id="0" name="Instance variable">Triggered</param>
-                                </condition>
-                                <condition id="-14" name="Pick by unique ID" sid="8318196259604212" type="CameraZone">
-                                    <param id="0" name="Unique ID">TriggerZone.RoomUID</param>
-                                </condition>
-                                <condition id="1" name="Is overlapping another object" sid="6715096764823873" type="Enemies">
-                                    <param id="0" name="Object">CameraZone</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="4180990095575683" type="System">
-                                    <param id="0" name="First value">Enemies.PickedCount</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">0</param>
-                                </condition>
+                                <condition id="-22" name="Else" sid="4664576725728939" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="9020028188566312" type="TriggerZone">
-                                    <param id="0" name="Instance variable">Triggered</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="0" name="Call function" sid="3607673106552956" type="Function">
-                                    <param id="0" name="Name">&quot;TriggerZone&quot;</param>
-                                    <param id="1" name="Parameter {n}">TriggerZone.UID</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="Count" sid="7187845552673681" static="0" type="number">-1</variable>
+                                <event-block sid="4706288549270771">
+                                    <conditions>
+                                        <condition id="0" name="For each node" sid="8200852903810036" type="TriggerZoneData">
+                                            <param id="0" name="XPath">&quot;//xml/Object[@Name=&apos;&quot;&amp;TriggerZone.Params&amp;&quot;&apos;]/Function&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="1553849696014867" type="System">
+                                            <param id="0" name="Variable">Count</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="2407360863849587">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="6824405730541648" type="System">
+                                                    <param id="0" name="First value">getbit(TriggerZone.ComplexTriggered,Count)</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <variable constant="0" name="Trigger" sid="349625288119844" static="0" type="number">1</variable>
+                                                <event-block sid="2515587499448847">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="7209613410747722" type="System">
+                                                            <param id="0" name="First value">TriggerZoneData.StringValue(&quot;@Conditions&quot;)</param>
+                                                            <param id="1" name="Comparison">1</param>
+                                                            <param id="2" name="Second value">&quot;&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="5821809956284049">
+                                                            <conditions>
+                                                                <condition id="-12" name="Repeat" sid="1597088465096885" type="System">
+                                                                    <param id="0" name="Count">tokencount(TriggerZoneData.StringValue(&quot;@Conditions&quot;), &quot; &quot;)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="1934965119277833">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="2331013822281526" type="System">
+                                                                            <param id="0" name="First value">left(tokenat(TriggerZoneData.StringValue(&quot;@Conditions&quot;), loopindex, &quot; &quot;), 1)</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">&quot;!&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="9379775520899813">
+                                                                            <conditions>
+                                                                                <condition id="3" name="Has key" sid="2063114147376292" type="GameStats">
+                                                                                    <param id="0" name="Key">mid(tokenat(TriggerZoneData.StringValue(&quot;@Conditions&quot;), loopindex, &quot; &quot;), 1, len(tokenat(TriggerZoneData.StringValue(&quot;@Conditions&quot;), loopindex, &quot; &quot;)))</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-9" name="Set value" sid="7158417269033419" type="System">
+                                                                                    <param id="0" name="Variable">Trigger</param>
+                                                                                    <param id="1" name="Value">0</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="5470721225577345">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="5310066384561655" type="System" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="1589989452948418">
+                                                                            <conditions>
+                                                                                <condition id="3" inverted="1" name="Has key" sid="7446578755793657" type="GameStats">
+                                                                                    <param id="0" name="Key">tokenat(TriggerZoneData.StringValue(&quot;@Conditions&quot;), loopindex, &quot; &quot;)</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-9" name="Set value" sid="1562255701392481" type="System">
+                                                                                    <param id="0" name="Variable">Trigger</param>
+                                                                                    <param id="1" name="Value">0</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="1613983482181613">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="9672434947667463" type="System">
+                                                                    <param id="0" name="First value">Trigger</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="7878720589245596" type="Function">
+                                                                    <param id="0" name="Name">&quot;TriggeredBy&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">TriggerZone.UID{###}Count</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="9162578640458597">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="2121394891462665" type="System">
+                                                            <param id="0" name="First value">Trigger</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="8124624358914728">
+                                                            <conditions>
+                                                                <condition id="1" name="Is overlapping another object" sid="3175330607111695" type="Enemies">
+                                                                    <param id="0" name="Object">TriggerZone</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="1415070248088522" type="System">
+                                                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Enemy&quot;)</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Second value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="4272814813651022" type="TriggerZone">
+                                                                    <param id="0" name="Instance variable">ComplexTriggered</param>
+                                                                    <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, Count, 1)</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="817056416468709" type="Function">
+                                                                    <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                                                    <param id="1" name="Parameter {n}">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="2227037249862882">
+                                                            <conditions>
+                                                                <condition id="1" name="Is overlapping another object" sid="4629816841662165" type="BASE">
+                                                                    <param id="0" name="Object">TriggerZone</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="3398423152289435" type="System">
+                                                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Player&quot;)</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Second value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="9895837136544626" type="TriggerZone">
+                                                                    <param id="0" name="Instance variable">ComplexTriggered</param>
+                                                                    <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, Count, 1)</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="6049314509666408" type="Function">
+                                                                    <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                                                    <param id="1" name="Parameter {n}">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="229883415646891">
+                                                            <conditions>
+                                                                <condition id="9" name="Is overlapping at offset" sid="6283227871135725" type="Rock">
+                                                                    <param id="0" name="Object">TriggerZone</param>
+                                                                    <param id="1" name="Offset X">0</param>
+                                                                    <param id="2" name="Offset Y">0</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="6704563619714369" type="System">
+                                                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;PushBlock&quot;)</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Second value">0</param>
+                                                                </condition>
+                                                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="9503076321995252" type="TriggerZone">
+                                                                    <param id="0" name="Instance variable">Triggered</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="3125725964658341" type="TriggerZone">
+                                                                    <param id="0" name="Instance variable">ComplexTriggered</param>
+                                                                    <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, Count, 1)</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="1883070913227467" type="Function">
+                                                                    <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                                                    <param id="1" name="Parameter {n}">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="1741145476299196">
+                                                            <conditions>
+                                                                <condition id="1" name="Is overlapping another object" sid="5921534095149828" type="BASE">
+                                                                    <param id="0" name="Object">TriggerZone</param>
+                                                                </condition>
+                                                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="7473831168379977" type="TriggerZone">
+                                                                    <param id="0" name="Instance variable">Triggered</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="719942987814061" type="System">
+                                                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;SmallKey&quot;)</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Second value">0</param>
+                                                                </condition>
+                                                                <condition id="0" name="Compare value" sid="3551931685926575" type="GameStats">
+                                                                    <param id="0" name="Key">&quot;keys&quot;</param>
+                                                                    <param id="1" name="Comparison">4</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block any="1" sid="176800142281795">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="6938373190559726" type="Input">
+                                                                            <param id="0" name="Instance variable">Button1</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                                        </condition>
+                                                                        <condition id="-7" name="Compare instance variable" sid="241928812224155" type="Input">
+                                                                            <param id="0" name="Instance variable">Button2</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="3397825912322175">
+                                                                            <conditions>
+                                                                                <condition id="-8" name="Compare two values" sid="2637664288514595" type="System">
+                                                                                    <param id="0" name="First value">Function.Call(&quot;OpenUnlockable&quot;, TriggerZone.Params)</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Second value">1</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-11" name="Add to" sid="6113975056705018" type="BASE">
+                                                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                                                    <param id="1" name="Value">0.5</param>
+                                                                                </action>
+                                                                                <action id="1" name="Set key" sid="3242993388704414" type="GameStats">
+                                                                                    <param id="0" name="Key">&quot;keys&quot;</param>
+                                                                                    <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) - 1</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="5293128488404607" type="TriggerZone">
+                                                                                    <param id="0" name="Instance variable">ComplexTriggered</param>
+                                                                                    <param id="1" name="Value">setbit(TriggerZone.ComplexTriggered, Count, 1)</param>
+                                                                                </action>
+                                                                                <action id="0" name="Call function" sid="7453488438673488" type="Function">
+                                                                                    <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                                                                    <param id="1" name="Parameter {n}">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="8674088400256304">
+                                                            <conditions>
+                                                                <condition id="1" name="Is overlapping another object" sid="4092414045698575" type="BASE">
+                                                                    <param id="0" name="Object">TriggerZone</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="9474411980624914" type="System">
+                                                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Buttons&quot;)</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Second value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block any="1" sid="2142954969860134">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="3459164095625707" type="Input">
+                                                                            <param id="0" name="Instance variable">Button1</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                                        </condition>
+                                                                        <condition id="-7" name="Compare instance variable" sid="880234544468868" type="Input">
+                                                                            <param id="0" name="Instance variable">Button2</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-11" name="Add to" sid="7220230518629631" type="BASE">
+                                                                            <param id="0" name="Instance variable">AttackTimer</param>
+                                                                            <param id="1" name="Value">0.5</param>
+                                                                        </action>
+                                                                        <action id="0" name="Call function" sid="1645925210298158" type="Function">
+                                                                            <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                                                            <param id="1" name="Parameter {n}">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block disabled="1" sid="7019907446735582">
+                                                            <conditions>
+                                                                <condition id="-8" name="Compare two values" sid="936463174940713" type="System">
+                                                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;RoomCleared&quot;)</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Second value">0</param>
+                                                                </condition>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6651561657031444" type="TriggerZone">
+                                                                    <param id="0" name="Instance variable">Triggered</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Pick by unique ID" sid="9715776032835438" type="CameraZone">
+                                                                    <param id="0" name="Unique ID">TriggerZone.RoomUID</param>
+                                                                </condition>
+                                                                <condition id="1" name="Is overlapping another object" sid="6228041565255975" type="Enemies">
+                                                                    <param id="0" name="Object">CameraZone</param>
+                                                                </condition>
+                                                                <condition id="-8" name="Compare two values" sid="4799717378840468" type="System">
+                                                                    <param id="0" name="First value">Enemies.PickedCount</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Second value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-13" name="Set boolean" sid="5092875672387518" type="TriggerZone">
+                                                                    <param id="0" name="Instance variable">Triggered</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="7460617704863078" type="Function">
+                                                                    <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                                                    <param id="1" name="Parameter {n}">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
