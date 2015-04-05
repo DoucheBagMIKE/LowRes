@@ -224,7 +224,7 @@
                     </properties>
                     <instance-variables>
                         <TriggeredBy>Player</TriggeredBy>
-                        <Conditions>GhostWait</Conditions>
+                        <Conditions></Conditions>
                         <FunctionName>GhostRGB</FunctionName>
                         <Params></Params>
                         <Triggered>false</Triggered>
@@ -235,10 +235,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>728</x>
-                        <y>276</y>
+                        <y>284</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>12</height>
+                        <width>48</width>
+                        <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -255,7 +255,7 @@
                     </properties>
                     <instance-variables>
                         <TriggeredBy>Player</TriggeredBy>
-                        <Conditions>!GhostWait</Conditions>
+                        <Conditions></Conditions>
                         <FunctionName>ComplexTrigger</FunctionName>
                         <Params>TestTrigger</Params>
                         <Triggered>false</Triggered>
@@ -266,10 +266,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>728</x>
-                        <y>260</y>
+                        <y>248</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>12</height>
+                        <width>48</width>
+                        <height>28</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

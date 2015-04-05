@@ -354,14 +354,30 @@
                         <action id="2" name="Delete key" sid="9440437823883889" type="NPCData">
                             <param id="0" name="Key">&quot;WaitAtPOIParams&quot;</param>
                         </action>
-                        <action id="0" name="Call function" sid="8424011568235327" type="Function">
-                            <param id="0" name="Name">&quot;GhostRGB&quot;</param>
-                            <param id="1" name="Parameter {n}">16{###}0{###}12</param>
+                    </actions>
+                </event-block>
+                <event-block sid="4945824032529912">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="7047111906940983" type="TriggerZone">
+                            <param id="0" name="Unique ID">NPCData.Get(&quot;TriggerUID&quot;)</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="1907933375674754" type="BASE">
+                            <param id="0" name="Object">TriggerZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Delete key" sid="309729763464273" type="GameStats">
+                            <param id="0" name="Key">&quot;GhostWait&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4555530535192897" type="Function">
+                            <param id="0" name="Name">&quot;PopState&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="6815550465259356">
                     <conditions>
+                        <condition id="-22" name="Else" sid="982226909583595" type="System" />
                         <condition id="-14" name="Pick by unique ID" sid="4478030497439594" type="PointsOfIntrest">
                             <param id="0" name="Unique ID">NPCData.Get(&quot;Target&quot;)</param>
                         </condition>
@@ -375,30 +391,6 @@
                         <action id="0" name="Call function" sid="6540634837486094" type="Function">
                             <param id="0" name="Name">&quot;SetGhostState&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;MoveToPOI&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4945824032529912">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="982226909583595" type="System" />
-                        <condition id="-14" name="Pick by unique ID" sid="7047111906940983" type="TriggerZone">
-                            <param id="0" name="Unique ID">NPCData.Get(&quot;TriggerUID&quot;)</param>
-                        </condition>
-                        <condition id="1" name="Is overlapping another object" sid="1907933375674754" type="BASE">
-                            <param id="0" name="Object">TriggerZone</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Delete key" sid="309729763464273" type="GameStats">
-                            <param id="0" name="Key">&quot;GhostWait&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="6799761720638836" type="Function">
-                            <param id="0" name="Name">&quot;GhostRGB&quot;</param>
-                            <param id="1" name="Parameter {n}">Ghost.SR{###}Ghost.SG{###}Ghost.SB</param>
-                        </action>
-                        <action id="0" name="Call function" sid="4555530535192897" type="Function">
-                            <param id="0" name="Name">&quot;PopState&quot;</param>
-                            <param id="1" name="Parameter {n}">NPC.UID</param>
                         </action>
                     </actions>
                 </event-block>
