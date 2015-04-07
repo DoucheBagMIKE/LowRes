@@ -2478,6 +2478,7 @@
     <layout-folder>
         <layout>Main.xml</layout>
         <layout>Template.xml</layout>
+        <layout>Game.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="NPC States">
