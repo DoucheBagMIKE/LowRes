@@ -509,7 +509,7 @@
                                 <condition id="-8" name="Compare two values" sid="3757073372552057" type="System">
                                     <param id="0" name="First value">NPCData.Get(&quot;CNode&quot;)</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">tokencount(NPCData.Get(&quot;Path&quot;), &quot; &quot;)+1</param>
+                                    <param id="2" name="Second value">tokencount(NPCData.Get(&quot;Path&quot;), &quot; &quot;)</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -523,6 +523,14 @@
                                 <action id="0" name="Call function" sid="3352205212675806" type="Function">
                                     <param id="0" name="Name">&quot;PopState&quot;</param>
                                     <param id="1" name="Parameter {n}">NPC.UID</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5184645327968913" type="Function">
+                                    <param id="0" name="Name">&quot;SetGhostState&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Wait2&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="1622716197694368" type="NPCData">
+                                    <param id="0" name="Key">&quot;Target&quot;</param>
+                                    <param id="1" name="Value">BASE.UID</param>
                                 </action>
                             </actions>
                         </event-block>
