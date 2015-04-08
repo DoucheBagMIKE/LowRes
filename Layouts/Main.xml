@@ -318,8 +318,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>636</x>
-                        <y>512</y>
+                        <x>608</x>
+                        <y>516</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -340,8 +340,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>548</x>
-                        <y>512</y>
+                        <x>520</x>
+                        <y>484</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -362,8 +362,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>500</x>
-                        <y>484</y>
+                        <x>452</x>
+                        <y>516</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -384,8 +384,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>452</x>
-                        <y>480</y>
+                        <x>424</x>
+                        <y>604</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -406,8 +406,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>444</x>
-                        <y>524</y>
+                        <x>472</x>
+                        <y>648</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -428,8 +428,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>428</x>
-                        <y>568</y>
+                        <x>500</x>
+                        <y>708</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -886,7 +886,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite3" uid="293">
+                <instance type="Sprite3" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -908,7 +908,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite3" uid="294">
+                <instance type="Sprite3" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -930,7 +930,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite3" uid="295">
+                <instance type="Sprite3" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -952,7 +952,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite3" uid="296">
+                <instance type="Sprite3" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -974,7 +974,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite3" uid="297">
+                <instance type="Sprite3" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -996,7 +996,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite3" uid="298">
+                <instance type="Sprite3" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4265,7 +4265,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BASE" uid="0">
+                <instance type="BASE" uid="6">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7951,7 +7951,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CameraZone" uid="292">
+                <instance type="CameraZone" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

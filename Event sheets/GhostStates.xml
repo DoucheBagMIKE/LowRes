@@ -772,6 +772,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Ghost Movement</comment>
         <event-block sid="6744564403319906">
             <conditions>
                 <condition id="0" name="On function" sid="6940147473809855" type="Function">
