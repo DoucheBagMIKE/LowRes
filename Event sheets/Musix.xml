@@ -106,6 +106,18 @@
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Tile">7</param>
                                         </condition>
+                                        <condition id="0" name="Compare tile at" sid="3512667980238016" type="BGTilemap">
+                                            <param id="0" name="Tile X">BGTilemap.PositionToTileX(base.ImagePointX(1))</param>
+                                            <param id="1" name="Tile Y">BGTilemap.PositionToTileY(base.ImagePointY(1))</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Tile">10</param>
+                                        </condition>
+                                        <condition id="0" name="Compare tile at" sid="2203671638910264" type="BGTilemap">
+                                            <param id="0" name="Tile X">BGTilemap.PositionToTileX(base.ImagePointX(1))</param>
+                                            <param id="1" name="Tile Y">BGTilemap.PositionToTileY(base.ImagePointY(1))</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Tile">11</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="25" name="Play at object" sid="4915769344752728" type="Audio">
