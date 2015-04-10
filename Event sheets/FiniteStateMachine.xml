@@ -174,7 +174,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Add key" sid="5312583307700372" type="NPCData">
-                    <param id="0" name="Key">&quot;Data&quot;&amp;FSM.Width-1</param>
+                    <param id="0" name="Key">&quot;Data&quot;&amp;FSM.Width</param>
                     <param id="1" name="Value">NPCData.AsJSON</param>
                 </action>
             </actions>
@@ -250,12 +250,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="4" name="Load" sid="6651594881239265" type="NPCData">
+                    <param id="0" name="JSON">NPCData.Get(&quot;Data&quot;&amp;FSM.Width-1)</param>
+                </action>
                 <action id="6" name="Pop" sid="1370669372715039" type="FSM">
                     <param id="0" name="Where">0</param>
                     <param id="1" name="Axis">0</param>
-                </action>
-                <action id="4" name="Load" sid="6651594881239265" type="NPCData">
-                    <param id="0" name="JSON">NPCData.Get(&quot;Data&quot;&amp;FSM.Width-1)</param>
                 </action>
             </actions>
         </event-block>

@@ -33,14 +33,22 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="6" name="Pop" sid="3508301652621256" type="FSM">
+                        <action disabled="1" id="6" name="Pop" sid="3508301652621256" type="FSM">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Axis">0</param>
                         </action>
-                        <action id="5" name="Push" sid="4234346073774044" type="FSM">
+                        <action disabled="1" id="5" name="Push" sid="4234346073774044" type="FSM">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">&quot;Follow&quot;</param>
                             <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4805021256261854" type="Function">
+                            <param id="0" name="Name">&quot;PopState&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4676540108787325" type="Function">
+                            <param id="0" name="Name">&quot;SetGhostState&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Follow&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -75,9 +83,13 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="6" name="Pop" sid="3610227542306698" type="FSM">
+                        <action disabled="1" id="6" name="Pop" sid="3610227542306698" type="FSM">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Axis">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1090422577267824" type="Function">
+                            <param id="0" name="Name">&quot;PopState&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -124,10 +136,14 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Push" sid="4368230869771062" type="FSM">
+                        <action disabled="1" id="5" name="Push" sid="4368230869771062" type="FSM">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">&quot;Wander&quot;</param>
                             <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2518123216868608" type="Function">
+                            <param id="0" name="Name">&quot;SetGhostState&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Wander&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -242,15 +258,15 @@
                         <condition id="-22" name="Else" sid="8976785574487686" type="System" />
                     </conditions>
                     <actions>
-                        <action id="2" name="Delete key" sid="8538671020205239" type="NPCData">
+                        <action disabled="1" id="2" name="Delete key" sid="8538671020205239" type="NPCData">
                             <param id="0" name="Key">&quot;Wander X&quot;</param>
                         </action>
-                        <action id="2" name="Delete key" sid="1876402170747192" type="NPCData">
+                        <action disabled="1" id="2" name="Delete key" sid="1876402170747192" type="NPCData">
                             <param id="0" name="Key">&quot;Wander Y&quot;</param>
                         </action>
-                        <action id="6" name="Pop" sid="3251985284273518" type="FSM">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Axis">0</param>
+                        <action id="0" name="Call function" sid="6924447688084579" type="Function">
+                            <param id="0" name="Name">&quot;PopState&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
                         </action>
                     </actions>
                 </event-block>
@@ -679,7 +695,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Add key" sid="902664605463989" type="NPCData">
-                    <param id="0" name="Key">&quot;Data&quot;&amp;FSM.Width-1</param>
+                    <param id="0" name="Key">&quot;Data&quot;&amp;FSM.Width</param>
                     <param id="1" name="Value">NPCData.AsJSON</param>
                 </action>
             </actions>

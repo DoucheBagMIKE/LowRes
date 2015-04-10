@@ -297,10 +297,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>688</x>
-                        <y>494</y>
+                        <y>492</y>
                         <z>0</z>
                         <width>80</width>
-                        <height>20</height>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
