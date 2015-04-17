@@ -152,13 +152,17 @@
                         <condition id="-22" name="Else" sid="4988005580604746" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="8707770107659812" type="NPC">
+                        <action behavior="CustomMovement" disabled="1" id="4" name="Accelerate toward angle" sid="8707770107659812" type="NPC">
                             <param id="0" name="Acceleration">128</param>
                             <param id="1" name="Angle">angle(NPC.X,NPC.Y, PointsOfIntrest.X,PointsOfIntrest.Y)</param>
                         </action>
-                        <action behavior="CustomMovement" id="2" name="Set speed" sid="6154591237057849" type="NPC">
+                        <action behavior="CustomMovement" disabled="1" id="2" name="Set speed" sid="6154591237057849" type="NPC">
                             <param id="0" name="Which">0</param>
                             <param id="1" name="Speed">clamp(NPC.CustomMovement.Speed,0,distance(PointsOfIntrest.X,PointsOfIntrest.Y,NPC.X,npc.Y))</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9441085179244202" type="Function">
+                            <param id="0" name="Name">&quot;Ghost_Move&quot;</param>
+                            <param id="1" name="Parameter {n}">PointsOfIntrest.X{###}PointsOfIntrest.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -813,12 +817,15 @@
                     </conditions>
                     <actions>
                         <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="9470978127418549" type="Ghost">
-                            <param id="0" name="Acceleration">64</param>
+                            <param id="0" name="Acceleration">112</param>
                             <param id="1" name="Angle">angle(Ghost.X,Ghost.Y, Function.Param(0),Function.Param(1))</param>
                         </action>
                         <action behavior="CustomMovement" id="2" name="Set speed" sid="3426047084430161" type="Ghost">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">clamp(Ghost.CustomMovement.Speed,0,distance(Function.Param(0),Function.Param(1),Ghost.X,Ghost.Y))</param>
+                            <param id="1" name="Speed">clamp(Ghost.CustomMovement.Speed,0,clamp(distance(Function.Param(0),Function.Param(1),Ghost.X,Ghost.Y), 0, 125))</param>
+                        </action>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="9318101735546459" type="Ghost">
+                            <param id="0" name="Angle">anglelerp(self.CustomMovement.MovingAngle, angle(Ghost.X,Ghost.Y, Function.Param(0),Function.Param(1)), 0.01)</param>
                         </action>
                     </actions>
                 </event-block>
