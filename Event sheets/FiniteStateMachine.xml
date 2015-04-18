@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FiniteStateMachine</name>
     <events>
-        <include>GenericStates</include>
         <include>GhostStates</include>
         <comment>Call The Currect State for All NPC&apos;s and the ghosts light color</comment>
         <event-block sid="319932826086733">
@@ -179,6 +178,19 @@
                 </action>
             </actions>
             <sub-events>
+                <event-block sid="2053370986694463">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="8029326223408031" type="NPCData">
+                            <param id="0" name="Key">&quot;RemoveOnSetState&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="113090174531959" type="Function">
+                            <param id="0" name="Name">&quot;PopState&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
                 <variable constant="0" name="Data" sid="2132217974884628" static="0" type="text"></variable>
                 <event-block sid="9173950796911705">
                     <conditions>
