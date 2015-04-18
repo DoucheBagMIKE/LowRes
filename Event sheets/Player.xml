@@ -20,6 +20,11 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6476108895040624" type="BASE">
                                     <param id="0" name="Instance variable">Hurt</param>
                                 </condition>
+                                <condition id="0" name="Compare value" sid="3882019896781413" type="GameStats">
+                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="5810621070179113" type="Function">
@@ -51,6 +56,11 @@
                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8176004194094329" type="BASE">
                                     <param id="0" name="Instance variable">Hurt</param>
                                 </condition>
+                                <condition id="0" name="Compare value" sid="7342051453800722" type="GameStats">
+                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="2567020440168967" type="Function">
@@ -66,26 +76,21 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="1441327646899596" type="System">
-                                    <param id="0" name="Object to create">HeartParticle</param>
-                                    <param id="1" name="Layer">&quot;GUI&quot;</param>
-                                    <param id="2" name="X">(HPGUI.X+HPGUI.Width)-4</param>
-                                    <param id="3" name="Y">HPGUI.Y+4</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="23932921984607" type="BASE">
-                                    <param id="0" name="Instance variable">Hurt</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="1" name="Set key" sid="5266039995810576" type="GameStats">
-                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
-                                    <param id="1" name="Value">GameStats.Get(&quot;CurHP&quot;)-(Function.Param(0))</param>
-                                </action>
                                 <action behavior="Knockback" id="2" name="Set speed" sid="7325574232425356" type="BASE">
                                     <param id="0" name="Which">0</param>
                                     <param id="1" name="Speed">function.Param(1)</param>
                                 </action>
                                 <action behavior="Knockback" id="6" name="Set angle of motion" sid="7938825964382066" type="BASE">
                                     <param id="0" name="Angle">function.Param(2)</param>
+                                </action>
+                                <action behavior="ScrollTo" id="0" name="Shake" sid="7661791039597037" type="Camera">
+                                    <param id="0" name="Magnitude">4</param>
+                                    <param id="1" name="Duration">0.4</param>
+                                    <param id="2" name="Mode">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="23932921984607" type="BASE">
+                                    <param id="0" name="Instance variable">Hurt</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action behavior="Flash" id="0" name="Flash" sid="7823832243761833" type="ARMS">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
@@ -97,12 +102,30 @@
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                                     <param id="2" name="Duration">0.5</param>
                                 </action>
-                                <action behavior="ScrollTo" id="0" name="Shake" sid="7661791039597037" type="Camera">
-                                    <param id="0" name="Magnitude">4</param>
-                                    <param id="1" name="Duration">0.4</param>
-                                    <param id="2" name="Mode">0</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="9226006475367208">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="7957792965619039" type="GameStats">
+                                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="1441327646899596" type="System">
+                                            <param id="0" name="Object to create">HeartParticle</param>
+                                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                                            <param id="2" name="X">(HPGUI.X+HPGUI.Width)-4</param>
+                                            <param id="3" name="Y">HPGUI.Y+4</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="5266039995810576" type="GameStats">
+                                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                            <param id="1" name="Value">GameStats.Get(&quot;CurHP&quot;)-(Function.Param(0))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="8455412783887966">
                             <conditions>
@@ -114,6 +137,33 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="2842182731278205">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="5329056164871409" type="GameStats">
+                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="4588902572577745" type="ARMS">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3539258484577749">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="6836804250018287" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8214362111556305" type="BODY">
+                                            <param id="0" name="Animation">&quot;Die&quot;&amp;BODY.AnimationName</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -194,6 +244,11 @@
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6205203771813764" type="BASE">
                                             <param id="0" name="Instance variable">attacking</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="691481108181919" type="GameStats">
+                                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -571,6 +626,11 @@
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Speed">8</param>
                                         </condition>
+                                        <condition id="0" name="Compare value" sid="4558672734957384" type="GameStats">
+                                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="8Direction" id="9" name="Set vector X" sid="1410100464547159" type="BASE">
@@ -938,6 +998,37 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="5488841704331261">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="5819977789651575" type="GameStats">
+                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="1201883714793859" type="BASE">
+                            <param id="0" name="Layer">&quot;DEATH2&quot;</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="3467182594087657" type="System">
+                            <param id="0" name="Layer">&quot;DEATH&quot;</param>
+                            <param id="1" name="Opacity">LayerOpacity(&quot;DEATH&quot;)+(dt*50)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7002342064764435">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="5482868463043473" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="7881889755362644" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="5101533113582103" type="Enemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

@@ -761,6 +761,88 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="2" loop="0" name="DieRight" pingpong="0" repeatcount="1" repeatto="0" sid="7486485900841918" speed="2">
+                        <frame duration="4" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="shadow" x="0.5" y="0.916667" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.75" y="1" />
+                                <point x="0.25" y="1" />
+                                <point x="0.25" y="0.666667" />
+                                <point x="0.75" y="0.666667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="shadow" x="0.5" y="0.916667" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="DieLeft" pingpong="0" repeatcount="1" repeatto="0" sid="5669424782365764" speed="2">
+                        <frame duration="4" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="shadow" x="0.5" y="0.916667" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.25" y="0.666667" />
+                                <point x="0.75" y="0.666667" />
+                                <point x="0.75" y="1" />
+                                <point x="0.25" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="shadow" x="0.5" y="0.916667" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="DieDown" pingpong="0" repeatcount="1" repeatto="0" sid="1721835902516654" speed="2">
+                        <frame duration="4" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="shadow" x="0.5" y="0.916667" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.75" y="1" />
+                                <point x="0.25" y="1" />
+                                <point x="0.25" y="0.666667" />
+                                <point x="0.75" y="0.666667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="shadow" x="0.5" y="0.916667" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.75" y="1" />
+                                <point x="0.25" y="1" />
+                                <point x="0.25" y="0.666667" />
+                                <point x="0.75" y="0.666667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="DieUp" pingpong="0" repeatcount="1" repeatto="0" sid="9594315781719868" speed="2">
+                        <frame duration="4" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="shadow" x="0.5" y="0.916667" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.75" y="1" />
+                                <point x="0.25" y="1" />
+                                <point x="0.25" y="0.666667" />
+                                <point x="0.75" y="0.666667" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="shadow" x="0.5" y="0.916667" />
+                            <image-point name="Imagepoint 2" x="0.5" y="0.5" />
+                            <collision-poly>
+                                <point x="0.75" y="1" />
+                                <point x="0.25" y="1" />
+                                <point x="0.25" y="0.666667" />
+                                <point x="0.75" y="0.666667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Indicator" sid="5246672248572776">
