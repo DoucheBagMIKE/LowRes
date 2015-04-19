@@ -18,6 +18,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;Collision&quot;</param>
                         </condition>
+                        <condition id="0" name="Compare value" sid="7134140139428977" type="GameStats">
+                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="811530034640391" type="System">
@@ -120,6 +125,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">CurZone</param>
                         </condition>
+                        <condition id="0" name="Compare value" sid="5641204048995971" type="GameStats">
+                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -191,6 +201,11 @@
                         </condition>
                         <condition id="-11" name="For Each" sid="8823856206026705" type="System">
                             <param id="0" name="Object">ProjectileTrap</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="1707745739520941" type="GameStats">
+                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>

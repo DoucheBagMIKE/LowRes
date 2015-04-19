@@ -2710,6 +2710,8 @@
         <file name="38874__swuing__footstep-grass.ogg" />
         <file name="stepwood_1.m4a" />
         <file name="stepwood_1.ogg" />
+        <file name="stepstone_5.m4a" />
+        <file name="stepstone_5.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="wind.m4a" />

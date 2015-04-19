@@ -5961,8 +5961,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>624</x>
-                        <y>516</y>
+                        <x>684</x>
+                        <y>404</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -6475,8 +6475,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>536</x>
-                        <y>480</y>
+                        <x>688</x>
+                        <y>652</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -7620,7 +7620,7 @@
         </layer>
         <layer name="DEATH" sid="2854586453819252">
             <initially-visible>1</initially-visible>
-            <background-color>29,29,29</background-color>
+            <background-color>23,23,23</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>

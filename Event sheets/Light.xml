@@ -11,6 +11,11 @@
                 <condition id="-8" name="Is boolean instance variable set" sid="2231445411484548" type="HAS_LIGHT">
                     <param id="0" name="Instance variable">drawlight</param>
                 </condition>
+                <condition id="0" name="Compare value" sid="4801558945895561" type="GameStats">
+                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>

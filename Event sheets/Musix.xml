@@ -140,10 +140,44 @@
                                             <param id="2" name="Comparison">0</param>
                                             <param id="3" name="Tile">8</param>
                                         </condition>
+                                        <condition id="0" name="Compare tile at" sid="2664489493084531" type="BGTilemap">
+                                            <param id="0" name="Tile X">BGTilemap.PositionToTileX(base.ImagePointX(1))</param>
+                                            <param id="1" name="Tile Y">BGTilemap.PositionToTileY(base.ImagePointY(1))</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Tile">9</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="25" name="Play at object" sid="3774283195696502" type="Audio">
                                             <param id="0" name="Audio file">stepwood_1</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">random(-25,-20)</param>
+                                            <param id="3" name="Object">BASE</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;Footstep&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="608502357076901">
+                                    <conditions>
+                                        <condition id="0" name="Compare tile at" sid="359244718078323" type="BGTilemap">
+                                            <param id="0" name="Tile X">BGTilemap.PositionToTileX(base.ImagePointX(1))</param>
+                                            <param id="1" name="Tile Y">BGTilemap.PositionToTileY(base.ImagePointY(1))</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Tile">14</param>
+                                        </condition>
+                                        <condition id="0" name="Compare tile at" sid="3615099755448655" type="BGTilemap">
+                                            <param id="0" name="Tile X">BGTilemap.PositionToTileX(base.ImagePointX(1))</param>
+                                            <param id="1" name="Tile Y">BGTilemap.PositionToTileY(base.ImagePointY(1))</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Tile">15</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="25" name="Play at object" sid="5888024711654601" type="Audio">
+                                            <param id="0" name="Audio file">stepstone_5</param>
                                             <param id="1" name="Loop">0</param>
                                             <param id="2" name="Volume">random(-25,-20)</param>
                                             <param id="3" name="Object">BASE</param>

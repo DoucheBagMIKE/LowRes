@@ -83,11 +83,6 @@
                                 <action behavior="Knockback" id="6" name="Set angle of motion" sid="7938825964382066" type="BASE">
                                     <param id="0" name="Angle">function.Param(2)</param>
                                 </action>
-                                <action behavior="ScrollTo" id="0" name="Shake" sid="7661791039597037" type="Camera">
-                                    <param id="0" name="Magnitude">4</param>
-                                    <param id="1" name="Duration">0.4</param>
-                                    <param id="2" name="Mode">0</param>
-                                </action>
                                 <action id="-13" name="Set boolean" sid="23932921984607" type="BASE">
                                     <param id="0" name="Instance variable">Hurt</param>
                                     <param id="1" name="Value">1</param>
@@ -122,6 +117,11 @@
                                         <action id="1" name="Set key" sid="5266039995810576" type="GameStats">
                                             <param id="0" name="Key">&quot;CurHP&quot;</param>
                                             <param id="1" name="Value">GameStats.Get(&quot;CurHP&quot;)-(Function.Param(0))</param>
+                                        </action>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="7661791039597037" type="Camera">
+                                            <param id="0" name="Magnitude">4</param>
+                                            <param id="1" name="Duration">0.4</param>
+                                            <param id="2" name="Mode">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1012,7 +1012,10 @@
                         </action>
                         <action id="-18" name="Set layer opacity" sid="3467182594087657" type="System">
                             <param id="0" name="Layer">&quot;DEATH&quot;</param>
-                            <param id="1" name="Opacity">LayerOpacity(&quot;DEATH&quot;)+(dt*50)</param>
+                            <param id="1" name="Opacity">clamp(LayerOpacity(&quot;DEATH&quot;)+(dt*75),0,75)</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="2198250166226854" type="Enemies">
+                            <param id="0" name="Opacity">self.Opacity-(dt*100)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1022,7 +1025,7 @@
                             </conditions>
                             <actions>
                                 <action id="-16" name="Wait" sid="7881889755362644" type="System">
-                                    <param id="0" name="Seconds">2</param>
+                                    <param id="0" name="Seconds">1</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="5101533113582103" type="Enemies" />
                             </actions>
