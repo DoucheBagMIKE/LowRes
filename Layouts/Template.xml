@@ -1037,9 +1037,11 @@
                     </properties>
                     <instance-variables>
                         <Shadow>Tiny</Shadow>
+                        <HasTriggerZone>false</HasTriggerZone>
                         <StartState>Wait</StartState>
                         <FSM_UID>-1</FSM_UID>
                         <DataUID>-1</DataUID>
+                        <TriggerUID>-1</TriggerUID>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
                         <LightSize>300</LightSize>
@@ -1059,10 +1061,24 @@
                         <TB>0</TB>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="CustomMovement">
+                        <behavior-instance type="NpcMovement">
                             <properties>
                                 <stepping-mode>None</stepping-mode>
                                 <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>8</cell-size>
+                                <cell-border>0</cell-border>
+                                <obstacles>Custom</obstacles>
+                                <max-speed>0</max-speed>
+                                <acceleration>0</acceleration>
+                                <deceleration>0</deceleration>
+                                <rotate-speed>0</rotate-speed>
+                                <rotate-object>No</rotate-object>
+                                <diagonals>Enabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>

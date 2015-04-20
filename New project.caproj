@@ -33,6 +33,8 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -1761,6 +1763,11 @@
                         <instance-variable name="ComplexTriggered" sid="2393238371813638" type="number" />
                         <instance-variable name="RoomUID" sid="3217334782030308" type="number" />
                     </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="7128138540518321">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6195334745074643" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -2119,6 +2126,14 @@
             </object-type>
             <object-type global="1" name="NPCData" sid="5478509479694992">
                 <plugin id="Dictionary" />
+            </object-type>
+            <object-type name="NpcBase" sid="5492825584513846">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2484456162515479" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Particles">
@@ -2499,6 +2514,7 @@
                 <member>Grass</member>
                 <member>Item_Pickup</member>
                 <member>Mirror</member>
+                <member>NpcBase</member>
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>
                 <member>Rock</member>
@@ -2559,15 +2575,21 @@
         <family name="NPC" plugin-id="Sprite" sid="9044368687429383">
             <members>
                 <member>Ghost</member>
+                <member>NpcBase</member>
             </members>
             <instance-variables>
+                <instance-variable name="HasTriggerZone" sid="8301706614571312" type="boolean" />
                 <instance-variable name="StartState" sid="5150051160699273" type="string" />
                 <instance-variable name="FSM_UID" sid="2978882145063888" type="number" />
                 <instance-variable name="DataUID" sid="3759315192729319" type="number" />
+                <instance-variable name="TriggerUID" sid="8980366828057946" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="CustomMovement" sid="1295308267382208">
+                <behavior-type name="NpcMovement" sid="1295308267382208">
                     <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Pathfinding" sid="9413541818976141">
+                    <behavior id="Pathfinding" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -2626,6 +2648,7 @@
                 <member>BASE</member>
                 <member>Door</member>
                 <member>ITEM_SPAWNER</member>
+                <member>NpcBase</member>
                 <member>OBJECT_SPAWNER</member>
                 <member>POI</member>
                 <member>Sign</member>
@@ -2642,6 +2665,7 @@
         <event-folder name="NPC States">
             <event-sheet>GhostStates.xml</event-sheet>
             <event-sheet>GenericStates.xml</event-sheet>
+            <event-sheet>NpcStates.xml</event-sheet>
         </event-folder>
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>Spawnable Effects.xml</event-sheet>
