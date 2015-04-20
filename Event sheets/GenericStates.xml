@@ -67,13 +67,13 @@
                         <condition id="-22" name="Else" sid="6170942785887325" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="NpcMovement" id="4" name="Accelerate toward angle" sid="526487126102191" type="NPC">
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="526487126102191" type="NPC">
                             <param id="0" name="Acceleration">64</param>
                             <param id="1" name="Angle">angle(NPC.X,NPC.Y, PointsOfIntrest.X,PointsOfIntrest.Y)</param>
                         </action>
-                        <action behavior="NpcMovement" id="2" name="Set speed" sid="9164007345822021" type="NPC">
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="9164007345822021" type="NPC">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">clamp(NPC.NpcMovement.Speed,0,distance(PointsOfIntrest.X,PointsOfIntrest.Y,NPC.X,npc.Y))</param>
+                            <param id="1" name="Speed">clamp(NPC.CustomMovement.Speed,0,distance(PointsOfIntrest.X,PointsOfIntrest.Y,NPC.X,npc.Y))</param>
                         </action>
                     </actions>
                 </event-block>

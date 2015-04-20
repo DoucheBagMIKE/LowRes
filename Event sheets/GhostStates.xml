@@ -202,7 +202,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="NpcMovement" id="0" name="Stop" sid="1085384214592632" type="NPC" />
+                                <action behavior="CustomMovement" id="0" name="Stop" sid="1085384214592632" type="NPC" />
                                 <action id="2" name="Delete key" sid="6382860869388193" type="NPCData">
                                     <param id="0" name="Key">&quot;Wander X&quot;</param>
                                 </action>
@@ -854,10 +854,10 @@
                 <comment>if the npc was moving before the state change we have to 0 out its speed or it will drift forever.</comment>
                 <event-block sid="7144481331457756">
                     <conditions>
-                        <condition behavior="NpcMovement" id="0" name="Is moving" sid="4120896252910991" type="NPC" />
+                        <condition behavior="CustomMovement" id="0" name="Is moving" sid="4120896252910991" type="NPC" />
                     </conditions>
                     <actions>
-                        <action behavior="NpcMovement" id="0" name="Stop" sid="335358857147488" type="NPC" />
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="335358857147488" type="NPC" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -905,13 +905,13 @@
                         <condition id="-22" name="Else" sid="7114037409141944" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="NpcMovement" id="4" name="Accelerate toward angle" sid="9470978127418549" type="Ghost">
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="9470978127418549" type="Ghost">
                             <param id="0" name="Acceleration">64</param>
                             <param id="1" name="Angle">angle(Ghost.X,Ghost.Y, Function.Param(0),Function.Param(1))</param>
                         </action>
-                        <action behavior="NpcMovement" id="2" name="Set speed" sid="3426047084430161" type="Ghost">
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="3426047084430161" type="Ghost">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">clamp(Ghost.NpcMovement.Speed,0,distance(Function.Param(0),Function.Param(1),Ghost.X,Ghost.Y))</param>
+                            <param id="1" name="Speed">clamp(Ghost.CustomMovement.Speed,0,distance(Function.Param(0),Function.Param(1),Ghost.X,Ghost.Y))</param>
                         </action>
                         <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="1052681372527472" type="Ghost">
                             <param id="0" name="Angle">anglelerp(self.CustomMovement.MovingAngle,angle(self.x,self.Y,function.Param(0),function.Param(1)),0.05)</param>
