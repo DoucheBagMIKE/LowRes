@@ -913,8 +913,8 @@
                             <param id="0" name="Which">0</param>
                             <param id="1" name="Speed">clamp(Ghost.NpcMovement.Speed,0,distance(Function.Param(0),Function.Param(1),Ghost.X,Ghost.Y))</param>
                         </action>
-                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="1052681372527472" type="Ghost">
-                            <param id="0" name="Angle">anglelerp(self.CustomMovement.MovingAngle,angle(self.x,self.Y,function.Param(0),function.Param(1)),0.05)</param>
+                        <action behavior="NpcMovement" id="6" name="Set angle of motion" sid="1052681372527472" type="Ghost">
+                            <param id="0" name="Angle">anglelerp(self.npcMovement.MovingAngle,angle(self.x,self.Y,function.Param(0),function.Param(1)),0.05)</param>
                         </action>
                     </actions>
                 </event-block>
