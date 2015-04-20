@@ -7801,6 +7801,8 @@
                     </properties>
                     <instance-variables>
                         <Shadow>SmallHor</Shadow>
+                        <Zone1>-1</Zone1>
+                        <Destroy>true</Destroy>
                         <HasTriggerZone>true</HasTriggerZone>
                         <StartState>Npc_RandomWalk</StartState>
                         <FSM_UID>-1</FSM_UID>
@@ -7833,8 +7835,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>680</x>
-                        <y>436</y>
+                        <x>-24</x>
+                        <y>504</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -7845,49 +7847,26 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NpcBase" uid="404">
+                <instance type="Npc_Spawner" uid="415">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn></Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>680</x>
-                        <y>444</y>
+                        <x>736</x>
+                        <y>448</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -7898,49 +7877,26 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NpcBase" uid="405">
+                <instance type="OBJECT_SPAWNER" uid="404">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn>Rock</Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>688</x>
-                        <y>444</y>
+                        <x>708</x>
+                        <y>380</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -7951,49 +7907,26 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NpcBase" uid="406">
+                <instance type="Npc_Spawner" uid="405">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn></Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>688</x>
-                        <y>436</y>
+                        <x>744</x>
+                        <y>448</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -8004,49 +7937,26 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NpcBase" uid="407">
+                <instance type="Npc_Spawner" uid="406">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn></Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>696</x>
-                        <y>436</y>
+                        <x>752</x>
+                        <y>448</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -8057,154 +7967,25 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NpcBase" uid="408">
+                <instance type="Npc_Spawner" uid="407">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn></Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>696</x>
-                        <y>444</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NpcBase" uid="409">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>680</x>
-                        <y>452</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NpcBase" uid="410">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>680</x>
+                        <x>752</x>
                         <y>460</y>
                         <z>0</z>
                         <width>8</width>
@@ -8216,48 +7997,25 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NpcBase" uid="411">
+                <instance type="Npc_Spawner" uid="408">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn></Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>688</x>
+                        <x>744</x>
                         <y>460</y>
                         <z>0</z>
                         <width>8</width>
@@ -8269,154 +8027,25 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NpcBase" uid="412">
+                <instance type="Npc_Spawner" uid="409">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn></Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>688</x>
-                        <y>452</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NpcBase" uid="413">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>696</x>
-                        <y>452</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NpcBase" uid="414">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Shadow>SmallHor</Shadow>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
-                        <FSM_UID>-1</FSM_UID>
-                        <DataUID>-1</DataUID>
-                        <TriggerUID>-1</TriggerUID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="NpcMovement">
-                            <properties>
-                                <stepping-mode>None</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>696</x>
+                        <x>736</x>
                         <y>460</y>
                         <z>0</z>
                         <width>8</width>

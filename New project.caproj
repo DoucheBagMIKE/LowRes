@@ -2395,6 +2395,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Npc_Spawner" sid="5579180623493098">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9563234050052294" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -2481,6 +2489,7 @@
                 <member>ENEMY_SPAWNER</member>
                 <member>ITEM_SPAWNER</member>
                 <member>LIGHT_SPAWNER</member>
+                <member>Npc_Spawner</member>
                 <member>OBJECT_SPAWNER</member>
                 <member>PARTICLE_SPAWNER</member>
             </members>
@@ -2538,6 +2547,7 @@
                 <member>Mage2</member>
                 <member>Mutant</member>
                 <member>Mutant2</member>
+                <member>NpcBase</member>
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>
                 <member>Rock</member>
