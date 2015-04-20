@@ -6530,14 +6530,14 @@
                         <behavior-instance type="Pathfinding">
                             <properties>
                                 <cell-size>8</cell-size>
-                                <cell-border>0</cell-border>
+                                <cell-border>-1</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>0</max-speed>
                                 <acceleration>0</acceleration>
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -7825,7 +7825,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -7878,7 +7878,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -7931,7 +7931,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -7984,7 +7984,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -8037,7 +8037,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -8090,7 +8090,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -8143,7 +8143,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -8196,7 +8196,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -8249,7 +8249,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -8302,7 +8302,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -8355,7 +8355,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -8408,7 +8408,7 @@
                                 <deceleration>0</deceleration>
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
+                                <diagonals>Disabled</diagonals>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>

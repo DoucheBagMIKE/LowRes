@@ -181,6 +181,10 @@
                             <param id="0" name="Key">&quot;cNode&quot;</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="0" name="Add key" sid="4654273802057387" type="NPCData">
+                            <param id="0" name="Key">&quot;Timeout&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>we ad the ranom x and y in this event beacuse we delete them later in this state so next tick it finds a new random position.</comment>
@@ -196,11 +200,11 @@
                     <actions>
                         <action id="0" name="Add key" sid="4082948041806585" type="NPCData">
                             <param id="0" name="Key">&quot;walkToX&quot;</param>
-                            <param id="1" name="Value">floor(random(-320, 480)+NPC.X)</param>
+                            <param id="1" name="Value">floor(random(-320, 320)+NPC.X)</param>
                         </action>
                         <action id="0" name="Add key" sid="7667958219704733" type="NPCData">
                             <param id="0" name="Key">&quot;walkToY&quot;</param>
-                            <param id="1" name="Value">floor(random(-320, 480)+NPC.Y)</param>
+                            <param id="1" name="Value">floor(random(-320, 320)+NPC.Y)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -344,6 +348,55 @@
                             <param id="0" name="Key">&quot;walkToY&quot;</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="3739727363554663">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4402009473458145" type="System" />
+                        <condition id="0" name="Compare value" sid="8713364436584617" type="NPCData">
+                            <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1517853211141973">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="8053086679199056" type="NPCData">
+                                    <param id="0" name="Key">&quot;timeout&quot;</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">1.0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="6190872754338651" type="NPCData">
+                                    <param id="0" name="Key">&quot;timeout&quot;</param>
+                                    <param id="1" name="Value">NPCData.Get(&quot;timeout&quot;)+dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9486192211611104">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1629678306599469" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="13777500044059" type="NPCData">
+                                    <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="1" name="Set key" sid="1977952273573889" type="NPCData">
+                                    <param id="0" name="Key">&quot;cNode&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="1432568210168749" type="NPCData">
+                                    <param id="0" name="Key">&quot;walkToX&quot;</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="7856664332510629" type="NPCData">
+                                    <param id="0" name="Key">&quot;walkToY&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
