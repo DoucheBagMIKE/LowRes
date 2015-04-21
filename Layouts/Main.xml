@@ -6496,7 +6496,6 @@
                     </properties>
                     <instance-variables>
                         <Shadow>Tiny</Shadow>
-                        <HasTriggerZone>false</HasTriggerZone>
                         <StartState>Wait</StartState>
                         <FSM_UID>-1</FSM_UID>
                         <DataUID>-1</DataUID>
@@ -7803,8 +7802,7 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
-                        <HasTriggerZone>true</HasTriggerZone>
-                        <StartState>Npc_RandomWalk</StartState>
+                        <StartState></StartState>
                         <FSM_UID>-1</FSM_UID>
                         <DataUID>-1</DataUID>
                         <TriggerUID>-1</TriggerUID>
@@ -7857,10 +7855,11 @@
                     <instance-variables>
                         <Zone>24</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn></Spawn>
+                        <Spawn>NpcTestState</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <NPC_Has_Triggerzone>true</NPC_Has_Triggerzone>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -7917,16 +7916,17 @@
                     <instance-variables>
                         <Zone>24</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn></Spawn>
+                        <Spawn>NpcTestState</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <NPC_Has_Triggerzone>true</NPC_Has_Triggerzone>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>744</x>
-                        <y>448</y>
+                        <x>736</x>
+                        <y>460</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -7947,16 +7947,17 @@
                     <instance-variables>
                         <Zone>24</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn></Spawn>
+                        <Spawn>NpcTestState</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <NPC_Has_Triggerzone>true</NPC_Has_Triggerzone>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>752</x>
-                        <y>448</y>
+                        <x>736</x>
+                        <y>472</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -7977,16 +7978,17 @@
                     <instance-variables>
                         <Zone>24</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn></Spawn>
+                        <Spawn>NpcTestState</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <NPC_Has_Triggerzone>true</NPC_Has_Triggerzone>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>752</x>
-                        <y>460</y>
+                        <x>748</x>
+                        <y>472</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -8007,16 +8009,17 @@
                     <instance-variables>
                         <Zone>24</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn></Spawn>
+                        <Spawn>NpcTestState</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <NPC_Has_Triggerzone>true</NPC_Has_Triggerzone>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>744</x>
-                        <y>460</y>
+                        <x>760</x>
+                        <y>472</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -8037,16 +8040,17 @@
                     <instance-variables>
                         <Zone>24</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn></Spawn>
+                        <Spawn>NpcTestState</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <NPC_Has_Triggerzone>true</NPC_Has_Triggerzone>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>736</x>
-                        <y>460</y>
+                        <x>772</x>
+                        <y>472</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -9413,7 +9417,11 @@
             </instance-variables>
         </instance>
         <instance type="WeaponData" uid="209" />
-        <instance type="TextData" uid="213" />
+        <instance type="TextData" uid="213">
+            <instance-variables>
+                <Loaded>false</Loaded>
+            </instance-variables>
+        </instance>
         <instance type="FSM" uid="219">
             <properties>
                 <width>0</width>
@@ -9431,7 +9439,16 @@
             </properties>
         </instance>
         <instance type="TempData" uid="260" />
-        <instance type="TriggerZoneData" uid="287" />
+        <instance type="TriggerZoneData" uid="287">
+            <instance-variables>
+                <Loaded>false</Loaded>
+            </instance-variables>
+        </instance>
+        <instance type="NpcXML" uid="410">
+            <instance-variables>
+                <Loaded>false</Loaded>
+            </instance-variables>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>

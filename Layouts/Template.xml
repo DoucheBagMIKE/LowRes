@@ -1037,7 +1037,6 @@
                     </properties>
                     <instance-variables>
                         <Shadow>Tiny</Shadow>
-                        <HasTriggerZone>false</HasTriggerZone>
                         <StartState>Wait</StartState>
                         <FSM_UID>-1</FSM_UID>
                         <DataUID>-1</DataUID>

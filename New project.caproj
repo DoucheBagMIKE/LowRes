@@ -2397,11 +2397,17 @@
         </object-type>
         <object-type name="Npc_Spawner" sid="5579180623493098">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="NPC_Has_Triggerzone" sid="9772015565703791" type="boolean" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9563234050052294" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type global="1" name="NpcXML" sid="3085188535781479">
+            <plugin id="XML" />
         </object-type>
     </object-folder>
     <families>
@@ -2578,9 +2584,13 @@
         </family>
         <family name="XmlData" plugin-id="XML" sid="5795262721723569">
             <members>
+                <member>NpcXML</member>
                 <member>TextData</member>
                 <member>TriggerZoneData</member>
             </members>
+            <instance-variables>
+                <instance-variable name="Loaded" sid="9723412056193157" type="boolean" />
+            </instance-variables>
         </family>
         <family name="NPC" plugin-id="Sprite" sid="9044368687429383">
             <members>
@@ -2588,7 +2598,6 @@
                 <member>NpcBase</member>
             </members>
             <instance-variables>
-                <instance-variable name="HasTriggerZone" sid="8301706614571312" type="boolean" />
                 <instance-variable name="StartState" sid="5150051160699273" type="string" />
                 <instance-variable name="FSM_UID" sid="2978882145063888" type="number" />
                 <instance-variable name="DataUID" sid="3759315192729319" type="number" />
@@ -2773,6 +2782,7 @@
         <file-folder name="XML">
             <file name="Texts.xml" />
             <file name="TriggerZoneFunctions.xml" />
+            <file name="Npc.xml" />
         </file-folder>
         <file name="KNOWN_BUGS.txt" />
     </files-folder>
