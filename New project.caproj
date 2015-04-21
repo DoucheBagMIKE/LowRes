@@ -2683,7 +2683,6 @@
     <event-folder>
         <event-folder name="NPC States">
             <event-sheet>GhostStates.xml</event-sheet>
-            <event-sheet>GenericStates.xml</event-sheet>
             <event-sheet>NpcStates.xml</event-sheet>
         </event-folder>
         <event-sheet>Main.xml</event-sheet>
@@ -2710,6 +2709,7 @@
         <event-sheet>Light.xml</event-sheet>
         <event-sheet>Particle.xml</event-sheet>
         <event-sheet>Mirrors.xml</event-sheet>
+        <event-sheet>Npc.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="14" />
