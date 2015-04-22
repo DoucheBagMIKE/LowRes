@@ -157,33 +157,6 @@
                                     <param id="1" name="Parameter {n}">Door.DoortoUID{###}Door.facing</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block disabled="1" sid="9305163137179893">
-                                    <conditions>
-                                        <condition id="3" inverted="1" name="Has key" sid="4489761443081854" type="GameStats">
-                                            <param id="0" name="Key">&quot;GhostWait&quot;</param>
-                                        </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="2608075977178739" type="NPC">
-                                            <param id="0" name="Unique ID">Ghost.UID</param>
-                                        </condition>
-                                        <condition id="-14" name="Pick by unique ID" sid="6985734122644694" type="FSM">
-                                            <param id="0" name="Unique ID">NPC.FSM_UID</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set size" sid="3364602181043928" type="FSM">
-                                            <param id="0" name="Width">0</param>
-                                            <param id="1" name="Height">1</param>
-                                            <param id="2" name="Depth">1</param>
-                                        </action>
-                                        <action id="3" name="Clear" sid="2365314009862573" type="NPCData" />
-                                        <action id="0" name="Call function" sid="7522560701068538" type="Function">
-                                            <param id="0" name="Name">&quot;SetGhostState&quot;</param>
-                                            <param id="1" name="Parameter {n}">&quot;Follow&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -202,41 +175,54 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="7660346473801175">
-                            <conditions />
-                            <actions />
-                            <sub-events>
-                                <event-block sid="2547392335642024">
-                                    <conditions>
-                                        <condition id="1" name="Compare parameter" sid="9308280793657059" type="Function">
-                                            <param id="0" name="Index">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;north&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Set position" sid="1516082152621603" type="BASE">
-                                            <param id="0" name="X">Door.X</param>
-                                            <param id="1" name="Y">Door.Y-12</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3785254098373353">
-                                    <conditions>
-                                        <condition id="1" name="Compare parameter" sid="4757977164564927" type="Function">
-                                            <param id="0" name="Index">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;south&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Set position" sid="335507397198681" type="BASE">
-                                            <param id="0" name="X">Door.X</param>
-                                            <param id="1" name="Y">Door.Y+12</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                        <event-block sid="2547392335642024">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="9308280793657059" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;north&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="1516082152621603" type="BASE">
+                                    <param id="0" name="X">Door.X</param>
+                                    <param id="1" name="Y">Door.Y-12</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3785254098373353">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9525671201382703" type="System" />
+                                <condition id="1" name="Compare parameter" sid="4757977164564927" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;south&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="335507397198681" type="BASE">
+                                    <param id="0" name="X">Door.X</param>
+                                    <param id="1" name="Y">Door.Y+12</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>i the ghost is not following the player then we make it forget what it was doing and teleport it to the player</comment>
+                        <event-block sid="9247686155315278">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="7872483067073784" type="GameStats">
+                                    <param id="0" name="Key">&quot;GhostWait&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="6245675884659769" type="Ghost">
+                                    <param id="0" name="Object">BASE</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2832179587299553" type="Function">
+                                    <param id="0" name="Name">&quot;StartState&quot;</param>
+                                    <param id="1" name="Parameter {n}">Ghost.UID</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="3914420828676203">
                             <conditions />
@@ -250,21 +236,6 @@
                                     <param id="1" name="Parameter {n}">&quot;in&quot;</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="9247686155315278">
-                                    <conditions>
-                                        <condition id="3" inverted="1" name="Has key" sid="7872483067073784" type="GameStats">
-                                            <param id="0" name="Key">&quot;GhostWait&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-4" name="Set position to another object" sid="6245675884659769" type="Ghost">
-                                            <param id="0" name="Object">BASE</param>
-                                            <param id="1" name="Image point (optional)">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
