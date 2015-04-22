@@ -166,6 +166,10 @@
                             <param id="0" name="Object">HAS_PARTICLE</param>
                             <param id="1" name="Image point (optional)">0</param>
                         </action>
+                        <action id="-29" name="Move to object" sid="5437188492632324" type="Particles">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">HAS_PARTICLE</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

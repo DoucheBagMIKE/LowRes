@@ -15,6 +15,7 @@
                     </conditions>
                     <actions>
                         <action id="-24" name="Move to top" sid="6417477344935773" type="ZORDERING" />
+                        <action id="-24" name="Move to top" sid="2630484728391717" type="Ghost" />
                     </actions>
                 </event-block>
                 <event-block sid="1081567774536975">

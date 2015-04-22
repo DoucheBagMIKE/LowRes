@@ -11,11 +11,6 @@
                 <condition id="-8" name="Is boolean instance variable set" sid="2231445411484548" type="HAS_LIGHT">
                     <param id="0" name="Instance variable">drawlight</param>
                 </condition>
-                <condition id="0" name="Compare value" sid="4801558945895561" type="GameStats">
-                    <param id="0" name="Key">&quot;CurHP&quot;</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
             </conditions>
             <actions />
             <sub-events>
@@ -93,13 +88,26 @@
                             <param id="1" name="Parameter index">2</param>
                             <param id="2" name="Value">HAS_LIGHT.B</param>
                         </action>
-                        <action id="-16" name="Set opacity" sid="8096602710968049" type="Light">
-                            <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="3072461283483242" type="LightColor">
-                            <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="5204475337281091">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="4801558945895561" type="GameStats">
+                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="8096602710968049" type="Light">
+                                    <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="3072461283483242" type="LightColor">
+                                    <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

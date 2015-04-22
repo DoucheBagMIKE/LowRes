@@ -273,219 +273,231 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="1006517132132829">
+                                        <event-block sid="2320790867198962">
                                             <conditions>
-                                                <condition id="0" name="Compare value" sid="110693074800159" type="Input">
-                                                    <param id="0" name="Key">&quot;Type&quot;</param>
+                                                <condition id="-14" name="Compare variable" sid="4834650822252334" type="System">
+                                                    <param id="0" name="Variable">fadeeffect</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;controler&quot;</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block any="1" sid="4461509764727949">
+                                                <event-block sid="1006517132132829">
                                                     <conditions>
-                                                        <condition id="0" name="Compare value" sid="8966991451959525" type="Input">
-                                                            <param id="0" name="Key">&quot;Left X&quot;</param>
-                                                            <param id="1" name="Comparison">1</param>
-                                                            <param id="2" name="Value">0</param>
-                                                        </condition>
-                                                        <condition id="0" name="Compare value" sid="8272070793731606" type="Input">
-                                                            <param id="0" name="Key">&quot;Left Y&quot;</param>
-                                                            <param id="1" name="Comparison">1</param>
-                                                            <param id="2" name="Value">0</param>
+                                                        <condition id="0" name="Compare value" sid="110693074800159" type="Input">
+                                                            <param id="0" name="Key">&quot;Type&quot;</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;controler&quot;</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-22" name="Set angle toward position" sid="1535415310320532" type="Indicator">
-                                                            <param id="0" name="X">self.X+Input.Get(&quot;Left X&quot;)</param>
-                                                            <param id="1" name="Y">self.y+Input.Get(&quot;Left Y&quot;)</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="4461509764727949">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare value" sid="8966991451959525" type="Input">
+                                                                    <param id="0" name="Key">&quot;Left X&quot;</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                                <condition id="0" name="Compare value" sid="8272070793731606" type="Input">
+                                                                    <param id="0" name="Key">&quot;Left Y&quot;</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-22" name="Set angle toward position" sid="1535415310320532" type="Indicator">
+                                                                    <param id="0" name="X">self.X+Input.Get(&quot;Left X&quot;)</param>
+                                                                    <param id="1" name="Y">self.y+Input.Get(&quot;Left Y&quot;)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block any="1" sid="934357347738014">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare value" sid="4808437787560581" type="Input">
+                                                                    <param id="0" name="Key">&quot;Right X&quot;</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                                <condition id="0" name="Compare value" sid="5759585479796646" type="Input">
+                                                                    <param id="0" name="Key">&quot;Right Y&quot;</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-22" name="Set angle toward position" sid="6520521091111876" type="Indicator">
+                                                                    <param id="0" name="X">self.X+Input.Get(&quot;Right X&quot;)</param>
+                                                                    <param id="1" name="Y">self.y+Input.Get(&quot;Right Y&quot;)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
-                                                <event-block any="1" sid="934357347738014">
+                                                <event-block sid="3412831181375993">
                                                     <conditions>
-                                                        <condition id="0" name="Compare value" sid="4808437787560581" type="Input">
-                                                            <param id="0" name="Key">&quot;Right X&quot;</param>
-                                                            <param id="1" name="Comparison">1</param>
-                                                            <param id="2" name="Value">0</param>
-                                                        </condition>
-                                                        <condition id="0" name="Compare value" sid="5759585479796646" type="Input">
-                                                            <param id="0" name="Key">&quot;Right Y&quot;</param>
-                                                            <param id="1" name="Comparison">1</param>
-                                                            <param id="2" name="Value">0</param>
-                                                        </condition>
+                                                        <condition id="-22" name="Else" sid="6151778116595291" type="System" />
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="-22" name="Set angle toward position" sid="6520521091111876" type="Indicator">
-                                                            <param id="0" name="X">self.X+Input.Get(&quot;Right X&quot;)</param>
-                                                            <param id="1" name="Y">self.y+Input.Get(&quot;Right Y&quot;)</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                        <event-block sid="3412831181375993">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="6151778116595291" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="6568877066542416">
-                                                    <conditions>
-                                                        <condition id="2" name="Key is down" sid="457225138693326" type="Keyboard">
-                                                            <param id="0" name="Key">39 (Right arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="9455953587631573" type="Keyboard">
-                                                            <param id="0" name="Key">37 (Left arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="5506099679324766" type="Keyboard">
-                                                            <param id="0" name="Key">38 (Up arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="2972255320397504" type="Keyboard">
-                                                            <param id="0" name="Key">40 (Down arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="6276003312718349" type="Keyboard">
-                                                            <param id="0" name="Key">67 (C)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-8" name="Set angle" sid="6139700020607074" type="Indicator">
-                                                            <param id="0" name="Angle">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="9066811238024331">
-                                                    <conditions>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="362686586224781" type="Keyboard">
-                                                            <param id="0" name="Key">39 (Right arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" name="Key is down" sid="8303226342194937" type="Keyboard">
-                                                            <param id="0" name="Key">37 (Left arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="4682455566317834" type="Keyboard">
-                                                            <param id="0" name="Key">38 (Up arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="9083197743188657" type="Keyboard">
-                                                            <param id="0" name="Key">40 (Down arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="806276417126751" type="Keyboard">
-                                                            <param id="0" name="Key">67 (C)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-8" name="Set angle" sid="7393555974489983" type="Indicator">
-                                                            <param id="0" name="Angle">180</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="2842220196687706">
-                                                    <conditions>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="2814140747156939" type="Keyboard">
-                                                            <param id="0" name="Key">39 (Right arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="8403750644624009" type="Keyboard">
-                                                            <param id="0" name="Key">37 (Left arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" name="Key is down" sid="3766659969369482" type="Keyboard">
-                                                            <param id="0" name="Key">38 (Up arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="6785106682546849" type="Keyboard">
-                                                            <param id="0" name="Key">40 (Down arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="2501269046690041" type="Keyboard">
-                                                            <param id="0" name="Key">67 (C)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-8" name="Set angle" sid="6284789317475841" type="Indicator">
-                                                            <param id="0" name="Angle">270</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="3799197658162744">
-                                                    <conditions>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="7961617278077551" type="Keyboard">
-                                                            <param id="0" name="Key">39 (Right arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="2091751220111124" type="Keyboard">
-                                                            <param id="0" name="Key">37 (Left arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="8310806452553649" type="Keyboard">
-                                                            <param id="0" name="Key">38 (Up arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" name="Key is down" sid="8401126525564645" type="Keyboard">
-                                                            <param id="0" name="Key">40 (Down arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="4069927299875035" type="Keyboard">
-                                                            <param id="0" name="Key">67 (C)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-8" name="Set angle" sid="7003327619250598" type="Indicator">
-                                                            <param id="0" name="Angle">90</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="4298600798558137">
-                                                    <conditions>
-                                                        <condition id="0" name="On key pressed" sid="458400765262529" type="Keyboard">
-                                                            <param id="0" name="Key">39 (Right arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="115643107223901" type="Keyboard">
-                                                            <param id="0" name="Key">67 (C)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-8" name="Set angle" sid="579044112576629" type="Indicator">
-                                                            <param id="0" name="Angle">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="871058545959021">
-                                                    <conditions>
-                                                        <condition id="0" name="On key pressed" sid="6397361475712867" type="Keyboard">
-                                                            <param id="0" name="Key">37 (Left arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="2170364543945355" type="Keyboard">
-                                                            <param id="0" name="Key">67 (C)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-8" name="Set angle" sid="221592631678261" type="Indicator">
-                                                            <param id="0" name="Angle">180</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="4144801299417343">
-                                                    <conditions>
-                                                        <condition id="0" name="On key pressed" sid="3092088662970962" type="Keyboard">
-                                                            <param id="0" name="Key">40 (Down arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="5301856783703657" type="Keyboard">
-                                                            <param id="0" name="Key">67 (C)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-8" name="Set angle" sid="9570972674888554" type="Indicator">
-                                                            <param id="0" name="Angle">90</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="3146275305067143">
-                                                    <conditions>
-                                                        <condition id="0" name="On key pressed" sid="7336862692216655" type="Keyboard">
-                                                            <param id="0" name="Key">38 (Up arrow)</param>
-                                                        </condition>
-                                                        <condition id="2" inverted="1" name="Key is down" sid="7308874814740277" type="Keyboard">
-                                                            <param id="0" name="Key">67 (C)</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-8" name="Set angle" sid="4529493843251742" type="Indicator">
-                                                            <param id="0" name="Angle">270</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="6568877066542416">
+                                                            <conditions>
+                                                                <condition id="2" name="Key is down" sid="457225138693326" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="9455953587631573" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="5506099679324766" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2972255320397504" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="6276003312718349" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="6139700020607074" type="Indicator">
+                                                                    <param id="0" name="Angle">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="9066811238024331">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="362686586224781" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" name="Key is down" sid="8303226342194937" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="4682455566317834" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="9083197743188657" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="806276417126751" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="7393555974489983" type="Indicator">
+                                                                    <param id="0" name="Angle">180</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="2842220196687706">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2814140747156939" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="8403750644624009" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" name="Key is down" sid="3766659969369482" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="6785106682546849" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2501269046690041" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="6284789317475841" type="Indicator">
+                                                                    <param id="0" name="Angle">270</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="3799197658162744">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="7961617278077551" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2091751220111124" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="8310806452553649" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" name="Key is down" sid="8401126525564645" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="4069927299875035" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="7003327619250598" type="Indicator">
+                                                                    <param id="0" name="Angle">90</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="4298600798558137">
+                                                            <conditions>
+                                                                <condition id="0" name="On key pressed" sid="458400765262529" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="115643107223901" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="579044112576629" type="Indicator">
+                                                                    <param id="0" name="Angle">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="871058545959021">
+                                                            <conditions>
+                                                                <condition id="0" name="On key pressed" sid="6397361475712867" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2170364543945355" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="221592631678261" type="Indicator">
+                                                                    <param id="0" name="Angle">180</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="4144801299417343">
+                                                            <conditions>
+                                                                <condition id="0" name="On key pressed" sid="3092088662970962" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="5301856783703657" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="9570972674888554" type="Indicator">
+                                                                    <param id="0" name="Angle">90</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="3146275305067143">
+                                                            <conditions>
+                                                                <condition id="0" name="On key pressed" sid="7336862692216655" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="7308874814740277" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="4529493843251742" type="Indicator">
+                                                                    <param id="0" name="Angle">270</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -630,6 +642,11 @@
                                             <param id="0" name="Key">&quot;CurHP&quot;</param>
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="7442683155328455" type="System">
+                                            <param id="0" name="Variable">fadeeffect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1008,6 +1025,9 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Move to layer" sid="1201883714793859" type="BASE">
+                            <param id="0" name="Layer">&quot;DEATH2&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="7639636653238573" type="Ghost">
                             <param id="0" name="Layer">&quot;DEATH2&quot;</param>
                         </action>
                         <action id="-18" name="Set layer opacity" sid="3467182594087657" type="System">
