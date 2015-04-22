@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
-        <include>Transitions</include>
         <include>GUI</include>
         <include>Xml</include>
         <include>Save-Load</include>
@@ -20,14 +19,14 @@
         <include>Traps</include>
         <include>Unlockable</include>
         <include>DoorsTeleporting</include>
+        <include>FiniteStateMachine</include>
+        <include>Npc</include>
         <include>Item Functions</include>
         <include>Spawnable Effects</include>
         <include>Musix</include>
-        <include>FiniteStateMachine</include>
         <include>Particle</include>
         <include>Light</include>
-        <include>Mirrors</include>
-        <include>Npc</include>
+        <include>Transitions</include>
         <variable constant="0" name="Quality" sid="693304184002963" static="0" type="text">low</variable>
         <variable constant="0" name="MenuMoved" sid="2498301788833179" static="0" type="number">0</variable>
         <variable constant="0" name="Pause" sid="926908428210607" static="0" type="number">2</variable>

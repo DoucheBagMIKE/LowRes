@@ -854,7 +854,7 @@
                 <comment>if the npc was moving before the state change we have to 0 out its speed or it will drift forever.</comment>
                 <event-block sid="7144481331457756">
                     <conditions>
-                        <condition behavior="NpcMovement" id="0" name="Is moving" sid="4120896252910991" type="NPC" />
+                        <condition behavior="NpcMovement" disabled="1" id="0" name="Is moving" sid="4120896252910991" type="NPC" />
                     </conditions>
                     <actions>
                         <action behavior="NpcMovement" id="0" name="Stop" sid="335358857147488" type="NPC" />

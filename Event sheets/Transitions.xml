@@ -42,6 +42,26 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="7203225753554959">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="1837930228151517" type="FSM">
+                            <param id="0" name="Unique ID">Ghost.FSM_UID</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4919888652513277" type="NPCData">
+                            <param id="0" name="Unique ID">Ghost.DataUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set size" sid="3295994463038557" type="FSM">
+                            <param id="0" name="Width">1</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="4" name="Load" sid="850417488576211" type="NPCData">
+                            <param id="0" name="JSON">NPCData.Get(&quot;Data&quot;&amp;FSM.Width)</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="2228808978686716">
@@ -84,22 +104,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="3235901736606108">
-                    <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="1696774582732943" type="NPC">
-                            <param id="0" name="Unique ID">Ghost.UID</param>
-                        </condition>
-                        <condition id="-12" name="Repeat" sid="6475523683497172" type="System">
-                            <param id="0" name="Count">FSM.Width</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="4922841818747484" type="Function">
-                            <param id="0" name="Name">&quot;PopState&quot;</param>
-                            <param id="1" name="Parameter {n}">NPC.UID</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block any="1" sid="9682103325190344">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="3845212185793531" type="System">
