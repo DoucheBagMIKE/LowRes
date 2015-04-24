@@ -1437,56 +1437,17 @@
             <object-type name="Mutant2" sid="3566029633638138">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="9893250363840864" speed="3">
+                    <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="9893250363840864" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
+                            <image-point name="Imagepoint 1" x="0.666667" y="0.833333" />
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="1" name="Walking" pingpong="1" repeatcount="1" repeatto="0" sid="6013247485267168" speed="5">
+                    <animation framecount="2" loop="1" name="Walking" pingpong="1" repeatcount="1" repeatto="0" sid="2385595171884493" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="0.5" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
+                            <image-point name="Imagepoint 1" x="0.666667" y="0.833333" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
+                            <image-point name="Imagepoint 1" x="0.666667" y="0.833333" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -1800,6 +1761,7 @@
                         <instance-variable name="facing" sid="6564563217641009" type="string" />
                         <instance-variable name="speed2" sid="8849962656236369" type="number" />
                         <instance-variable name="shake" sid="8030625785436811" type="boolean" />
+                        <instance-variable name="fadespeed" sid="148881361088797" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Solid" sid="4706586570582585">
@@ -2410,6 +2372,10 @@
         <object-type global="1" name="NpcXML" sid="3085188535781479">
             <plugin id="XML" />
         </object-type>
+        <object-type name="Blood" sid="8535890849848838">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -2656,6 +2622,7 @@
             <members>
                 <member>EnemyProjectile</member>
                 <member>Ghost</member>
+                <member>Mutant2</member>
             </members>
             <instance-variables>
                 <instance-variable name="ParticleType" sid="7953337383418355" type="string" />
