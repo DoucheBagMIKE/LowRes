@@ -336,6 +336,9 @@
                         <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <LeaveBloodTrail>false</LeaveBloodTrail>
+                        <BloodOnHit>true</BloodOnHit>
+                        <BloodTrailTimer>0.2</BloodTrailTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -499,6 +502,9 @@
                         <G>0</G>
                         <B>0</B>
                         <drawlight>true</drawlight>
+                        <LeaveBloodTrail>false</LeaveBloodTrail>
+                        <BloodOnHit>true</BloodOnHit>
+                        <BloodTrailTimer>0.2</BloodTrailTimer>
                         <attacking>false</attacking>
                         <AttackTimer>-1</AttackTimer>
                         <MaxSpd>0</MaxSpd>
@@ -590,6 +596,9 @@
                         <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <LeaveBloodTrail>false</LeaveBloodTrail>
+                        <BloodOnHit>true</BloodOnHit>
+                        <BloodTrailTimer>0.2</BloodTrailTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -775,6 +784,9 @@
                         <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <LeaveBloodTrail>false</LeaveBloodTrail>
+                        <BloodOnHit>true</BloodOnHit>
+                        <BloodTrailTimer>0.2</BloodTrailTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -978,6 +990,9 @@
                         <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <LeaveBloodTrail>false</LeaveBloodTrail>
+                        <BloodOnHit>true</BloodOnHit>
+                        <BloodTrailTimer>0.2</BloodTrailTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -1246,6 +1261,9 @@
                         <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <LeaveBloodTrail>false</LeaveBloodTrail>
+                        <BloodOnHit>true</BloodOnHit>
+                        <BloodTrailTimer>0.2</BloodTrailTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -1320,6 +1338,9 @@
                         <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <LeaveBloodTrail>false</LeaveBloodTrail>
+                        <BloodOnHit>true</BloodOnHit>
+                        <BloodTrailTimer>0.2</BloodTrailTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">
@@ -1394,6 +1415,9 @@
                         <spawnerUID>-1</spawnerUID>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <LeaveBloodTrail>false</LeaveBloodTrail>
+                        <BloodOnHit>true</BloodOnHit>
+                        <BloodTrailTimer>0.2</BloodTrailTimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Knockback">

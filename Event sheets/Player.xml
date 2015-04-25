@@ -97,6 +97,10 @@
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                                     <param id="2" name="Duration">0.5</param>
                                 </action>
+                                <action id="0" name="Call function" sid="5262935771234486" type="Function">
+                                    <param id="0" name="Name">&quot;bloodhit&quot;</param>
+                                    <param id="1" name="Parameter {n}">BASE.UID{###}BASE.ImagePointX(1){###}BASE.ImagePointY(1){###}0{###}180{###}6</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="9226006475367208">

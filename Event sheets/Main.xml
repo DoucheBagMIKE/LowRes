@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <include>Blood</include>
         <include>GUI</include>
         <include>Xml</include>
         <include>Save-Load</include>
@@ -118,6 +119,20 @@
         </event-block>
         <event-group description="" sid="7922617050674798" title="DEBUG">
             <sub-events>
+                <event-block sid="6868540131226496">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="392514708352329" type="SpriteFont">
+                            <param id="0" name="Instance variable">Function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;FPS&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1215543777502458" type="SpriteFont">
+                            <param id="0" name="Text">fps</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block any="1" sid="141615764024376">
                     <conditions>
                         <condition id="3" name="Is button down" sid="2954166013619666" type="Gamepad">
@@ -260,6 +275,19 @@
                         <action id="0" name="Call function" sid="7540026819946514" type="Function">
                             <param id="0" name="Name">&quot;Teleport&quot;</param>
                             <param id="1" name="Parameter {n}">389{###}&quot;north&quot;{###}100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3013448510432586">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="439800755960356" type="Keyboard">
+                            <param id="0" name="Key">81 (Q)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3518390448414784" type="Function">
+                            <param id="0" name="Name">&quot;blood&quot;</param>
+                            <param id="1" name="Parameter {n}">mouse.x{###}mouse.y</param>
                         </action>
                     </actions>
                 </event-block>

@@ -55,6 +55,10 @@
                                     <param id="0" name="Key">str(Enemies.spawnerUID)</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="3178510625508327" type="Function">
+                                    <param id="0" name="Name">&quot;bloodhit&quot;</param>
+                                    <param id="1" name="Parameter {n}">enemies.uid{###}enemies.imagepointx(1){###}enemies.imagepointy(1){###}0{###}180{###}16</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="9928100213307216">
@@ -754,29 +758,6 @@
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="879307078749014">
-                                            <conditions>
-                                                <condition id="-1" name="Compare X" sid="9828691457861803" type="Enemies">
-                                                    <param id="0" name="Comparison">4</param>
-                                                    <param id="1" name="X co-ordinate">BASE.X</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="7" name="Set mirrored" sid="3992988170146152" type="Enemies">
-                                                    <param id="0" name="State">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="5370588111473447">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="6898279336735072" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="7" name="Set mirrored" sid="8276301505986618" type="Enemies">
-                                                    <param id="0" name="State">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                         <event-block sid="9371050136167233">
                                             <conditions>
                                                 <condition id="2" name="Is playing" sid="2902298516157998" type="Enemies">
@@ -831,6 +812,29 @@
                                                                 <action id="4" name="Set animation" sid="1580849290355924" type="Enemies">
                                                                     <param id="0" name="Animation">&quot;Walking&quot;</param>
                                                                     <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="879307078749014">
+                                                            <conditions>
+                                                                <condition id="-1" name="Compare X" sid="9828691457861803" type="Enemies">
+                                                                    <param id="0" name="Comparison">4</param>
+                                                                    <param id="1" name="X co-ordinate">BASE.X</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="3992988170146152" type="Enemies">
+                                                                    <param id="0" name="State">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="5370588111473447">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="6898279336735072" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="7" name="Set mirrored" sid="8276301505986618" type="Enemies">
+                                                                    <param id="0" name="State">0</param>
                                                                 </action>
                                                             </actions>
                                                         </event-block>
@@ -1774,7 +1778,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="6724959446517491" type="Function">
                                             <param id="0" name="Name">&quot;HitCollide&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                            <param id="1" name="Parameter {n}">Enemies.UID{###}Melee_Hitbox.ImagePointX(1){###}Melee_Hitbox.ImagePointY(1){###}angle(Enemies.X,Enemies.Y,Melee_Hitbox.ImagePointX(1),Melee_Hitbox.ImagePointY(1))-180{###}32{###}6</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1818,9 +1822,9 @@
                                             <param id="0" name="Tag">&quot;Hit&quot;</param>
                                             <param id="1" name="Playback rate">1.5</param>
                                         </action>
-                                        <action id="0" name="Call function" sid="5784110810342405" type="Function">
+                                        <action id="0" name="Call function" sid="9674770231070295" type="Function">
                                             <param id="0" name="Name">&quot;HitCollide&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                            <param id="1" name="Parameter {n}">Enemies.UID{###}Melee_Hitbox.ImagePointX(1){###}Melee_Hitbox.ImagePointY(1){###}angle(Enemies.X,Enemies.Y,Melee_Hitbox.ImagePointX(1),Melee_Hitbox.ImagePointY(1))-180{###}32{###}6</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1878,9 +1882,9 @@
                                     <param id="2" name="Mode">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="193688597129242" type="PlayerProjectile" />
-                                <action id="0" name="Call function" sid="3737665339866702" type="Function">
+                                <action id="0" name="Call function" sid="1838445504406338" type="Function">
                                     <param id="0" name="Name">&quot;HitCollide&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID{###}PlayerProjectile.X{###}PlayerProjectile.Y{###}angle(Enemies.X,Enemies.Y,PlayerProjectile.X,PlayerProjectile.Y)-180{###}5{###}6</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1904,6 +1908,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Call function" sid="2877209387044848" type="Function">
+                                    <param id="0" name="Name">&quot;bloodhit&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}Function.Param(2){###}Function.Param(3){###}Function.Param(4){###}Function.Param(5)</param>
+                                </action>
                                 <action id="-13" name="Set time scale" sid="4208095586473559" type="System">
                                     <param id="0" name="Time scale">0.2</param>
                                 </action>

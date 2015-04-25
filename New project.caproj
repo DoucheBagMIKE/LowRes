@@ -31,6 +31,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
@@ -50,7 +51,7 @@
         <width>320</width>
         <height>176</height>
     </window-size>
-    <pixel-rounding>0</pixel-rounding>
+    <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
     <first-layout>Main</first-layout>
     <use-loader-layout>0</use-loader-layout>
@@ -1013,7 +1014,9 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9365454665790129" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="1" y="0.5" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2372,9 +2375,28 @@
         <object-type global="1" name="NpcXML" sid="3085188535781479">
             <plugin id="XML" />
         </object-type>
-        <object-type name="Blood" sid="8535890849848838">
-            <plugin id="TiledBg" />
-            <texture />
+        <object-type name="Blood" sid="6312864481411931">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="7093327609522016">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="3849824162906345">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3017461451782836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.625" y="0.375" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.375" y="0.625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -2622,7 +2644,6 @@
             <members>
                 <member>EnemyProjectile</member>
                 <member>Ghost</member>
-                <member>Mutant2</member>
             </members>
             <instance-variables>
                 <instance-variable name="ParticleType" sid="7953337383418355" type="string" />
@@ -2641,6 +2662,24 @@
                 <member>Sign</member>
                 <member>Sprite2</member>
             </members>
+        </family>
+        <family name="CanBleed" plugin-id="Sprite" sid="5685418196120473">
+            <members>
+                <member>BASE</member>
+                <member>Bat</member>
+                <member>Bird</member>
+                <member>Mage</member>
+                <member>Mage2</member>
+                <member>Mutant</member>
+                <member>Mutant2</member>
+                <member>Slime</member>
+                <member>Spider</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="LeaveBloodTrail" sid="198127423281217" type="boolean" />
+                <instance-variable name="BloodOnHit" sid="4131393222680073" type="boolean" />
+                <instance-variable name="BloodTrailTimer" sid="7342353842490128" type="number" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>
@@ -2679,6 +2718,7 @@
         <event-sheet>Mirrors.xml</event-sheet>
         <event-sheet>Npc.xml</event-sheet>
         <event-sheet>Transitions.xml</event-sheet>
+        <event-sheet>Blood.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="14" />
