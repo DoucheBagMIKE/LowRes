@@ -18,20 +18,11 @@
                     <sub-events>
                         <event-block sid="3947082271129628">
                             <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="5407981912861503" type="BASE">
+                                <condition id="0" name="On collision with another object" sid="5407981912861503" type="BASE">
                                     <param id="0" name="Object">CameraZone</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="1112885692188739" type="System">
-                                    <param id="0" name="Variable">ScrolltoX</param>
-                                    <param id="1" name="Value">clamp(BASE.X,CameraZone.X+(OriginalWindowWidth/2),CameraZone.X+CameraZone.Width-(OriginalWindowWidth/2))</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="7937065731455193" type="System">
-                                    <param id="0" name="Variable">ScrolltoY</param>
-                                    <param id="1" name="Value">clamp(BASE.Y,CameraZone.Y+(OriginalWindowHeight/2),CameraZone.Y+CameraZone.Height-(OriginalWindowHeight/2))</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block sid="408003742020112">
                                     <conditions>
@@ -86,6 +77,23 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="2566351999424612">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="3264424826481038" type="CameraZone">
+                                    <param id="0" name="Unique ID">CurZone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7025276333785408" type="System">
+                                    <param id="0" name="Variable">ScrolltoX</param>
+                                    <param id="1" name="Value">clamp(BASE.X,CameraZone.X+(OriginalWindowWidth/2),CameraZone.X+CameraZone.Width-(OriginalWindowWidth/2))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3853493096151621" type="System">
+                                    <param id="0" name="Variable">ScrolltoY</param>
+                                    <param id="1" name="Value">clamp(BASE.Y,CameraZone.Y+(OriginalWindowHeight/2),CameraZone.Y+CameraZone.Height-(OriginalWindowHeight/2))</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="5965660903095454">
                             <conditions>
