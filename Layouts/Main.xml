@@ -6682,7 +6682,7 @@
                 </instance>
                 <instance type="SMOKE_PARTICLE" uid="242">
                     <properties>
-                        <rate>8</rate>
+                        <rate>6</rate>
                         <spray-cone>90</spray-cone>
                         <type>Continuous spray</type>
                         <initial-particle-properties></initial-particle-properties>
@@ -6725,7 +6725,7 @@
                 </instance>
                 <instance type="FIRE_PARTICLE" uid="241">
                     <properties>
-                        <rate>24</rate>
+                        <rate>8</rate>
                         <spray-cone>360</spray-cone>
                         <type>Continuous spray</type>
                         <initial-particle-properties></initial-particle-properties>
@@ -8464,8 +8464,8 @@
                         <width>400</width>
                         <height>400</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.501999974</hotspotX>
+                        <hotspotY>0.495999992</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -9164,13 +9164,13 @@
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>///////////</text>
-                        <scale>0.5</scale>
+                        <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-1</character-spacing>
+                        <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -9240,7 +9240,7 @@
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
-                        <scale>0.5</scale>
+                        <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>

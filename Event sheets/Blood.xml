@@ -14,7 +14,7 @@
             <actions>
                 <action behavior="CustomMovement" id="2" name="Set speed" sid="3864586403141896" type="Blood">
                     <param id="0" name="Which">0</param>
-                    <param id="1" name="Speed">clamp(self.CustomMovement.Speed-(dt*32),0,100)</param>
+                    <param id="1" name="Speed">clamp(self.CustomMovement.Speed-(dt*100),0,100)</param>
                 </action>
             </actions>
         </event-block>
@@ -85,10 +85,10 @@
                         </action>
                         <action behavior="CustomMovement" id="2" name="Set speed" sid="9685646569447933" type="Blood">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">random(25)</param>
+                            <param id="1" name="Speed">random(40)</param>
                         </action>
                         <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="6555144102743743" type="Blood">
-                            <param id="0" name="Angle">function.Param(3)-random(function.Param(4))+random(function.Param(4))</param>
+                            <param id="0" name="Angle">function.Param(3)+(-random(function.Param(4))+random(function.Param(4)))</param>
                         </action>
                     </actions>
                 </event-block>

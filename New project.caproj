@@ -2155,7 +2155,7 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="168141801883493" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.502" hotspotY="0.496" />
                     </animation>
                 </animation-folder>
             </object-type>
