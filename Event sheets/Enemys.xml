@@ -49,7 +49,7 @@
                             <actions>
                                 <action id="0" name="Call function" sid="6777597159363791" type="Function">
                                     <param id="0" name="Name">&quot;Explosion&quot;</param>
-                                    <param id="1" name="Parameter {n}">Enemies.X{###}Enemies.Y{###}&quot;Explode&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.X{###}Enemies.Y{###}&quot;Enemy&quot;</param>
                                 </action>
                                 <action id="0" name="Add key" sid="8060325939461937" type="TempData">
                                     <param id="0" name="Key">str(Enemies.spawnerUID)</param>
@@ -57,7 +57,7 @@
                                 </action>
                                 <action id="0" name="Call function" sid="3178510625508327" type="Function">
                                     <param id="0" name="Name">&quot;bloodhit&quot;</param>
-                                    <param id="1" name="Parameter {n}">enemies.uid{###}enemies.imagepointx(1){###}enemies.imagepointy(1){###}0{###}180{###}16</param>
+                                    <param id="1" name="Parameter {n}">enemies.uid{###}enemies.imagepointx(1){###}enemies.imagepointy(1){###}0{###}180{###}32</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -741,6 +741,141 @@
                                         </event-block>
                                     </sub-events>
                                 </event-block>
+                                <event-block sid="6749162179202298">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6595618834799113" type="Enemies">
+                                            <param id="0" name="Instance variable">MovementType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Passive&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="252401149970782">
+                                            <conditions>
+                                                <condition behavior="Movement" id="1" name="Compare speed" sid="2526306819635744" type="Enemies">
+                                                    <param id="0" name="Which">1</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Speed">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="3625770472634265" type="Enemies">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5438735101270937">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="1572292316759646" type="System" />
+                                                <condition behavior="Movement" id="1" name="Compare speed" sid="1864105629779219" type="Enemies">
+                                                    <param id="0" name="Which">1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Speed">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="1244418548673932" type="Enemies">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2671061925944754">
+                                            <conditions>
+                                                <condition id="2" name="Is playing" sid="9325799739834718" type="Enemies">
+                                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="4272558136892772" type="Enemies">
+                                                    <param id="0" name="Instance variable">playedsound</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="5036621700091649">
+                                                    <conditions>
+                                                        <condition behavior="Movement" id="1" name="Compare speed" sid="6621665268921573" type="Enemies">
+                                                            <param id="0" name="Which">0</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Speed">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-12" name="Subtract from" sid="193818234811107" type="Enemies">
+                                                            <param id="0" name="Instance variable">Timer</param>
+                                                            <param id="1" name="Value">dt</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="9260202541033832">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="441637700540133" type="Enemies">
+                                                                    <param id="0" name="Instance variable">Timer</param>
+                                                                    <param id="1" name="Comparison">3</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action behavior="Movement" id="2" name="Set speed" sid="6946839771965665" type="Enemies">
+                                                                    <param id="0" name="Which">0</param>
+                                                                    <param id="1" name="Speed">random(24)</param>
+                                                                </action>
+                                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="7567663664541632" type="Enemies">
+                                                                    <param id="0" name="Angle">random(360)</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="8939406452789522" type="Enemies">
+                                                                    <param id="0" name="Instance variable">Timer</param>
+                                                                    <param id="1" name="Value">random(0.5,1.5)</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="6360490634687299" type="Enemies">
+                                                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="5946766149620331">
+                                            <conditions>
+                                                <condition behavior="Movement" id="1" name="Compare speed" sid="4517936026159155" type="Enemies">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Speed">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="3661402215902187" type="Enemies">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">clamp(self.Movement.Speed-(dt*16),0,112)</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="5643110834129071">
+                                                    <conditions>
+                                                        <condition behavior="Movement" id="1" name="Compare speed" sid="2248215380898326" type="Enemies">
+                                                            <param id="0" name="Which">0</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Speed">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="7293679833177945" type="Enemies">
+                                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action behavior="Movement" id="2" name="Set speed" sid="7258913591353492" type="Enemies">
+                                                            <param id="0" name="Which">0</param>
+                                                            <param id="1" name="Speed">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <event-block sid="1219173471747892">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="105246249464243" type="Enemies">
@@ -1330,6 +1465,18 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="129172119456589">
+                                            <conditions>
+                                                <condition id="2" inverted="1" name="Is playing" sid="3165219403272243" type="Enemies">
+                                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="6" name="Set speed" sid="7651890678368496" type="Enemies">
+                                                    <param id="0" name="Speed">self.movement.Speed/8</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -1778,7 +1925,7 @@
                                         </action>
                                         <action id="0" name="Call function" sid="6724959446517491" type="Function">
                                             <param id="0" name="Name">&quot;HitCollide&quot;</param>
-                                            <param id="1" name="Parameter {n}">Enemies.UID{###}Melee_Hitbox.ImagePointX(1){###}Melee_Hitbox.ImagePointY(1){###}angle(Enemies.X,Enemies.Y,Melee_Hitbox.ImagePointX(1),Melee_Hitbox.ImagePointY(1))-180{###}32{###}6</param>
+                                            <param id="1" name="Parameter {n}">Enemies.UID{###}Melee_Hitbox.ImagePointX(&quot;spawnBlood&quot;){###}Melee_Hitbox.ImagePointY(&quot;spawnBlood&quot;){###}angle(Enemies.X,Enemies.Y,Melee_Hitbox.ImagePointX(&quot;spawnBlood&quot;),Melee_Hitbox.ImagePointY(&quot;spawnBlood&quot;))-180{###}6{###}6</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1789,44 +1936,51 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="9529301858744432" type="Enemies">
-                                            <param id="0" name="Instance variable">Projectile</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="ScrollTo" id="0" name="Shake" sid="4381693573068636" type="Camera">
-                                            <param id="0" name="Magnitude">2</param>
-                                            <param id="1" name="Duration">0.2</param>
-                                            <param id="2" name="Mode">0</param>
-                                        </action>
-                                        <action behavior="Flash" id="0" name="Flash" sid="7178981832358672" type="Enemies">
-                                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                            <param id="2" name="Duration">0.5</param>
-                                        </action>
-                                        <action id="-12" name="Subtract from" sid="7268739255700497" type="Enemies">
-                                            <param id="0" name="Instance variable">HP</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="25" name="Play at object" sid="6117924635128971" type="Audio">
-                                            <param id="0" name="Audio file">hit</param>
-                                            <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">random(-20,-15)</param>
-                                            <param id="3" name="Object">Enemies</param>
-                                            <param id="4" name="Inner angle">360</param>
-                                            <param id="5" name="Outer angle">360</param>
-                                            <param id="6" name="Outer gain">0</param>
-                                            <param id="7" name="Tag (optional)">&quot;Hit&quot;</param>
-                                        </action>
-                                        <action id="5" name="Set playback rate" sid="1696668363477471" type="Audio">
-                                            <param id="0" name="Tag">&quot;Hit&quot;</param>
-                                            <param id="1" name="Playback rate">1.5</param>
-                                        </action>
-                                        <action id="0" name="Call function" sid="9674770231070295" type="Function">
-                                            <param id="0" name="Name">&quot;HitCollide&quot;</param>
-                                            <param id="1" name="Parameter {n}">Enemies.UID{###}Melee_Hitbox.ImagePointX(1){###}Melee_Hitbox.ImagePointY(1){###}angle(Enemies.X,Enemies.Y,Melee_Hitbox.ImagePointX(1),Melee_Hitbox.ImagePointY(1))-180{###}32{###}6</param>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="8046457262442044" type="BASE">
+                                            <param id="0" name="Speed">0</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="3431192988104555">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="9529301858744432" type="Enemies">
+                                                    <param id="0" name="Instance variable">Projectile</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="ScrollTo" id="0" name="Shake" sid="4381693573068636" type="Camera">
+                                                    <param id="0" name="Magnitude">2</param>
+                                                    <param id="1" name="Duration">0.2</param>
+                                                    <param id="2" name="Mode">0</param>
+                                                </action>
+                                                <action behavior="Flash" id="0" name="Flash" sid="7178981832358672" type="Enemies">
+                                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                                    <param id="2" name="Duration">0.5</param>
+                                                </action>
+                                                <action id="-12" name="Subtract from" sid="7268739255700497" type="Enemies">
+                                                    <param id="0" name="Instance variable">HP</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="25" name="Play at object" sid="6117924635128971" type="Audio">
+                                                    <param id="0" name="Audio file">hit</param>
+                                                    <param id="1" name="Loop">0</param>
+                                                    <param id="2" name="Volume">random(-20,-15)</param>
+                                                    <param id="3" name="Object">Enemies</param>
+                                                    <param id="4" name="Inner angle">360</param>
+                                                    <param id="5" name="Outer angle">360</param>
+                                                    <param id="6" name="Outer gain">0</param>
+                                                    <param id="7" name="Tag (optional)">&quot;Hit&quot;</param>
+                                                </action>
+                                                <action id="5" name="Set playback rate" sid="1696668363477471" type="Audio">
+                                                    <param id="0" name="Tag">&quot;Hit&quot;</param>
+                                                    <param id="1" name="Playback rate">1.5</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -1884,7 +2038,7 @@
                                 <action id="-9" name="Destroy" sid="193688597129242" type="PlayerProjectile" />
                                 <action id="0" name="Call function" sid="1838445504406338" type="Function">
                                     <param id="0" name="Name">&quot;HitCollide&quot;</param>
-                                    <param id="1" name="Parameter {n}">Enemies.UID{###}PlayerProjectile.X{###}PlayerProjectile.Y{###}angle(Enemies.X,Enemies.Y,PlayerProjectile.X,PlayerProjectile.Y)-180{###}5{###}6</param>
+                                    <param id="1" name="Parameter {n}">Enemies.UID{###}PlayerProjectile.ImagePointX(&quot;spawnBlood&quot;){###}PlayerProjectile.ImagePointY(&quot;spawnBlood&quot;){###}angle(Enemies.X,Enemies.Y,PlayerProjectile.ImagePointX(&quot;spawnBlood&quot;),PlayerProjectile.ImagePointY(&quot;spawnBlood&quot;))-180{###}5{###}6</param>
                                 </action>
                             </actions>
                         </event-block>

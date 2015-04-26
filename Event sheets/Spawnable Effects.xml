@@ -46,6 +46,68 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9445149475533104">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2101812712514352" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Enemy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Play at position" sid="7965235704846555" type="Audio">
+                            <param id="0" name="Audio file">DM-CGS-49</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">random(-5,0)</param>
+                            <param id="3" name="X">Function.Param(0)</param>
+                            <param id="4" name="Y">Function.Param(1)</param>
+                            <param id="5" name="Angle">360</param>
+                            <param id="6" name="Inner angle">0</param>
+                            <param id="7" name="Outer angle">360</param>
+                            <param id="8" name="Outer gain">360</param>
+                            <param id="9" name="Tag (optional)">&quot;Explode&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5597759960369716" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2590157496400496">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9351143346962934" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Grass&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Play at position" sid="2059179997870818" type="Audio">
+                            <param id="0" name="Audio file">hit</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">random(-20,-15)</param>
+                            <param id="3" name="X">Function.Param(0)</param>
+                            <param id="4" name="Y">Function.Param(1)</param>
+                            <param id="5" name="Angle">360</param>
+                            <param id="6" name="Inner angle">0</param>
+                            <param id="7" name="Outer angle">360</param>
+                            <param id="8" name="Outer gain">360</param>
+                            <param id="9" name="Tag (optional)">&quot;Hit&quot;</param>
+                        </action>
+                        <action id="5" name="Set playback rate" sid="1021610006531662" type="Audio">
+                            <param id="0" name="Tag">&quot;Hit&quot;</param>
+                            <param id="1" name="Playback rate">1.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="944800829135079" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="2218828179835329">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="7915965667531338" type="Function">

@@ -346,13 +346,13 @@
                         <action id="11" name="Set collisions enabled" sid="9478548397554532" type="Grass">
                             <param id="0" name="Collisions">0</param>
                         </action>
+                        <action id="0" name="Call function" sid="7770900167948826" type="Function">
+                            <param id="0" name="Name">&quot;Explosion&quot;</param>
+                            <param id="1" name="Parameter {n}">Grass.X{###}Grass.Y{###}&quot;Grass&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="6153641973255166" type="Function">
                             <param id="0" name="Name">&quot;MeleeHitCollide&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Call function" sid="7770900167948826" type="Function">
-                            <param id="0" name="Name">&quot;Explosion&quot;</param>
-                            <param id="1" name="Parameter {n}">Grass.X{###}Grass.Y{###}&quot;Explode&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -379,14 +379,14 @@
                         <action id="11" name="Set collisions enabled" sid="1873472070296547" type="Grass">
                             <param id="0" name="Collisions">0</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="4690114695798197" type="PlayerProjectile" />
+                        <action id="0" name="Call function" sid="3250910407614042" type="Function">
+                            <param id="0" name="Name">&quot;Explosion&quot;</param>
+                            <param id="1" name="Parameter {n}">Grass.X{###}Grass.Y{###}&quot;Grass&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="6175283540579829" type="Function">
                             <param id="0" name="Name">&quot;MeleeHitCollide&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="4690114695798197" type="PlayerProjectile" />
-                        <action id="0" name="Call function" sid="5431779738257258" type="Function">
-                            <param id="0" name="Name">&quot;Explosion&quot;</param>
-                            <param id="1" name="Parameter {n}">Grass.X{###}Grass.Y{###}&quot;Explode&quot;</param>
                         </action>
                     </actions>
                 </event-block>

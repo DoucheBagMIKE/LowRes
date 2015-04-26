@@ -198,7 +198,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="5890007743231892" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">96</param>
+                            <param id="1" name="Value">16</param>
                         </action>
                         <action id="-10" name="Set value" sid="7427119200602883" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
@@ -233,7 +233,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="2238773188780609" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">96</param>
+                            <param id="1" name="Value">16</param>
                         </action>
                         <action id="-10" name="Set value" sid="3949326571375279" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
@@ -268,7 +268,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="9030900974828115" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">96</param>
+                            <param id="1" name="Value">16</param>
                         </action>
                         <action id="-10" name="Set value" sid="216165861279214" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
@@ -303,7 +303,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="7878505232555915" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">96</param>
+                            <param id="1" name="Value">16</param>
                         </action>
                         <action id="-10" name="Set value" sid="4283850451024592" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>

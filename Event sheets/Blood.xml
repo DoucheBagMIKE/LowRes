@@ -30,6 +30,12 @@
                 <action behavior="CustomMovement" id="12" name="Set enabled" sid="8218098379440081" type="Blood">
                     <param id="0" name="State">0</param>
                 </action>
+                <action id="-16" name="Wait" sid="7416840266900339" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="8227775884782244" type="Blood">
+                    <param id="0" name="Layer">&quot;BG&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7355285913568946">
@@ -46,7 +52,7 @@
                     <param id="3" name="Y">Function.Param(1)</param>
                 </action>
                 <action id="9" name="Set scale" sid="2905925175232117" type="Blood">
-                    <param id="0" name="Scale">random(0.7,0.1)</param>
+                    <param id="0" name="Scale">random(0.3,0.6)</param>
                 </action>
                 <action id="-8" name="Set angle" sid="5782177291041265" type="Blood">
                     <param id="0" name="Angle">random(360)</param>
@@ -73,12 +79,12 @@
                     <actions>
                         <action id="-3" name="Create object" sid="7523042828943133" type="System">
                             <param id="0" name="Object to create">Blood</param>
-                            <param id="1" name="Layer">&quot;BG&quot;</param>
+                            <param id="1" name="Layer">&quot;OBSTACLE&quot;</param>
                             <param id="2" name="X">function.Param(1)</param>
                             <param id="3" name="Y">function.Param(2)</param>
                         </action>
                         <action id="9" name="Set scale" sid="1168205410183016" type="Blood">
-                            <param id="0" name="Scale">random(0.8,0.1)</param>
+                            <param id="0" name="Scale">random(0.3,1)</param>
                         </action>
                         <action id="-8" name="Set angle" sid="6226844654351886" type="Blood">
                             <param id="0" name="Angle">random(360)</param>

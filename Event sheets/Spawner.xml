@@ -119,6 +119,35 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
+                                                        <event-block sid="1674984564316907">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="8310362530459432" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Bunny&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="6537291055641435" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Object">Bunny</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="2009128720771431" type="Bunny">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">ENEMY_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action behavior="LineOfSight" id="3" name="Clear obstacles" sid="7603254868219913" type="Bunny" />
+                                                                <action id="-10" name="Set value" sid="9571184815545038" type="Bunny">
+                                                                    <param id="0" name="Instance variable">spawnerUID</param>
+                                                                    <param id="1" name="Value">ENEMY_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="19723339450247" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
                                                         <event-block sid="5354888486478316">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="6793742896051328" type="ENEMY_SPAWNER">
