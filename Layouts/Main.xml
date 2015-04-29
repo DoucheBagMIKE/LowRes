@@ -4478,8 +4478,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>676</x>
-                        <y>496</y>
+                        <x>200</x>
+                        <y>444</y>
                         <z>0</z>
                         <width>12</width>
                         <height>12</height>
@@ -4791,7 +4791,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>112</range>
+                                <range>64</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -5162,11 +5162,6 @@
                         <fadespeed>100</fadespeed>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Solid2">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -5208,11 +5203,6 @@
                         <fadespeed>100</fadespeed>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Solid2">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -8119,7 +8109,7 @@
                     </properties>
                     <instance-variables>
                         <Deceleration>160</Deceleration>
-                        <MovementType>Passive</MovementType>
+                        <MovementType>PassiveJump</MovementType>
                         <Shadow>SmallHor</Shadow>
                         <HP>1</HP>
                         <Explode>true</Explode>

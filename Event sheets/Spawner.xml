@@ -5,6 +5,20 @@
     <events>
         <event-group description="" sid="3044321978302448" title="Spawner">
             <sub-events>
+                <event-block sid="5067539100645326">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="3854455444076742" type="System" />
+                        <condition id="1" name="Is overlapping another object" sid="9106191564899547" type="Spawners">
+                            <param id="0" name="Object">CameraZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4717241961814535" type="Spawners">
+                            <param id="0" name="Instance variable">Zone</param>
+                            <param id="1" name="Value">CameraZone.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="1345210193030856">
                     <conditions>
                         <condition id="-15" inverted="1" name="Is group active" sid="6262760650754815" type="System">

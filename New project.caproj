@@ -8,7 +8,7 @@
     <author-website></author-website>
     <app-id></app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>20300</saved-with-version>
+    <saved-with-version>20402</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -59,7 +59,7 @@
         <prop name="Clear background">No</prop>
         <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
@@ -1693,12 +1693,7 @@
                 <object-type name="Bunny" sid="24792555504562">
                     <plugin id="Sprite" />
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6636411853804537" speed="0">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="Imagepoint 1" x="0.5" y="1" />
-                            </frame>
-                        </animation>
-                        <animation framecount="2" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="4514880077326087" speed="5">
+                        <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4514880077326087" speed="3">
                             <frame duration="2" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="Imagepoint 1" x="0.5" y="1" />
                             </frame>
@@ -1764,6 +1759,17 @@
                                     <image-point name="Imagepoint 4" x="-0.5" y="0.5" />
                                     <image-point name="Imagepoint 5" x="0.5" y="-0.5" />
                                 </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                    <object-type name="BarrierTrap" sid="5350070155757312">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Down" pingpong="0" repeatcount="1" repeatto="0" sid="3634483474047993" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                            <animation framecount="1" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="9113816283028324" speed="5">
+                                <frame duration="2" hotspotX="0.5" hotspotY="0.583333" />
                             </animation>
                         </animation-folder>
                     </object-type>
@@ -1890,6 +1896,54 @@
                                     <point x="1" y="0" />
                                     <point x="1" y="0.625" />
                                     <point x="0" y="0.625" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="DownStairs" pingpong="0" repeatcount="1" repeatto="0" sid="6224889419849551" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="UpStairs" pingpong="0" repeatcount="1" repeatto="0" sid="7206178236668973" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                        <animation framecount="5" loop="0" name="DungeonDoor" pingpong="0" repeatcount="0" repeatto="0" sid="153568392419406" speed="0">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="1" y="1" />
+                                    <point x="0" y="1" />
+                                    <point x="0" y="0" />
+                                    <point x="1" y="0" />
                                 </collision-poly>
                             </frame>
                         </animation>
@@ -2453,6 +2507,7 @@
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
             <members>
+                <member>BarrierTrap</member>
                 <member>ProjectileTrap</member>
                 <member>SpikeTrap</member>
             </members>
@@ -2584,6 +2639,7 @@
         </family>
         <family name="Zone" plugin-id="Sprite" sid="5679059934981115">
             <members>
+                <member>BarrierTrap</member>
                 <member>Bat</member>
                 <member>Bird</member>
                 <member>Bunny</member>
@@ -2612,7 +2668,6 @@
         </family>
         <family name="Solid" plugin-id="Sprite" sid="1112206093548328">
             <members>
-                <member>Door</member>
                 <member>Grass</member>
                 <member>ProjectileTrap</member>
                 <member>Rock</member>
@@ -2740,6 +2795,7 @@
     <layout-folder>
         <layout>Main.xml</layout>
         <layout>Template.xml</layout>
+        <layout>Demo.xml</layout>
         <layout>Game.xml</layout>
     </layout-folder>
     <event-folder>

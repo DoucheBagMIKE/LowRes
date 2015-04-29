@@ -5,6 +5,20 @@
     <events>
         <event-group description="" sid="8629667444287655" title="Traps">
             <sub-events>
+                <event-block sid="8029757770823326">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2459627329402739" type="System" />
+                        <condition id="1" name="Is overlapping another object" sid="5862218981629558" type="Zone">
+                            <param id="0" name="Object">CameraZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3524115898208158" type="Zone">
+                            <param id="0" name="Instance variable">Zone1</param>
+                            <param id="1" name="Value">CameraZone.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="9960838359772203">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9886633911152288" type="BASE">

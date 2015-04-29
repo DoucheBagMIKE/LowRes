@@ -196,7 +196,6 @@
                         </event-block>
                         <event-block sid="3785254098373353">
                             <conditions>
-                                <condition id="-22" name="Else" sid="9525671201382703" type="System" />
                                 <condition id="1" name="Compare parameter" sid="4757977164564927" type="Function">
                                     <param id="0" name="Index">1</param>
                                     <param id="1" name="Comparison">0</param>
@@ -207,6 +206,36 @@
                                 <action id="-3" name="Set position" sid="335507397198681" type="BASE">
                                     <param id="0" name="X">Door.X</param>
                                     <param id="1" name="Y">Door.Y+12</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6123788970972307">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="6451806031470182" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="5709284084808039" type="BASE">
+                                    <param id="0" name="X">Door.X-12</param>
+                                    <param id="1" name="Y">Door.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2268820915481518">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="6495624551712508" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="5008855561950864" type="BASE">
+                                    <param id="0" name="X">Door.X+12</param>
+                                    <param id="1" name="Y">Door.Y</param>
                                 </action>
                             </actions>
                         </event-block>
