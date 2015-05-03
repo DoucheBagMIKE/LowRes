@@ -322,9 +322,6 @@
                 <condition id="0" name="On function" sid="2980187469016367" type="Function">
                     <param id="0" name="Name">&quot;Holding_Boomerang&quot;</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2435781410234556" type="BASE">
-                    <param id="0" name="Instance variable">boomerangflag</param>
-                </condition>
             </conditions>
             <actions>
                 <action behavior="8Direction" id="4" name="Set max speed" sid="295821596339917" type="BASE">
@@ -1031,9 +1028,6 @@
                 <condition id="0" name="On function" sid="24858679794878" type="Function">
                     <param id="0" name="Name">&quot;Released_Boomerang&quot;</param>
                 </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1246096055083756" type="BASE">
-                    <param id="0" name="Instance variable">boomerangflag</param>
-                </condition>
             </conditions>
             <actions>
                 <action id="25" name="Play at object" sid="6094487529080002" type="Audio">
@@ -1052,10 +1046,6 @@
                 <action id="-13" name="Set boolean" sid="9201879623686037" type="BASE">
                     <param id="0" name="Instance variable">holding</param>
                     <param id="1" name="Value">0</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="6727650719388303" type="BASE">
-                    <param id="0" name="Instance variable">boomerangflag</param>
-                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
             <sub-events>

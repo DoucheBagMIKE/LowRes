@@ -1894,29 +1894,6 @@
                 </event-group>
                 <event-group description="" sid="7904725990849584" title="EnemyHit2">
                     <sub-events>
-                        <event-block sid="9594679231151292">
-                            <conditions>
-                                <condition id="-19" name="On destroyed" sid="8116090715287478" type="PlayerProjectile" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="9808716507959769">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="7475363598254637" type="PlayerProjectile">
-                                            <param id="0" name="Instance variable">onHit</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;return&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="1997427698934282" type="BASE">
-                                            <param id="0" name="Instance variable">boomerangflag</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
                         <event-block sid="8951367732106789">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="2656374858255697" type="System">
@@ -2008,7 +1985,7 @@
                                                 <condition behavior="Movement" id="1" name="Compare speed" sid="7384452353572052" type="PlayerProjectile">
                                                     <param id="0" name="Which">0</param>
                                                     <param id="1" name="Comparison">3</param>
-                                                    <param id="2" name="Speed">16</param>
+                                                    <param id="2" name="Speed">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>

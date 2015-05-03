@@ -484,7 +484,6 @@
                     <instance-variable name="Decel" sid="4544444062373281" type="number" />
                     <instance-variable name="Hurt" sid="3241880360051007" type="boolean" />
                     <instance-variable name="holding" sid="4628454122978854" type="boolean" />
-                    <instance-variable name="boomerangflag" sid="6949275267447753" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="8Direction" sid="1349255795833973">
@@ -2710,113 +2709,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-<<<<<<< HEAD
-        <object-type name="Npc_Sprite" sid="5305846641382098">
+        <object-type name="Sprite4" sid="5305846641382098">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="765063863362331">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7919138158241017" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-=======
-        <object-type name="Sprite4" sid="2934200300645537">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="4" loop="1" name="NPC1_Down" pingpong="0" repeatcount="1" repeatto="0" sid="2768529470673408" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                </animation>
-                <animation framecount="4" loop="1" name="NPC1_Right" pingpong="0" repeatcount="1" repeatto="0" sid="6791803828032821" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                </animation>
-                <animation framecount="4" loop="1" name="NPC1_Up" pingpong="0" repeatcount="1" repeatto="0" sid="8871816483511735" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                    </frame>
-                </animation>
-                <animation framecount="4" loop="1" name="NPC1_Left" pingpong="0" repeatcount="1" repeatto="0" sid="143924083691265" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
->>>>>>> origin/master
                 </animation>
             </animation-folder>
         </object-type>
