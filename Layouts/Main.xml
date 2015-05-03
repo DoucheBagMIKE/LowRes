@@ -4454,6 +4454,7 @@
                         <Decel>0</Decel>
                         <Hurt>false</Hurt>
                         <holding>false</holding>
+                        <boomerangflag>false</boomerangflag>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
