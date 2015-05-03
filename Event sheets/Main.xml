@@ -133,7 +133,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" sid="141615764024376">
+                <event-block any="1" disabled="1" sid="141615764024376">
                     <conditions>
                         <condition id="3" name="Is button down" sid="2954166013619666" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
@@ -150,7 +150,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4665048051051859">
+                <event-block disabled="1" sid="4665048051051859">
                     <conditions>
                         <condition id="-22" name="Else" sid="769878235810528" type="System" />
                     </conditions>
@@ -160,7 +160,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1454136079095475">
+                <event-block disabled="1" sid="1454136079095475">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="1255290743840532" type="Keyboard">
                             <param id="0" name="Key">192 (`)</param>
@@ -238,7 +238,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6691750877619213">
+                <event-block disabled="1" sid="6691750877619213">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="7905274005893857" type="Keyboard">
                             <param id="0" name="Key">51 (3)</param>
@@ -258,7 +258,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3983388678193269">
+                <event-block disabled="1" sid="3983388678193269">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="9369974233136881" type="Keyboard">
                             <param id="0" name="Key">52 (4)</param>
@@ -278,7 +278,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3013448510432586">
+                <event-block disabled="1" sid="3013448510432586">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="439800755960356" type="Keyboard">
                             <param id="0" name="Key">81 (Q)</param>
@@ -293,7 +293,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="721896659797865">
+        <event-block disabled="1" sid="721896659797865">
             <conditions>
                 <condition id="2" name="Is in touch" sid="9960711138224674" type="Touch" />
             </conditions>

@@ -822,6 +822,9 @@
                                     <param id="0" name="Object">ARMS</param>
                                     <param id="1" name="Image point (optional)">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="6503291644467049" type="Melee_Hitbox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="7674368771356679">

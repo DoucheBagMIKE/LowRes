@@ -317,6 +317,84 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="1511431570304526">
+            <conditions>
+                <condition id="0" name="On function" sid="2980187469016367" type="Function">
+                    <param id="0" name="Name">&quot;Holding_Boomerang&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="295821596339917" type="BASE">
+                    <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9137467771480128" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7007567675732832">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3791322152839511" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3939657190093971" type="ARMS">
+                            <param id="0" name="Animation">&quot;BoomerangRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4122699886505575">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="4899059689927928" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4905229779738636" type="ARMS">
+                            <param id="0" name="Animation">&quot;BoomerangDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6145539142651414">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="8047176734466219" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5330236532350901" type="ARMS">
+                            <param id="0" name="Animation">&quot;BoomerangUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3741650264699194">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3028124431604873" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5645238524418938" type="ARMS">
+                            <param id="0" name="Animation">&quot;BoomerangLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="666985267057665">
             <conditions>
                 <condition id="0" name="On function" sid="6913963333920467" type="Function">
@@ -755,6 +833,10 @@
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">48</param>
                         </action>
+                        <action id="-10" name="Set value" sid="6554216938306351" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">onHit</param>
+                            <param id="1" name="Value">&quot;destroy&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7755258460833939">
@@ -798,6 +880,10 @@
                         <action id="-10" name="Set value" sid="6286911438378338" type="PlayerProjectile">
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">48</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6296238641287521" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">onHit</param>
+                            <param id="1" name="Value">&quot;destroy&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -843,6 +929,10 @@
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">48</param>
                         </action>
+                        <action id="-10" name="Set value" sid="6535441691804393" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">onHit</param>
+                            <param id="1" name="Value">&quot;destroy&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3152855621937636">
@@ -887,6 +977,10 @@
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">48</param>
                         </action>
+                        <action id="-10" name="Set value" sid="9470470534148121" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">onHit</param>
+                            <param id="1" name="Value">&quot;destroy&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="4176634944764371">
@@ -922,6 +1016,264 @@
                             <param id="0" name="Speed">35</param>
                         </action>
                         <action id="-10" name="Set value" sid="6899325591932948" type="BASE">
+                            <param id="0" name="Instance variable">AttackTimer</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1237978491872875">
+            <conditions>
+                <condition id="0" name="On function" sid="24858679794878" type="Function">
+                    <param id="0" name="Name">&quot;Released_Boomerang&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Play at object" sid="6094487529080002" type="Audio">
+                    <param id="0" name="Audio file">swing</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-20</param>
+                    <param id="3" name="Object">BASE</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;Sword&quot;</param>
+                </action>
+                <action behavior="8Direction" id="3" name="Set speed" sid="1412888554948373" type="BASE">
+                    <param id="0" name="Speed">BASE.8Direction.Speed/2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9201879623686037" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="908391888546935">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3296886520009587" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4671027317733686" type="ARMS">
+                            <param id="0" name="Animation">&quot;BoomerangRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2340532547623219" type="BASE">
+                            <param id="0" name="Object">PlayerProjectile</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2463752502592167" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Zone1</param>
+                            <param id="1" name="Value">CurZone</param>
+                        </action>
+                        <action behavior="Movement" id="2" name="Set speed" sid="3742882673535341" type="PlayerProjectile">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">180+(BASE.8Direction.VectorX/2)</param>
+                        </action>
+                        <action behavior="Movement" id="2" name="Set speed" sid="2840206954095355" type="PlayerProjectile">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">BASE.8Direction.VectorY*2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3189409924273979" type="PlayerProjectile">
+                            <param id="0" name="Animation">&quot;Boomerang&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7961506067795963" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Shadow</param>
+                            <param id="1" name="Value">&quot;SmallHor&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2181985613460829" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">48</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="376071309882909" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">onHit</param>
+                            <param id="1" name="Value">&quot;return&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5874358599904119">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9484450440035548" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6949924244669247" type="ARMS">
+                            <param id="0" name="Animation">&quot;BoomerangDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6058805745340046" type="BASE">
+                            <param id="0" name="Object">PlayerProjectile</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Movement" id="2" name="Set speed" sid="1134520732517467" type="PlayerProjectile">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">BASE.8Direction.VectorX*2</param>
+                        </action>
+                        <action behavior="Movement" id="2" name="Set speed" sid="5323657014422589" type="PlayerProjectile">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">180+(BASE.8Direction.VectorY/2)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4162968040028749" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Zone1</param>
+                            <param id="1" name="Value">CurZone</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4302494975664202" type="PlayerProjectile">
+                            <param id="0" name="Animation">&quot;Boomerang&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6086030289273157" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Shadow</param>
+                            <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9686495748603767" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">48</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="209499687081802" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">onHit</param>
+                            <param id="1" name="Value">&quot;return&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8409132714637326">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3388285743631039" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6539602069503186" type="ARMS">
+                            <param id="0" name="Animation">&quot;BoomerangUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6061134973652135" type="BASE">
+                            <param id="0" name="Object">PlayerProjectile</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Movement" id="2" name="Set speed" sid="7733789866550131" type="PlayerProjectile">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">BASE.8Direction.VectorX*2</param>
+                        </action>
+                        <action behavior="Movement" id="2" name="Set speed" sid="3080099343223698" type="PlayerProjectile">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">-180+(BASE.8Direction.VectorY/2)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7625141727191377" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Zone1</param>
+                            <param id="1" name="Value">CurZone</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8239399923326331" type="PlayerProjectile">
+                            <param id="0" name="Animation">&quot;Boomerang&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3149230525461552" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Shadow</param>
+                            <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8267923100610076" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">48</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8266775603253299" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">onHit</param>
+                            <param id="1" name="Value">&quot;return&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4110294447316892">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7571440331073847" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="187889949377542" type="ARMS">
+                            <param id="0" name="Animation">&quot;BoomerangLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5384870991981403" type="BASE">
+                            <param id="0" name="Object">PlayerProjectile</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Movement" id="2" name="Set speed" sid="2096513680548585" type="PlayerProjectile">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">-180+(BASE.8Direction.VectorX/2)</param>
+                        </action>
+                        <action behavior="Movement" id="2" name="Set speed" sid="7433830953323378" type="PlayerProjectile">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">BASE.8Direction.VectorY*2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4214399220562394" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Zone1</param>
+                            <param id="1" name="Value">CurZone</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3370006412655845" type="PlayerProjectile">
+                            <param id="0" name="Animation">&quot;Boomerang&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5642242520993392" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Shadow</param>
+                            <param id="1" name="Value">&quot;SmallHor&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2037649895003811" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">48</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2723037362241268" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">onHit</param>
+                            <param id="1" name="Value">&quot;return&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1169816869874994">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="6195211799062294" type="Input">
+                            <param id="0" name="Key">&quot;Left X&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="5760195586682728" type="Input">
+                            <param id="0" name="Key">&quot;Left Y&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="2192485662643565" type="BODY">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="970127559660952" type="BODY">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8202173944941017">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="4561496764210719" type="BASE">
+                            <param id="0" name="Instance variable">attacking</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="7846227748268548" type="ARMS">
+                            <param id="0" name="Speed">35</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8139472661819802" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
                             <param id="1" name="Value">0.5</param>
                         </action>

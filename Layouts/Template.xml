@@ -496,7 +496,7 @@
                     <instance-variables>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
-                        <LightSize>200</LightSize>
+                        <LightSize>100</LightSize>
                         <LightOpacity>25</LightOpacity>
                         <R>0</R>
                         <G>0</G>
@@ -941,6 +941,8 @@
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <Knockback>0</Knockback>
+                        <onHit></onHit>
+                        <hitTrigger>false</hitTrigger>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Movement">
@@ -1727,13 +1729,13 @@
                     <instance-variables>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
-                        <FollowUID>220</FollowUID>
+                        <FollowUID>-1</FollowUID>
                         <size>1</size>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
-                                <active-on-start>Yes</active-on-start>
+                                <active-on-start>No</active-on-start>
                                 <movement>Size</movement>
                                 <wave>Sine</wave>
                                 <period>3</period>

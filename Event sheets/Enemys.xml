@@ -251,8 +251,8 @@
                                             <sub-events>
                                                 <event-block sid="3864291970711325">
                                                     <conditions>
-                                                        <condition id="5" inverted="1" name="Is tag playing" sid="7400610041966312" type="Audio">
-                                                            <param id="0" name="Tag">&quot;ENEMY&quot;&amp;Enemies.UID</param>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="922776476839063" type="Enemies">
+                                                            <param id="0" name="Instance variable">playedsound</param>
                                                         </condition>
                                                     </conditions>
                                                     <actions>
@@ -266,9 +266,24 @@
                                                             <param id="6" name="Outer gain">0</param>
                                                             <param id="7" name="Tag (optional)">&quot;ENEMY&quot;&amp;Enemies.UID</param>
                                                         </action>
+                                                        <action id="-13" name="Set boolean" sid="97750569513403" type="Enemies">
+                                                            <param id="0" name="Instance variable">playedsound</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
                                                     </actions>
                                                 </event-block>
                                             </sub-events>
+                                        </event-block>
+                                        <event-block sid="1594008450701401">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="88398522986701" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="4816280031497007" type="Enemies">
+                                                    <param id="0" name="Instance variable">playedsound</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -337,20 +352,42 @@
                                                             <param id="0" name="Comparison">0</param>
                                                             <param id="1" name="Number">0</param>
                                                         </condition>
-                                                        <condition id="5" inverted="1" name="Is tag playing" sid="3967298389418593" type="Audio">
-                                                            <param id="0" name="Tag">&quot;ENEMY&quot;&amp;Enemies.UID</param>
-                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="5755775202433865">
+                                                            <conditions>
+                                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3791262109659665" type="Enemies">
+                                                                    <param id="0" name="Instance variable">playedsound</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="25" name="Play at object" sid="222519236423966" type="Audio">
+                                                                    <param id="0" name="Audio file">DM-CGS-39</param>
+                                                                    <param id="1" name="Loop">0</param>
+                                                                    <param id="2" name="Volume">random(-20,-15)</param>
+                                                                    <param id="3" name="Object">Enemies</param>
+                                                                    <param id="4" name="Inner angle">360</param>
+                                                                    <param id="5" name="Outer angle">360</param>
+                                                                    <param id="6" name="Outer gain">0</param>
+                                                                    <param id="7" name="Tag (optional)">&quot;ENEMY&quot;&amp;Enemies.UID</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="1255764736607102" type="Enemies">
+                                                                    <param id="0" name="Instance variable">playedsound</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="8099165884170366">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="9280231395972175" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="25" name="Play at object" sid="222519236423966" type="Audio">
-                                                            <param id="0" name="Audio file">DM-CGS-39</param>
-                                                            <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-20,-15)</param>
-                                                            <param id="3" name="Object">Enemies</param>
-                                                            <param id="4" name="Inner angle">360</param>
-                                                            <param id="5" name="Outer angle">360</param>
-                                                            <param id="6" name="Outer gain">0</param>
-                                                            <param id="7" name="Tag (optional)">&quot;ENEMY&quot;&amp;Enemies.UID</param>
+                                                        <action id="-13" name="Set boolean" sid="8438239935949357" type="Enemies">
+                                                            <param id="0" name="Instance variable">playedsound</param>
+                                                            <param id="1" name="Value">0</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -489,7 +526,7 @@
                                                     <actions>
                                                         <action behavior="Movement" id="2" name="Set speed" sid="3239968415848197" type="Enemies">
                                                             <param id="0" name="Which">0</param>
-                                                            <param id="1" name="Speed">random(48,112)</param>
+                                                            <param id="1" name="Speed">random(48,80)</param>
                                                         </action>
                                                         <action behavior="Movement" id="6" name="Set angle of motion" sid="9920003453253268" type="Enemies">
                                                             <param id="0" name="Angle">angle(self.X,self.Y,base.X,base.Y)+random(-16,16)</param>
@@ -559,9 +596,6 @@
                                                             <conditions>
                                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5901676394695652" type="Enemies">
                                                                     <param id="0" name="Instance variable">playedsound</param>
-                                                                </condition>
-                                                                <condition id="5" inverted="1" name="Is tag playing" sid="4579785658628601" type="Audio">
-                                                                    <param id="0" name="Tag">&quot;ENEMY&quot;&amp;Enemies.UID</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
@@ -683,14 +717,14 @@
                                                             <actions>
                                                                 <action behavior="Movement" id="2" name="Set speed" sid="6284232675202279" type="Enemies">
                                                                     <param id="0" name="Which">0</param>
-                                                                    <param id="1" name="Speed">random(64,140)</param>
+                                                                    <param id="1" name="Speed">random(112,212)</param>
                                                                 </action>
                                                                 <action behavior="Movement" id="6" name="Set angle of motion" sid="7232024749091332" type="Enemies">
                                                                     <param id="0" name="Angle">angle(self.X,self.Y,base.X,base.Y)+random(-16,16)</param>
                                                                 </action>
                                                                 <action id="-10" name="Set value" sid="1013391456311007" type="Enemies">
                                                                     <param id="0" name="Instance variable">Timer</param>
-                                                                    <param id="1" name="Value">random(0.5,1)</param>
+                                                                    <param id="1" name="Value">random(0.4,0.6)</param>
                                                                 </action>
                                                                 <action id="4" name="Set animation" sid="140016960433194" type="Enemies">
                                                                     <param id="0" name="Animation">&quot;Walking&quot;</param>
@@ -713,7 +747,7 @@
                                             <actions>
                                                 <action behavior="Movement" id="2" name="Set speed" sid="9911766412879564" type="Enemies">
                                                     <param id="0" name="Which">0</param>
-                                                    <param id="1" name="Speed">clamp(self.Movement.Speed-(dt*64),0,140)</param>
+                                                    <param id="1" name="Speed">clamp(self.Movement.Speed-(dt*96),0,140)</param>
                                                 </action>
                                                 <action behavior="Movement" id="6" name="Set angle of motion" sid="6547357306181488" type="Enemies">
                                                     <param id="0" name="Angle">anglelerp(Enemies.movement.MovingAngle, angle(self.X,self.Y,base.X,base.Y), 0.025)</param>
@@ -1115,9 +1149,6 @@
                                                             <conditions>
                                                                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="393179312966384" type="Enemies">
                                                                     <param id="0" name="Instance variable">playedsound</param>
-                                                                </condition>
-                                                                <condition id="5" inverted="1" name="Is tag playing" sid="3167481310476837" type="Audio">
-                                                                    <param id="0" name="Tag">&quot;ENEMY&quot;&amp;Enemies.UID</param>
                                                                 </condition>
                                                             </conditions>
                                                             <actions>
@@ -1863,6 +1894,111 @@
                 </event-group>
                 <event-group description="" sid="7904725990849584" title="EnemyHit2">
                     <sub-events>
+                        <event-block sid="8951367732106789">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="2656374858255697" type="System">
+                                    <param id="0" name="Object">PlayerProjectile</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="794431573798467">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                                <event-block sid="6696459349392048">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="2909080327345422" type="PlayerProjectile">
+                                            <param id="0" name="Instance variable">hitTrigger</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="81298165221021">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="5384082863163493" type="PlayerProjectile">
+                                                    <param id="0" name="Instance variable">onHit</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;destroy&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="2814632128021787" type="PlayerProjectile" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="930765172298076">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="8109472583094338" type="PlayerProjectile">
+                                                    <param id="0" name="Instance variable">onHit</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;return&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="3319810090073145" type="PlayerProjectile">
+                                                    <param id="0" name="Angle">angle(self.X,self.Y,base.x,base.Y)</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="9397297364993026" type="PlayerProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">self.Movement.Speed+(dt*100)</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="9063276813675446" type="PlayerProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">clamp(self.Movement.Speed,0,200)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="8107870374720035">
+                                            <conditions>
+                                                <condition id="0" name="On collision with another object" sid="3881319164577107" type="PlayerProjectile">
+                                                    <param id="0" name="Object">BASE</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="1441967373185664" type="PlayerProjectile" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="7639757802685921">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3637819555603793" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="1956243580606723" type="PlayerProjectile">
+                                            <param id="0" name="Instance variable">onHit</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;return&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Movement" id="2" name="Set speed" sid="1784068331090915" type="PlayerProjectile">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">self.Movement.Speed-(dt*150)</param>
+                                        </action>
+                                        <action behavior="Movement" id="2" name="Set speed" sid="9540332199085545" type="PlayerProjectile">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">clamp(self.Movement.Speed,0,200)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="7022505573003317">
+                                            <conditions>
+                                                <condition behavior="Movement" id="1" name="Compare speed" sid="7384452353572052" type="PlayerProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Speed">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="2324345026129757" type="PlayerProjectile">
+                                                    <param id="0" name="Instance variable">hitTrigger</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="9368859888284801">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="9022672468987152" type="Melee_Hitbox">
@@ -2037,7 +2173,10 @@
                                     <param id="1" name="Duration">0.2</param>
                                     <param id="2" name="Mode">0</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="193688597129242" type="PlayerProjectile" />
+                                <action id="-13" name="Set boolean" sid="193688597129242" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">hitTrigger</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="0" name="Call function" sid="1838445504406338" type="Function">
                                     <param id="0" name="Name">&quot;HitCollide&quot;</param>
                                     <param id="1" name="Parameter {n}">Enemies.UID{###}PlayerProjectile.ImagePointX(&quot;spawnBlood&quot;){###}PlayerProjectile.ImagePointY(&quot;spawnBlood&quot;){###}angle(Enemies.X,Enemies.Y,PlayerProjectile.ImagePointX(&quot;spawnBlood&quot;),PlayerProjectile.ImagePointY(&quot;spawnBlood&quot;))-180{###}5{###}6</param>
@@ -2052,9 +2191,15 @@
                                 <condition id="0" name="On collision with another object" sid="1194270979100774" type="PlayerProjectile">
                                     <param id="0" name="Object">Solid</param>
                                 </condition>
+                                <condition id="0" name="On collision with another object" sid="9081799116016077" type="PlayerProjectile">
+                                    <param id="0" name="Object">EnemyBounds</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="5988257121476375" type="PlayerProjectile" />
+                                <action id="-13" name="Set boolean" sid="3994480310051098" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">hitTrigger</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="148693251613192">
