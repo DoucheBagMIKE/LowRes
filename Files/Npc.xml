@@ -1,5 +1,6 @@
 <xml>
 	<Object Name="NpcTestState">
+		<Sprite Name= "Default"></Sprite>
 		<NpcState Name= "Npc_RandomWalk"></NpcState>
 		<Function Name= "ShowTextBox"
 			Params="bottom;Test"

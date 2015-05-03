@@ -14,6 +14,7 @@
             </conditions>
             <actions />
             <sub-events>
+                <variable constant="0" name="Animate" sid="6790577739682393" static="0" type="number">0</variable>
                 <event-block sid="9482415715265581">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="4108549271731483" type="Function">
@@ -22,7 +23,12 @@
                             <param id="2" name="Value">NPC.X</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="7173222687630083" type="System">
+                            <param id="0" name="Variable">Animate</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="8568459483589438">
                             <conditions>
@@ -33,11 +39,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="NpcMovement" disabled="1" id="2" name="Set speed" sid="6503910799918848" type="NPC">
+                                <action behavior="NpcMovement" id="2" name="Set speed" sid="6503910799918848" type="NPC">
                                     <param id="0" name="Which">1</param>
-                                    <param id="1" name="Speed">-1</param>
+                                    <param id="1" name="Speed">-8</param>
                                 </action>
-                                <action id="-1" name="Set X" sid="7045486235477483" type="NPC">
+                                <action disabled="1" id="-1" name="Set X" sid="7045486235477483" type="NPC">
                                     <param id="0" name="X">NPC.X-1</param>
                                 </action>
                             </actions>
@@ -47,28 +53,32 @@
                                 <condition id="-22" name="Else" sid="9534817471189844" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="NpcMovement" disabled="1" id="2" name="Set speed" sid="6559856610184379" type="NPC">
+                                <action behavior="NpcMovement" id="2" name="Set speed" sid="6559856610184379" type="NPC">
                                     <param id="0" name="Which">1</param>
-                                    <param id="1" name="Speed">1</param>
+                                    <param id="1" name="Speed">8</param>
                                 </action>
-                                <action id="-1" name="Set X" sid="7498898775674949" type="NPC">
+                                <action disabled="1" id="-1" name="Set X" sid="7498898775674949" type="NPC">
                                     <param id="0" name="X">NPC.X+1</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="8973164967553224">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="9031904885653385">
                     <conditions>
                         <condition id="-22" name="Else" sid="1287574673763512" type="System" />
-                        <condition behavior="NpcMovement" disabled="1" id="1" name="Compare speed" sid="3173241570340144" type="NPC">
+                        <condition behavior="NpcMovement" id="1" name="Compare speed" sid="3173241570340144" type="NPC">
                             <param id="0" name="Which">1</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Speed">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="NpcMovement" disabled="1" id="2" name="Set speed" sid="3063092244710099" type="NPC">
+                        <action behavior="NpcMovement" id="2" name="Set speed" sid="3063092244710099" type="NPC">
                             <param id="0" name="Which">1</param>
                             <param id="1" name="Speed">0</param>
                         </action>
@@ -82,7 +92,12 @@
                             <param id="2" name="Value">NPC.Y</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="8651600446690743" type="System">
+                            <param id="0" name="Variable">Animate</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="8756342336725966">
                             <conditions>
@@ -93,11 +108,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="NpcMovement" disabled="1" id="2" name="Set speed" sid="9084637561014125" type="NPC">
+                                <action behavior="NpcMovement" id="2" name="Set speed" sid="9084637561014125" type="NPC">
                                     <param id="0" name="Which">2</param>
-                                    <param id="1" name="Speed">-1</param>
+                                    <param id="1" name="Speed">-8</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="5814359836750812" type="NPC">
+                                <action disabled="1" id="-2" name="Set Y" sid="5814359836750812" type="NPC">
                                     <param id="0" name="Y">NPC.Y-1</param>
                                 </action>
                             </actions>
@@ -107,11 +122,11 @@
                                 <condition id="-22" name="Else" sid="6585436388491209" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="NpcMovement" disabled="1" id="2" name="Set speed" sid="6014937367460471" type="NPC">
+                                <action behavior="NpcMovement" id="2" name="Set speed" sid="6014937367460471" type="NPC">
                                     <param id="0" name="Which">2</param>
-                                    <param id="1" name="Speed">1</param>
+                                    <param id="1" name="Speed">8</param>
                                 </action>
-                                <action id="-2" name="Set Y" sid="1821056526839751" type="NPC">
+                                <action disabled="1" id="-2" name="Set Y" sid="1821056526839751" type="NPC">
                                     <param id="0" name="Y">NPC.Y+1</param>
                                 </action>
                             </actions>
@@ -121,27 +136,162 @@
                 <event-block sid="5254813104538947">
                     <conditions>
                         <condition id="-22" name="Else" sid="8961063133460749" type="System" />
-                        <condition behavior="NpcMovement" disabled="1" id="1" name="Compare speed" sid="8808588700401054" type="NPC">
+                        <condition behavior="NpcMovement" id="1" name="Compare speed" sid="8808588700401054" type="NPC">
                             <param id="0" name="Which">2</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Speed">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="NpcMovement" disabled="1" id="2" name="Set speed" sid="8799874062225891" type="NPC">
+                        <action behavior="NpcMovement" id="2" name="Set speed" sid="8799874062225891" type="NPC">
                             <param id="0" name="Which">2</param>
                             <param id="1" name="Speed">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9164566053937344">
-                    <conditions />
-                    <actions>
-                        <action id="-3" name="Set position" sid="4973163981093588" type="NPC">
-                            <param id="0" name="X">floor(NPC.X)</param>
-                            <param id="1" name="Y">floor(NPC.Y)</param>
-                        </action>
-                    </actions>
+                <event-block sid="6629771864716989">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3173413880644437" type="NPC">
+                            <param id="0" name="Instance variable">HasSprite</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4723289272691773">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1346184584865291" type="System">
+                                    <param id="0" name="Variable">Animate</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6740904238448001">
+                                    <conditions>
+                                        <condition behavior="NpcMovement" id="1" name="Compare speed" sid="7335115240419741" type="NPC">
+                                            <param id="0" name="Which">2</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Speed">0</param>
+                                        </condition>
+                                        <condition behavior="NpcMovement" id="1" name="Compare speed" sid="7014631462460959" type="NPC">
+                                            <param id="0" name="Which">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Speed">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="5950702305987214">
+                                            <conditions>
+                                                <condition behavior="NpcMovement" id="1" name="Compare speed" sid="452550441010877" type="NPC">
+                                                    <param id="0" name="Which">2</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Speed">0</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="3457756979556314" type="NPC">
+                                                    <param id="0" name="Instance variable">SpriteDir</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;Down&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="7714451894501714" type="NPC">
+                                                    <param id="0" name="Instance variable">SpriteDir</param>
+                                                    <param id="1" name="Value">&quot;Down&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5328823731737451">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="3377249227949333" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="3831391998722756" type="NPC">
+                                                    <param id="0" name="Instance variable">SpriteDir</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">&quot;Up&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="8895013700846198" type="NPC">
+                                                    <param id="0" name="Instance variable">SpriteDir</param>
+                                                    <param id="1" name="Value">&quot;Up&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="7357248839373682">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5827338455766619" type="System" />
+                                        <condition behavior="NpcMovement" id="1" name="Compare speed" sid="4175435792328707" type="NPC">
+                                            <param id="0" name="Which">1</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Speed">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="3241168961772811" type="NPC">
+                                            <param id="0" name="Instance variable">SpriteDir</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;Right&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="1089218798540558" type="NPC">
+                                            <param id="0" name="Instance variable">SpriteDir</param>
+                                            <param id="1" name="Value">&quot;Right&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9163875607575466">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2069967094894097" type="System" />
+                                        <condition behavior="NpcMovement" id="1" name="Compare speed" sid="9453354299048189" type="NPC">
+                                            <param id="0" name="Which">1</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Speed">0</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="8904830160242033" type="NPC">
+                                            <param id="0" name="Instance variable">SpriteDir</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;Left&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="9571615801078383" type="NPC">
+                                            <param id="0" name="Instance variable">SpriteDir</param>
+                                            <param id="1" name="Value">&quot;Left&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2888984834871787">
+                                    <conditions>
+                                        <condition id="2" inverted="1" name="Is playing" sid="9884518792286366" type="Sprite4">
+                                            <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Walking_&quot;&amp;NPC.SpriteDir</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="4602428595765227" type="Sprite4">
+                                            <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Walking_&quot;&amp;NPC.SpriteDir</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="865403089108289">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6876810802999827" type="System" />
+                                <condition id="2" inverted="1" name="Is playing" sid="879526366596583" type="Sprite4">
+                                    <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle_&quot;&amp;NPC.SpriteDir</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9370406017616721" type="Sprite4">
+                                    <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle_&quot;&amp;NPC.SpriteDir</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -259,8 +409,8 @@
                             <conditions>
                                 <condition id="-21" name="Is between values" sid="2766901953616258" type="System">
                                     <param id="0" name="Value">NPC.X</param>
-                                    <param id="1" name="Lower bound">int(tokenat(tokenat(NPCData.Get(&quot;pathfindingPath&quot;), NPCData.Get(&quot;cNode&quot;), &quot; &quot;), 0, &quot;,&quot;))-4</param>
-                                    <param id="2" name="Upper bound">int(tokenat(tokenat(NPCData.Get(&quot;pathfindingPath&quot;), NPCData.Get(&quot;cNode&quot;), &quot; &quot;), 0, &quot;,&quot;))+4</param>
+                                    <param id="1" name="Lower bound">int(tokenat(tokenat(NPCData.Get(&quot;pathfindingPath&quot;), NPCData.Get(&quot;cNode&quot;), &quot; &quot;), 0, &quot;,&quot;))-8</param>
+                                    <param id="2" name="Upper bound">int(tokenat(tokenat(NPCData.Get(&quot;pathfindingPath&quot;), NPCData.Get(&quot;cNode&quot;), &quot; &quot;), 0, &quot;,&quot;))+8</param>
                                 </condition>
                                 <condition id="-21" name="Is between values" sid="236551584636969" type="System">
                                     <param id="0" name="Value">NPC.Y</param>
@@ -285,9 +435,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="2" name="Delete key" sid="9234809851279564" type="NPCData">
-                                    <param id="0" name="Key">&quot;StateConstructor&quot;</param>
-                                </action>
                                 <action id="2" name="Delete key" sid="4731316438750168" type="NPCData">
                                     <param id="0" name="Key">&quot;walkToX&quot;</param>
                                 </action>
@@ -322,37 +469,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Was looking for path and there isnt one</comment>
-                <event-block sid="4254875191638027">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="5642219214892835" type="System" />
-                        <condition id="0" name="Compare value" sid="6188464178461738" type="NPCData">
-                            <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">-1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set key" sid="9757942503318872" type="NPCData">
-                            <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="1" name="Set key" sid="3744186905211123" type="NPCData">
-                            <param id="0" name="Key">&quot;cNode&quot;</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="1" name="Set key" sid="9143841840118136" type="NPCData">
-                            <param id="0" name="Key">&quot;Timeout&quot;</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="2" name="Delete key" sid="7802494652267251" type="NPCData">
-                            <param id="0" name="Key">&quot;walkToX&quot;</param>
-                        </action>
-                        <action id="2" name="Delete key" sid="6233400189573139" type="NPCData">
-                            <param id="0" name="Key">&quot;walkToY&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <comment>Is Looking for path</comment>
                 <event-block sid="3739727363554663">
                     <conditions>
                         <condition id="-22" name="Else" sid="4402009473458145" type="System" />
@@ -405,6 +522,37 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Was looking for path and there isnt one</comment>
+                <event-block sid="4254875191638027">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5642219214892835" type="System" />
+                        <condition id="0" name="Compare value" sid="6188464178461738" type="NPCData">
+                            <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="9757942503318872" type="NPCData">
+                            <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="1" name="Set key" sid="3744186905211123" type="NPCData">
+                            <param id="0" name="Key">&quot;cNode&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="1" name="Set key" sid="9143841840118136" type="NPCData">
+                            <param id="0" name="Key">&quot;Timeout&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="7802494652267251" type="NPCData">
+                            <param id="0" name="Key">&quot;walkToX&quot;</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="6233400189573139" type="NPCData">
+                            <param id="0" name="Key">&quot;walkToY&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>

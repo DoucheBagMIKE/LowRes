@@ -2406,6 +2406,10 @@
             </object-type>
             <object-type name="NpcBase" sid="5492825584513846">
                 <plugin id="Sprite" />
+                <container>
+                    <type>NpcBase</type>
+                    <type>Sprite4</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2484456162515479" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -2711,10 +2715,42 @@
         </object-type>
         <object-type name="Sprite4" sid="5305846641382098">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="4484100552831537">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>NpcBase</type>
+                <type>Sprite4</type>
+            </container>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7919138158241017" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
+                <animation-folder name="Default">
+                    <animation framecount="1" loop="0" name="Default_Idle_Up" pingpong="0" repeatcount="1" repeatto="0" sid="9566764390280818" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default_Idle_Down" pingpong="0" repeatcount="1" repeatto="0" sid="7919138158241017" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default_Idle_Left" pingpong="0" repeatcount="1" repeatto="0" sid="514971793034578" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default_Idle_Right" pingpong="0" repeatcount="1" repeatto="0" sid="4459471972705329" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default_Walking_Up" pingpong="0" repeatcount="1" repeatto="0" sid="5333276656678849" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default_Walking_Down" pingpong="0" repeatcount="1" repeatto="0" sid="4339216458589778" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default_Walking_Left" pingpong="0" repeatcount="1" repeatto="0" sid="9699056836138885" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Default_Walking_Right" pingpong="0" repeatcount="1" repeatto="0" sid="2643189431698444" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </animation-folder>
         </object-type>
     </object-folder>
@@ -2917,6 +2953,9 @@
                 <instance-variable name="FSM_UID" sid="2978882145063888" type="number" />
                 <instance-variable name="DataUID" sid="3759315192729319" type="number" />
                 <instance-variable name="TriggerUID" sid="8980366828057946" type="number" />
+                <instance-variable name="HasSprite" sid="8600657711179408" type="boolean" />
+                <instance-variable name="SpriteName" sid="7953586484358111" type="string" />
+                <instance-variable name="SpriteDir" sid="638115937759523" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="NpcMovement" sid="1295308267382208">

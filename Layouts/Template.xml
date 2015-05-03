@@ -1058,6 +1058,9 @@
                         <FSM_UID>-1</FSM_UID>
                         <DataUID>-1</DataUID>
                         <TriggerUID>-1</TriggerUID>
+                        <HasSprite>false</HasSprite>
+                        <SpriteName></SpriteName>
+                        <SpriteDir></SpriteDir>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
                         <LightSize>300</LightSize>
