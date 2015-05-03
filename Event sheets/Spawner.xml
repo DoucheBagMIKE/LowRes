@@ -923,6 +923,23 @@
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
+                                                                <event-block sid="7073400670987546">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Compare two values" sid="9004618701355208" type="System">
+                                                                            <param id="0" name="First value">NpcXML.StringValue(&quot;name(.)&quot;)</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">&quot;Sprite&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-3" name="Create object" sid="4208676627020759" type="System">
+                                                                            <param id="0" name="Object to create">Npc_Sprite</param>
+                                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                            <param id="2" name="X">NpcBase.X</param>
+                                                                            <param id="3" name="Y">NpcBase.Y</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
                                                                 <event-block sid="7341245040907328">
                                                                     <conditions>
                                                                         <condition id="-22" name="Else" sid="8375590316539417" type="System" />

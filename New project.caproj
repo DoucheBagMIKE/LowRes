@@ -2709,6 +2709,19 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Npc_Sprite" sid="5305846641382098">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="765063863362331">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7919138158241017" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
