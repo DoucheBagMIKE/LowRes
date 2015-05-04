@@ -7,7 +7,20 @@
             <conditions>
                 <condition id="-18" name="On created" sid="8193690276268232" type="NPC" />
             </conditions>
-            <actions />
+            <actions>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="1513694024931322" type="NPC">
+                    <param id="0" name="Obstacle">ObstacleTilemap</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="8366588383538456" type="NPC">
+                    <param id="0" name="Obstacle">Tilemap</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="7674294875611568" type="NPC">
+                    <param id="0" name="Obstacle">Solid</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2830932643147926" type="NPC">
+                    <param id="0" name="Obstacle">Unlockable</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="5661066488264783">
                     <conditions>
@@ -111,14 +124,17 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="9604918675623832" type="NpcBase" />
-                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="3193576582434336" type="NPC">
+                        <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="3193576582434336" type="NPC">
                             <param id="0" name="Obstacle">ObstacleTilemap</param>
                         </action>
-                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="3104069739978273" type="NPC">
+                        <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="3104069739978273" type="NPC">
                             <param id="0" name="Obstacle">Tilemap</param>
                         </action>
-                        <action behavior="Pathfinding" id="5" name="Add obstacle" sid="8851632433962376" type="NPC">
+                        <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="8851632433962376" type="NPC">
                             <param id="0" name="Obstacle">Solid</param>
+                        </action>
+                        <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="4156627087795843" type="NPC">
+                            <param id="0" name="Obstacle">Unlockable</param>
                         </action>
                     </actions>
                 </event-block>
@@ -199,15 +215,17 @@
         <event-block sid="4808831148015154">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="1540756372823234" type="System" />
-                <condition id="-14" name="Pick by unique ID" sid="8222421797993281" type="NPCData">
+                <condition id="-14" inverted="1" name="Pick by unique ID" sid="3583302784994584" type="NPCData">
                     <param id="0" name="Unique ID">Ghost.DataUID</param>
+                </condition>
+                <condition id="-14" inverted="1" name="Pick by unique ID" sid="9798936807927605" type="FSM">
+                    <param id="0" name="Unique ID">Ghost.FSM_UID</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Add key" sid="2099791096525945" type="NPCData">
-                    <param id="0" name="Key">&quot;Target&quot;</param>
-                    <param id="1" name="Value">BASE.UID</param>
-                </action>
+                <action id="-9" name="Destroy" sid="9237755724013139" type="NPCData" />
+                <action id="-9" name="Destroy" sid="8385282478421919" type="FSM" />
+                <action id="-9" name="Destroy" sid="6272407811984971" type="Sprite4" />
                 <action id="-10" name="Set value" sid="4476713515686867" type="Ghost">
                     <param id="0" name="Instance variable">SR</param>
                     <param id="1" name="Value">Ghost.R</param>
@@ -231,6 +249,20 @@
                 <action id="-10" name="Set value" sid="5320223218816148" type="Ghost">
                     <param id="0" name="Instance variable">TB</param>
                     <param id="1" name="Value">Ghost.B</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="593960310440939">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4552166019224462" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="8222421797993281" type="NPCData">
+                    <param id="0" name="Unique ID">Ghost.DataUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="2099791096525945" type="NPCData">
+                    <param id="0" name="Key">&quot;Target&quot;</param>
+                    <param id="1" name="Value">BASE.UID</param>
                 </action>
             </actions>
         </event-block>

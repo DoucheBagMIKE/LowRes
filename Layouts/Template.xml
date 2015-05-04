@@ -1082,15 +1082,15 @@
                     <behavior-instances>
                         <behavior-instance type="NpcMovement">
                             <properties>
-                                <stepping-mode>None</stepping-mode>
+                                <stepping-mode>Horizontal then vertical</stepping-mode>
                                 <pixels-per-step>5</pixels-per-step>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>4</cell-size>
+                                <cell-border>1</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>0</max-speed>
                                 <acceleration>0</acceleration>

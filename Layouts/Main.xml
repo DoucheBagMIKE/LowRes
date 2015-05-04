@@ -6533,15 +6533,15 @@
                     <behavior-instances>
                         <behavior-instance type="NpcMovement">
                             <properties>
-                                <stepping-mode>None</stepping-mode>
+                                <stepping-mode>Horizontal then vertical</stepping-mode>
                                 <pixels-per-step>5</pixels-per-step>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>4</cell-size>
+                                <cell-border>1</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>0</max-speed>
                                 <acceleration>0</acceleration>
@@ -7834,15 +7834,15 @@
                     <behavior-instances>
                         <behavior-instance type="NpcMovement">
                             <properties>
-                                <stepping-mode>None</stepping-mode>
+                                <stepping-mode>Horizontal then vertical</stepping-mode>
                                 <pixels-per-step>1</pixels-per-step>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>8</cell-size>
-                                <cell-border>-1</cell-border>
+                                <cell-size>4</cell-size>
+                                <cell-border>1</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>0</max-speed>
                                 <acceleration>0</acceleration>
@@ -8233,6 +8233,216 @@
                         <z>0</z>
                         <width>8</width>
                         <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OBJECT_SPAWNER" uid="583">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn>Grass</Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>756</x>
+                        <y>468</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OBJECT_SPAWNER" uid="584">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn>Grass</Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>756</x>
+                        <y>476</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OBJECT_SPAWNER" uid="585">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn>Grass</Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>756</x>
+                        <y>484</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OBJECT_SPAWNER" uid="586">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn>Grass</Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>756</x>
+                        <y>492</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OBJECT_SPAWNER" uid="587">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn>Grass</Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>756</x>
+                        <y>500</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OBJECT_SPAWNER" uid="588">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn>Grass</Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>756</x>
+                        <y>508</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="OBJECT_SPAWNER" uid="589">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zone>24</Zone>
+                        <Loaded>false</Loaded>
+                        <Spawn>Grass</Spawn>
+                        <DontSpawnIF></DontSpawnIF>
+                        <TriggerOnce>false</TriggerOnce>
+                        <Triggered>false</Triggered>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>756</x>
+                        <y>460</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
