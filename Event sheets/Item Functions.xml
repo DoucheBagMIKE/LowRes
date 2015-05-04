@@ -322,6 +322,9 @@
                 <condition id="0" name="On function" sid="2980187469016367" type="Function">
                     <param id="0" name="Name">&quot;Holding_Boomerang&quot;</param>
                 </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2808543516747997" type="BASE">
+                    <param id="0" name="Instance variable">Boomerang</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="8Direction" id="4" name="Set max speed" sid="295821596339917" type="BASE">
@@ -1028,6 +1031,9 @@
                 <condition id="0" name="On function" sid="24858679794878" type="Function">
                     <param id="0" name="Name">&quot;Released_Boomerang&quot;</param>
                 </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4251201616549509" type="BASE">
+                    <param id="0" name="Instance variable">Boomerang</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="25" name="Play at object" sid="6094487529080002" type="Audio">
@@ -1046,6 +1052,10 @@
                 <action id="-13" name="Set boolean" sid="9201879623686037" type="BASE">
                     <param id="0" name="Instance variable">holding</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="6534612842899633" type="BASE">
+                    <param id="0" name="Instance variable">Boomerang</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
             <sub-events>
@@ -1091,9 +1101,9 @@
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">48</param>
                         </action>
-                        <action id="-10" name="Set value" sid="376071309882909" type="PlayerProjectile">
+                        <action id="-10" name="Set value" sid="5177408635938257" type="PlayerProjectile">
                             <param id="0" name="Instance variable">onHit</param>
-                            <param id="1" name="Value">&quot;return&quot;</param>
+                            <param id="1" name="Value">&quot;boomerang&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1139,9 +1149,9 @@
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">48</param>
                         </action>
-                        <action id="-10" name="Set value" sid="209499687081802" type="PlayerProjectile">
+                        <action id="-10" name="Set value" sid="6428357511902891" type="PlayerProjectile">
                             <param id="0" name="Instance variable">onHit</param>
-                            <param id="1" name="Value">&quot;return&quot;</param>
+                            <param id="1" name="Value">&quot;boomerang&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1187,9 +1197,9 @@
                             <param id="0" name="Instance variable">Knockback</param>
                             <param id="1" name="Value">48</param>
                         </action>
-                        <action id="-10" name="Set value" sid="8266775603253299" type="PlayerProjectile">
+                        <action id="-10" name="Set value" sid="3688223918716735" type="PlayerProjectile">
                             <param id="0" name="Instance variable">onHit</param>
-                            <param id="1" name="Value">&quot;return&quot;</param>
+                            <param id="1" name="Value">&quot;boomerang&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1237,7 +1247,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="2723037362241268" type="PlayerProjectile">
                             <param id="0" name="Instance variable">onHit</param>
-                            <param id="1" name="Value">&quot;return&quot;</param>
+                            <param id="1" name="Value">&quot;boomerang&quot;</param>
                         </action>
                     </actions>
                 </event-block>

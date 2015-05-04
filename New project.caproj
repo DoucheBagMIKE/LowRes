@@ -484,6 +484,7 @@
                     <instance-variable name="Decel" sid="4544444062373281" type="number" />
                     <instance-variable name="Hurt" sid="3241880360051007" type="boolean" />
                     <instance-variable name="holding" sid="4628454122978854" type="boolean" />
+                    <instance-variable name="Boomerang" sid="95268944729055" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="8Direction" sid="1349255795833973">

@@ -1894,6 +1894,29 @@
                 </event-group>
                 <event-group description="" sid="7904725990849584" title="EnemyHit2">
                     <sub-events>
+                        <event-block sid="3339978902504305">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="5630308499447045" type="PlayerProjectile" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4813360857707348">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9983644332099346" type="PlayerProjectile">
+                                            <param id="0" name="Instance variable">onHit</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;boomerang&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="7788121584737182" type="BASE">
+                                            <param id="0" name="Instance variable">Boomerang</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="8951367732106789">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="2656374858255697" type="System">
@@ -1931,7 +1954,7 @@
                                                 <condition id="-7" name="Compare instance variable" sid="8109472583094338" type="PlayerProjectile">
                                                     <param id="0" name="Instance variable">onHit</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;return&quot;</param>
+                                                    <param id="2" name="Value">&quot;boomerang&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -1966,7 +1989,7 @@
                                         <condition id="-7" name="Compare instance variable" sid="1956243580606723" type="PlayerProjectile">
                                             <param id="0" name="Instance variable">onHit</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">&quot;return&quot;</param>
+                                            <param id="2" name="Value">&quot;boomerang&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -1985,7 +2008,7 @@
                                                 <condition behavior="Movement" id="1" name="Compare speed" sid="7384452353572052" type="PlayerProjectile">
                                                     <param id="0" name="Which">0</param>
                                                     <param id="1" name="Comparison">3</param>
-                                                    <param id="2" name="Speed">1</param>
+                                                    <param id="2" name="Speed">8</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
