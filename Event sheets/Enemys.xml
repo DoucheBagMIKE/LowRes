@@ -1963,7 +1963,7 @@
                                                 </action>
                                                 <action behavior="Movement" id="2" name="Set speed" sid="9397297364993026" type="PlayerProjectile">
                                                     <param id="0" name="Which">0</param>
-                                                    <param id="1" name="Speed">self.Movement.Speed+(dt*100)</param>
+                                                    <param id="1" name="Speed">self.Movement.Speed+(dt*250)</param>
                                                 </action>
                                                 <action behavior="Movement" id="2" name="Set speed" sid="9063276813675446" type="PlayerProjectile">
                                                     <param id="0" name="Which">0</param>
@@ -2008,7 +2008,7 @@
                                                 <condition behavior="Movement" id="1" name="Compare speed" sid="7384452353572052" type="PlayerProjectile">
                                                     <param id="0" name="Which">0</param>
                                                     <param id="1" name="Comparison">3</param>
-                                                    <param id="2" name="Speed">8</param>
+                                                    <param id="2" name="Speed">1</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
