@@ -59,7 +59,7 @@
         <prop name="Clear background">No</prop>
         <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
         <prop name="Hide address bar">No</prop>
@@ -1919,34 +1919,34 @@
                             <animation framecount="4" loop="0" name="Up" pingpong="0" repeatcount="1" repeatto="0" sid="1127170504623769" speed="5">
                                 <frame duration="2" hotspotX="0.5" hotspotY="0.666667">
                                     <collision-poly>
-                                        <point x="0" y="0" />
-                                        <point x="1" y="0" />
-                                        <point x="1" y="0.666667" />
-                                        <point x="0" y="0.666667" />
+                                        <point x="0" y="0.333333" />
+                                        <point x="1" y="0.333333" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
                                     </collision-poly>
                                 </frame>
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.666667">
                                     <collision-poly>
-                                        <point x="0" y="0" />
-                                        <point x="1" y="0" />
-                                        <point x="1" y="0.666667" />
-                                        <point x="0" y="0.666667" />
+                                        <point x="0" y="0.333333" />
+                                        <point x="1" y="0.333333" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
                                     </collision-poly>
                                 </frame>
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.666667">
                                     <collision-poly>
-                                        <point x="0" y="0" />
-                                        <point x="1" y="0" />
-                                        <point x="1" y="0.666667" />
-                                        <point x="0" y="0.666667" />
+                                        <point x="0" y="0.333333" />
+                                        <point x="1" y="0.333333" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
                                     </collision-poly>
                                 </frame>
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.666667">
                                     <collision-poly>
-                                        <point x="0" y="0" />
-                                        <point x="1" y="0" />
-                                        <point x="1" y="0.666667" />
-                                        <point x="0" y="0.666667" />
+                                        <point x="0" y="0.333333" />
+                                        <point x="1" y="0.333333" />
+                                        <point x="1" y="1" />
+                                        <point x="0" y="1" />
                                     </collision-poly>
                                 </frame>
                             </animation>
