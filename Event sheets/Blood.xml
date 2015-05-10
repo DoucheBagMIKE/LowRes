@@ -72,6 +72,9 @@
                         <condition id="-14" name="Pick by unique ID" sid="4669329251409882" type="CanBleed">
                             <param id="0" name="Unique ID">Function.Param(0)</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="255506916561932" type="CanBleed">
+                            <param id="0" name="Instance variable">BloodOnHit</param>
+                        </condition>
                         <condition id="-12" name="Repeat" sid="9797644740760818" type="System">
                             <param id="0" name="Count">Function.Param(5)</param>
                         </condition>

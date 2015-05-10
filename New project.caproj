@@ -1089,6 +1089,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="9216603823117938" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="PLAYERSHADOW" sid="8932778525142226">
@@ -1682,6 +1685,60 @@
                                 <point x="0.166667" y="0.958333" />
                                 <point x="0.166667" y="0.5" />
                                 <point x="0.833333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Skeleton" sid="5133386522951306">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="5048836095839395" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="Walking" pingpong="1" repeatcount="1" repeatto="0" sid="2843792965030255" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="0.5" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="0.5" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2780,6 +2837,7 @@
                 <member>Mutant</member>
                 <member>Mutant2</member>
                 <member>Mutant3</member>
+                <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
             </members>
@@ -2869,6 +2927,7 @@
                 <member>Mutant</member>
                 <member>Mutant2</member>
                 <member>Mutant3</member>
+                <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
             </members>
@@ -2910,6 +2969,7 @@
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>
                 <member>Rock</member>
+                <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
                 <member>SpiderWeb</member>
@@ -3040,6 +3100,7 @@
                 <member>Mutant</member>
                 <member>Mutant2</member>
                 <member>Mutant3</member>
+                <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
             </members>
