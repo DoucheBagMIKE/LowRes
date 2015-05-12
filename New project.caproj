@@ -1461,11 +1461,11 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1981647149288757" speed="3">
-                        <frame duration="1.5" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.666667" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.666667" />
+                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -1636,86 +1636,12 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Mutant3" sid="2208464990608096">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="3153073165717641" speed="3">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.479167" y="0.791667" />
-                            <collision-poly>
-                                <point x="0.666667" y="0.729167" />
-                                <point x="0.333333" y="0.729167" />
-                                <point x="0.333333" y="0.5" />
-                                <point x="0.666667" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="2" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.479167" y="0.791667" />
-                            <collision-poly>
-                                <point x="0.666667" y="0.729167" />
-                                <point x="0.333333" y="0.729167" />
-                                <point x="0.333333" y="0.5" />
-                                <point x="0.666667" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="3" loop="1" name="Walking" pingpong="1" repeatcount="1" repeatto="0" sid="9147170910045917" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="0.5" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="Skeleton" sid="5133386522951306">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="5048836095839395" speed="3">
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5048836095839395" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="1" />
-                            <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                    <animation framecount="4" loop="1" name="Walking" pingpong="1" repeatcount="1" repeatto="0" sid="2843792965030255" speed="3">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="1" />
-                            <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="0.5" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <image-point name="Imagepoint 1" x="0.5625" y="1" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -1724,7 +1650,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <image-point name="Imagepoint 1" x="0.5625" y="1" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -1732,8 +1658,17 @@
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="0.5" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5625" y="1" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5625" y="1" />
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="0" y="1" />
@@ -2811,6 +2746,18 @@
                 </animation-folder>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite5" sid="7452753903819477">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5848779264686839" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles2" sid="8646954763829572">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -2836,7 +2783,6 @@
                 <member>Mage2</member>
                 <member>Mutant</member>
                 <member>Mutant2</member>
-                <member>Mutant3</member>
                 <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
@@ -2926,7 +2872,6 @@
                 <member>Mage2</member>
                 <member>Mutant</member>
                 <member>Mutant2</member>
-                <member>Mutant3</member>
                 <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
@@ -2964,7 +2909,6 @@
                 <member>Mage2</member>
                 <member>Mutant</member>
                 <member>Mutant2</member>
-                <member>Mutant3</member>
                 <member>NpcBase</member>
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>
@@ -3099,7 +3043,6 @@
                 <member>Mage2</member>
                 <member>Mutant</member>
                 <member>Mutant2</member>
-                <member>Mutant3</member>
                 <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>

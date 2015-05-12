@@ -25,12 +25,12 @@
                                     <param id="0" name="Animation">Enemies.Shadow</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="6" name="Set speed" sid="2007501420669737" type="Enemies">
-                                    <param id="0" name="Speed">Enemies.AnimationSpeed+random(-1,1)</param>
-                                </action>
                                 <action id="-27" name="Set effect enabled" sid="439313446633523" type="Enemies">
                                     <param id="0" name="Mode">0</param>
                                     <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="29019870946468" type="Enemies">
+                                    <param id="0" name="Frame number">random(self.AnimationFrameCount)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -274,9 +274,9 @@
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
-                                        <event-block sid="1594008450701401">
+                                        <event-block sid="9222098557343875">
                                             <conditions>
-                                                <condition id="-22" name="Else" sid="88398522986701" type="System" />
+                                                <condition id="-22" name="Else" sid="5814010980567702" type="System" />
                                             </conditions>
                                             <actions>
                                                 <action id="-13" name="Set boolean" sid="4816280031497007" type="Enemies">
@@ -630,6 +630,34 @@
                                             <actions>
                                                 <action id="5" name="Set frame" sid="9953689775976655" type="Enemies">
                                                     <param id="0" name="Frame number">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="8264815531571806">
+                                            <conditions>
+                                                <condition behavior="Movement" id="1" name="Compare speed" sid="2327402140975989" type="Enemies">
+                                                    <param id="0" name="Which">1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Speed">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="6775130032252232" type="Enemies">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3849284397330825">
+                                            <conditions>
+                                                <condition behavior="Movement" id="1" name="Compare speed" sid="7992839215656123" type="Enemies">
+                                                    <param id="0" name="Which">1</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Speed">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set mirrored" sid="9324228814479948" type="Enemies">
+                                                    <param id="0" name="State">0</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1275,6 +1303,11 @@
                                                                     <param id="0" name="Object">EnemyProjectile</param>
                                                                     <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                                                                     <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="0" name="Spawn another object" sid="587154698486677" type="Enemies">
+                                                                    <param id="0" name="Object">Particles2</param>
+                                                                    <param id="1" name="Layer">&quot;BG&quot;</param>
+                                                                    <param id="2" name="Image point">1</param>
                                                                 </action>
                                                                 <action id="-10" name="Set value" sid="9883053635804546" type="EnemyProjectile">
                                                                     <param id="0" name="Instance variable">Zone1</param>

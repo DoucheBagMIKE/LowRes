@@ -2461,9 +2461,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -4792,7 +4792,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>64</range>
+                                <range>24</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -4802,9 +4802,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -4918,9 +4918,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -5516,9 +5516,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -6324,9 +6324,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -7020,9 +7020,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -7097,9 +7097,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -7204,9 +7204,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -8018,9 +8018,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -8165,9 +8165,9 @@
                     <effect-instances>
                         <effect-instance type="SetColor">
                             <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.75</red>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
