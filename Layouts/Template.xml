@@ -334,6 +334,7 @@
                         <KnockbackAmount>64</KnockbackAmount>
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
+                        <Phase></Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -423,6 +424,8 @@
                         <Pushed>false</Pushed>
                         <Effect>Push</Effect>
                         <SpawnerID>0</SpawnerID>
+                        <Pickup>false</Pickup>
+                        <canCut>false</canCut>
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
@@ -595,6 +598,7 @@
                         <KnockbackAmount>80</KnockbackAmount>
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
+                        <Phase></Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -672,6 +676,7 @@
                         <KnockbackAmount>80</KnockbackAmount>
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
+                        <Phase></Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <HasLight>false</HasLight>
@@ -783,6 +788,7 @@
                         <KnockbackAmount>0</KnockbackAmount>
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
+                        <Phase></Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -850,6 +856,8 @@
                         <Pushed>false</Pushed>
                         <Effect>Slow</Effect>
                         <SpawnerID>0</SpawnerID>
+                        <Pickup>false</Pickup>
+                        <canCut>false</canCut>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                     </instance-variables>
@@ -893,6 +901,8 @@
                         <Pushed>false</Pushed>
                         <Effect>Cut</Effect>
                         <SpawnerID>0</SpawnerID>
+                        <Pickup>false</Pickup>
+                        <canCut>true</canCut>
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
@@ -991,6 +1001,7 @@
                         <KnockbackAmount>80</KnockbackAmount>
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
+                        <Phase></Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -1258,13 +1269,14 @@
                         <Explode>true</Explode>
                         <Projectile>false</Projectile>
                         <hit>false</hit>
-                        <Timer>1</Timer>
+                        <Timer>2.5</Timer>
                         <playedsound>false</playedsound>
                         <Flying>false</Flying>
                         <Damage>0</Damage>
                         <KnockbackAmount>64</KnockbackAmount>
                         <ProjectileType>Fireball</ProjectileType>
                         <spawnerUID>-1</spawnerUID>
+                        <Phase>Fireball</Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -1342,6 +1354,7 @@
                         <KnockbackAmount>0</KnockbackAmount>
                         <ProjectileType>Ice</ProjectileType>
                         <spawnerUID>-1</spawnerUID>
+                        <Phase>IceBall</Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -1419,6 +1432,7 @@
                         <KnockbackAmount>80</KnockbackAmount>
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
+                        <Phase></Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -1486,6 +1500,8 @@
                         <Pushed>false</Pushed>
                         <Effect>Sword</Effect>
                         <SpawnerID>0</SpawnerID>
+                        <Pickup>true</Pickup>
+                        <canCut>false</canCut>
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>

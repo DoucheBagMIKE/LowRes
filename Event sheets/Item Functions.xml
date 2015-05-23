@@ -3,6 +3,51 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Item Functions</name>
     <events>
+        <event-block sid="875413795707135">
+            <conditions>
+                <condition id="0" name="On function" sid="3284472386707326" type="Function">
+                    <param id="0" name="Name">&quot;Holding_FireCracker&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2352654137826459">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="7010101339311826" type="WeaponData">
+                            <param id="0" name="Key">&quot;FireCracker_FuseTime&quot;</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="7036240413739532" type="WeaponData">
+                            <param id="0" name="Key">&quot;FireCracker_FuseTime&quot;</param>
+                            <param id="1" name="Value">WeaponData.Get(&quot;FireCracker_FuseTime&quot;) - dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5972071710918344">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6232065514480595" type="System" />
+                        <condition id="0" name="Compare value" sid="8880178114628854" type="WeaponData">
+                            <param id="0" name="Key">&quot;Exploded&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6464756915028677" type="Function">
+                            <param id="0" name="Name">&quot;Explosion&quot;</param>
+                            <param id="1" name="Parameter {n}">BASE.X{###}BASE.Y{###}&quot;Explode&quot;</param>
+                        </action>
+                        <action id="1" name="Set key" sid="6261411789479788" type="WeaponData">
+                            <param id="0" name="Key">&quot;Exploded&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="391974330271162">
             <conditions>
                 <condition id="0" name="On function" sid="4849810722453008" type="Function">
@@ -75,84 +120,6 @@
                     <actions>
                         <action id="4" name="Set animation" sid="3637291555436483" type="ARMS">
                             <param id="0" name="Animation">&quot;SwordLeft&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="9405530835271014">
-            <conditions>
-                <condition id="0" name="On function" sid="4884398394899193" type="Function">
-                    <param id="0" name="Name">&quot;Holding_Bow&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="2339388892017515" type="BASE">
-                    <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="5512157225241126" type="BASE">
-                    <param id="0" name="Instance variable">holding</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="8477965659553128">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="7298657589354033" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Right&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9363597581362977" type="ARMS">
-                            <param id="0" name="Animation">&quot;BowRight&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4697427425995708">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="1291128156464634" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Down&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="2995056385037487" type="ARMS">
-                            <param id="0" name="Animation">&quot;BowDown&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6240440341873721">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="2262610713121415" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Up&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7087716015851801" type="ARMS">
-                            <param id="0" name="Animation">&quot;BowUp&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8226838162864586">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="2258763692537313" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Left&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9105146284745338" type="ARMS">
-                            <param id="0" name="Animation">&quot;BowLeft&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -768,6 +735,101 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="7140696610412209">
+            <conditions>
+                <condition id="0" name="On function" sid="7168588535756611" type="Function">
+                    <param id="0" name="Name">&quot;Pressed_Bow&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="2265369996143905" type="WeaponData">
+                    <param id="0" name="Key">&quot;BowStr&quot;</param>
+                    <param id="1" name="Value">150</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9405530835271014">
+            <conditions>
+                <condition id="0" name="On function" sid="4884398394899193" type="Function">
+                    <param id="0" name="Name">&quot;Holding_Bow&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="2339388892017515" type="BASE">
+                    <param id="0" name="Max Speed">BASE.MaxSpd/2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="5512157225241126" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="1" name="Set key" sid="9112117074222833" type="WeaponData">
+                    <param id="0" name="Key">&quot;BowStr&quot;</param>
+                    <param id="1" name="Value">WeaponData.Get(&quot;BowStr&quot;) + (dt*96)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8477965659553128">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7298657589354033" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9363597581362977" type="ARMS">
+                            <param id="0" name="Animation">&quot;BowRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4697427425995708">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="1291128156464634" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2995056385037487" type="ARMS">
+                            <param id="0" name="Animation">&quot;BowDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6240440341873721">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2262610713121415" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7087716015851801" type="ARMS">
+                            <param id="0" name="Animation">&quot;BowUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8226838162864586">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2258763692537313" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9105146284745338" type="ARMS">
+                            <param id="0" name="Animation">&quot;BowLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="1918867196258482">
             <conditions>
                 <condition id="0" name="On function" sid="7930480968196283" type="Function">
@@ -818,7 +880,7 @@
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="8865194628657146" type="PlayerProjectile">
                             <param id="0" name="Which">1</param>
-                            <param id="1" name="Speed">150+(BASE.8Direction.VectorX/2)</param>
+                            <param id="1" name="Speed">clamp(WeaponData.Get(&quot;BowStr&quot;) ,150,300)+(BASE.8Direction.VectorX/2)</param>
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="706317038410713" type="PlayerProjectile">
                             <param id="0" name="Which">2</param>
@@ -839,6 +901,9 @@
                         <action id="-10" name="Set value" sid="6554216938306351" type="PlayerProjectile">
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="3623949833133784" type="WeaponData">
+                            <param id="0" name="Key">&quot;BowStr&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -866,7 +931,7 @@
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="7693343609125462" type="PlayerProjectile">
                             <param id="0" name="Which">2</param>
-                            <param id="1" name="Speed">150+(BASE.8Direction.VectorY/2)</param>
+                            <param id="1" name="Speed">clamp(WeaponData.Get(&quot;BowStr&quot;) ,150,300)+(BASE.8Direction.VectorY/2)</param>
                         </action>
                         <action id="-10" name="Set value" sid="1747208288533412" type="PlayerProjectile">
                             <param id="0" name="Instance variable">Zone1</param>
@@ -887,6 +952,9 @@
                         <action id="-10" name="Set value" sid="6296238641287521" type="PlayerProjectile">
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="2742229290843299" type="WeaponData">
+                            <param id="0" name="Key">&quot;BowStr&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -914,7 +982,7 @@
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="4949316835581648" type="PlayerProjectile">
                             <param id="0" name="Which">2</param>
-                            <param id="1" name="Speed">-150+(BASE.8Direction.VectorY/2)</param>
+                            <param id="1" name="Speed">-clamp(WeaponData.Get(&quot;BowStr&quot;) ,150,300)+(BASE.8Direction.VectorY/2)</param>
                         </action>
                         <action id="-10" name="Set value" sid="9240318575156862" type="PlayerProjectile">
                             <param id="0" name="Instance variable">Zone1</param>
@@ -935,6 +1003,9 @@
                         <action id="-10" name="Set value" sid="6535441691804393" type="PlayerProjectile">
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="7903719296479427" type="WeaponData">
+                            <param id="0" name="Key">&quot;BowStr&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -958,7 +1029,7 @@
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="8011127409745372" type="PlayerProjectile">
                             <param id="0" name="Which">1</param>
-                            <param id="1" name="Speed">-150+(BASE.8Direction.VectorX/2)</param>
+                            <param id="1" name="Speed">-clamp(WeaponData.Get(&quot;BowStr&quot;) ,150,300)+(BASE.8Direction.VectorX/2)</param>
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="6978531693596674" type="PlayerProjectile">
                             <param id="0" name="Which">2</param>
@@ -983,6 +1054,9 @@
                         <action id="-10" name="Set value" sid="9470470534148121" type="PlayerProjectile">
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="6518369713752828" type="WeaponData">
+                            <param id="0" name="Key">&quot;BowStr&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1403,51 +1477,6 @@
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="875413795707135">
-            <conditions>
-                <condition id="0" name="On function" sid="3284472386707326" type="Function">
-                    <param id="0" name="Name">&quot;Holding_FireCracker&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="2352654137826459">
-                    <conditions>
-                        <condition id="0" name="Compare value" sid="7010101339311826" type="WeaponData">
-                            <param id="0" name="Key">&quot;FireCracker_FuseTime&quot;</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="1" name="Set key" sid="7036240413739532" type="WeaponData">
-                            <param id="0" name="Key">&quot;FireCracker_FuseTime&quot;</param>
-                            <param id="1" name="Value">WeaponData.Get(&quot;FireCracker_FuseTime&quot;) - dt</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5972071710918344">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="6232065514480595" type="System" />
-                        <condition id="0" name="Compare value" sid="8880178114628854" type="WeaponData">
-                            <param id="0" name="Key">&quot;Exploded&quot;</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="6464756915028677" type="Function">
-                            <param id="0" name="Name">&quot;Explosion&quot;</param>
-                            <param id="1" name="Parameter {n}">BASE.X{###}BASE.Y{###}&quot;Explode&quot;</param>
-                        </action>
-                        <action id="1" name="Set key" sid="6261411789479788" type="WeaponData">
-                            <param id="0" name="Key">&quot;Exploded&quot;</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="6178299290584534">
             <conditions>

@@ -133,7 +133,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" disabled="1" sid="141615764024376">
+                <event-block any="1" sid="141615764024376">
                     <conditions>
                         <condition id="3" name="Is button down" sid="2954166013619666" type="Gamepad">
                             <param id="0" name="Gamepad">0</param>
@@ -150,7 +150,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="4665048051051859">
+                <event-block sid="4665048051051859">
                     <conditions>
                         <condition id="-22" name="Else" sid="769878235810528" type="System" />
                     </conditions>

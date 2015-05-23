@@ -162,7 +162,7 @@
                             <actions>
                                 <action id="0" name="Add key" sid="5768991993812129" type="ItemDesc">
                                     <param id="0" name="Key">&quot;Sword&quot;</param>
-                                    <param id="1" name="Value">&quot;A weapon luckily found right at the start of your adventure! Use it to cut through obstacles and your foes!&quot;</param>
+                                    <param id="1" name="Value">&quot;A sword made out of deer antlers. It was your fathers.&quot;</param>
                                 </action>
                                 <action id="0" name="Add key" sid="899903988633842" type="ItemDesc">
                                     <param id="0" name="Key">&quot;DashShoes&quot;</param>
@@ -170,7 +170,11 @@
                                 </action>
                                 <action id="0" name="Add key" sid="307719951129419" type="ItemDesc">
                                     <param id="0" name="Key">&quot;Bow&quot;</param>
-                                    <param id="1" name="Value">&quot;A bow! Theres not a lot to be said. Shoot people from afar!&quot;</param>
+                                    <param id="1" name="Value">&quot;A finely crafted bow. It is engraved with symbols.&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="5348772373142332" type="ItemDesc">
+                                    <param id="0" name="Key">&quot;Boomerang&quot;</param>
+                                    <param id="1" name="Value">&quot;This boomerang has a razor sharp egde, There is a handle to hold it by.&quot;</param>
                                 </action>
                                 <action id="0" name="Add key" sid="271316030604252" type="ItemDesc">
                                     <param id="0" name="Key">&quot;FireCracker&quot;</param>

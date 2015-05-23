@@ -8,7 +8,7 @@
     <author-website></author-website>
     <app-id></app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>20500</saved-with-version>
+    <saved-with-version>20502</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -43,6 +43,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="setcolor">Set color</effect>
+        <effect author="Scirra" id="tint">Tint</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -1328,6 +1329,16 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="1" loop="0" name="Tiny" pingpong="0" repeatcount="1" repeatto="0" sid="8626476931320179" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.625" />
+                                <point x="0.5" y="0.625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                     <animation framecount="1" loop="0" name="Big" pingpong="0" repeatcount="1" repeatto="0" sid="7828286541240521" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
@@ -1348,7 +1359,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="Tiny" pingpong="0" repeatcount="1" repeatto="0" sid="8626476931320179" speed="5">
+                    <animation framecount="1" loop="0" name="Giant" pingpong="0" repeatcount="1" repeatto="0" sid="7023504648758371" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.5" y="0.5" />
@@ -1358,7 +1369,17 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="1" loop="0" name="Giant" pingpong="0" repeatcount="1" repeatto="0" sid="7023504648758371" speed="5">
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="8009173838035658" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.625" />
+                                <point x="0.5" y="0.625" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pixel" pingpong="0" repeatcount="1" repeatto="0" sid="3139358939748431" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="0.5" y="0.5" />
@@ -2473,6 +2494,37 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="TitleScreen">
+            <object-type name="Sprite8" sid="2065120400621649">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6983336559901655" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite7" sid="6402314023882405">
+                <plugin id="Sprite" />
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="943395644449851" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite6" sid="9780007793907483">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1808362389455822" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="WebStorage" sid="1510269620771624">
             <plugin id="WebStorage" />
         </object-type>
@@ -2763,6 +2815,20 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
+        <object-type name="Sprite9" sid="9033971692845046">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="windVal" sid="8644549285660016" type="number" />
+                <instance-variable name="timer" sid="4339244719265628" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3712015296931939" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -2807,6 +2873,7 @@
                 <instance-variable name="KnockbackAmount" sid="4758494175986432" type="number" />
                 <instance-variable name="ProjectileType" sid="5051754548617732" type="string" />
                 <instance-variable name="spawnerUID" sid="1359232653356904" type="number" />
+                <instance-variable name="Phase" sid="5453263384239798" type="string" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Knockback" sid="5869555695933761">
@@ -2834,12 +2901,15 @@
                 <member>Item_Pickup</member>
                 <member>Rock</member>
                 <member>SpiderWeb</member>
+                <member>Sprite9</member>
             </members>
             <instance-variables>
                 <instance-variable name="Pushable" sid="1603580744635957" type="boolean" />
                 <instance-variable name="Pushed" sid="6833075845728192" type="boolean" />
                 <instance-variable name="Effect" sid="6110952570512172" type="string" />
                 <instance-variable name="SpawnerID" sid="4287452911914569" type="number" />
+                <instance-variable name="Pickup" sid="7628258399981248" type="boolean" />
+                <instance-variable name="canCut" sid="7837163374392175" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="2953233102579049">
@@ -2880,6 +2950,7 @@
                 <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
+                <member>Sprite9</member>
             </members>
         </family>
         <family name="DRAWSHADOW" plugin-id="Sprite" sid="9297328645158486">
@@ -2894,6 +2965,7 @@
                 <member>Rock</member>
                 <member>Sign</member>
                 <member>Sprite2</member>
+                <member>Sprite9</member>
             </members>
             <instance-variables>
                 <instance-variable name="Shadow" sid="8926569785025806" type="string" />
@@ -2923,6 +2995,7 @@
                 <member>Spider</member>
                 <member>SpiderWeb</member>
                 <member>SpikeTrap</member>
+                <member>Sprite9</member>
             </members>
             <instance-variables>
                 <instance-variable name="Zone1" sid="1642167997895468" type="number" />
@@ -3064,6 +3137,7 @@
         <layout>Template.xml</layout>
         <layout>Demo.xml</layout>
         <layout>Game.xml</layout>
+        <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-folder name="NPC States">
@@ -3097,6 +3171,7 @@
         <event-sheet>Npc.xml</event-sheet>
         <event-sheet>Transitions.xml</event-sheet>
         <event-sheet>Blood.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="14" />
@@ -3120,10 +3195,10 @@
                 <positioned-audio></positioned-audio>
                 <panning-model>HRTF</panning-model>
                 <distance-model>Inverse</distance-model>
-                <listener-z-height>160</listener-z-height>
-                <reference-distance>150</reference-distance>
-                <maximum-distance>5000</maximum-distance>
-                <roll-off-factor>800</roll-off-factor>
+                <listener-z-height>350</listener-z-height>
+                <reference-distance>350</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>150</roll-off-factor>
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="394" />

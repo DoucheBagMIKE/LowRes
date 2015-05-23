@@ -230,50 +230,58 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8893791949458575">
+                        <event-block sid="1470120056899456">
                             <conditions>
-                                <condition id="-22" name="Else" sid="1268416545871463" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="9843559370676919" type="Interactive">
+                                    <param id="0" name="Instance variable">Effect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;lerpAngle&quot;</param>
+                                </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="9333678413575292">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="1934024287624653" type="Interactive">
-                                            <param id="0" name="Instance variable">Effect</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">&quot;SmallKey&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="5" name="Push" sid="6805247000585228" type="INV">
-                                            <param id="0" name="Where">0</param>
-                                            <param id="1" name="Value">Interactive.Effect</param>
-                                            <param id="2" name="Axis">0</param>
-                                        </action>
-                                        <action id="0" name="Add key" sid="9728694085743205" type="GameStats">
-                                            <param id="0" name="Key">&quot;Has_&quot;&amp;Interactive.Effect</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="4765503668179263" type="Interactive" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="317789035970059">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="599584454085667" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="1" name="Set key" sid="6318757831393877" type="GameStats">
-                                            <param id="0" name="Key">&quot;keys&quot;</param>
-                                            <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) + 1</param>
-                                        </action>
-                                        <action id="0" name="Add key" sid="8921796203565228" type="GameStats">
-                                            <param id="0" name="Key">&quot;Has_Key_&quot;&amp;str(Interactive.SpawnerID)</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-9" name="Destroy" sid="4721161247642757" type="Interactive" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="2095764863463419" type="Interactive">
+                                    <param id="0" name="Angle">anglelerp(self.Angle,(BASE.8Direction.VectorX/3),0.7)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="317789035970059">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1934024287624653" type="Interactive">
+                                    <param id="0" name="Instance variable">Effect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;SmallKey&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="6318757831393877" type="GameStats">
+                                    <param id="0" name="Key">&quot;keys&quot;</param>
+                                    <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) + 1</param>
+                                </action>
+                                <action id="0" name="Add key" sid="8921796203565228" type="GameStats">
+                                    <param id="0" name="Key">&quot;Has_Key_&quot;&amp;str(Interactive.SpawnerID)</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4721161247642757" type="Interactive" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9333678413575292">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6416826808479085" type="Interactive">
+                                    <param id="0" name="Instance variable">Pickup</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="6805247000585228" type="INV">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">Interactive.Effect</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="0" name="Add key" sid="9728694085743205" type="GameStats">
+                                    <param id="0" name="Key">&quot;Has_&quot;&amp;Interactive.Effect</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4765503668179263" type="Interactive" />
+                            </actions>
                         </event-block>
                         <event-block any="1" disabled="1" sid="9308912854686143">
                             <conditions>
@@ -306,6 +314,49 @@
                                 <action id="-9" name="Destroy" sid="5510171733711907" type="Interactive" />
                             </actions>
                         </event-block>
+                        <event-block sid="5821763440790746">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5569776677096699">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2837329771822281" type="Interactive">
+                            <param id="0" name="Instance variable">Effect</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;lerpAngle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="7384125733518807" type="Sprite9">
+                            <param id="0" name="Instance variable">timer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7375715260208148" type="Sprite9">
+                            <param id="0" name="Angle">anglelerp(self.angle,self.windVal,0.04)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5945318255119288">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7283470284050283" type="Sprite9">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="822921188808723" type="Sprite9">
+                                    <param id="0" name="Instance variable">windVal</param>
+                                    <param id="1" name="Value">random(-16,16)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9103410006433767" type="Sprite9">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Value">random(0.4,2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="620533779653272">
@@ -323,10 +374,8 @@
                         <condition id="0" name="On collision with another object" sid="9884565148012184" type="Melee_Hitbox">
                             <param id="0" name="Object">Grass</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="6865959531962274" type="Grass">
-                            <param id="0" name="Instance variable">Effect</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Cut&quot;</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6865959531962274" type="Grass">
+                            <param id="0" name="Instance variable">canCut</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="5393182294003558" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
@@ -361,10 +410,8 @@
                         <condition id="0" name="On collision with another object" sid="6136841308105926" type="PlayerProjectile">
                             <param id="0" name="Object">Grass</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="5354313681125436" type="Grass">
-                            <param id="0" name="Instance variable">Effect</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Cut&quot;</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9572442810998846" type="Grass">
+                            <param id="0" name="Instance variable">canCut</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -388,6 +435,54 @@
                             <param id="0" name="Name">&quot;MeleeHitCollide&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6241974018036653">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4018712008039799" type="Melee_Hitbox">
+                            <param id="0" name="Object">Sprite9</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8639525700676572" type="Sprite9">
+                            <param id="0" name="Instance variable">canCut</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9789884974567837" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2052050408686221" type="Function">
+                            <param id="0" name="Name">&quot;Explosion&quot;</param>
+                            <param id="1" name="Parameter {n}">sprite9.X{###}sprite9.Y{###}&quot;Grass&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="393446727671892" type="Function">
+                            <param id="0" name="Name">&quot;MeleeHitCollide&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8296264338921393" type="Sprite9" />
+                    </actions>
+                </event-block>
+                <event-block sid="1110475227726548">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7600036076283227" type="PlayerProjectile">
+                            <param id="0" name="Object">Grass</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3986167036679895" type="Grass">
+                            <param id="0" name="Instance variable">canCut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5157829872826156" type="Function">
+                            <param id="0" name="Name">&quot;Explosion&quot;</param>
+                            <param id="1" name="Parameter {n}">sprite9.X{###}sprite9.Y{###}&quot;Grass&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4173391187235567" type="Function">
+                            <param id="0" name="Name">&quot;MeleeHitCollide&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3474310527177904" type="PlayerProjectile" />
+                        <action id="-9" name="Destroy" sid="574287080612757" type="Sprite9" />
                     </actions>
                 </event-block>
             </sub-events>
