@@ -230,6 +230,40 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
+                                                        <event-block sid="3410984422122414">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="5320195436789621" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Mutant3&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="1071505089719666" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Object">Heart</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="2243904071597082" type="Heart">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">ENEMY_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="2669632915165242" type="Heart">
+                                                                    <param id="0" name="Obstacle">ObstacleTilemap</param>
+                                                                </action>
+                                                                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="9811690191610106" type="Heart">
+                                                                    <param id="0" name="Obstacle">Rock</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="2969706634528761" type="Heart">
+                                                                    <param id="0" name="Instance variable">spawnerUID</param>
+                                                                    <param id="1" name="Value">ENEMY_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="705947533278248" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
                                                         <event-block sid="2680748425644329">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="4116834450040101" type="ENEMY_SPAWNER">
@@ -433,7 +467,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="8498334510969684">
+                                <event-block sid="2643129996811664">
                                     <conditions>
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1819351144605694" type="OBJECT_SPAWNER">
                                             <param id="0" name="Instance variable">Loaded</param>
@@ -441,7 +475,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="4422499548078725">
+                                        <event-block sid="8498334510969684">
                                             <conditions>
                                                 <condition id="-11" name="For Each" sid="6948073552925317" type="System">
                                                     <param id="0" name="Object">OBJECT_SPAWNER</param>
@@ -449,105 +483,349 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="9366645763666059">
+                                                <event-block sid="4422499548078725">
                                                     <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="7739436997521201" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Instance variable">Spawn</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Rock&quot;</param>
+                                                        <condition id="3" inverted="1" name="Has key" sid="6711839849797204" type="TempData">
+                                                            <param id="0" name="Key">str(OBJECT_SPAWNER.UID)</param>
                                                         </condition>
                                                     </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Spawn another object" sid="8367193623454301" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Object">Rock</param>
-                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                                            <param id="2" name="Image point">0</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="3178132811473582" type="Rock">
-                                                            <param id="0" name="Instance variable">Zone1</param>
-                                                            <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="2980818429530971" type="Rock">
-                                                            <param id="0" name="Instance variable">Pushable</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="3214651368007745" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Instance variable">Loaded</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="3951771212595015">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="8063025378764796" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Instance variable">Spawn</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Web&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Spawn another object" sid="7964714981746351" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Object">SpiderWeb</param>
-                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                                            <param id="2" name="Image point">0</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="6134085189763177" type="SpiderWeb">
-                                                            <param id="0" name="Instance variable">Zone1</param>
-                                                            <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="9477378672030058" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Instance variable">Loaded</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="4614593079517751">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="7669176382114091" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Instance variable">Spawn</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Grass&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Spawn another object" sid="3252796521615016" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Object">Grass</param>
-                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                                            <param id="2" name="Image point">0</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="7527092805895463" type="Grass">
-                                                            <param id="0" name="Instance variable">Zone1</param>
-                                                            <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="6143158955998579" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Instance variable">Loaded</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="7270451897391298">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="1962313099490568" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Instance variable">Spawn</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Flower&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="0" name="Spawn another object" sid="749315622810681" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Object">Sprite9</param>
-                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                                            <param id="2" name="Image point">0</param>
-                                                        </action>
-                                                        <action id="-10" name="Set value" sid="4792698612715381" type="Sprite9">
-                                                            <param id="0" name="Instance variable">Zone1</param>
-                                                            <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
-                                                        </action>
-                                                        <action id="-13" name="Set boolean" sid="5415494518809458" type="OBJECT_SPAWNER">
-                                                            <param id="0" name="Instance variable">Loaded</param>
-                                                            <param id="1" name="Value">1</param>
-                                                        </action>
-                                                    </actions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="9366645763666059">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="7739436997521201" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Rock&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="8367193623454301" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Object">Rock</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="3178132811473582" type="Rock">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="2980818429530971" type="Rock">
+                                                                    <param id="0" name="Instance variable">Pushable</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="3214651368007745" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="3951771212595015">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="8063025378764796" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Web&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="7964714981746351" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Object">SpiderWeb</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="6134085189763177" type="SpiderWeb">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="9477378672030058" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="4614593079517751">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="7669176382114091" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Bush&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="3252796521615016" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Object">Breakable</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="7527092805895463" type="Breakable">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="2347222432077228" type="Breakable">
+                                                                    <param id="0" name="Instance variable">SpawnerID</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="9535177300497323" type="Breakable">
+                                                                    <param id="0" name="Animation">&quot;Bush&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="6143158955998579" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="4177037277918816">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="1201186621163626" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Pot&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="4892213376272715" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Object">Breakable</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="6624701126558104" type="Breakable">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="6645440175585141" type="Breakable">
+                                                                    <param id="0" name="Instance variable">SpawnerID</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="9459828317851271" type="Breakable">
+                                                                    <param id="0" name="Animation">&quot;Pot&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="5186462899321724" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="8291146803027279">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="5220088320253611" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;BigPot&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="3571277249584623" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Object">Breakable</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="7419868299248219" type="Breakable">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="6577236490368042" type="Breakable">
+                                                                    <param id="0" name="Instance variable">SpawnerID</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="6619361695320894" type="Breakable">
+                                                                    <param id="0" name="Animation">&quot;BigPot&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="725008762437614" type="Breakable">
+                                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                                    <param id="1" name="Value">&quot;Big&quot;</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="7278738204990892" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="3156435124417132">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="8013089294320111" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;FirePot&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="1505185158920552" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Object">Breakable</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="1166913452246551" type="Breakable">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="6752409938788613" type="Breakable">
+                                                                    <param id="0" name="Instance variable">SpawnerID</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="6643502627075503" type="Breakable">
+                                                                    <param id="0" name="Animation">&quot;Pot&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="8099994812478672" type="Breakable">
+                                                                    <param id="0" name="Instance variable">drawlight</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="2634914475947969" type="Breakable">
+                                                                    <param id="0" name="Instance variable">ParticleType</param>
+                                                                    <param id="1" name="Value">&quot;Fire&quot;</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="4845799457130169" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="2215023970842695">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="6422736089002297" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;BigFirePot&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="8207452832372301" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Object">Breakable</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="6333560777999663" type="Breakable">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="1220844458420904" type="Breakable">
+                                                                    <param id="0" name="Instance variable">SpawnerID</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="3501287076346648" type="Breakable">
+                                                                    <param id="0" name="Animation">&quot;BigPot&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="739861686158411" type="Breakable">
+                                                                    <param id="0" name="Instance variable">drawlight</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="2017642344126669" type="Breakable">
+                                                                    <param id="0" name="Instance variable">ParticleType</param>
+                                                                    <param id="1" name="Value">&quot;Fire&quot;</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="7099207607588977" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="7270451897391298">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="1962313099490568" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Flower&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="7932727946334329" type="System">
+                                                                    <param id="0" name="Object to create">Foilage</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="X">OBJECT_SPAWNER.X+random(-1,1)</param>
+                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y-2</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="7777451305021131" type="Foilage">
+                                                                    <param id="0" name="Instance variable">SpawnerID</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="4792698612715381" type="Foilage">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="1543783396174187" type="Foilage">
+                                                                    <param id="0" name="Animation">&quot;Flowers&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="7178367765831727" type="System">
+                                                                    <param id="0" name="Object to create">Foilage</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="X">OBJECT_SPAWNER.X+random(-1,1)</param>
+                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y+2</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="959073931896866" type="Foilage">
+                                                                    <param id="0" name="Instance variable">SpawnerID</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="7174444998896388" type="Foilage">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="9354899184370137" type="Foilage">
+                                                                    <param id="0" name="Animation">&quot;Flowers&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="5415494518809458" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="8310815420700156">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="4291639171153353" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Grass&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="27284360116361" type="System">
+                                                                    <param id="0" name="Object to create">Foilage</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="X">OBJECT_SPAWNER.X+random(-1,1)</param>
+                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y-2</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="9920716107693844" type="Foilage">
+                                                                    <param id="0" name="Instance variable">SpawnerID</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="131598545379468" type="Foilage">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="9269260719229715" type="Foilage">
+                                                                    <param id="0" name="Animation">&quot;Grass&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="201646430227971" type="System">
+                                                                    <param id="0" name="Object to create">Foilage</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="X">OBJECT_SPAWNER.X+random(-1,1)</param>
+                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y+2</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="1993857364439445" type="Foilage">
+                                                                    <param id="0" name="Instance variable">SpawnerID</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="3461000943927282" type="Foilage">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="8945593442022163" type="Foilage">
+                                                                    <param id="0" name="Animation">&quot;Grass&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="1834832114179117" type="OBJECT_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -1062,28 +1340,67 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3996887092387284">
+                <event-block any="1" sid="7392487541929725">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="80571256270544" type="Zone">
+                        <condition id="-1" name="Compare X" sid="7332634235029413" type="Zone">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">ViewportLeft(&quot;OBJECT&quot;)</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="30653407843082" type="Zone">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="X co-ordinate">ViewportRight(&quot;OBJECT&quot;)</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="979187156409067" type="Zone">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">ViewportTop(&quot;OBJECT&quot;)</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="2930729695252866" type="Zone">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;OBJECT&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3996887092387284">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="80571256270544" type="Zone">
+                                    <param id="0" name="Instance variable">Zone1</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">CurZone</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="8338521937185977" type="Zone">
+                                    <param id="0" name="Instance variable">Destroy</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7527262551832019" type="Zone">
+                                    <param id="0" name="Instance variable">Zone1</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="9317210346127988" type="System">
+                                    <param id="0" name="Object">Zone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="4391140407945259" type="Zone" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2793042704687135">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="387564864984692" type="Light">
                             <param id="0" name="Instance variable">Zone1</param>
                             <param id="1" name="Comparison">1</param>
                             <param id="2" name="Value">CurZone</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="8338521937185977" type="Zone">
-                            <param id="0" name="Instance variable">Destroy</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="7527262551832019" type="Zone">
-                            <param id="0" name="Instance variable">Zone1</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="4391140407945259" type="Zone" />
+                        <action id="-9" name="Destroy" sid="7864882369681286" type="Light" />
                     </actions>
                 </event-block>
                 <event-block sid="7516545160154856">
                     <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="3330525830230554" type="Particles" />
                         <condition id="-7" name="Compare instance variable" sid="2583973062756546" type="Particles">
                             <param id="0" name="Instance variable">Zone</param>
                             <param id="1" name="Comparison">1</param>

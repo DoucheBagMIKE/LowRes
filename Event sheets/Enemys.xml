@@ -511,7 +511,7 @@
                                                 </action>
                                                 <action id="-10" name="Set value" sid="6948668608476048" type="Enemies">
                                                     <param id="0" name="Instance variable">Timer</param>
-                                                    <param id="1" name="Value">random(0.3,1.2)</param>
+                                                    <param id="1" name="Value">random(0.6,1)</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
@@ -529,7 +529,7 @@
                                                     <actions>
                                                         <action behavior="Movement" id="2" name="Set speed" sid="3239968415848197" type="Enemies">
                                                             <param id="0" name="Which">0</param>
-                                                            <param id="1" name="Speed">random(48,80)</param>
+                                                            <param id="1" name="Speed">random(80,112)</param>
                                                         </action>
                                                         <action behavior="Movement" id="6" name="Set angle of motion" sid="9920003453253268" type="Enemies">
                                                             <param id="0" name="Angle">angle(self.X,self.Y,base.X,base.Y)+random(-16,16)</param>
@@ -550,7 +550,7 @@
                                                     <actions>
                                                         <action behavior="Movement" id="2" name="Set speed" sid="4584458998632814" type="Enemies">
                                                             <param id="0" name="Which">0</param>
-                                                            <param id="1" name="Speed">random(48,80)</param>
+                                                            <param id="1" name="Speed">random(80,112)</param>
                                                         </action>
                                                         <action behavior="Movement" id="6" name="Set angle of motion" sid="4320045182275718" type="Enemies">
                                                             <param id="0" name="Angle">random(360)</param>

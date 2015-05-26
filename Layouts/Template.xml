@@ -889,7 +889,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Grass" uid="475">
+                <instance type="Breakable" uid="475">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -906,6 +906,17 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <HasLight>false</HasLight>
+                        <LightUID>-1</LightUID>
+                        <LightSize>250</LightSize>
+                        <LightOpacity>75</LightOpacity>
+                        <R>7</R>
+                        <G>2</G>
+                        <B>0</B>
+                        <drawlight>false</drawlight>
+                        <ParticleType></ParticleType>
+                        <HasParticle>false</HasParticle>
+                        <ParticleUID>-1</ParticleUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -1810,6 +1821,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1886,6 +1899,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1911,6 +1926,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1936,6 +1953,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1961,6 +1980,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1986,6 +2007,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2011,6 +2034,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2036,6 +2061,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2061,6 +2088,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2086,6 +2115,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2111,6 +2142,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2136,6 +2169,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2161,6 +2196,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2186,6 +2223,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2211,6 +2250,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2236,6 +2277,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2261,6 +2304,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2286,6 +2331,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2311,6 +2358,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2336,6 +2385,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2361,6 +2412,8 @@
                     </properties>
                     <instance-variables>
                         <Music>dungeon1</Music>
+                        <dark>false</dark>
+                        <light>false</light>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

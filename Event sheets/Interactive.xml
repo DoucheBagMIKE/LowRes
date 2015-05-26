@@ -230,6 +230,16 @@
                                 </action>
                             </actions>
                         </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8793024000870131">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5075524241673886" type="BASE">
+                            <param id="0" name="Object">Interactive</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
                         <event-block sid="1470120056899456">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="9843559370676919" type="Interactive">
@@ -240,7 +250,7 @@
                             </conditions>
                             <actions>
                                 <action id="-8" name="Set angle" sid="2095764863463419" type="Interactive">
-                                    <param id="0" name="Angle">anglelerp(self.Angle,(BASE.8Direction.VectorX/3),0.7)</param>
+                                    <param id="0" name="Angle">anglelerp(self.Angle,(BASE.8Direction.VectorX/2),0.7)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -283,42 +293,17 @@
                                 <action id="-9" name="Destroy" sid="4765503668179263" type="Interactive" />
                             </actions>
                         </event-block>
-                        <event-block any="1" disabled="1" sid="9308912854686143">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7147469260278062" type="Interactive">
-                                    <param id="0" name="Instance variable">Effect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Sword&quot;</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="7341297249444611" type="Interactive">
-                                    <param id="0" name="Instance variable">Effect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;Bow&quot;</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="9545765215335211" type="Interactive">
-                                    <param id="0" name="Instance variable">Effect</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;DashShoes&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="5" name="Push" sid="9995589370814701" type="INV">
-                                    <param id="0" name="Where">0</param>
-                                    <param id="1" name="Value">Interactive.Effect</param>
-                                    <param id="2" name="Axis">0</param>
-                                </action>
-                                <action id="0" name="Add key" sid="5931964424231861" type="GameStats">
-                                    <param id="0" name="Key">&quot;Has_&quot;&amp;Interactive.Effect</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="5510171733711907" type="Interactive" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="5821763440790746">
-                            <conditions />
-                            <actions />
-                        </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="6189601826979563">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="7550655781131812" type="Foilage" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="9169496839688093" type="Foilage">
+                            <param id="0" name="Frame number">int(random(self.AnimationFrameCount))</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="5569776677096699">
                     <conditions>
@@ -327,31 +312,34 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;lerpAngle&quot;</param>
                         </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="6748963444577527" type="BASE">
+                            <param id="0" name="Object">Interactive</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="7384125733518807" type="Sprite9">
+                        <action id="-12" name="Subtract from" sid="7384125733518807" type="Foilage">
                             <param id="0" name="Instance variable">timer</param>
                             <param id="1" name="Value">dt</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="7375715260208148" type="Sprite9">
-                            <param id="0" name="Angle">anglelerp(self.angle,self.windVal,0.04)</param>
+                        <action id="-8" name="Set angle" sid="7375715260208148" type="Foilage">
+                            <param id="0" name="Angle">anglelerp(self.angle,self.windVal,0.01)</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="5945318255119288">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7283470284050283" type="Sprite9">
+                                <condition id="-7" name="Compare instance variable" sid="7283470284050283" type="Foilage">
                                     <param id="0" name="Instance variable">timer</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="822921188808723" type="Sprite9">
+                                <action id="-10" name="Set value" sid="822921188808723" type="Foilage">
                                     <param id="0" name="Instance variable">windVal</param>
                                     <param id="1" name="Value">random(-16,16)</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="9103410006433767" type="Sprite9">
+                                <action id="-10" name="Set value" sid="9103410006433767" type="Foilage">
                                     <param id="0" name="Instance variable">timer</param>
                                     <param id="1" name="Value">random(0.4,2)</param>
                                 </action>
@@ -372,9 +360,9 @@
                 <event-block sid="1622278260338924">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9884565148012184" type="Melee_Hitbox">
-                            <param id="0" name="Object">Grass</param>
+                            <param id="0" name="Object">Breakable</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="6865959531962274" type="Grass">
+                        <condition id="-8" name="Is boolean instance variable set" sid="6865959531962274" type="Breakable">
                             <param id="0" name="Instance variable">canCut</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="5393182294003558" type="Melee_Hitbox">
@@ -384,65 +372,48 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="4012520828857607" type="Grass">
-                            <param id="0" name="Animation">&quot;Cut&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="576064925595998" type="Grass">
-                            <param id="0" name="Instance variable">Shadow</param>
-                            <param id="1" name="Value">&quot;Tiny&quot;</param>
-                        </action>
-                        <action id="11" name="Set collisions enabled" sid="9478548397554532" type="Grass">
-                            <param id="0" name="Collisions">0</param>
+                        <action id="0" name="Add key" sid="3882582525369006" type="TempData">
+                            <param id="0" name="Key">str(Breakable.SpawnerID)</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Call function" sid="7770900167948826" type="Function">
                             <param id="0" name="Name">&quot;Explosion&quot;</param>
-                            <param id="1" name="Parameter {n}">Grass.X{###}Grass.Y{###}&quot;Grass&quot;</param>
+                            <param id="1" name="Parameter {n}">Breakable.X{###}Breakable.Y{###}Breakable.AnimationName</param>
                         </action>
-                        <action id="0" name="Call function" sid="6153641973255166" type="Function">
-                            <param id="0" name="Name">&quot;MeleeHitCollide&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
+                        <action id="-9" name="Destroy" sid="6203221580586138" type="Breakable" />
                     </actions>
                 </event-block>
                 <event-block sid="9889964440358572">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6136841308105926" type="PlayerProjectile">
-                            <param id="0" name="Object">Grass</param>
+                            <param id="0" name="Object">Breakable</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="9572442810998846" type="Grass">
+                        <condition id="-8" name="Is boolean instance variable set" sid="9572442810998846" type="Breakable">
                             <param id="0" name="Instance variable">canCut</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="9721390696099664" type="Grass">
-                            <param id="0" name="Animation">&quot;Cut&quot;</param>
-                            <param id="1" name="From">1</param>
+                        <action id="0" name="Add key" sid="9302215632220667" type="TempData">
+                            <param id="0" name="Key">str(Breakable.SpawnerID)</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="4991936067333373" type="Grass">
-                            <param id="0" name="Instance variable">Shadow</param>
-                            <param id="1" name="Value">&quot;Tiny&quot;</param>
-                        </action>
-                        <action id="11" name="Set collisions enabled" sid="1873472070296547" type="Grass">
-                            <param id="0" name="Collisions">0</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="4690114695798197" type="PlayerProjectile" />
-                        <action id="0" name="Call function" sid="3250910407614042" type="Function">
+                        <action id="0" name="Call function" sid="780370984465557" type="Function">
                             <param id="0" name="Name">&quot;Explosion&quot;</param>
-                            <param id="1" name="Parameter {n}">Grass.X{###}Grass.Y{###}&quot;Grass&quot;</param>
+                            <param id="1" name="Parameter {n}">Breakable.X{###}Breakable.Y{###}Breakable.AnimationName</param>
                         </action>
-                        <action id="0" name="Call function" sid="6175283540579829" type="Function">
-                            <param id="0" name="Name">&quot;MeleeHitCollide&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                        <action id="-9" name="Destroy" sid="497720087405754" type="Breakable" />
+                        <action id="-13" name="Set boolean" sid="6138006133700086" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">hitTrigger</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="6241974018036653">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4018712008039799" type="Melee_Hitbox">
-                            <param id="0" name="Object">Sprite9</param>
+                            <param id="0" name="Object">Foilage</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="8639525700676572" type="Sprite9">
+                        <condition id="-8" name="Is boolean instance variable set" sid="8639525700676572" type="Foilage">
                             <param id="0" name="Instance variable">canCut</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="9789884974567837" type="Melee_Hitbox">
@@ -452,37 +423,36 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="2052050408686221" type="Function">
+                        <action id="0" name="Add key" sid="3928592612240784" type="TempData">
+                            <param id="0" name="Key">str(Foilage.SpawnerID)</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7375427861790604" type="Function">
                             <param id="0" name="Name">&quot;Explosion&quot;</param>
-                            <param id="1" name="Parameter {n}">sprite9.X{###}sprite9.Y{###}&quot;Grass&quot;</param>
+                            <param id="1" name="Parameter {n}">Foilage.X{###}Foilage.Y{###}Foilage.AnimationName</param>
                         </action>
-                        <action id="0" name="Call function" sid="393446727671892" type="Function">
-                            <param id="0" name="Name">&quot;MeleeHitCollide&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="8296264338921393" type="Sprite9" />
+                        <action id="-9" name="Destroy" sid="8296264338921393" type="Foilage" />
                     </actions>
                 </event-block>
                 <event-block sid="1110475227726548">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="7600036076283227" type="PlayerProjectile">
-                            <param id="0" name="Object">Grass</param>
+                            <param id="0" name="Object">Foilage</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="3986167036679895" type="Grass">
+                        <condition id="-8" name="Is boolean instance variable set" sid="3986167036679895" type="Breakable">
                             <param id="0" name="Instance variable">canCut</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="5157829872826156" type="Function">
+                        <action id="0" name="Add key" sid="9864690754604495" type="TempData">
+                            <param id="0" name="Key">str(Foilage.SpawnerID)</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6737885342558616" type="Function">
                             <param id="0" name="Name">&quot;Explosion&quot;</param>
-                            <param id="1" name="Parameter {n}">sprite9.X{###}sprite9.Y{###}&quot;Grass&quot;</param>
+                            <param id="1" name="Parameter {n}">Foilage.X{###}Foilage.Y{###}Foilage.AnimationName</param>
                         </action>
-                        <action id="0" name="Call function" sid="4173391187235567" type="Function">
-                            <param id="0" name="Name">&quot;MeleeHitCollide&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="3474310527177904" type="PlayerProjectile" />
-                        <action id="-9" name="Destroy" sid="574287080612757" type="Sprite9" />
+                        <action id="-9" name="Destroy" sid="574287080612757" type="Foilage" />
                     </actions>
                 </event-block>
             </sub-events>

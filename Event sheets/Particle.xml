@@ -167,10 +167,10 @@
                     <actions>
                         <action id="-4" name="Set position to another object" sid="7071383501545857" type="Particles">
                             <param id="0" name="Object">HAS_PARTICLE</param>
-                            <param id="1" name="Image point (optional)">0</param>
+                            <param id="1" name="Image point (optional)">&quot;par&quot;</param>
                         </action>
                         <action id="-29" name="Move to object" sid="5437188492632324" type="Particles">
-                            <param id="0" name="Where">1</param>
+                            <param id="0" name="Where">0</param>
                             <param id="1" name="Object">HAS_PARTICLE</param>
                         </action>
                     </actions>

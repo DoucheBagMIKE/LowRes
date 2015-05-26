@@ -764,7 +764,7 @@
                 </action>
                 <action id="1" name="Set key" sid="9112117074222833" type="WeaponData">
                     <param id="0" name="Key">&quot;BowStr&quot;</param>
-                    <param id="1" name="Value">WeaponData.Get(&quot;BowStr&quot;) + (dt*96)</param>
+                    <param id="1" name="Value">WeaponData.Get(&quot;BowStr&quot;) + (dt*120)</param>
                 </action>
             </actions>
             <sub-events>
@@ -902,9 +902,6 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
                         </action>
-                        <action id="2" name="Delete key" sid="3623949833133784" type="WeaponData">
-                            <param id="0" name="Key">&quot;BowStr&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7755258460833939">
@@ -952,9 +949,6 @@
                         <action id="-10" name="Set value" sid="6296238641287521" type="PlayerProjectile">
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
-                        </action>
-                        <action id="2" name="Delete key" sid="2742229290843299" type="WeaponData">
-                            <param id="0" name="Key">&quot;BowStr&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1004,9 +998,6 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
                         </action>
-                        <action id="2" name="Delete key" sid="7903719296479427" type="WeaponData">
-                            <param id="0" name="Key">&quot;BowStr&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3152855621937636">
@@ -1055,9 +1046,6 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
                         </action>
-                        <action id="2" name="Delete key" sid="6518369713752828" type="WeaponData">
-                            <param id="0" name="Key">&quot;BowStr&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="4176634944764371">
@@ -1095,6 +1083,9 @@
                         <action id="-10" name="Set value" sid="6899325591932948" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
                             <param id="1" name="Value">0.5</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="6518369713752828" type="WeaponData">
+                            <param id="0" name="Key">&quot;BowStr&quot;</param>
                         </action>
                     </actions>
                 </event-block>

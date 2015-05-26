@@ -50,6 +50,105 @@
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="9307715005323098">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="413482355120731" type="CameraZone">
+                                                    <param id="0" name="Instance variable">dark</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-18" name="Set layer opacity" sid="9802855089313834" type="System">
+                                                    <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                                                    <param id="1" name="Opacity">100</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="85978344359179" type="System">
+                                                    <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                                    <param id="1" name="Opacity">100</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="8394995726340261" type="System">
+                                                    <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                                                    <param id="1" name="Opacity">50</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="4767723673425153">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="6931183034806317" type="CameraZone">
+                                                    <param id="0" name="Instance variable">light</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-18" name="Set layer opacity" sid="3181912013529754" type="System">
+                                                    <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                                                    <param id="1" name="Opacity">0</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="3745946709644735" type="System">
+                                                    <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                                    <param id="1" name="Opacity">0</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="5419195403854637" type="System">
+                                                    <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                                                    <param id="1" name="Opacity">75</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="7694557404633803">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4731054456278344" type="CameraZone">
+                                                    <param id="0" name="Instance variable">light</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3582127297302785" type="CameraZone">
+                                                    <param id="0" name="Instance variable">dark</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="3533811640321852">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="7894713219191462" type="System">
+                                                            <param id="0" name="Variable">isDay</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-18" name="Set layer opacity" sid="5000995721063644" type="System">
+                                                            <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                                                            <param id="1" name="Opacity">0</param>
+                                                        </action>
+                                                        <action id="-18" name="Set layer opacity" sid="2576242618678713" type="System">
+                                                            <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                                            <param id="1" name="Opacity">0</param>
+                                                        </action>
+                                                        <action id="-18" name="Set layer opacity" sid="8384940546140863" type="System">
+                                                            <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                                                            <param id="1" name="Opacity">75</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="5018241775910344">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="8326630354612961" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-18" name="Set layer opacity" sid="4368638963829225" type="System">
+                                                            <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                                                            <param id="1" name="Opacity">100</param>
+                                                        </action>
+                                                        <action id="-18" name="Set layer opacity" sid="2213447103944451" type="System">
+                                                            <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                                            <param id="1" name="Opacity">100</param>
+                                                        </action>
+                                                        <action id="-18" name="Set layer opacity" sid="2461672062049165" type="System">
+                                                            <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                                                            <param id="1" name="Opacity">50</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="3535387562853547">
                                     <conditions>

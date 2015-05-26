@@ -90,12 +90,12 @@
                                 <action behavior="Flash" id="0" name="Flash" sid="7823832243761833" type="ARMS">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.5</param>
+                                    <param id="2" name="Duration">1</param>
                                 </action>
                                 <action behavior="Flash" id="0" name="Flash" sid="1300996146446449" type="BODY">
                                     <param id="0" name="&apos;On&apos; time">0.1</param>
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
-                                    <param id="2" name="Duration">0.5</param>
+                                    <param id="2" name="Duration">1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="5262935771234486" type="Function">
                                     <param id="0" name="Name">&quot;bloodhit&quot;</param>

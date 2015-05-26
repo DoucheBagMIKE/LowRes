@@ -37,6 +37,7 @@
         <variable constant="0" name="ScrolltoX" sid="4387079001928423" static="0" type="number">0</variable>
         <variable constant="0" name="ScrolltoY" sid="5820235018737976" static="0" type="number">0</variable>
         <variable constant="0" name="CurZone" sid="5523916427160463" static="0" type="number">-1</variable>
+        <variable constant="0" name="isDay" sid="9750121491080792" static="0" type="number">1</variable>
         <event-block sid="2712545167009221">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7724518492129189" type="System" />
@@ -97,6 +98,12 @@
                     <param id="0" name="Object">BASE</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
+                <action id="5" name="Set frame" sid="4000576881084663" type="Sprite3">
+                    <param id="0" name="Frame number">random(2)</param>
+                </action>
+                <action id="6" name="Set speed" sid="1817521017151781" type="Sprite3">
+                    <param id="0" name="Speed">random(1,2)</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="2423298807149933">
@@ -153,28 +160,11 @@
                 <event-block sid="4665048051051859">
                     <conditions>
                         <condition id="-22" name="Else" sid="769878235810528" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="3499912147503057" type="System" />
                     </conditions>
                     <actions>
                         <action id="11" name="Set collisions enabled" sid="1852080070675076" type="BASE">
                             <param id="0" name="Collisions">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="1454136079095475">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="1255290743840532" type="Keyboard">
-                            <param id="0" name="Key">192 (`)</param>
-                        </condition>
-                        <condition id="0" name="Compare value" sid="7882895141925384" type="GameStats">
-                            <param id="0" name="Key">&quot;CurHP&quot;</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="1457170829797706" type="Function">
-                            <param id="0" name="Name">&quot;Hurt_Player&quot;</param>
-                            <param id="1" name="Parameter {n}">1{###}0{###}0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -211,6 +201,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;low&quot;</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="3092721869960749" type="System" />
                     </conditions>
                     <actions>
                         <action id="-40" name="Set fullscreen scaling" sid="5538168951471063" type="System">
@@ -228,6 +219,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">&quot;high&quot;</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1819191230598917" type="System" />
                     </conditions>
                     <actions>
                         <action id="-40" name="Set fullscreen scaling" sid="7712079552021337" type="System">
@@ -238,71 +230,57 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="6691750877619213">
+                <event-block sid="4828453067318248">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="7905274005893857" type="Keyboard">
-                            <param id="0" name="Key">51 (3)</param>
+                        <condition id="0" name="On key pressed" sid="8291254655273643" type="Keyboard">
+                            <param id="0" name="Key">190 (.)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="7951247479485389" type="Function">
-                            <param id="0" name="Name">&quot;fade&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;out&quot;{###}100</param>
+                        <action id="-18" name="Set layer opacity" sid="2683001149769237" type="System">
+                            <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                            <param id="1" name="Opacity">100</param>
                         </action>
-                        <action id="-41" name="Wait for signal" sid="946182401414563" type="System">
-                            <param id="0" name="Tag">&quot;transition&quot;</param>
+                        <action id="-18" name="Set layer opacity" sid="859076010667014" type="System">
+                            <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                            <param id="1" name="Opacity">100</param>
                         </action>
-                        <action id="0" name="Call function" sid="6724265493336987" type="Function">
-                            <param id="0" name="Name">&quot;Teleport&quot;</param>
-                            <param id="1" name="Parameter {n}">380{###}&quot;north&quot;{###}100</param>
+                        <action id="-18" name="Set layer opacity" sid="2180324806170763" type="System">
+                            <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                            <param id="1" name="Opacity">50</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3745390124616503" type="System">
+                            <param id="0" name="Variable">isDay</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="3983388678193269">
+                <event-block sid="5655586872406275">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="9369974233136881" type="Keyboard">
-                            <param id="0" name="Key">52 (4)</param>
+                        <condition id="0" name="On key pressed" sid="365429976318698" type="Keyboard">
+                            <param id="0" name="Key">188 (,)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="3229461829810947" type="Function">
-                            <param id="0" name="Name">&quot;fade&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;out&quot;{###}100</param>
+                        <action id="-18" name="Set layer opacity" sid="2302782447526706" type="System">
+                            <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                            <param id="1" name="Opacity">0</param>
                         </action>
-                        <action id="-41" name="Wait for signal" sid="6917260295355522" type="System">
-                            <param id="0" name="Tag">&quot;transition&quot;</param>
+                        <action id="-18" name="Set layer opacity" sid="4829128047980072" type="System">
+                            <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                            <param id="1" name="Opacity">0</param>
                         </action>
-                        <action id="0" name="Call function" sid="7540026819946514" type="Function">
-                            <param id="0" name="Name">&quot;Teleport&quot;</param>
-                            <param id="1" name="Parameter {n}">389{###}&quot;north&quot;{###}100</param>
+                        <action id="-18" name="Set layer opacity" sid="1315899631130603" type="System">
+                            <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                            <param id="1" name="Opacity">75</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="3013448510432586">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="439800755960356" type="Keyboard">
-                            <param id="0" name="Key">81 (Q)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="3518390448414784" type="Function">
-                            <param id="0" name="Name">&quot;blood&quot;</param>
-                            <param id="1" name="Parameter {n}">mouse.x{###}mouse.y</param>
+                        <action id="-9" name="Set value" sid="8169502770440884" type="System">
+                            <param id="0" name="Variable">isDay</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="721896659797865">
-            <conditions>
-                <condition id="2" name="Is in touch" sid="9960711138224674" type="Touch" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="2329286739381299" type="BASE">
-                    <param id="0" name="X">lerp(self.x,touch.X,0.1)</param>
-                    <param id="1" name="Y">lerp(self.Y,touch.Y,0.1)</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
