@@ -8,7 +8,7 @@
     <author-website></author-website>
     <app-id></app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>20502</saved-with-version>
+    <saved-with-version>20600</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -1864,7 +1864,7 @@
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Bush" pingpong="0" repeatcount="1" repeatto="0" sid="6348295899087857" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="Imagepoint 1" x="0.25" y="0.25" />
+                                <image-point name="Imagepoint 1" x="0.5" y="0.875" />
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="Pot" pingpong="0" repeatcount="1" repeatto="0" sid="5183698304295948" speed="5">
@@ -2590,6 +2590,14 @@
                 <texture />
             </object-type>
             <object-type name="GHOST_PARTICLE" sid="3545224410965443">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="Bush_Particle" sid="2476522125602651">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="Grass_Particle" sid="8958852837881751">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
