@@ -40,7 +40,7 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="811530034640391" type="System">
-                            <param id="0" name="Seconds">0.25</param>
+                            <param id="0" name="Seconds">0.2</param>
                         </action>
                         <action id="4" name="Set animation" sid="412658780749286" type="SpikeTrap">
                             <param id="0" name="Animation">&quot;Up&quot;</param>
@@ -103,7 +103,7 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="3790426821472962" type="System">
-                            <param id="0" name="Seconds">0.25</param>
+                            <param id="0" name="Seconds">0.2</param>
                         </action>
                         <action id="4" name="Set animation" sid="4321932772145327" type="SpikeTrap">
                             <param id="0" name="Animation">&quot;Up&quot;</param>
