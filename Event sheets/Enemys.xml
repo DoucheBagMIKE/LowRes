@@ -34,6 +34,17 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="1510010639476353">
+                            <conditions>
+                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="2050285866572329" type="Mutant5" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="3512326172370724" type="Mutant5">
+                                    <param id="0" name="Pin to">Mutant4</param>
+                                    <param id="1" name="Mode">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="3594704897923372">
                             <conditions>
                                 <condition id="-19" name="On destroyed" sid="2568959645741835" type="Enemies" />

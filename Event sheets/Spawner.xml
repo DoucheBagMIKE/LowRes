@@ -264,6 +264,74 @@
                                                                 </action>
                                                             </actions>
                                                         </event-block>
+                                                        <event-block sid="3300522755366223">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="2134283647727099" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Mutant4&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="3047348739133505" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Object">Mutant4</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="2063540499020104" type="Mutant4">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">ENEMY_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="8545840118553951" type="Mutant4">
+                                                                    <param id="0" name="Obstacle">ObstacleTilemap</param>
+                                                                </action>
+                                                                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="6244095960720971" type="Mutant4">
+                                                                    <param id="0" name="Obstacle">Rock</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="5431769911228284" type="Mutant4">
+                                                                    <param id="0" name="Instance variable">spawnerUID</param>
+                                                                    <param id="1" name="Value">ENEMY_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="9603657978798401" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="6719358710823192">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="7104843567249885" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Spawn</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;Mutant5&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Spawn another object" sid="8594268779437238" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Object">Mutant5</param>
+                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                    <param id="2" name="Image point">0</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="3879382381317809" type="Mutant5">
+                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                    <param id="1" name="Value">ENEMY_SPAWNER.Zone</param>
+                                                                </action>
+                                                                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="3759893173093305" type="Mutant5">
+                                                                    <param id="0" name="Obstacle">ObstacleTilemap</param>
+                                                                </action>
+                                                                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="8898643353066512" type="Mutant5">
+                                                                    <param id="0" name="Obstacle">Rock</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="4555945434341189" type="Mutant5">
+                                                                    <param id="0" name="Instance variable">spawnerUID</param>
+                                                                    <param id="1" name="Value">ENEMY_SPAWNER.UID</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="5314030626603277" type="ENEMY_SPAWNER">
+                                                                    <param id="0" name="Instance variable">Loaded</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
                                                         <event-block sid="2680748425644329">
                                                             <conditions>
                                                                 <condition id="-7" name="Compare instance variable" sid="4116834450040101" type="ENEMY_SPAWNER">

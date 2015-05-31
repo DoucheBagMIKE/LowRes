@@ -365,6 +365,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">
@@ -629,6 +630,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">
@@ -716,6 +718,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">
@@ -819,6 +822,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">
@@ -1043,6 +1047,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">
@@ -1318,6 +1323,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">
@@ -1396,6 +1402,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">
@@ -1474,6 +1481,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Flash" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="SetColor">

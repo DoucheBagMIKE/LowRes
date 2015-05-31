@@ -30,6 +30,7 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
@@ -1744,38 +1745,36 @@
             </object-type>
             <object-type name="Mutant4" sid="9494774215590671">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="DragDrop" sid="4174198570739671">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="3986995631673943" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                            <image-point name="Imagepoint 1" x="0.46875" y="0.71875" />
+                            <collision-poly>
+                                <point x="0.75" y="0.8125" />
+                                <point x="0.1875" y="0.8125" />
+                                <point x="0.1875" y="0.25" />
+                                <point x="0.75" y="0.25" />
+                            </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="1" name="Walking" pingpong="1" repeatcount="1" repeatto="0" sid="8333291938986631" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                </animation-folder>
+            </object-type>
+            <object-type name="Mutant5" sid="2390577737837161">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="1193575463441018" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5625">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.8125" />
                             <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="0.5" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
-                            <collision-poly>
-                                <point x="0.833333" y="0.958333" />
-                                <point x="0.166667" y="0.958333" />
-                                <point x="0.166667" y="0.5" />
-                                <point x="0.833333" y="0.5" />
+                                <point x="0.0625" y="0.0625" />
+                                <point x="0.9375" y="0.0625" />
+                                <point x="0.9375" y="0.9375" />
+                                <point x="0.0625" y="0.9375" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -3044,6 +3043,7 @@
                 <member>Mutant</member>
                 <member>Mutant2</member>
                 <member>Mutant4</member>
+                <member>Mutant5</member>
                 <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
@@ -3077,6 +3077,9 @@
                 </behavior-type>
                 <behavior-type name="Flash" sid="944074125878139">
                     <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="3162498554419487">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <effects>
@@ -3141,6 +3144,7 @@
                 <member>Mutant</member>
                 <member>Mutant2</member>
                 <member>Mutant4</member>
+                <member>Mutant5</member>
                 <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
@@ -3183,6 +3187,7 @@
                 <member>Mutant</member>
                 <member>Mutant2</member>
                 <member>Mutant4</member>
+                <member>Mutant5</member>
                 <member>NpcBase</member>
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>
@@ -3321,6 +3326,7 @@
                 <member>Mutant</member>
                 <member>Mutant2</member>
                 <member>Mutant4</member>
+                <member>Mutant5</member>
                 <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
