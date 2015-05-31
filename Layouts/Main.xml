@@ -7092,7 +7092,7 @@
                         <KnockbackAmount>0</KnockbackAmount>
                         <ProjectileType>Ice</ProjectileType>
                         <spawnerUID>-1</spawnerUID>
-                        <Phase>IceBall</Phase>
+                        <Phase></Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -7190,7 +7190,7 @@
                         <Deceleration>500</Deceleration>
                         <MovementType>Walk</MovementType>
                         <Shadow>Giant</Shadow>
-                        <HP>14</HP>
+                        <HP>20</HP>
                         <Explode>true</Explode>
                         <Projectile>false</Projectile>
                         <hit>false</hit>
@@ -7201,7 +7201,7 @@
                         <KnockbackAmount>80</KnockbackAmount>
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
-                        <Phase></Phase>
+                        <Phase>spit</Phase>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -7226,7 +7226,7 @@
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Custom</obstacles>
-                                <range>300</range>
+                                <range>75</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>

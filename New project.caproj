@@ -1477,6 +1477,23 @@
                             <image-point name="Imagepoint 1" x="0.5" y="0.875" />
                         </frame>
                     </animation>
+                    <animation framecount="5" loop="0" name="venom" pingpong="0" repeatcount="1" repeatto="0" sid="2739313932814477" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.875" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.625" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.375" />
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Spider" sid="6414842812907998">
@@ -1661,6 +1678,38 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="3" loop="0" name="Spit" pingpong="0" repeatcount="1" repeatto="0" sid="2459831630205991" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                            <image-point name="Imagepoint 2" x="0.333333" y="0.375" />
+                            <collision-poly>
+                                <point x="0.833333" y="0.958333" />
+                                <point x="0.166667" y="0.958333" />
+                                <point x="0.166667" y="0.5" />
+                                <point x="0.833333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                            <image-point name="Imagepoint 2" x="0.333333" y="0.375" />
+                            <collision-poly>
+                                <point x="0.833333" y="0.958333" />
+                                <point x="0.166667" y="0.958333" />
+                                <point x="0.166667" y="0.5" />
+                                <point x="0.833333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="4" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.75" />
+                            <image-point name="spit" x="0.333333" y="0.375" />
+                            <collision-poly>
+                                <point x="0.833333" y="0.958333" />
+                                <point x="0.166667" y="0.958333" />
+                                <point x="0.166667" y="0.5" />
+                                <point x="0.833333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Mutant2" sid="3566029633638138">
@@ -1752,6 +1801,17 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="3986995631673943" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.46875" y="0.71875" />
+                            <collision-poly>
+                                <point x="0.75" y="0.8125" />
+                                <point x="0.1875" y="0.8125" />
+                                <point x="0.1875" y="0.25" />
+                                <point x="0.75" y="0.25" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="Animation2" pingpong="1" repeatcount="1" repeatto="0" sid="7870170734383489" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.46875" y="0.71875" />
                             <collision-poly>
@@ -2623,6 +2683,10 @@
                 <plugin id="Particles" />
                 <texture />
             </object-type>
+            <object-type name="POISON_PARTICLE" sid="9350082564782611">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="Lights">
             <object-type name="Light" sid="8595833317171854">
@@ -3270,6 +3334,7 @@
             <members>
                 <member>FIRE_PARTICLE</member>
                 <member>GHOST_PARTICLE</member>
+                <member>POISON_PARTICLE</member>
                 <member>SMOKE_PARTICLE</member>
             </members>
             <instance-variables>
@@ -3406,8 +3471,8 @@
                 <positioned-audio></positioned-audio>
                 <panning-model>HRTF</panning-model>
                 <distance-model>Inverse</distance-model>
-                <listener-z-height>350</listener-z-height>
-                <reference-distance>350</reference-distance>
+                <listener-z-height>400</listener-z-height>
+                <reference-distance>400</reference-distance>
                 <maximum-distance>10000</maximum-distance>
                 <roll-off-factor>150</roll-off-factor>
             </properties>
