@@ -81,62 +81,8 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="6740904238448001">
-                                    <conditions>
-                                        <condition behavior="NpcMovement" id="1" name="Compare speed" sid="7335115240419741" type="NPC">
-                                            <param id="0" name="Which">2</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Speed">0</param>
-                                        </condition>
-                                        <condition behavior="NpcMovement" id="1" name="Compare speed" sid="7014631462460959" type="NPC">
-                                            <param id="0" name="Which">1</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Speed">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="5950702305987214">
-                                            <conditions>
-                                                <condition behavior="NpcMovement" id="1" name="Compare speed" sid="452550441010877" type="NPC">
-                                                    <param id="0" name="Which">2</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Speed">0</param>
-                                                </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="3457756979556314" type="NPC">
-                                                    <param id="0" name="Instance variable">SpriteDir</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">&quot;Down&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="7714451894501714" type="NPC">
-                                                    <param id="0" name="Instance variable">SpriteDir</param>
-                                                    <param id="1" name="Value">&quot;Down&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="5328823731737451">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="3377249227949333" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="3831391998722756" type="NPC">
-                                                    <param id="0" name="Instance variable">SpriteDir</param>
-                                                    <param id="1" name="Comparison">1</param>
-                                                    <param id="2" name="Value">&quot;Up&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="8895013700846198" type="NPC">
-                                                    <param id="0" name="Instance variable">SpriteDir</param>
-                                                    <param id="1" name="Value">&quot;Up&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
                                 <event-block sid="7357248839373682">
                                     <conditions>
-                                        <condition id="-22" name="Else" sid="5827338455766619" type="System" />
                                         <condition behavior="NpcMovement" id="1" name="Compare speed" sid="4175435792328707" type="NPC">
                                             <param id="0" name="Which">1</param>
                                             <param id="1" name="Comparison">4</param>
@@ -151,7 +97,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="1089218798540558" type="NPC">
                                             <param id="0" name="Instance variable">SpriteDir</param>
-                                            <param id="1" name="Value">&quot;Right&quot;</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -163,29 +109,48 @@
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Speed">0</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="8904830160242033" type="NPC">
-                                            <param id="0" name="Instance variable">SpriteDir</param>
-                                            <param id="1" name="Comparison">1</param>
-                                            <param id="2" name="Value">&quot;Left&quot;</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-10" name="Set value" sid="9571615801078383" type="NPC">
                                             <param id="0" name="Instance variable">SpriteDir</param>
-                                            <param id="1" name="Value">&quot;Left&quot;</param>
+                                            <param id="1" name="Value">&quot;flipped&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="2888984834871787">
                                     <conditions>
-                                        <condition id="2" inverted="1" name="Is playing" sid="9884518792286366" type="Sprite4">
-                                            <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Walking_&quot;&amp;NPC.SpriteDir</param>
+                                        <condition id="2" inverted="1" name="Is playing" sid="9884518792286366" type="Sprite9">
+                                            <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Walking&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="4602428595765227" type="Sprite4">
-                                            <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Walking_&quot;&amp;NPC.SpriteDir</param>
+                                        <action id="4" name="Set animation" sid="4602428595765227" type="Sprite9">
+                                            <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle&quot;</param>
                                             <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1911717582378955">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6358174505255105" type="NPC">
+                                            <param id="0" name="Instance variable">SpriteDir</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;flipped&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="6275527570976379" type="Sprite9">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6555170036626901">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8729413906036356" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="6184128988134506" type="Sprite9">
+                                            <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -194,13 +159,13 @@
                         <event-block sid="865403089108289">
                             <conditions>
                                 <condition id="-22" name="Else" sid="6876810802999827" type="System" />
-                                <condition id="2" inverted="1" name="Is playing" sid="879526366596583" type="Sprite4">
-                                    <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle_&quot;&amp;NPC.SpriteDir</param>
+                                <condition id="2" inverted="1" name="Is playing" sid="879526366596583" type="Sprite9">
+                                    <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="9370406017616721" type="Sprite4">
-                                    <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle_&quot;&amp;NPC.SpriteDir</param>
+                                <action id="4" name="Set animation" sid="9370406017616721" type="Sprite9">
+                                    <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>

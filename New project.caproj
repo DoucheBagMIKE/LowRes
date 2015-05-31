@@ -2373,6 +2373,17 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Npc_Spawner" sid="5579180623493098">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="NPC_Has_Triggerzone" sid="9772015565703791" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9563234050052294" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="CAMERA">
             <object-type name="Camera" sid="5967414008303214">
@@ -2578,7 +2589,7 @@
                 <plugin id="Sprite" />
                 <container>
                     <type>NpcBase</type>
-                    <type>Sprite4</type>
+                    <type>Sprite9</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2484456162515479" speed="5">
@@ -2885,17 +2896,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Npc_Spawner" sid="5579180623493098">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="NPC_Has_Triggerzone" sid="9772015565703791" type="boolean" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9563234050052294" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type global="1" name="NpcXML" sid="3085188535781479">
             <plugin id="XML" />
         </object-type>
@@ -2929,10 +2929,6 @@
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
-            <container>
-                <type>NpcBase</type>
-                <type>Sprite4</type>
-            </container>
             <animation-folder>
                 <animation-folder name="Default">
                     <animation framecount="1" loop="0" name="Default_Idle_Up" pingpong="0" repeatcount="1" repeatto="0" sid="9566764390280818" speed="5">
@@ -2976,6 +2972,15 @@
         </object-type>
         <object-type name="Sprite9" sid="2798654224740543">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="944919803393819">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>NpcBase</type>
+                <type>Sprite9</type>
+            </container>
             <animation-folder>
                 <animation framecount="2" loop="1" name="oldMan" pingpong="0" repeatcount="1" repeatto="0" sid="8713932927083775" speed="3">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -2993,7 +2998,7 @@
                         <image-point name="Imagepoint 1" x="0.5" y="1" />
                     </frame>
                 </animation>
-                <animation framecount="2" loop="1" name="man" pingpong="0" repeatcount="1" repeatto="0" sid="4525983942656463" speed="3">
+                <animation framecount="2" loop="1" name="man_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="4525983942656463" speed="3">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.5" y="1" />
                     </frame>

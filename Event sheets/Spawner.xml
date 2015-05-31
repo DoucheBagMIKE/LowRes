@@ -1244,10 +1244,10 @@
                                                     <param id="0" name="Instance variable">HasSprite</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
-                                                <action behavior="Pathfinding" id="13" name="Set diagonals enabled" sid="9202671008288288" type="NpcBase">
+                                                <action behavior="Pathfinding" disabled="1" id="13" name="Set diagonals enabled" sid="9202671008288288" type="NpcBase">
                                                     <param id="0" name="Diagonals">0</param>
                                                 </action>
-                                                <action behavior="Pathfinding" id="16" name="Regenerate region around object" sid="5145272307587925" type="NpcBase">
+                                                <action behavior="Pathfinding" disabled="1" id="16" name="Regenerate region around object" sid="5145272307587925" type="NpcBase">
                                                     <param id="0" name="Object">CameraZone</param>
                                                 </action>
                                                 <action id="-13" name="Set boolean" sid="386204991253144" type="Npc_Spawner">
@@ -1377,7 +1377,7 @@
                                                                         </condition>
                                                                     </conditions>
                                                                     <actions>
-                                                                        <action behavior="Pin" id="0" name="Pin to object" sid="3678073123289413" type="Sprite4">
+                                                                        <action behavior="Pin" id="0" name="Pin to object" sid="3678073123289413" type="Sprite9">
                                                                             <param id="0" name="Pin to">NpcBase</param>
                                                                             <param id="1" name="Mode">1</param>
                                                                         </action>
