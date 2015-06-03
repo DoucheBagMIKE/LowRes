@@ -63,7 +63,7 @@
                                 <action id="25" name="Play at object" sid="3207551820722372" type="Audio">
                                     <param id="0" name="Audio file">knifeSlice</param>
                                     <param id="1" name="Loop">0</param>
-                                    <param id="2" name="Volume">random(-25,-20)</param>
+                                    <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                     <param id="3" name="Object">SpikeTrap</param>
                                     <param id="4" name="Inner angle">360</param>
                                     <param id="5" name="Outer angle">360</param>
@@ -121,7 +121,7 @@
                                 <action id="25" name="Play at object" sid="1713211954049297" type="Audio">
                                     <param id="0" name="Audio file">knifeSlice</param>
                                     <param id="1" name="Loop">0</param>
-                                    <param id="2" name="Volume">random(-25,-20)</param>
+                                    <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                     <param id="3" name="Object">SpikeTrap</param>
                                     <param id="4" name="Inner angle">360</param>
                                     <param id="5" name="Outer angle">360</param>
@@ -191,7 +191,7 @@
                                                 <action id="25" name="Play at object" sid="2450747806399474" type="Audio">
                                                     <param id="0" name="Audio file">knifeSlice</param>
                                                     <param id="1" name="Loop">0</param>
-                                                    <param id="2" name="Volume">random(-25,-20)</param>
+                                                    <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                                     <param id="3" name="Object">SpikeTrap</param>
                                                     <param id="4" name="Inner angle">360</param>
                                                     <param id="5" name="Outer angle">360</param>
@@ -330,7 +330,7 @@
                                                         <action id="25" name="Play at object" sid="5815232530654159" type="Audio">
                                                             <param id="0" name="Audio file">knifeSlice</param>
                                                             <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-25,-20)</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                                             <param id="3" name="Object">ProjectileTrap</param>
                                                             <param id="4" name="Inner angle">360</param>
                                                             <param id="5" name="Outer angle">360</param>
@@ -419,10 +419,10 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="25" name="Play at object" sid="3541249982930765" type="Audio">
+                                                        <action id="25" name="Play at object" sid="7524691743411844" type="Audio">
                                                             <param id="0" name="Audio file">knifeSlice</param>
                                                             <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-25,-20)</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                                             <param id="3" name="Object">ProjectileTrap</param>
                                                             <param id="4" name="Inner angle">360</param>
                                                             <param id="5" name="Outer angle">360</param>
@@ -483,10 +483,10 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="25" name="Play at object" sid="9836982536696242" type="Audio">
+                                                        <action id="25" name="Play at object" sid="8678508588165283" type="Audio">
                                                             <param id="0" name="Audio file">knifeSlice</param>
                                                             <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-25,-20)</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                                             <param id="3" name="Object">ProjectileTrap</param>
                                                             <param id="4" name="Inner angle">360</param>
                                                             <param id="5" name="Outer angle">360</param>
@@ -550,7 +550,7 @@
                                                         <action id="25" name="Play at object" sid="9582430088040734" type="Audio">
                                                             <param id="0" name="Audio file">knifeSlice</param>
                                                             <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-25,-20)</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                                             <param id="3" name="Object">ProjectileTrap</param>
                                                             <param id="4" name="Inner angle">360</param>
                                                             <param id="5" name="Outer angle">360</param>
@@ -614,7 +614,7 @@
                                                         <action id="25" name="Play at object" sid="8562203973397889" type="Audio">
                                                             <param id="0" name="Audio file">knifeSlice</param>
                                                             <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-25,-20)</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                                             <param id="3" name="Object">ProjectileTrap</param>
                                                             <param id="4" name="Inner angle">360</param>
                                                             <param id="5" name="Outer angle">360</param>
@@ -678,7 +678,7 @@
                                                         <action id="25" name="Play at object" sid="9514347876270414" type="Audio">
                                                             <param id="0" name="Audio file">knifeSlice</param>
                                                             <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-25,-20)</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                                             <param id="3" name="Object">ProjectileTrap</param>
                                                             <param id="4" name="Inner angle">360</param>
                                                             <param id="5" name="Outer angle">360</param>
@@ -826,7 +826,7 @@
                                                         <action id="25" name="Play at object" sid="6148419603169642" type="Audio">
                                                             <param id="0" name="Audio file">knifeSlice</param>
                                                             <param id="1" name="Loop">0</param>
-                                                            <param id="2" name="Volume">random(-25,-20)</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                                             <param id="3" name="Object">ProjectileTrap</param>
                                                             <param id="4" name="Inner angle">360</param>
                                                             <param id="5" name="Outer angle">360</param>

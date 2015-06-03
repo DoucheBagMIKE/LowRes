@@ -23,7 +23,7 @@
                         <action id="24" name="Play at position" sid="9513027586806835" type="Audio">
                             <param id="0" name="Audio file">DM-CGS-49</param>
                             <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">random(-5,0)</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
                             <param id="3" name="X">Function.Param(0)</param>
                             <param id="4" name="Y">Function.Param(1)</param>
                             <param id="5" name="Angle">360</param>
@@ -81,7 +81,7 @@
                         <action id="24" name="Play at position" sid="7965235704846555" type="Audio">
                             <param id="0" name="Audio file">DM-CGS-49</param>
                             <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">random(-5,0)</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
                             <param id="3" name="X">Function.Param(0)</param>
                             <param id="4" name="Y">Function.Param(1)</param>
                             <param id="5" name="Angle">360</param>
@@ -149,7 +149,7 @@
                         <action id="24" name="Play at position" sid="1393335078481429" type="Audio">
                             <param id="0" name="Audio file">DM-CGS-49</param>
                             <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">random(-5,0)</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
                             <param id="3" name="X">Function.Param(0)</param>
                             <param id="4" name="Y">Function.Param(1)</param>
                             <param id="5" name="Angle">360</param>
@@ -184,7 +184,7 @@
                         <action id="24" name="Play at position" sid="6030995776838693" type="Audio">
                             <param id="0" name="Audio file">DM-CGS-49</param>
                             <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">random(-5,0)</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
                             <param id="3" name="X">Function.Param(0)</param>
                             <param id="4" name="Y">Function.Param(1)</param>
                             <param id="5" name="Angle">360</param>
@@ -219,7 +219,7 @@
                         <action id="24" name="Play at position" sid="2951591459559348" type="Audio">
                             <param id="0" name="Audio file">DM-CGS-49</param>
                             <param id="1" name="Loop">0</param>
-                            <param id="2" name="Volume">random(-5,0)</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
                             <param id="3" name="X">Function.Param(0)</param>
                             <param id="4" name="Y">Function.Param(1)</param>
                             <param id="5" name="Angle">360</param>

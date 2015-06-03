@@ -803,8 +803,8 @@
                                                                 <action id="-3" name="Create object" sid="7932727946334329" type="System">
                                                                     <param id="0" name="Object to create">Foilage</param>
                                                                     <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                                                    <param id="2" name="X">OBJECT_SPAWNER.X+random(-1,1)</param>
-                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y-2</param>
+                                                                    <param id="2" name="X">OBJECT_SPAWNER.X</param>
+                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y</param>
                                                                 </action>
                                                                 <action id="-10" name="Set value" sid="7777451305021131" type="Foilage">
                                                                     <param id="0" name="Instance variable">SpawnerID</param>
@@ -815,24 +815,6 @@
                                                                     <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
                                                                 </action>
                                                                 <action id="4" name="Set animation" sid="1543783396174187" type="Foilage">
-                                                                    <param id="0" name="Animation">&quot;Flowers&quot;</param>
-                                                                    <param id="1" name="From">1</param>
-                                                                </action>
-                                                                <action id="-3" name="Create object" sid="7178367765831727" type="System">
-                                                                    <param id="0" name="Object to create">Foilage</param>
-                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                                                    <param id="2" name="X">OBJECT_SPAWNER.X+random(-1,1)</param>
-                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y+2</param>
-                                                                </action>
-                                                                <action id="-10" name="Set value" sid="959073931896866" type="Foilage">
-                                                                    <param id="0" name="Instance variable">SpawnerID</param>
-                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
-                                                                </action>
-                                                                <action id="-10" name="Set value" sid="7174444998896388" type="Foilage">
-                                                                    <param id="0" name="Instance variable">Zone1</param>
-                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
-                                                                </action>
-                                                                <action id="4" name="Set animation" sid="9354899184370137" type="Foilage">
                                                                     <param id="0" name="Animation">&quot;Flowers&quot;</param>
                                                                     <param id="1" name="From">1</param>
                                                                 </action>
@@ -854,8 +836,8 @@
                                                                 <action id="-3" name="Create object" sid="27284360116361" type="System">
                                                                     <param id="0" name="Object to create">Foilage</param>
                                                                     <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                                                    <param id="2" name="X">OBJECT_SPAWNER.X+random(-1,1)</param>
-                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y-2</param>
+                                                                    <param id="2" name="X">OBJECT_SPAWNER.X</param>
+                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y</param>
                                                                 </action>
                                                                 <action id="-10" name="Set value" sid="9920716107693844" type="Foilage">
                                                                     <param id="0" name="Instance variable">SpawnerID</param>
@@ -866,24 +848,6 @@
                                                                     <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
                                                                 </action>
                                                                 <action id="4" name="Set animation" sid="9269260719229715" type="Foilage">
-                                                                    <param id="0" name="Animation">&quot;Grass&quot;</param>
-                                                                    <param id="1" name="From">1</param>
-                                                                </action>
-                                                                <action id="-3" name="Create object" sid="201646430227971" type="System">
-                                                                    <param id="0" name="Object to create">Foilage</param>
-                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                                                    <param id="2" name="X">OBJECT_SPAWNER.X+random(-1,1)</param>
-                                                                    <param id="3" name="Y">OBJECT_SPAWNER.Y+2</param>
-                                                                </action>
-                                                                <action id="-10" name="Set value" sid="1993857364439445" type="Foilage">
-                                                                    <param id="0" name="Instance variable">SpawnerID</param>
-                                                                    <param id="1" name="Value">OBJECT_SPAWNER.UID</param>
-                                                                </action>
-                                                                <action id="-10" name="Set value" sid="3461000943927282" type="Foilage">
-                                                                    <param id="0" name="Instance variable">Zone1</param>
-                                                                    <param id="1" name="Value">OBJECT_SPAWNER.Zone</param>
-                                                                </action>
-                                                                <action id="4" name="Set animation" sid="8945593442022163" type="Foilage">
                                                                     <param id="0" name="Animation">&quot;Grass&quot;</param>
                                                                     <param id="1" name="From">1</param>
                                                                 </action>

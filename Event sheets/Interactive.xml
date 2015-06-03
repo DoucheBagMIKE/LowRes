@@ -381,6 +381,13 @@
                             <param id="1" name="Parameter {n}">Breakable.X{###}Breakable.Y{###}Breakable.AnimationName</param>
                         </action>
                         <action id="-9" name="Destroy" sid="6203221580586138" type="Breakable" />
+                        <action behavior="Knockback" id="2" name="Set speed" sid="253826732191085" type="BASE">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">32</param>
+                        </action>
+                        <action behavior="Knockback" id="6" name="Set angle of motion" sid="2170805894512697" type="BASE">
+                            <param id="0" name="Angle">angle(self.imagepointx(1),self.imagepointy(1),Breakable.imagepointx(1),Breakable.ImagePointY(1))-180</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="9889964440358572">
@@ -402,11 +409,57 @@
                             <param id="1" name="Parameter {n}">Breakable.X{###}Breakable.Y{###}Breakable.AnimationName</param>
                         </action>
                         <action id="-9" name="Destroy" sid="497720087405754" type="Breakable" />
-                        <action id="-13" name="Set boolean" sid="6138006133700086" type="PlayerProjectile">
-                            <param id="0" name="Instance variable">hitTrigger</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="3729530156016999">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2150994997391273" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">PierceAMT</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="4224917137425465" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">hitTrigger</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4024353918762301">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3600788795676452" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">PierceAMT</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="5864236628309746" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">PierceAMT</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3568125390261565">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1813165855297074" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">onHit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;boomerang&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1158279107546773" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">hitTrigger</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Movement" id="2" name="Set speed" sid="1276891481172994" type="PlayerProjectile">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">self.movement.Speed-32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="6241974018036653">
                     <conditions>
@@ -454,6 +507,26 @@
                         </action>
                         <action id="-9" name="Destroy" sid="574287080612757" type="Foilage" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="8106784215368">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4338004820079618" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">onHit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;boomerang&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9234243505745913" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">hitTrigger</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Movement" id="2" name="Set speed" sid="5967602871830038" type="PlayerProjectile">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">self.movement.Speed-16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

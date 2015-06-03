@@ -4254,8 +4254,8 @@
                         <x>120</x>
                         <y>76</y>
                         <z>0</z>
-                        <width>6</width>
-                        <height>6</height>
+                        <width>16</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -6238,6 +6238,8 @@
                         <Knockback>0</Knockback>
                         <onHit></onHit>
                         <hitTrigger>false</hitTrigger>
+                        <PierceAMT>0</PierceAMT>
+                        <Damage>1</Damage>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Movement">
@@ -7637,7 +7639,7 @@
                 </instance>
                 <instance type="DustPar" uid="264">
                     <properties>
-                        <rate>4</rate>
+                        <rate>6</rate>
                         <spray-cone>360</spray-cone>
                         <type>One-shot</type>
                         <initial-particle-properties></initial-particle-properties>
@@ -9584,8 +9586,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>52</x>
-                        <y>-36</y>
+                        <x>8</x>
+                        <y>16</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>

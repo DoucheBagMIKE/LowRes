@@ -2,28 +2,5 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events>
-        <event-block sid="6387660169934889">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="929389771609663" type="System" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="487396827455941">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="7164535089412739" type="System">
-                            <param id="0" name="First value">scrolly</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">300</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-6" name="Scroll to Y" sid="8488654239879063" type="System">
-                            <param id="0" name="Y">scrolly+(dt*32)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-    </events>
+    <events />
 </c2eventsheet>

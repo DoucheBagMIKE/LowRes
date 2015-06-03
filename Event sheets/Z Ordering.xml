@@ -30,6 +30,11 @@
                     </conditions>
                     <actions>
                         <action id="-24" name="Move to top" sid="3824120694201226" type="Enemies" />
+                    </actions>
+                </event-block>
+                <event-block sid="5001975050019995">
+                    <conditions />
+                    <actions>
                         <action id="-24" name="Move to top" sid="3180948243694953" type="Particles" />
                     </actions>
                 </event-block>
